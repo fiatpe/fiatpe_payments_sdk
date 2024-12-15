@@ -20,6 +20,7 @@ PaymentParams _$PaymentParamsFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$PaymentParams {
+  String get transactionId => throw _privateConstructorUsedError;
   double get amount => throw _privateConstructorUsedError;
   String get customerName => throw _privateConstructorUsedError;
   String get customerEmail => throw _privateConstructorUsedError;
@@ -44,7 +45,8 @@ abstract class $PaymentParamsCopyWith<$Res> {
       _$PaymentParamsCopyWithImpl<$Res, PaymentParams>;
   @useResult
   $Res call(
-      {double amount,
+      {String transactionId,
+      double amount,
       String customerName,
       String customerEmail,
       String phoneNumber,
@@ -69,6 +71,7 @@ class _$PaymentParamsCopyWithImpl<$Res, $Val extends PaymentParams>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? transactionId = null,
     Object? amount = null,
     Object? customerName = null,
     Object? customerEmail = null,
@@ -81,6 +84,10 @@ class _$PaymentParamsCopyWithImpl<$Res, $Val extends PaymentParams>
     Object? udf5 = null,
   }) {
     return _then(_value.copyWith(
+      transactionId: null == transactionId
+          ? _value.transactionId
+          : transactionId // ignore: cast_nullable_to_non_nullable
+              as String,
       amount: null == amount
           ? _value.amount
           : amount // ignore: cast_nullable_to_non_nullable
@@ -134,7 +141,8 @@ abstract class _$$PaymentParamsImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {double amount,
+      {String transactionId,
+      double amount,
       String customerName,
       String customerEmail,
       String phoneNumber,
@@ -157,6 +165,7 @@ class __$$PaymentParamsImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? transactionId = null,
     Object? amount = null,
     Object? customerName = null,
     Object? customerEmail = null,
@@ -169,6 +178,10 @@ class __$$PaymentParamsImplCopyWithImpl<$Res>
     Object? udf5 = null,
   }) {
     return _then(_$PaymentParamsImpl(
+      transactionId: null == transactionId
+          ? _value.transactionId
+          : transactionId // ignore: cast_nullable_to_non_nullable
+              as String,
       amount: null == amount
           ? _value.amount
           : amount // ignore: cast_nullable_to_non_nullable
@@ -217,7 +230,8 @@ class __$$PaymentParamsImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$PaymentParamsImpl extends _PaymentParams {
   const _$PaymentParamsImpl(
-      {required this.amount,
+      {required this.transactionId,
+      required this.amount,
       required this.customerName,
       required this.customerEmail,
       required this.phoneNumber,
@@ -232,6 +246,8 @@ class _$PaymentParamsImpl extends _PaymentParams {
   factory _$PaymentParamsImpl.fromJson(Map<String, dynamic> json) =>
       _$$PaymentParamsImplFromJson(json);
 
+  @override
+  final String transactionId;
   @override
   final double amount;
   @override
@@ -263,6 +279,8 @@ class _$PaymentParamsImpl extends _PaymentParams {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$PaymentParamsImpl &&
+            (identical(other.transactionId, transactionId) ||
+                other.transactionId == transactionId) &&
             (identical(other.amount, amount) || other.amount == amount) &&
             (identical(other.customerName, customerName) ||
                 other.customerName == customerName) &&
@@ -281,8 +299,19 @@ class _$PaymentParamsImpl extends _PaymentParams {
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, amount, customerName,
-      customerEmail, phoneNumber, callbackURL, udf1, udf2, udf3, udf4, udf5);
+  int get hashCode => Object.hash(
+      runtimeType,
+      transactionId,
+      amount,
+      customerName,
+      customerEmail,
+      phoneNumber,
+      callbackURL,
+      udf1,
+      udf2,
+      udf3,
+      udf4,
+      udf5);
 
   @JsonKey(ignore: true)
   @override
@@ -300,7 +329,8 @@ class _$PaymentParamsImpl extends _PaymentParams {
 
 abstract class _PaymentParams extends PaymentParams {
   const factory _PaymentParams(
-      {required final double amount,
+      {required final String transactionId,
+      required final double amount,
       required final String customerName,
       required final String customerEmail,
       required final String phoneNumber,
@@ -315,6 +345,8 @@ abstract class _PaymentParams extends PaymentParams {
   factory _PaymentParams.fromJson(Map<String, dynamic> json) =
       _$PaymentParamsImpl.fromJson;
 
+  @override
+  String get transactionId;
   @override
   double get amount;
   @override

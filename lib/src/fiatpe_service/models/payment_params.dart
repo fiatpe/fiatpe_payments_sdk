@@ -10,6 +10,7 @@ class PaymentParams with _$PaymentParams {
   const PaymentParams._();
 
   const factory PaymentParams({
+    required String transactionId,
     required double amount,
     required String customerName,
     required String customerEmail,
@@ -30,7 +31,8 @@ class PaymentParams with _$PaymentParams {
   factory PaymentParams.fromJson(Map<String, dynamic> json) => _$PaymentParamsFromJson(json);
 
   String _asPipeCombined() {
-    return "$customerName"
+    return "$transactionId"
+        "|$customerName"
         "|$customerEmail"
         "|$phoneNumber"
         "|${amount.toString()}"
