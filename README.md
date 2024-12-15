@@ -7,6 +7,10 @@
 
 ---
 
+![fiatpe-payments-flutter](https://bucket.fiatpe.com/app-banner/202412150141736264236350.png)
+
+---
+
 ## ✨ Features
 
 - 🔄 **UPI Payments**: Seamlessly integrate UPI payments into your Flutter app.
@@ -23,6 +27,13 @@ dependencies:
   fiatpe_payments_sdk: ^1.0.1
 ```
 
+Alternatively, you can add the dependency directly to your Flutter project by running the following command in your terminal:
+
+```bash
+dart pub add fiatpe_payments_sdk
+```
+This will automatically update your pubspec.yaml file with the required dependency.
+
 Then run:
 
 ```bash
@@ -31,9 +42,51 @@ flutter pub get
 
 ---
 
-## 🔧 Setup
+### 🛠 Android Configuration
 
-### 1. Import the Library
+#### Add Internet Permission
+
+For Android, ensure that you have the Internet permission set in your `AndroidManifest.xml` file. This permission is necessary for network communications between your app and the FiatPe payment servers.
+
+Add the following line inside the `<manifest>` tag in your `AndroidManifest.xml` file:
+
+  ```xml
+    <uses-permission android:name="android.permission.INTERNET" />
+  ```
+
+This allows your application to access the Internet, which is crucial for processing payments.
+
+---
+
+### 🛠 iOS Configuration
+
+#### Update Info.plist
+
+For iOS, you must configure your `Info.plist` to include the URL schemes of the payment apps your application will interact with. This step is crucial to ensure your app can check if these apps are installed and facilitate the UPI payment process.
+
+Add the following configuration to your `Info.plist`:
+
+  ```xml
+    <key>LSApplicationQueriesSchemes</key>
+    <array>
+        <string>BHIM</string>
+        <string>bhim</string>
+        <string>com.amazon.mobile.shopping</string>
+        <string>gpay</string>
+        <string>imobile</string>
+        <string>paytm</string>
+        <string>paytmmp</string>
+        <string>payzapp</string>
+        <string>phonepe</string>
+    </array>
+  ```
+
+This configuration allows your application to query for the installed status of popular payment apps like BHIM, Google Pay, iMobile, Paytm, and others.
+
+## 📝 Usage Instructions
+
+
+#### 1. Import the Library
 
 Add the import statement to your Dart file:
 
@@ -86,6 +139,9 @@ FiatPePayments.startPayment(
     callbackURL: "https://example.com/payment_callback", // Payment callback URL
     udf1: "custom data 1", // Optional user-defined field
     udf2: "custom data 2", // Optional user-defined field
+    udf3: "custom data 3", // Optional user-defined field
+    udf4: "custom data 4", // Optional user-defined field
+    udf5: "custom data 5", // Optional user-defined field
   ),
   onPaymentResult: (result) {
     switch (result) {
@@ -108,6 +164,12 @@ FiatPePayments.startPayment(
   },
 );
 ```
+## UPI Payments Demo
+
+<p align="center" style="height: 600px;">
+  <img src="https://bucket.fiatpe.com/app-banner/202412150141811434703350.gif" alt="fiatpe-payments-flutter-flow" style="margin-right: 50px;" />
+  <img src="https://bucket.fiatpe.com/app-banner/202412150144046487608350.gif" alt="fiatpe-payments-flutter-flow" />
+</p>
 
 ---
 
@@ -217,7 +279,7 @@ The `PaymentResult` class represents the possible outcomes of a payment process.
       <td style="border: 1px solid #ddd; padding: 8px;">errorCode</td>
       <td style="border: 1px solid #ddd; padding: 8px;">String</td>
       <td style="border: 1px solid #ddd; padding: 8px;">✅ Yes</td>
-      <td style="border: 1px solid #ddd; padding: 8px;">Error code associated with the payment failure.</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">Error code associated with the payment failure.<br>NOT_INITIALIZED / PAYMENT_FAILED</td>
     </tr>
     <tr>
       <td style="border: 1px solid #ddd; padding: 8px;">errorMessage</td>
@@ -387,7 +449,7 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ## 🛠 Support
 
-For issues or feature requests, please raise an issue on the [GitHub Repository](https://github.com/your-username/fiatpe_payments_sdk/issues).
+For issues or feature requests, please raise an issue on the [GitHub Repository](https://github.com/fiatpe/fiatpe_payments_sdk/issues).
 
 ---
 

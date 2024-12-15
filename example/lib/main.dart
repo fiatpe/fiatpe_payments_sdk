@@ -1,9 +1,13 @@
+import 'dart:math';
+
 import 'package:fiatpe_payments_sdk/fiatpe_payments_sdk.dart';
 import 'package:fiatpe_payments_sdk_example/helpers/context_ext.dart';
 import 'package:fiatpe_payments_sdk_example/helpers/keys.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:package_info_plus/package_info_plus.dart';
+import 'package:shortid/shortid.dart';
+
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -37,6 +41,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'FiatPe Payment Gateway',
+      debugShowCheckedModeBanner: false,
+      debugShowMaterialGrid: false,
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
@@ -124,7 +130,7 @@ class _MyHomePageState extends State<MyHomePage> {
         customerName: "Prabhat Pandey",
         phoneNumber: "+919984454545",
         callbackURL: "https://google.com",
-        transactionId: "FIATPE2342343"
+        transactionId: shortid.generate(),
       ),
       onPaymentResult: (result) {
         switch (result) {
