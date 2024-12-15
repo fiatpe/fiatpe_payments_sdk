@@ -1,4 +1,3 @@
-import 'dart:math';
 
 import 'package:fiatpe_payments_sdk/fiatpe_payments_sdk.dart';
 import 'package:fiatpe_payments_sdk/src/ui/custom/clickable_view.dart';

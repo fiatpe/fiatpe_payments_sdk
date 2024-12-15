@@ -20,8 +20,6 @@ class FiatPePayments {
 
   const FiatPePayments._privateConstructor();
 
-  static const FiatPePayments _fiatPePayments = FiatPePayments._privateConstructor();
-
   static init({
     required FiatPeAuthKeys keys,
     OnFiatPeInitiationFailed? onFailed,

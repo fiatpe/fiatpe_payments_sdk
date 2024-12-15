@@ -1,4 +1,3 @@
-import 'package:injectable/injectable.dart';
 import 'package:rxdart/rxdart.dart';
 
 import '../../ui/event/bloc/fiat_pe_bloc.dart';

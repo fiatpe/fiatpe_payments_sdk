@@ -1,4 +1,3 @@
-import 'dart:developer';
 
 import 'package:fiatpe_payments_sdk/src/utils/log/logging.dart';
 import 'package:flutter/services.dart';

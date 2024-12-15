@@ -1,5 +1,6 @@
 import 'package:fiatpe_payments_sdk/fiatpe_payments_sdk.dart';
 import 'package:fiatpe_payments_sdk_example/helpers/context_ext.dart';
+import 'package:fiatpe_payments_sdk_example/helpers/keys.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:package_info_plus/package_info_plus.dart';
@@ -8,8 +9,8 @@ void main() {
   WidgetsFlutterBinding.ensureInitialized();
   FiatPePayments.init(
     keys: const FiatPeAuthKeys(
-      api: "YOUR_API_KEY",
-      salt: "YOUR_SALT_KEY",
+      api: YOUR_API_KEY,
+      salt: YOUR_SALT_KEY,
     ),
     onFailed: (msg) {
       // TODO: Handle initialization failed

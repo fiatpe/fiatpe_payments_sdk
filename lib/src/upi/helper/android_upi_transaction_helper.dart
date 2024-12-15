@@ -1,11 +1,10 @@
-import 'dart:developer';
 
 import 'package:fiatpe_payments_sdk/src/upi/channel/upi_method_channel.dart';
 import 'package:fiatpe_payments_sdk/src/upi/helper/platform_upi_transaction_helper.dart';
 
-import '../../../fiatpe_payments_sdk.dart';
 import '../../utils/log/logging.dart';
 import '../models/upi_payment_params.dart';
+import 'upi_app.dart';
 
 class AndroidUpiTransactionHelper implements PlatformUpiTransactionHelper {
   @override

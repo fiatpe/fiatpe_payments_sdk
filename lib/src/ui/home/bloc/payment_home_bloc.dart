@@ -1,14 +1,11 @@
-import 'dart:developer';
 
 import 'package:bloc/bloc.dart';
 import 'package:fiatpe_payments_sdk/src/fiatpe_service/fiatpe_repo.dart';
 import 'package:fiatpe_payments_sdk/src/ui/event/bloc/fiat_pe_bloc.dart';
-import 'package:fiatpe_payments_sdk/src/utils/di/injection.dart';
 import 'package:fiatpe_payments_sdk/src/utils/helper/result.dart';
 import 'package:fiatpe_payments_sdk/src/utils/log/logging.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-import '../../../fiatpe_payments.dart';
 import '../../../upi/helper/upi_app.dart';
 import '../../../upi/upi_transaction_manager.dart';
 import '../../../utils/manager/fiatpe_event_manager.dart';

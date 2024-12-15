@@ -26,7 +26,6 @@ class PaymentBloc extends Bloc<PaymentEvent, PaymentState> {
 
   final UpiManager _upiManager = UpiManager();
 
-  PaymentParams? _params;
   InitiateTransactionResponse? _response;
 
   PaymentBloc() : super(const PaymentState.initiating()) {
@@ -40,7 +39,6 @@ class PaymentBloc extends Bloc<PaymentEvent, PaymentState> {
     PaymentStartedEvent event,
     Emitter<PaymentState> emit,
   ) async {
-    _params = event.params;
     final result = await _repo.initTransactions(params: event.params);
     switch (result) {
       case Success():
@@ -84,6 +82,7 @@ class PaymentBloc extends Bloc<PaymentEvent, PaymentState> {
           id: event.id,
         ),
       );
+      logger.d("Result of PayWithUPI: $result");
     }
   }
 

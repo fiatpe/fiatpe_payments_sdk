@@ -1,7 +1,5 @@
-import 'dart:developer';
 
 import 'package:fiatpe_payments_sdk/fiatpe_payments_sdk.dart';
-import 'package:fiatpe_payments_sdk/src/upi/models/upi_payment_params.dart';
 import 'package:fiatpe_payments_sdk/src/utils/log/logging.dart';
 import 'package:flutter/services.dart';
 

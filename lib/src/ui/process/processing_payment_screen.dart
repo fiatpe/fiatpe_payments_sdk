@@ -1,4 +1,3 @@
-import 'dart:math';
 
 import 'package:fiatpe_payments_sdk/fiatpe_payments_sdk.dart';
 import 'package:fiatpe_payments_sdk/src/ui/custom/lifecycle_aware_widget.dart';
@@ -583,9 +582,7 @@ class TestPinVerificationDialog extends StatelessWidget {
   final String title;
   final PaymentParams params;
 
-  final TextEditingController _pinController = TextEditingController();
-
-  TestPinVerificationDialog({
+  const TestPinVerificationDialog({
     super.key,
     required this.onPinSubmit,
     required this.title,

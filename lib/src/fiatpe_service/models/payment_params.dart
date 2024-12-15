@@ -1,4 +1,3 @@
-import 'package:fiatpe_payments_sdk/src/fiatpe_service/models/payment_mode.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'payment_params.freezed.dart';

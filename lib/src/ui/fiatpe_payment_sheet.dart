@@ -1,4 +1,3 @@
-import 'dart:developer';
 
 import 'package:fiatpe_payments_sdk/src/fiatpe_service/keys.dart';
 import 'package:fiatpe_payments_sdk/src/fiatpe_service/models/payment_result.dart';
@@ -15,7 +14,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import '../utils/callbacks/callbacks.dart';
 import '../utils/log/logging.dart';
 import 'bloc/payment_bloc.dart';
-import 'home/bloc/payment_home_bloc.dart';
 
 class FiatPePaymentSheet extends StatelessWidget {
   final PaymentParams params;

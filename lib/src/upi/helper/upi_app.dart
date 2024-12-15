@@ -1,4 +1,3 @@
-import 'package:fiatpe_payments_sdk/fiatpe_payments_sdk.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'upi_app.freezed.dart';

@@ -5,15 +5,11 @@ import 'package:fiatpe_payments_sdk/fiatpe_payments_sdk.dart';
 import 'package:fiatpe_payments_sdk/src/fiatpe_service/fiatpe_repo.dart';
 import 'package:fiatpe_payments_sdk/src/fiatpe_service/models/payment_mode.dart';
 import 'package:fiatpe_payments_sdk/src/fiatpe_service/models/txn_status.dart';
-import 'package:fiatpe_payments_sdk/src/upi/helper/upi_app.dart';
 import 'package:fiatpe_payments_sdk/src/utils/helper/result.dart';
 import 'package:fiatpe_payments_sdk/src/utils/log/logging.dart';
-
-// import 'package:flutter_fgbg/flutter_fgbg.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 import '../../../fiatpe_service/transaction_details.dart';
-import '../../../upi/upi_transaction_manager.dart';
 
 part 'processing_payment_event.dart';
 
@@ -22,7 +18,6 @@ part 'processing_payment_state.dart';
 part 'processing_payment_bloc.freezed.dart';
 
 class ProcessingPaymentBloc extends Bloc<ProcessingPaymentEvent, ProcessingPaymentState> {
-  final UpiManager _upiManager = UpiManager();
 
   final _repo = FiatPeRepo.getInstance();
   bool _isFinished = false;
@@ -31,8 +26,6 @@ class ProcessingPaymentBloc extends Bloc<ProcessingPaymentEvent, ProcessingPayme
 
   Timer? _timer;
 
-  num _txnId = -1;
-  String _customVpa = "";
   UPIPaymentModeVPA? _modeVpa;
 
   // StreamSubscription<FGBGType>? subscription;
@@ -42,21 +35,6 @@ class ProcessingPaymentBloc extends Bloc<ProcessingPaymentEvent, ProcessingPayme
   bool _paused = false;
 
   ProcessingPaymentBloc() : super(const ProcessingPaymentState.processingStageOne()) {
-    // subscription = FGBGEvents.instance.stream.listen((event) {
-    //   switch (event) {
-    //     case FGBGType.foreground:
-    //       logger.i("App State Changed to ====> FORE_GROUND");
-    //       if (_backgroundedAt != null) {
-    //         _restartTimeTicker(_backgroundedAt!);
-    //       }
-    //     case FGBGType.background:
-    //       logger.i("App State Changed to ====> BACK_GROUND");
-    //       _backgroundedAt = DateTime.now();
-    //       _secondsBackgroundedAt = _remainingSeconds;
-    //       _timer?.cancel();
-    //   }
-    // });
-
     on<PaymentProcessingStartEvent>(_onStartedEvent);
     on<PaymentProcessingFetchStatusEvent>(_onFetchStatus);
     on<PaymentProcessingTimerTickEvent>(_onTimerTick);
@@ -92,8 +70,6 @@ class ProcessingPaymentBloc extends Bloc<ProcessingPaymentEvent, ProcessingPayme
           modeVpa: mode,
         ),
       );
-      _txnId = event.id;
-      _customVpa = mode.vpa;
       add(ProcessingPaymentEvent.fetchStatus(id: event.id));
       _remainingSeconds = 300;
       _startTimeTicker();
