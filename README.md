@@ -115,34 +115,261 @@ FiatPePayments.startPayment(
 
 The `PaymentParams` class encapsulates the details required to process a payment. Below is a breakdown of its fields:
 
-| Field           | Type     | Required | Description                                                                    |
-|-----------------|----------|----------|--------------------------------------------------------------------------------|
-| `transactionId` | `String` | ✅ Yes   | Transaction ID of the payment. It should be unique for each payment.           |
-| `amount`        | `double` | ✅ Yes   | The payment amount.                                                            |
-| `customerName`  | `String` | ✅ Yes   | Full name of the customer.                                                     |
-| `customerEmail` | `String` | ✅ Yes   | Email address of the customer.                                                 |
-| `phoneNumber`   | `String` | ✅ Yes   | Phone number of the customer.                                                  |
-| `callbackURL`   | `String` | ✅ Yes   | URL to which the payment result is sent.                                       |
-| `udf1`          | `String` | ❌ No    | Optional user-defined field for custom data e.g. Transaction ID, Order ID etc. |
-| `udf2`          | `String` | ❌ No    | Optional user-defined field for custom data e.g. Transaction ID, Order ID etc. |
-| `udf3`          | `String` | ❌ No    | Optional user-defined field for custom data e.g. Transaction ID, Order ID etc. |
-| `udf4`          | `String` | ❌ No    | Optional user-defined field for custom data e.g. Transaction ID, Order ID etc. |
-| `udf5`          | `String` | ❌ No    | Optional user-defined field for custom data e.g. Transaction ID, Order ID etc. |
+<table style="border-collapse: collapse; width: 100%; text-align: left;">
+  <thead>
+    <tr>
+      <th style="border: 1px solid #ddd; padding: 8px;">Field</th>
+      <th style="border: 1px solid #ddd; padding: 8px;">Type</th>
+      <th style="border: 1px solid #ddd; padding: 8px;">Required</th>
+      <th style="border: 1px solid #ddd; padding: 8px;">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border: 1px solid #ddd; padding: 8px;">amount</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">double</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">✅ Yes</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">The payment amount.</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #ddd; padding: 8px;">customerName</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">String</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">✅ Yes</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">Full name of the customer.</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #ddd; padding: 8px;">customerEmail</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">String</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">✅ Yes</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">Email address of the customer.</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #ddd; padding: 8px;">phoneNumber</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">String</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">✅ Yes</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">Phone number of the customer.</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #ddd; padding: 8px;">callbackURL</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">String</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">✅ Yes</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">URL to which the payment result is sent.</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #ddd; padding: 8px;">udf1</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">String?</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">❌ No</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">Optional user-defined field for custom data e.g. Order Id, Address, Invoice ID, Internal Transaction ID or any other custom field.</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #ddd; padding: 8px;">udf2</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">String?</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">❌ No</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">Optional user-defined field for custom data e.g. Order Id, Address, Invoice ID, Internal Transaction ID or any other custom field.</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #ddd; padding: 8px;">udf3</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">String?</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">❌ No</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">Optional user-defined field for custom data e.g. Order Id, Address, Invoice ID, Internal Transaction ID or any other custom field.</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #ddd; padding: 8px;">udf4</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">String?</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">❌ No</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">Optional user-defined field for custom data e.g. Order Id, Address, Invoice ID, Internal Transaction ID or any other custom field.</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #ddd; padding: 8px;">udf5</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">String?</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">❌ No</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">Optional user-defined field for custom data e.g. Order Id, Address, Invoice ID, Internal Transaction ID or any other custom field.</td>
+    </tr>
+  </tbody>
+</table>
 
-#### Example
+## 📄 PaymentResult Class
 
-```dart
-final params = PaymentParams(
-  transactionId: "TRANSACTIONID",
-  amount: 100.0,
-  customerName: "John Doe",
-  customerEmail: "customer@example.com",
-  phoneNumber: "+911234567890",
-  callbackURL: "https://example.com/payment_callback",
-  udf1: "custom data 1",
-  udf2: "custom data 2",
-);
-```
+The `PaymentResult` class represents the possible outcomes of a payment process. It uses a sealed class structure to handle different results like success, failure, pending, cancellation, and unknown status.
+
+### Variants
+
+<table style="border-collapse: collapse; width: 100%; text-align: left;">
+  <thead>
+    <tr>
+      <th style="border: 1px solid #ddd; padding: 8px;">Variant</th>
+      <th style="border: 1px solid #ddd; padding: 8px;">Field</th>
+      <th style="border: 1px solid #ddd; padding: 8px;">Type</th>
+      <th style="border: 1px solid #ddd; padding: 8px;">Required</th>
+      <th style="border: 1px solid #ddd; padding: 8px;">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td rowspan="1" style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">PaymentSuccess</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">details</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">TransactionDetails</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">✅ Yes</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">Detailed information about the successful transaction.</td>
+    </tr>
+    <tr>
+      <td rowspan="3" style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">PaymentFailure</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">errorCode</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">String</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">✅ Yes</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">Error code associated with the payment failure.</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #ddd; padding: 8px;">errorMessage</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">String</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">✅ Yes</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">Description of the error.</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #ddd; padding: 8px;">details</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">TransactionDetails?</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">❌ No</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">Additional transaction details if available.</td>
+    </tr>
+    <tr>
+      <td rowspan="1" style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">PaymentPending</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">details</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">TransactionDetails</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">✅ Yes</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">Detailed information about the pending transaction.</td>
+    </tr>
+    <tr>
+      <td rowspan="2" style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">PaymentCancelled</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">details</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">TransactionDetails</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">✅ Yes</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">Detailed information about the cancelled transaction.</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #ddd; padding: 8px;">reason</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">String?</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">❌ No</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">Optional reason for cancellation.</td>
+    </tr>
+    <tr>
+      <td rowspan="1" style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">PaymentUnknown</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">rawResponse</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">String</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">✅ Yes</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">Raw response for debugging unknown or unexpected results.</td>
+    </tr>
+  </tbody>
+</table>
+
+## 📄 TransactionDetails Class
+
+The `TransactionDetails` class provides detailed information about a transaction during the payment process.
+
+<table style="border-collapse: collapse; width: 100%; text-align: left;">
+  <thead>
+    <tr>
+      <th style="border: 1px solid #ddd; padding: 8px;">Field</th>
+      <th style="border: 1px solid #ddd; padding: 8px;">Type</th>
+      <th style="border: 1px solid #ddd; padding: 8px;">Required</th>
+      <th style="border: 1px solid #ddd; padding: 8px;">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border: 1px solid #ddd; padding: 8px;">id</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">int</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">✅ Yes</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">Unique identifier for the transaction.</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #ddd; padding: 8px;">paymentMode</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">String?</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">❌ No</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">Mode of payment used (e.g., UPI, card, net banking).</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #ddd; padding: 8px;">transactionId</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">String</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">✅ Yes</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">Unique identifier for the transaction.</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #ddd; padding: 8px;">transactionRefId</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">dynamic</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">❌ No</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">Reference ID used internally.</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #ddd; padding: 8px;">rrnNo</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">dynamic</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">❌ No</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">Retrieval reference number, if applicable.</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #ddd; padding: 8px;">status</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">String</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">✅ Yes</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">Current status of the transaction (e.g., success, failure).</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #ddd; padding: 8px;">amount</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">int</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">✅ Yes</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">The payment amount.</td>
+    </tr><tr>
+      <td style="border: 1px solid #ddd; padding: 8px;">udf1</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">String?</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">❌ No</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">Optional user-defined field for custom data e.g. Order Id, Address, Invoice ID, Internal Transaction ID or any other custom field.</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #ddd; padding: 8px;">udf2</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">String?</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">❌ No</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">Optional user-defined field for custom data e.g. Order Id, Address, Invoice ID, Internal Transaction ID or any other custom field.</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #ddd; padding: 8px;">udf3</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">String?</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">❌ No</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">Optional user-defined field for custom data e.g. Order Id, Address, Invoice ID, Internal Transaction ID or any other custom field.</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #ddd; padding: 8px;">udf4</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">String?</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">❌ No</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">Optional user-defined field for custom data e.g. Order Id, Address, Invoice ID, Internal Transaction ID or any other custom field.</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #ddd; padding: 8px;">udf5</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">String?</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">❌ No</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">Optional user-defined field for custom data e.g. Order Id, Address, Invoice ID, Internal Transaction ID or any other custom field.</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #ddd; padding: 8px;">txnDateTime</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">DateTime</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">✅ Yes</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">Date and time of the transaction.</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #ddd; padding: 8px;">message</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">String</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">✅ Yes</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">Additional information or messages about the transaction.</td>
+    </tr>
+  </tbody>
+</table>
+
+---
+
+### Notes on Required Fields:
+- **`id`**: Ensures every transaction is uniquely identifiable.
+- **`transactionId`**: Necessary for referencing the specific transaction.
+- **`status`**: Vital for determining the outcome of the transaction.
+- **`amount`**: Specifies the monetary value involved in the transaction.
+- **`txnDateTime`**: Provides the timestamp for transaction logging and auditing.
+- **`message`**: Offers additional context or feedback regarding the transaction.
 
 
 ## 📦 Upcoming Features
