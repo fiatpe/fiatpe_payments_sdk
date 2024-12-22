@@ -14,6 +14,9 @@ InitiateTransactionResponse _$InitiateTransactionResponseFromJson(
           .map((e) => UpiQueryParam.fromJson(e as Map<String, dynamic>))
           .toList(),
       message: json['message'] as String,
+      brand: json['brand'] == null
+          ? null
+          : Brand.fromJson(json['brand'] as Map<String, dynamic>),
     );
 
 Map<String, dynamic> _$InitiateTransactionResponseToJson(
@@ -22,4 +25,15 @@ Map<String, dynamic> _$InitiateTransactionResponseToJson(
       'id': instance.id,
       'result': instance.upiQueries,
       'message': instance.message,
+      'brand': instance.brand,
+    };
+
+Brand _$BrandFromJson(Map<String, dynamic> json) => Brand(
+      name: json['name'] as String,
+      icon: json['icon'] as String,
+    );
+
+Map<String, dynamic> _$BrandToJson(Brand instance) => <String, dynamic>{
+      'name': instance.name,
+      'icon': instance.icon,
     };

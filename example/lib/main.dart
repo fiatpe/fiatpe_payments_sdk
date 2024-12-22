@@ -72,7 +72,7 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: Text(widget.title),
-        actions: [
+        actions: const [
           AppVersionView()
         ],
       ),
@@ -130,7 +130,7 @@ class _MyHomePageState extends State<MyHomePage> {
         customerName: "Prabhat Pandey",
         phoneNumber: "+919984454545",
         callbackURL: "https://google.com",
-        transactionId: shortid.generate(),
+        transactionId: shortid.generate().toUpperCase(),
       ),
       onPaymentResult: (result) {
         switch (result) {

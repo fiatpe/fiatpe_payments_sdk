@@ -7,6 +7,7 @@ import 'package:fiatpe_payments_sdk/src/ui/cache_memory_image_provider.dart';
 import 'package:fiatpe_payments_sdk/src/ui/custom/clickable_view.dart';
 import 'package:fiatpe_payments_sdk/src/ui/custom/custom_alert_dialog.dart';
 import 'package:fiatpe_payments_sdk/src/ui/process/processing_payment_screen.dart';
+import 'package:fiatpe_payments_sdk/src/utils/exts/color_ext.dart';
 import 'package:fiatpe_payments_sdk/src/utils/exts/context_ext.dart';
 import 'package:fiatpe_payments_sdk/src/utils/exts/number_ext.dart';
 import 'package:flutter/material.dart';
@@ -87,225 +88,364 @@ class _PaymentHomeUi extends StatelessWidget {
           );
         }
       },
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        mainAxisAlignment: MainAxisAlignment.start,
+      child: Stack(
         children: [
+          Column(
+            children: [
+              Expanded(
+                flex: 1,
+                child: Container(
+                  color: Theme.of(context).colorScheme.tertiary,
+                ),
+              ),
+              Expanded(
+                flex: 2,
+                child: Container(
+                  color: Theme.of(context).colorScheme.onSurface.withAlpha(40),
+                ),
+              ),
+            ],
+          ),
           Padding(
-            padding: const EdgeInsets.symmetric(vertical: 8.0, horizontal: 8),
-            child: Row(
-              crossAxisAlignment: CrossAxisAlignment.center,
+            padding: const EdgeInsets.all(8.0),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
-                IconButton(
-                  onPressed: () {
-                    showCancelAlertDialog(
-                      context: context,
-                      onCancel: () {
-                        context.read<PaymentBloc>().add(const PaymentEvent.cancel());
-                      },
-                    );
-                  },
-                  icon: const Icon(Icons.arrow_back_rounded),
-                ),
-                const Expanded(
-                  child: Text(
-                    "Payment",
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                      fontSize: 18,
-                      fontWeight: FontWeight.w500,
-                    ),
+                Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 8.0, horizontal: 8),
+                  child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      IconButton(
+                        onPressed: () {
+                          showCancelAlertDialog(
+                            context: context,
+                            onCancel: () {
+                              context.read<PaymentBloc>().add(const PaymentEvent.cancel());
+                            },
+                          );
+                        },
+                        icon: Row(
+                          children: [
+                            Container(
+                              width: 24,
+                              height: 24,
+                              decoration: BoxDecoration(
+                                color: Theme.of(context).colorScheme.surface,
+                                borderRadius: BorderRadius.circular(24),
+                              ),
+                              padding: EdgeInsets.all(2),
+                              child: const Icon(
+                                Icons.close,
+                                size: 20,
+                              ),
+                            ),
+                            const SizedBox(width: 8),
+                            Text(
+                              "Cancel",
+                              style: TextStyle(
+                                fontSize: 12,
+                                fontWeight: FontWeight.w500,
+                                color: Theme.of(context).colorScheme.surface,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                      const Spacer(),
+                      Text(
+                        "Powered by",
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          fontSize: 12,
+                          fontWeight: FontWeight.w500,
+                          color: Theme.of(context).colorScheme.surface,
+                        ),
+                      ),
+                      const SizedBox(width: 8),
+                      Container(
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(20),
+                          color: Theme.of(context).colorScheme.surface,
+                        ),
+                        padding: const EdgeInsets.symmetric(vertical: 6, horizontal: 12),
+                        child: Image.asset(
+                          "assets/images/fp_logo_transparent.png",
+                          package: "fiatpe_payments_sdk",
+                          height: 18,
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                    ],
                   ),
                 ),
-                const SizedBox(width: 48)
-              ],
-            ),
-          ),
-          Expanded(
-            child: Stack(
-              children: [
-                SingleChildScrollView(
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    mainAxisSize: MainAxisSize.min,
+                Expanded(
+                  child: Stack(
                     children: [
-                      Padding(
-                        padding: const EdgeInsets.symmetric(vertical: 12.0, horizontal: 13),
-                        child: Container(
-                          decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(20),
+                      Column(
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.symmetric(horizontal: 13),
+                            child: Container(
+                              decoration: BoxDecoration(
+                                color: Theme.of(context).colorScheme.primary,
+                                borderRadius: const BorderRadius.vertical(top: Radius.circular(20)),
+                              ),
+                              child: SizedBox(
+                                width: double.infinity,
+                                child: Padding(
+                                  padding: const EdgeInsets.symmetric(
+                                    horizontal: 16,
+                                  ),
+                                  child: Column(
+                                    children: [
+                                      Padding(
+                                        padding: const EdgeInsets.symmetric(
+                                          horizontal: 4,
+                                          vertical: 8,
+                                        ),
+                                        child: Row(
+                                          children: [
+                                            const Text("You are paying"),
+                                            const Spacer(),
+                                            Text(
+                                              paymentState.params.amount.inRupees(),
+                                              style: const TextStyle(
+                                                fontSize: 28,
+                                                fontWeight: FontWeight.bold,
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                      ),
+                                      Divider(
+                                        height: 1,
+                                        color:
+                                            Theme.of(context).colorScheme.onSurface.withAlpha(50),
+                                      ),
+                                      const SizedBox(height: 8),
+                                      Row(
+                                        crossAxisAlignment: CrossAxisAlignment.center,
+                                        mainAxisAlignment: MainAxisAlignment.center,
+                                        children: [
+                                          SizedBox(
+                                            width: 42,
+                                            height: 42,
+                                            child: Image.network(
+                                              "https://bucket.fiatpe.com/app-banner/202412220083036250413357.png",
+                                              height: 18,
+                                              fit: BoxFit.cover,
+                                            ),
+                                          ),
+                                          const SizedBox(width: 12),
+                                          Expanded(
+                                            child: Column(
+                                              crossAxisAlignment: CrossAxisAlignment.start,
+                                              mainAxisAlignment: MainAxisAlignment.center,
+                                              children: [
+                                                paymentState.brand?.name != null ? Text(
+                                                  paymentState.brand!.name,
+                                                  style: const TextStyle(
+                                                    fontSize: 14,
+                                                    fontWeight: FontWeight.w500,
+                                                  ),
+                                                ) : Container(),
+                                                Text(
+                                                  "Txn ID: ${paymentState.params.transactionId}",
+                                                  style: const TextStyle(
+                                                    fontSize: 12,
+                                                    fontWeight: FontWeight.normal,
+                                                  ),
+                                                ),
+                                              ],
+                                            ),
+                                          )
+                                        ],
+                                      ),
+                                      const SizedBox(height: 12),
+                                    ],
+                                  ),
+                                ),
+                              ),
+                            ),
                           ),
-                          child: SizedBox(
-                            width: double.infinity,
-                            child: Padding(
-                              padding: const EdgeInsets.symmetric(vertical: 16.0, horizontal: 16),
+                          Expanded(
+                            child: SingleChildScrollView(
                               child: Column(
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                mainAxisSize: MainAxisSize.min,
                                 children: [
-                                  const Text("You are paying"),
-                                  Text(
-                                    paymentState.params.amount.inRupees(),
-                                    style: const TextStyle(
-                                      fontSize: 28,
-                                      fontWeight: FontWeight.bold,
+                                  Padding(
+                                    padding: const EdgeInsets.symmetric(horizontal: 13),
+                                    child: Container(
+                                      decoration: const BoxDecoration(
+                                        color: Colors.white,
+                                      ),
+                                      child: Column(
+                                        children: [
+                                          AnimatedContainer(
+                                            decoration: BoxDecoration(
+                                              border: Border(
+                                                bottom: BorderSide(
+                                                  width: 1,
+                                                  color: Theme.of(context)
+                                                      .colorScheme
+                                                      .onSurface
+                                                      .withAlpha(25),
+                                                ),
+                                              ),
+                                            ),
+                                            duration: const Duration(milliseconds: 200),
+                                            child: Padding(
+                                              padding: const EdgeInsets.symmetric(
+                                                vertical: 16.0,
+                                                horizontal: 16,
+                                              ),
+                                              child: Row(
+                                                children: [
+                                                  Image.asset(
+                                                    "assets/images/bhim.png",
+                                                    package: "fiatpe_payments_sdk",
+                                                    height: 18,
+                                                    width: 18,
+                                                    fit: BoxFit.cover,
+                                                  ),
+                                                  const SizedBox(width: 8),
+                                                  Text(
+                                                    "UPI",
+                                                    style: TextStyle(
+                                                      fontSize: 13,
+                                                      color: Theme.of(context)
+                                                          .colorScheme
+                                                          .onSurface
+                                                          .withAlpha(200),
+                                                      fontWeight: FontWeight.bold,
+                                                    ),
+                                                  ),
+                                                ],
+                                              ),
+                                            ),
+                                          ),
+                                          for (UPIApp app in state.upiApps)
+                                            _UpiAppItemView(app: app, state: state),
+                                          _CustomVpaRadioButton(state: state),
+                                          state.selectedUpiApp == null
+                                              ? _CustomVpaView(
+                                                  verified: state.isVpaVerified,
+                                                  upiName: state.vpaVerifiedName ?? "Verified",
+                                                  vpaController: vpaController,
+                                                  vpaError: state.vpaVerificationError,
+                                                  verifying: state.isVpaVerifying,
+                                                )
+                                              : Container(),
+                                          const SizedBox(height: 12),
+                                        ],
+                                      ),
                                     ),
                                   ),
                                 ],
                               ),
                             ),
                           ),
-                        ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.symmetric(vertical: 12.0, horizontal: 13),
-                        child: Container(
-                          decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(20),
-                          ),
-                          child: Column(
-                            children: [
-                              AnimatedContainer(
-                                decoration: BoxDecoration(
-                                  border: Border(
-                                    bottom: BorderSide(
-                                      width: 1,
-                                      color: Theme.of(context).colorScheme.onSurface.withAlpha(25),
-                                    ),
-                                  ),
-                                ),
-                                duration: const Duration(milliseconds: 200),
-                                child: Padding(
-                                  padding: const EdgeInsets.symmetric(
-                                    vertical: 16.0,
-                                    horizontal: 16,
-                                  ),
-                                  child: Row(
-                                    children: [
-                                      Image.asset(
-                                        "assets/images/bhim.png",
-                                        package: "fiatpe_payments_sdk",
-                                        height: 18,
-                                        width: 18,
-                                        fit: BoxFit.cover,
-                                      ),
-                                      const SizedBox(width: 8),
-                                      Text(
-                                        "UPI",
-                                        style: TextStyle(
-                                          fontSize: 13,
-                                          color: Theme.of(context)
-                                              .colorScheme
-                                              .onSurface
-                                              .withAlpha(200),
-                                          fontWeight: FontWeight.bold,
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                ),
+                          Padding(
+                            padding: const EdgeInsets.symmetric(horizontal: 13.0),
+                            child: Container(
+                              width: double.infinity,
+                              decoration: const BoxDecoration(
+                                color: Colors.white,
+                                borderRadius: BorderRadius.vertical(bottom: Radius.circular(20)),
                               ),
-                              for (UPIApp app in state.upiApps)
-                                _UpiAppItemView(app: app, state: state),
-                              _CustomVpaRadioButton(state: state),
-                              state.selectedUpiApp == null
-                                  ? _CustomVpaView(
-                                      verified: state.isVpaVerified,
-                                      upiName: state.vpaVerifiedName ?? "Verified",
-                                      vpaController: vpaController,
-                                      vpaError: state.vpaVerificationError,
-                                      verifying: state.isVpaVerifying,
-                                    )
-                                  : Container(),
-                              const SizedBox(height: 12),
-                            ],
-                          ),
-                        ),
+                              padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
+                              child: _PayNowButton(
+                                  state: state,
+                                  paymentState: paymentState,
+                                  vpaController: vpaController),
+                            ),
+                          )
+                        ],
                       ),
+                      state.loading
+                          ? const Align(
+                              alignment: Alignment.center,
+                              child: CircularProgressIndicator(),
+                            )
+                          : Container(),
                     ],
                   ),
                 ),
-                state.loading
-                    ? const Align(
-                        alignment: Alignment.center,
-                        child: CircularProgressIndicator(),
-                      )
-                    : Container(),
               ],
             ),
           ),
-          Container(
-            color: Colors.white,
-            child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 12.0, vertical: 16),
-              child: Row(
-                children: [
-                  Expanded(
-                    child: AutoSizeText(
-                      paymentState.params.amount.inRupees(),
-                      style: const TextStyle(
-                        fontSize: 24,
-                        fontWeight: FontWeight.bold,
-                      ),
-                      maxFontSize: 24,
-                      minFontSize: 14,
-                    ),
-                  ),
-                  Container(
-                    decoration: BoxDecoration(
-                      color: Theme.of(context).colorScheme.primary,
-                      borderRadius: BorderRadius.circular(8),
-                    ),
-                    child: ClickableView(
-                      onTapped: () {
-                        final app = state.selectedUpiApp;
-                        if (app != null) {
-                          context.read<PaymentBloc>().add(
-                                PaymentEvent.launchUpiApp(
-                                  app: app,
-                                  queries: paymentState.queries,
-                                  id: paymentState.id,
-                                  params: paymentState.params,
-                                ),
-                              );
-                          Navigator.of(context).pushReplacementNamed(
-                            ProcessingPaymentScreen.route,
-                            arguments: PaymentMode.app(app: app),
-                          );
-                        } else if (state.isVpaVerified) {
-                          context.read<PaymentHomeBloc>().add(
-                                PaymentHomeEvent.triggerUpiRequest(
-                                  vpa: vpaController.text,
-                                  id: paymentState.id,
-                                ),
-                              );
-                        } else {
-                          context.showSnackBar(message: "Please select any UPI app.");
-                        }
-                      },
-                      borderRadius: BorderRadius.circular(8),
-                      child: Padding(
-                        padding: const EdgeInsets.symmetric(
-                          vertical: 16.0,
-                          horizontal: 24,
-                        ),
-                        child: Text(
-                          "PAY NOW",
-                          style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            color: Theme.of(context).colorScheme.onPrimary,
-                          ),
-                        ),
-                      ),
-                    ),
-                  )
-                ],
-              ),
-            ),
-          ),
         ],
+      ),
+    );
+  }
+}
+
+class _PayNowButton extends StatelessWidget {
+  const _PayNowButton({
+    super.key,
+    required this.state,
+    required this.paymentState,
+    required this.vpaController,
+  });
+
+  final PaymentHomeState state;
+  final PaymentInitiatedState paymentState;
+  final TextEditingController vpaController;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      decoration: BoxDecoration(
+        color: Theme.of(context).colorScheme.primary,
+        borderRadius: BorderRadius.circular(8),
+      ),
+      child: ClickableView(
+        onTapped: () {
+          final app = state.selectedUpiApp;
+          if (app != null) {
+            context.read<PaymentBloc>().add(
+                  PaymentEvent.launchUpiApp(
+                    app: app,
+                    queries: paymentState.queries,
+                    id: paymentState.id,
+                    params: paymentState.params,
+                  ),
+                );
+            Navigator.of(context).pushReplacementNamed(
+              ProcessingPaymentScreen.route,
+              arguments: PaymentMode.app(app: app),
+            );
+          } else if (state.isVpaVerified) {
+            context.read<PaymentHomeBloc>().add(
+                  PaymentHomeEvent.triggerUpiRequest(
+                    vpa: vpaController.text,
+                    id: paymentState.id,
+                  ),
+                );
+          } else {
+            context.showSnackBar(message: "Please select any UPI app.");
+          }
+        },
+        borderRadius: BorderRadius.circular(8),
+        child: Padding(
+          padding: const EdgeInsets.symmetric(
+            vertical: 16.0,
+            horizontal: 24,
+          ),
+          child: Text(
+            "PAY NOW",
+            style: TextStyle(
+              fontWeight: FontWeight.bold,
+              color: Theme.of(context).colorScheme.onPrimary,
+            ),
+            textAlign: TextAlign.center,
+          ),
+        ),
       ),
     );
   }
@@ -552,7 +692,7 @@ class _RadioButton extends StatelessWidget {
         border: Border.all(
           width: 2,
           color: selected
-              ? Theme.of(context).colorScheme.primary
+              ? Theme.of(context).colorScheme.tertiary
               : Theme.of(context).colorScheme.onSurface.withAlpha(50),
         ),
         borderRadius: BorderRadius.circular(32),
@@ -567,7 +707,7 @@ class _RadioButton extends StatelessWidget {
             height: selected ? 14 : 4,
             decoration: BoxDecoration(
               color: selected
-                  ? Theme.of(context).colorScheme.primary
+                  ? Theme.of(context).colorScheme.tertiary
                   : Theme.of(context).colorScheme.onSurface.withAlpha(0),
               borderRadius: BorderRadius.circular(32),
             ),

@@ -49,6 +49,7 @@ class PaymentBloc extends Bloc<PaymentEvent, PaymentState> {
               params: event.params,
               id: _response!.id,
               queries: _response!.getUpiQueries(),
+              brand: result.data.brand,
             ),
           );
         } else {

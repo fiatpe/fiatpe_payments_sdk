@@ -81,12 +81,42 @@ class FiatPePayments {
       sheetAnimationStyle: AnimationStyle.noAnimation,
       useRootNavigator: true,
       builder: (BuildContext sheetContext) {
-        return Padding(
-          padding: MediaQuery.viewPaddingOf(context),
-          child: FiatPePaymentSheet(
-              params: params,
-              onPaymentResult: onPaymentResult,
-              parentContext: context,
+        return Theme(
+          data: ThemeData(
+            colorScheme: const ColorScheme(
+              primary: Color(0xFFFBD302),
+              primaryContainer: Color(0xFFFFFBE6),
+              secondaryContainer: Color(0xFFF2F2F0),
+              secondary: Color(0xFFFBD302),
+              tertiary: Color(0xFFD88A03),
+              onPrimary: Color(0xFF000000),
+              onSecondary: Color(0xFF000000),
+              brightness: Brightness.light,
+              error: Color(0xFFBF0000),
+              onError: Color(0xFFFFFFFF),
+              surface: Colors.white,
+              onSurface: Color(0xFF141414),
+            ),
+            useMaterial3: true,
+            fontFamily: "Roboto",
+          ),
+          child: Builder(
+            builder: (builderContext) {
+              return Container(
+                decoration: BoxDecoration(
+                  color: Theme.of(builderContext).colorScheme.tertiary
+                ),
+                child: Padding(
+                  padding: MediaQuery.viewPaddingOf(context),
+                  // padding: EdgeInsets.zero,
+                  child: FiatPePaymentSheet(
+                      params: params,
+                      onPaymentResult: onPaymentResult,
+                      parentContext: context,
+                  ),
+                ),
+              );
+            }
           ),
         );
       },

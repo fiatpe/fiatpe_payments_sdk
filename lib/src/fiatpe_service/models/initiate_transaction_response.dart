@@ -10,11 +10,13 @@ class InitiateTransactionResponse {
   @JsonKey(name: "result")
   final List<UpiQueryParam> upiQueries;
   final String message;
+  final Brand? brand;
 
   InitiateTransactionResponse({
     required this.id,
     required this.upiQueries,
     required this.message,
+    required this.brand,
   });
 
   factory InitiateTransactionResponse.fromJson(Map<String, dynamic> json) =>
@@ -25,4 +27,22 @@ class InitiateTransactionResponse {
   String getUpiQueries() {
     return upiQueries.map((item) => item.toString()).join("&");
   }
+}
+
+@JsonSerializable(fieldRename: FieldRename.snake)
+class Brand {
+  final String name;
+  final String icon;
+
+  Brand({
+    required this.name,
+    required this.icon,
+  });
+
+
+  factory Brand.fromJson(Map<String, dynamic> json) =>
+      _$BrandFromJson(json);
+
+  Map<String, dynamic> toJson() => _$BrandToJson(this);
+
 }

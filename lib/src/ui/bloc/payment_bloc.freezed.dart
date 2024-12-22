@@ -806,7 +806,8 @@ mixin _$PaymentState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initiating,
-    required TResult Function(PaymentParams params, num id, String queries)
+    required TResult Function(
+            PaymentParams params, num id, String queries, Brand? brand)
         initiated,
     required TResult Function(PaymentParams params) initiationFailed,
     required TResult Function(TransactionDetails details) canceled,
@@ -815,7 +816,9 @@ mixin _$PaymentState {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initiating,
-    TResult? Function(PaymentParams params, num id, String queries)? initiated,
+    TResult? Function(
+            PaymentParams params, num id, String queries, Brand? brand)?
+        initiated,
     TResult? Function(PaymentParams params)? initiationFailed,
     TResult? Function(TransactionDetails details)? canceled,
   }) =>
@@ -823,7 +826,9 @@ mixin _$PaymentState {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initiating,
-    TResult Function(PaymentParams params, num id, String queries)? initiated,
+    TResult Function(
+            PaymentParams params, num id, String queries, Brand? brand)?
+        initiated,
     TResult Function(PaymentParams params)? initiationFailed,
     TResult Function(TransactionDetails details)? canceled,
     required TResult orElse(),
@@ -917,7 +922,8 @@ class _$PaymentInitiatingStateImpl implements PaymentInitiatingState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initiating,
-    required TResult Function(PaymentParams params, num id, String queries)
+    required TResult Function(
+            PaymentParams params, num id, String queries, Brand? brand)
         initiated,
     required TResult Function(PaymentParams params) initiationFailed,
     required TResult Function(TransactionDetails details) canceled,
@@ -929,7 +935,9 @@ class _$PaymentInitiatingStateImpl implements PaymentInitiatingState {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initiating,
-    TResult? Function(PaymentParams params, num id, String queries)? initiated,
+    TResult? Function(
+            PaymentParams params, num id, String queries, Brand? brand)?
+        initiated,
     TResult? Function(PaymentParams params)? initiationFailed,
     TResult? Function(TransactionDetails details)? canceled,
   }) {
@@ -940,7 +948,9 @@ class _$PaymentInitiatingStateImpl implements PaymentInitiatingState {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initiating,
-    TResult Function(PaymentParams params, num id, String queries)? initiated,
+    TResult Function(
+            PaymentParams params, num id, String queries, Brand? brand)?
+        initiated,
     TResult Function(PaymentParams params)? initiationFailed,
     TResult Function(TransactionDetails details)? canceled,
     required TResult orElse(),
@@ -1001,7 +1011,7 @@ abstract class _$$PaymentInitiatedStateImplCopyWith<$Res> {
           $Res Function(_$PaymentInitiatedStateImpl) then) =
       __$$PaymentInitiatedStateImplCopyWithImpl<$Res>;
   @useResult
-  $Res call({PaymentParams params, num id, String queries});
+  $Res call({PaymentParams params, num id, String queries, Brand? brand});
 
   $PaymentParamsCopyWith<$Res> get params;
 }
@@ -1020,6 +1030,7 @@ class __$$PaymentInitiatedStateImplCopyWithImpl<$Res>
     Object? params = null,
     Object? id = null,
     Object? queries = null,
+    Object? brand = freezed,
   }) {
     return _then(_$PaymentInitiatedStateImpl(
       params: null == params
@@ -1034,6 +1045,10 @@ class __$$PaymentInitiatedStateImplCopyWithImpl<$Res>
           ? _value.queries
           : queries // ignore: cast_nullable_to_non_nullable
               as String,
+      brand: freezed == brand
+          ? _value.brand
+          : brand // ignore: cast_nullable_to_non_nullable
+              as Brand?,
     ));
   }
 
@@ -1050,7 +1065,10 @@ class __$$PaymentInitiatedStateImplCopyWithImpl<$Res>
 
 class _$PaymentInitiatedStateImpl implements PaymentInitiatedState {
   const _$PaymentInitiatedStateImpl(
-      {required this.params, required this.id, required this.queries});
+      {required this.params,
+      required this.id,
+      required this.queries,
+      required this.brand});
 
   @override
   final PaymentParams params;
@@ -1058,10 +1076,12 @@ class _$PaymentInitiatedStateImpl implements PaymentInitiatedState {
   final num id;
   @override
   final String queries;
+  @override
+  final Brand? brand;
 
   @override
   String toString() {
-    return 'PaymentState.initiated(params: $params, id: $id, queries: $queries)';
+    return 'PaymentState.initiated(params: $params, id: $id, queries: $queries, brand: $brand)';
   }
 
   @override
@@ -1071,11 +1091,12 @@ class _$PaymentInitiatedStateImpl implements PaymentInitiatedState {
             other is _$PaymentInitiatedStateImpl &&
             (identical(other.params, params) || other.params == params) &&
             (identical(other.id, id) || other.id == id) &&
-            (identical(other.queries, queries) || other.queries == queries));
+            (identical(other.queries, queries) || other.queries == queries) &&
+            (identical(other.brand, brand) || other.brand == brand));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, params, id, queries);
+  int get hashCode => Object.hash(runtimeType, params, id, queries, brand);
 
   @JsonKey(ignore: true)
   @override
@@ -1088,36 +1109,41 @@ class _$PaymentInitiatedStateImpl implements PaymentInitiatedState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initiating,
-    required TResult Function(PaymentParams params, num id, String queries)
+    required TResult Function(
+            PaymentParams params, num id, String queries, Brand? brand)
         initiated,
     required TResult Function(PaymentParams params) initiationFailed,
     required TResult Function(TransactionDetails details) canceled,
   }) {
-    return initiated(params, id, queries);
+    return initiated(params, id, queries, brand);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initiating,
-    TResult? Function(PaymentParams params, num id, String queries)? initiated,
+    TResult? Function(
+            PaymentParams params, num id, String queries, Brand? brand)?
+        initiated,
     TResult? Function(PaymentParams params)? initiationFailed,
     TResult? Function(TransactionDetails details)? canceled,
   }) {
-    return initiated?.call(params, id, queries);
+    return initiated?.call(params, id, queries, brand);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initiating,
-    TResult Function(PaymentParams params, num id, String queries)? initiated,
+    TResult Function(
+            PaymentParams params, num id, String queries, Brand? brand)?
+        initiated,
     TResult Function(PaymentParams params)? initiationFailed,
     TResult Function(TransactionDetails details)? canceled,
     required TResult orElse(),
   }) {
     if (initiated != null) {
-      return initiated(params, id, queries);
+      return initiated(params, id, queries, brand);
     }
     return orElse();
   }
@@ -1165,11 +1191,13 @@ abstract class PaymentInitiatedState implements PaymentState {
   const factory PaymentInitiatedState(
       {required final PaymentParams params,
       required final num id,
-      required final String queries}) = _$PaymentInitiatedStateImpl;
+      required final String queries,
+      required final Brand? brand}) = _$PaymentInitiatedStateImpl;
 
   PaymentParams get params;
   num get id;
   String get queries;
+  Brand? get brand;
   @JsonKey(ignore: true)
   _$$PaymentInitiatedStateImplCopyWith<_$PaymentInitiatedStateImpl>
       get copyWith => throw _privateConstructorUsedError;
@@ -1255,7 +1283,8 @@ class _$PaymentInitiationFailedStateImpl
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initiating,
-    required TResult Function(PaymentParams params, num id, String queries)
+    required TResult Function(
+            PaymentParams params, num id, String queries, Brand? brand)
         initiated,
     required TResult Function(PaymentParams params) initiationFailed,
     required TResult Function(TransactionDetails details) canceled,
@@ -1267,7 +1296,9 @@ class _$PaymentInitiationFailedStateImpl
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initiating,
-    TResult? Function(PaymentParams params, num id, String queries)? initiated,
+    TResult? Function(
+            PaymentParams params, num id, String queries, Brand? brand)?
+        initiated,
     TResult? Function(PaymentParams params)? initiationFailed,
     TResult? Function(TransactionDetails details)? canceled,
   }) {
@@ -1278,7 +1309,9 @@ class _$PaymentInitiationFailedStateImpl
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initiating,
-    TResult Function(PaymentParams params, num id, String queries)? initiated,
+    TResult Function(
+            PaymentParams params, num id, String queries, Brand? brand)?
+        initiated,
     TResult Function(PaymentParams params)? initiationFailed,
     TResult Function(TransactionDetails details)? canceled,
     required TResult orElse(),
@@ -1407,7 +1440,8 @@ class _$PaymentCanceledStateImpl implements PaymentCanceledState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initiating,
-    required TResult Function(PaymentParams params, num id, String queries)
+    required TResult Function(
+            PaymentParams params, num id, String queries, Brand? brand)
         initiated,
     required TResult Function(PaymentParams params) initiationFailed,
     required TResult Function(TransactionDetails details) canceled,
@@ -1419,7 +1453,9 @@ class _$PaymentCanceledStateImpl implements PaymentCanceledState {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initiating,
-    TResult? Function(PaymentParams params, num id, String queries)? initiated,
+    TResult? Function(
+            PaymentParams params, num id, String queries, Brand? brand)?
+        initiated,
     TResult? Function(PaymentParams params)? initiationFailed,
     TResult? Function(TransactionDetails details)? canceled,
   }) {
@@ -1430,7 +1466,9 @@ class _$PaymentCanceledStateImpl implements PaymentCanceledState {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initiating,
-    TResult Function(PaymentParams params, num id, String queries)? initiated,
+    TResult Function(
+            PaymentParams params, num id, String queries, Brand? brand)?
+        initiated,
     TResult Function(PaymentParams params)? initiationFailed,
     TResult Function(TransactionDetails details)? canceled,
     required TResult orElse(),

@@ -8,6 +8,7 @@ class PaymentState with _$PaymentState {
     required PaymentParams params,
     required num id,
     required String queries,
+    required Brand? brand,
   }) = PaymentInitiatedState;
 
   const factory PaymentState.initiationFailed({
