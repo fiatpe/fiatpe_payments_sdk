@@ -49,7 +49,7 @@ class PaymentBloc extends Bloc<PaymentEvent, PaymentState> {
               params: event.params,
               id: _response!.id,
               queries: _response!.getUpiQueries(),
-              brand: result.data.brand,
+              brand: _response?.brand,
             ),
           );
         } else {
@@ -125,4 +125,9 @@ class PaymentBloc extends Bloc<PaymentEvent, PaymentState> {
         break;
     }
   }
+
+  Brand? getBrand() {
+    return _response?.brand;
+  }
+
 }

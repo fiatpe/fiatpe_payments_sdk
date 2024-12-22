@@ -1,6 +1,7 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'upi_app.freezed.dart';
+
 part 'upi_app.g.dart';
 
 @freezed
@@ -10,6 +11,7 @@ class UPIApp with _$UPIApp {
     required String androidPackageName,
     required String iosBundleId,
     required String appName,
+    required Set<String> upiHandles,
     String? icon, // Optional icon parameter as bitmap
   }) = _UPIApp;
 
@@ -18,6 +20,7 @@ class UPIApp with _$UPIApp {
 
 class UpiApps {
   UpiApps._();
+
   //Working in IOS
   // Working in Android
   static const phonePe = UPIApp(
@@ -25,7 +28,13 @@ class UpiApps {
     androidPackageName: "com.phonepe.app",
     iosBundleId: "com.phonepe.PhonePeApp",
     appName: "PhonePe",
+    upiHandles: {
+      "axl",
+      "ibl",
+      "ybl",
+    },
   );
+
   //Working in IOS
   // Working in Android
   static const gPay = UPIApp(
@@ -33,6 +42,12 @@ class UpiApps {
     androidPackageName: "com.google.android.apps.nbu.paisa.user",
     iosBundleId: "com.google.paisa",
     appName: "Google Pay",
+    upiHandles: {
+      "okaxis",
+      "okhdfcbank",
+      "okicici",
+      "oksbi",
+    },
   );
 
   //Working in IOS
@@ -42,7 +57,9 @@ class UpiApps {
     androidPackageName: "net.one97.paytm",
     iosBundleId: "com.one97.paytm",
     appName: "Paytm",
+    upiHandles: {"paytm"},
   );
+
   //Working in IOS
   // TODO: Test in Android - Aftab
   static const bharatPe = UPIApp(
@@ -50,6 +67,7 @@ class UpiApps {
     androidPackageName: "com.postpe.app",
     iosBundleId: "in.postpe.app",
     appName: "BharatPe",
+    upiHandles: {},
   );
 
   //Working in IOS
@@ -59,6 +77,7 @@ class UpiApps {
     androidPackageName: "com.amazon.mShop.android.shopping",
     iosBundleId: "com.amazon.AmazonIN",
     appName: "Amazon Pay",
+    upiHandles: {},
   );
 
   //Working in IOS
@@ -68,6 +87,7 @@ class UpiApps {
     androidPackageName: "in.org.npci.upiapp",
     iosBundleId: "in.org.npci.ios.upiapp",
     appName: "BHIM",
+    upiHandles: {"upi"},
   );
 
   //Working in IOS
@@ -76,7 +96,8 @@ class UpiApps {
     scheme: "imobileapp",
     androidPackageName: "com.csam.icici.bank.imobile",
     iosBundleId: "com.icicibank.imobile",
-    appName: "iMobile", // Duplicate name from PhonePe
+    appName: "iMobile",
+    upiHandles: {"icici"},
   );
 
   //Working in IOS
@@ -86,8 +107,9 @@ class UpiApps {
     androidPackageName: "com.hdfcbank.payzapp",
     iosBundleId: "com.hdfcbank.payzapp",
     appName: "PayZapp",
+    upiHandles: {},
   );
-  
+
   //Need to test
   // TODO: Remove it
   static const axisPay = UPIApp(
@@ -95,16 +117,17 @@ class UpiApps {
     androidPackageName: "com.upi.axispay",
     iosBundleId: "comaxisbank.axispay",
     appName: "Axis Pay",
+    upiHandles: {"axisbank"},
   );
 
-  
   //Need to test
   // TODO: Test in Android - Prabhat
   static const yonoSbi = UPIApp(
     scheme: "yonosbi",
     androidPackageName: "com.sbi.lotusintouch",
     iosBundleId: "com.sbi.lotusintouch",
-    appName: "YONO SBI", // Duplicate name from PhonePe
+    appName: "YONO SBI",
+    upiHandles: {"sbi"},
   );
 
   //Not Working in iOS
@@ -114,6 +137,7 @@ class UpiApps {
     androidPackageName: "com.whatsapp",
     iosBundleId: "net.whatsapp.WhatsApp",
     appName: "WhatsApp",
+    upiHandles: {"wa"},
   );
 
   static final Map<String, UPIApp> androidPackageMap = {
@@ -143,4 +167,40 @@ class UpiApps {
     yonoSbi.iosBundleId: yonoSbi,
     whatsapp.iosBundleId: whatsapp,
   };
+
+  static final Map<String, UPIApp> upiHandleMap = {
+    // PhonePe handles
+    "axl": phonePe,
+    "ibl": phonePe,
+    "ybl": phonePe,
+
+    // Google Pay handles
+    "okaxis": gPay,
+    "okhdfcbank": gPay,
+    "okicici": gPay,
+    "oksbi": gPay,
+
+    // Paytm handle
+    "paytm": paytmMp,
+
+    // BHIM handle
+    "upi": bhim,
+
+    // iMobile handle
+    "icici": iMobile,
+
+    // Axis Pay handle
+    "axisbank": axisPay,
+
+    // YONO SBI handle
+    "sbi": yonoSbi,
+
+    // WhatsApp handle
+    "wa": whatsapp,
+  };
+
+  static UPIApp getUpiAppFromVpa(String vpa) {
+    final handle = vpa.split("@").last;
+    return upiHandleMap[handle] ?? bhim;
+  }
 }

@@ -118,6 +118,7 @@ class ProcessingPaymentBloc extends Bloc<ProcessingPaymentEvent, ProcessingPayme
         ProcessingPaymentState.timerTick(
           duration: Duration(seconds: _remainingSeconds),
           modeVpa: _modeVpa!,
+          details: details,
         ),
       );
     }

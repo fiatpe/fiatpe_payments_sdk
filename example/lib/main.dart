@@ -126,10 +126,10 @@ class _MyHomePageState extends State<MyHomePage> {
       context: context,
       params: PaymentParams(
         amount: amount,
-        customerEmail: "prabhatsdp@gmail.com",
-        customerName: "Prabhat Pandey",
-        phoneNumber: "+919984454545",
-        callbackURL: "https://google.com",
+        customerName: "John Doe", // Customer's full name
+        customerEmail: "customer@example.com", // Customer's email
+        phoneNumber: "+911234567890", // Customer's phone number
+        callbackURL: "https://example.com/payment_callback", // Payment callback URL
         transactionId: shortid.generate().toUpperCase(),
       ),
       onPaymentResult: (result) {

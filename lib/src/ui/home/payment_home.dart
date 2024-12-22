@@ -1,13 +1,11 @@
 import 'dart:convert';
 import 'dart:io';
 
-import 'package:auto_size_text/auto_size_text.dart';
 import 'package:fiatpe_payments_sdk/fiatpe_payments_sdk.dart';
 import 'package:fiatpe_payments_sdk/src/ui/cache_memory_image_provider.dart';
 import 'package:fiatpe_payments_sdk/src/ui/custom/clickable_view.dart';
 import 'package:fiatpe_payments_sdk/src/ui/custom/custom_alert_dialog.dart';
 import 'package:fiatpe_payments_sdk/src/ui/process/processing_payment_screen.dart';
-import 'package:fiatpe_payments_sdk/src/utils/exts/color_ext.dart';
 import 'package:fiatpe_payments_sdk/src/utils/exts/context_ext.dart';
 import 'package:fiatpe_payments_sdk/src/utils/exts/number_ext.dart';
 import 'package:flutter/material.dart';
@@ -16,6 +14,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import '../bloc/payment_bloc.dart';
 import '../event/bloc/fiat_pe_bloc.dart';
 import 'bloc/payment_home_bloc.dart';
+import 'components/brand_widget.dart';
 
 class PaymentHome extends StatelessWidget {
   static const route = "payment_home";
@@ -226,43 +225,9 @@ class _PaymentHomeUi extends StatelessWidget {
                                             Theme.of(context).colorScheme.onSurface.withAlpha(50),
                                       ),
                                       const SizedBox(height: 8),
-                                      Row(
-                                        crossAxisAlignment: CrossAxisAlignment.center,
-                                        mainAxisAlignment: MainAxisAlignment.center,
-                                        children: [
-                                          SizedBox(
-                                            width: 42,
-                                            height: 42,
-                                            child: Image.network(
-                                              "https://bucket.fiatpe.com/app-banner/202412220083036250413357.png",
-                                              height: 18,
-                                              fit: BoxFit.cover,
-                                            ),
-                                          ),
-                                          const SizedBox(width: 12),
-                                          Expanded(
-                                            child: Column(
-                                              crossAxisAlignment: CrossAxisAlignment.start,
-                                              mainAxisAlignment: MainAxisAlignment.center,
-                                              children: [
-                                                paymentState.brand?.name != null ? Text(
-                                                  paymentState.brand!.name,
-                                                  style: const TextStyle(
-                                                    fontSize: 14,
-                                                    fontWeight: FontWeight.w500,
-                                                  ),
-                                                ) : Container(),
-                                                Text(
-                                                  "Txn ID: ${paymentState.params.transactionId}",
-                                                  style: const TextStyle(
-                                                    fontSize: 12,
-                                                    fontWeight: FontWeight.normal,
-                                                  ),
-                                                ),
-                                              ],
-                                            ),
-                                          )
-                                        ],
+                                      BrandWidget(
+                                        brand: paymentState.brand,
+                                        txnId: paymentState.params.transactionId,
                                       ),
                                       const SizedBox(height: 12),
                                     ],

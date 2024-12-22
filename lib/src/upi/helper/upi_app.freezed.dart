@@ -24,6 +24,7 @@ mixin _$UPIApp {
   String get androidPackageName => throw _privateConstructorUsedError;
   String get iosBundleId => throw _privateConstructorUsedError;
   String get appName => throw _privateConstructorUsedError;
+  Set<String> get upiHandles => throw _privateConstructorUsedError;
   String? get icon => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -41,6 +42,7 @@ abstract class $UPIAppCopyWith<$Res> {
       String androidPackageName,
       String iosBundleId,
       String appName,
+      Set<String> upiHandles,
       String? icon});
 }
 
@@ -61,6 +63,7 @@ class _$UPIAppCopyWithImpl<$Res, $Val extends UPIApp>
     Object? androidPackageName = null,
     Object? iosBundleId = null,
     Object? appName = null,
+    Object? upiHandles = null,
     Object? icon = freezed,
   }) {
     return _then(_value.copyWith(
@@ -80,6 +83,10 @@ class _$UPIAppCopyWithImpl<$Res, $Val extends UPIApp>
           ? _value.appName
           : appName // ignore: cast_nullable_to_non_nullable
               as String,
+      upiHandles: null == upiHandles
+          ? _value.upiHandles
+          : upiHandles // ignore: cast_nullable_to_non_nullable
+              as Set<String>,
       icon: freezed == icon
           ? _value.icon
           : icon // ignore: cast_nullable_to_non_nullable
@@ -100,6 +107,7 @@ abstract class _$$UPIAppImplCopyWith<$Res> implements $UPIAppCopyWith<$Res> {
       String androidPackageName,
       String iosBundleId,
       String appName,
+      Set<String> upiHandles,
       String? icon});
 }
 
@@ -118,6 +126,7 @@ class __$$UPIAppImplCopyWithImpl<$Res>
     Object? androidPackageName = null,
     Object? iosBundleId = null,
     Object? appName = null,
+    Object? upiHandles = null,
     Object? icon = freezed,
   }) {
     return _then(_$UPIAppImpl(
@@ -137,6 +146,10 @@ class __$$UPIAppImplCopyWithImpl<$Res>
           ? _value.appName
           : appName // ignore: cast_nullable_to_non_nullable
               as String,
+      upiHandles: null == upiHandles
+          ? _value._upiHandles
+          : upiHandles // ignore: cast_nullable_to_non_nullable
+              as Set<String>,
       icon: freezed == icon
           ? _value.icon
           : icon // ignore: cast_nullable_to_non_nullable
@@ -153,7 +166,9 @@ class _$UPIAppImpl implements _UPIApp {
       required this.androidPackageName,
       required this.iosBundleId,
       required this.appName,
-      this.icon});
+      required final Set<String> upiHandles,
+      this.icon})
+      : _upiHandles = upiHandles;
 
   factory _$UPIAppImpl.fromJson(Map<String, dynamic> json) =>
       _$$UPIAppImplFromJson(json);
@@ -166,12 +181,20 @@ class _$UPIAppImpl implements _UPIApp {
   final String iosBundleId;
   @override
   final String appName;
+  final Set<String> _upiHandles;
+  @override
+  Set<String> get upiHandles {
+    if (_upiHandles is EqualUnmodifiableSetView) return _upiHandles;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableSetView(_upiHandles);
+  }
+
   @override
   final String? icon;
 
   @override
   String toString() {
-    return 'UPIApp(scheme: $scheme, androidPackageName: $androidPackageName, iosBundleId: $iosBundleId, appName: $appName, icon: $icon)';
+    return 'UPIApp(scheme: $scheme, androidPackageName: $androidPackageName, iosBundleId: $iosBundleId, appName: $appName, upiHandles: $upiHandles, icon: $icon)';
   }
 
   @override
@@ -185,13 +208,21 @@ class _$UPIAppImpl implements _UPIApp {
             (identical(other.iosBundleId, iosBundleId) ||
                 other.iosBundleId == iosBundleId) &&
             (identical(other.appName, appName) || other.appName == appName) &&
+            const DeepCollectionEquality()
+                .equals(other._upiHandles, _upiHandles) &&
             (identical(other.icon, icon) || other.icon == icon));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
-      runtimeType, scheme, androidPackageName, iosBundleId, appName, icon);
+      runtimeType,
+      scheme,
+      androidPackageName,
+      iosBundleId,
+      appName,
+      const DeepCollectionEquality().hash(_upiHandles),
+      icon);
 
   @JsonKey(ignore: true)
   @override
@@ -213,6 +244,7 @@ abstract class _UPIApp implements UPIApp {
       required final String androidPackageName,
       required final String iosBundleId,
       required final String appName,
+      required final Set<String> upiHandles,
       final String? icon}) = _$UPIAppImpl;
 
   factory _UPIApp.fromJson(Map<String, dynamic> json) = _$UPIAppImpl.fromJson;
@@ -225,6 +257,8 @@ abstract class _UPIApp implements UPIApp {
   String get iosBundleId;
   @override
   String get appName;
+  @override
+  Set<String> get upiHandles;
   @override
   String? get icon;
   @override

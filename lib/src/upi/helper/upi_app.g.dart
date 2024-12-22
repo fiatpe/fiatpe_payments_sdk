@@ -11,6 +11,8 @@ _$UPIAppImpl _$$UPIAppImplFromJson(Map<String, dynamic> json) => _$UPIAppImpl(
       androidPackageName: json['androidPackageName'] as String,
       iosBundleId: json['iosBundleId'] as String,
       appName: json['appName'] as String,
+      upiHandles:
+          (json['upiHandles'] as List<dynamic>).map((e) => e as String).toSet(),
       icon: json['icon'] as String?,
     );
 
@@ -20,5 +22,6 @@ Map<String, dynamic> _$$UPIAppImplToJson(_$UPIAppImpl instance) =>
       'androidPackageName': instance.androidPackageName,
       'iosBundleId': instance.iosBundleId,
       'appName': instance.appName,
+      'upiHandles': instance.upiHandles.toList(),
       'icon': instance.icon,
     };

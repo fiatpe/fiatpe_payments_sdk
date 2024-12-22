@@ -3,6 +3,7 @@ import 'package:fiatpe_payments_sdk/fiatpe_payments_sdk.dart';
 import 'package:fiatpe_payments_sdk/src/ui/custom/lifecycle_aware_widget.dart';
 import 'package:fiatpe_payments_sdk/src/ui/custom/test_pin_verification_view.dart';
 import 'package:fiatpe_payments_sdk/src/ui/event/bloc/fiat_pe_bloc.dart';
+import 'package:fiatpe_payments_sdk/src/ui/process/components/custom_vpa_timer_widget.dart';
 import 'package:fiatpe_payments_sdk/src/utils/callbacks/callbacks.dart';
 import 'package:fiatpe_payments_sdk/src/utils/exts/time_ext.dart';
 import 'package:fiatpe_payments_sdk/src/utils/log/logging.dart';
@@ -147,7 +148,7 @@ class _ProcessingPaymentScreenUI extends StatelessWidget {
                           message: "Payment Failed.",
                         );
                       case ProcessingPaymentTimerState():
-                        return _CustomVpaTimerUi(state: state);
+                        return CustomVpaTimerWidget(state: state);
                     }
                   },
                 ),
@@ -156,200 +157,6 @@ class _ProcessingPaymentScreenUI extends StatelessWidget {
           ],
         );
       }),
-    );
-  }
-}
-
-class _CustomVpaTimerUi extends StatelessWidget {
-  final ProcessingPaymentTimerState state;
-
-  const _CustomVpaTimerUi({
-    super.key,
-    required this.state,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      mainAxisAlignment: MainAxisAlignment.start,
-      children: [
-        const SizedBox(height: 20),
-        Padding(
-          padding: const EdgeInsets.all(16.0),
-          child: Container(
-            width: double.infinity,
-            decoration: BoxDecoration(
-              color: Colors.white,
-              borderRadius: BorderRadius.circular(12),
-            ),
-            child: Padding(
-              padding: const EdgeInsets.symmetric(
-                horizontal: 12.0,
-                vertical: 12,
-              ),
-              child: Column(
-                children: [
-                  Row(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: <Widget>[
-                      SizedBox(
-                        width: 100,
-                        child: Image.asset(
-                          "assets/images/upi.png",
-                          package: "fiatpe_payments_sdk",
-                        ),
-                      ),
-                      const Spacer(),
-                      SizedBox(
-                        width: 36,
-                        height: 36,
-                        child: CircularProgressIndicator(
-                          value: state.duration.inSeconds / 300,
-                          strokeWidth: 4,
-                          color: Theme.of(context).colorScheme.primary,
-                          backgroundColor: Theme.of(context).colorScheme.primary.withAlpha(25),
-                          strokeCap: StrokeCap.round,
-                          // value: 1,
-                        ),
-                      ),
-                      const SizedBox(width: 12),
-                      Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        mainAxisSize: MainAxisSize.min,
-                        children: [
-                          Text(
-                            state.duration.toMinutesSeconds(),
-                            style: TextStyle(
-                              fontSize: 22,
-                              fontWeight: FontWeight.w600,
-                              color: Theme.of(context).colorScheme.primary,
-                              height: 1,
-                            ),
-                          ),
-                          Text(
-                            "Min Left",
-                            style: TextStyle(
-                              fontSize: 11,
-                              color: Theme.of(context).colorScheme.primary,
-                              height: 1,
-                            ),
-                          ),
-                        ],
-                      ),
-                      const SizedBox(height: 4),
-                    ],
-                  )
-                ],
-              ),
-            ),
-          ),
-        ),
-        const SizedBox(height: 12),
-        const Padding(
-          padding: EdgeInsets.symmetric(horizontal: 16.0),
-          child: Text("Steps to Pay via UPI"),
-        ),
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 6),
-          child: Container(
-            width: double.infinity,
-            decoration: BoxDecoration(
-              color: Colors.white,
-              borderRadius: BorderRadius.circular(12),
-            ),
-            child: const Padding(
-              padding: EdgeInsets.symmetric(
-                horizontal: 16.0,
-                vertical: 24,
-              ),
-              child: Row(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  _CustomVpaGuidelineStep(
-                    image: "assets/images/step_one.png",
-                    message: "Tap on the push notification received from on your entered VPA",
-                    imageWidth: 40,
-                    step: "Step 1",
-                  ),
-                  SizedBox(width: 8),
-                  _CustomVpaGuidelineStep(
-                    image: "assets/images/upi_step_two.png",
-                    message: "Enter your UPI Pin and make payment",
-                    step: "Step 2",
-                    imageWidth: 32,
-                  ),
-                ],
-              ),
-            ),
-          ),
-        ),
-      ],
-    );
-  }
-}
-
-class _CustomVpaGuidelineStep extends StatelessWidget {
-  final String image;
-  final String message;
-  final double imageWidth;
-  final String step;
-
-  const _CustomVpaGuidelineStep({
-    super.key,
-    required this.image,
-    required this.message,
-    required this.imageWidth,
-    required this.step,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Expanded(
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        mainAxisAlignment: MainAxisAlignment.start,
-        children: [
-          Container(
-            decoration: BoxDecoration(
-              color: Colors.blue.withAlpha(25),
-              borderRadius: BorderRadius.circular(32),
-            ),
-            child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 12.0, vertical: 4),
-              child: Text(
-                step,
-                style: const TextStyle(
-                  color: Colors.blue,
-                  fontWeight: FontWeight.w500,
-                ),
-              ),
-            ),
-          ),
-          const SizedBox(height: 20),
-          Row(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: [
-              SizedBox(
-                width: imageWidth,
-                child: Image.asset(
-                  image,
-                  package: "fiatpe_payments_sdk",
-                ),
-              ),
-              const SizedBox(width: 8),
-              Expanded(
-                child: Text(
-                  message,
-                  style: const TextStyle(fontSize: 11),
-                ),
-              ),
-            ],
-          )
-        ],
-      ),
     );
   }
 }

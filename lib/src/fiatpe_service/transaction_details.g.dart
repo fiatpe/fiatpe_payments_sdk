@@ -14,7 +14,7 @@ TransactionDetails _$TransactionDetailsFromJson(Map<String, dynamic> json) =>
       transactionRefId: json['transactionRefId'],
       rrnNo: json['rrnNo'],
       status: json['status'] as String?,
-      amount: (json['amount'] as num?)?.toInt(),
+      amount: (json['amount'] as num?)?.toDouble(),
       udf1: json['udf1'] as String?,
       udf2: json['udf2'] as String?,
       udf3: json['udf3'] as String?,

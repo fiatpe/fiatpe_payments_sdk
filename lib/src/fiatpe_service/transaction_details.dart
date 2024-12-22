@@ -28,7 +28,7 @@ class TransactionDetails {
   final dynamic transactionRefId;
   final dynamic rrnNo;
   final String? status;
-  final int? amount;
+  final double? amount;
   final String? udf1;
   final String? udf2;
   final String? udf3;
