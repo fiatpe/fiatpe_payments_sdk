@@ -22,7 +22,7 @@ mixin _$PaymentEvent {
     required TResult Function(
             UPIApp app, String queries, num id, PaymentParams params)
         launchUpiApp,
-    required TResult Function() cancel,
+    required TResult Function(String reason) cancel,
     required TResult Function(
             String pin, num id, UPIApp app, PaymentParams params)
         verifyTestPin,
@@ -33,7 +33,7 @@ mixin _$PaymentEvent {
     TResult? Function(PaymentParams params)? started,
     TResult? Function(UPIApp app, String queries, num id, PaymentParams params)?
         launchUpiApp,
-    TResult? Function()? cancel,
+    TResult? Function(String reason)? cancel,
     TResult? Function(String pin, num id, UPIApp app, PaymentParams params)?
         verifyTestPin,
   }) =>
@@ -43,7 +43,7 @@ mixin _$PaymentEvent {
     TResult Function(PaymentParams params)? started,
     TResult Function(UPIApp app, String queries, num id, PaymentParams params)?
         launchUpiApp,
-    TResult Function()? cancel,
+    TResult Function(String reason)? cancel,
     TResult Function(String pin, num id, UPIApp app, PaymentParams params)?
         verifyTestPin,
     required TResult orElse(),
@@ -173,7 +173,7 @@ class _$PaymentStartedEventImpl implements PaymentStartedEvent {
     required TResult Function(
             UPIApp app, String queries, num id, PaymentParams params)
         launchUpiApp,
-    required TResult Function() cancel,
+    required TResult Function(String reason) cancel,
     required TResult Function(
             String pin, num id, UPIApp app, PaymentParams params)
         verifyTestPin,
@@ -187,7 +187,7 @@ class _$PaymentStartedEventImpl implements PaymentStartedEvent {
     TResult? Function(PaymentParams params)? started,
     TResult? Function(UPIApp app, String queries, num id, PaymentParams params)?
         launchUpiApp,
-    TResult? Function()? cancel,
+    TResult? Function(String reason)? cancel,
     TResult? Function(String pin, num id, UPIApp app, PaymentParams params)?
         verifyTestPin,
   }) {
@@ -200,7 +200,7 @@ class _$PaymentStartedEventImpl implements PaymentStartedEvent {
     TResult Function(PaymentParams params)? started,
     TResult Function(UPIApp app, String queries, num id, PaymentParams params)?
         launchUpiApp,
-    TResult Function()? cancel,
+    TResult Function(String reason)? cancel,
     TResult Function(String pin, num id, UPIApp app, PaymentParams params)?
         verifyTestPin,
     required TResult orElse(),
@@ -377,7 +377,7 @@ class _$LaunchUpiAppPaymentEventImpl implements LaunchUpiAppPaymentEvent {
     required TResult Function(
             UPIApp app, String queries, num id, PaymentParams params)
         launchUpiApp,
-    required TResult Function() cancel,
+    required TResult Function(String reason) cancel,
     required TResult Function(
             String pin, num id, UPIApp app, PaymentParams params)
         verifyTestPin,
@@ -391,7 +391,7 @@ class _$LaunchUpiAppPaymentEventImpl implements LaunchUpiAppPaymentEvent {
     TResult? Function(PaymentParams params)? started,
     TResult? Function(UPIApp app, String queries, num id, PaymentParams params)?
         launchUpiApp,
-    TResult? Function()? cancel,
+    TResult? Function(String reason)? cancel,
     TResult? Function(String pin, num id, UPIApp app, PaymentParams params)?
         verifyTestPin,
   }) {
@@ -404,7 +404,7 @@ class _$LaunchUpiAppPaymentEventImpl implements LaunchUpiAppPaymentEvent {
     TResult Function(PaymentParams params)? started,
     TResult Function(UPIApp app, String queries, num id, PaymentParams params)?
         launchUpiApp,
-    TResult Function()? cancel,
+    TResult Function(String reason)? cancel,
     TResult Function(String pin, num id, UPIApp app, PaymentParams params)?
         verifyTestPin,
     required TResult orElse(),
@@ -474,6 +474,8 @@ abstract class _$$PaymentCancelEventImplCopyWith<$Res> {
   factory _$$PaymentCancelEventImplCopyWith(_$PaymentCancelEventImpl value,
           $Res Function(_$PaymentCancelEventImpl) then) =
       __$$PaymentCancelEventImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String reason});
 }
 
 /// @nodoc
@@ -483,26 +485,52 @@ class __$$PaymentCancelEventImplCopyWithImpl<$Res>
   __$$PaymentCancelEventImplCopyWithImpl(_$PaymentCancelEventImpl _value,
       $Res Function(_$PaymentCancelEventImpl) _then)
       : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? reason = null,
+  }) {
+    return _then(_$PaymentCancelEventImpl(
+      reason: null == reason
+          ? _value.reason
+          : reason // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
 }
 
 /// @nodoc
 
 class _$PaymentCancelEventImpl implements PaymentCancelEvent {
-  const _$PaymentCancelEventImpl();
+  const _$PaymentCancelEventImpl({this.reason = "User canceled."});
+
+  @override
+  @JsonKey()
+  final String reason;
 
   @override
   String toString() {
-    return 'PaymentEvent.cancel()';
+    return 'PaymentEvent.cancel(reason: $reason)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$PaymentCancelEventImpl);
+        (other.runtimeType == runtimeType &&
+            other is _$PaymentCancelEventImpl &&
+            (identical(other.reason, reason) || other.reason == reason));
   }
 
   @override
-  int get hashCode => runtimeType.hashCode;
+  int get hashCode => Object.hash(runtimeType, reason);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$PaymentCancelEventImplCopyWith<_$PaymentCancelEventImpl> get copyWith =>
+      __$$PaymentCancelEventImplCopyWithImpl<_$PaymentCancelEventImpl>(
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -511,12 +539,12 @@ class _$PaymentCancelEventImpl implements PaymentCancelEvent {
     required TResult Function(
             UPIApp app, String queries, num id, PaymentParams params)
         launchUpiApp,
-    required TResult Function() cancel,
+    required TResult Function(String reason) cancel,
     required TResult Function(
             String pin, num id, UPIApp app, PaymentParams params)
         verifyTestPin,
   }) {
-    return cancel();
+    return cancel(reason);
   }
 
   @override
@@ -525,11 +553,11 @@ class _$PaymentCancelEventImpl implements PaymentCancelEvent {
     TResult? Function(PaymentParams params)? started,
     TResult? Function(UPIApp app, String queries, num id, PaymentParams params)?
         launchUpiApp,
-    TResult? Function()? cancel,
+    TResult? Function(String reason)? cancel,
     TResult? Function(String pin, num id, UPIApp app, PaymentParams params)?
         verifyTestPin,
   }) {
-    return cancel?.call();
+    return cancel?.call(reason);
   }
 
   @override
@@ -538,13 +566,13 @@ class _$PaymentCancelEventImpl implements PaymentCancelEvent {
     TResult Function(PaymentParams params)? started,
     TResult Function(UPIApp app, String queries, num id, PaymentParams params)?
         launchUpiApp,
-    TResult Function()? cancel,
+    TResult Function(String reason)? cancel,
     TResult Function(String pin, num id, UPIApp app, PaymentParams params)?
         verifyTestPin,
     required TResult orElse(),
   }) {
     if (cancel != null) {
-      return cancel();
+      return cancel(reason);
     }
     return orElse();
   }
@@ -588,7 +616,13 @@ class _$PaymentCancelEventImpl implements PaymentCancelEvent {
 }
 
 abstract class PaymentCancelEvent implements PaymentEvent {
-  const factory PaymentCancelEvent() = _$PaymentCancelEventImpl;
+  const factory PaymentCancelEvent({final String reason}) =
+      _$PaymentCancelEventImpl;
+
+  String get reason;
+  @JsonKey(ignore: true)
+  _$$PaymentCancelEventImplCopyWith<_$PaymentCancelEventImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -709,7 +743,7 @@ class _$PaymentVerifyTestPinEventImpl implements PaymentVerifyTestPinEvent {
     required TResult Function(
             UPIApp app, String queries, num id, PaymentParams params)
         launchUpiApp,
-    required TResult Function() cancel,
+    required TResult Function(String reason) cancel,
     required TResult Function(
             String pin, num id, UPIApp app, PaymentParams params)
         verifyTestPin,
@@ -723,7 +757,7 @@ class _$PaymentVerifyTestPinEventImpl implements PaymentVerifyTestPinEvent {
     TResult? Function(PaymentParams params)? started,
     TResult? Function(UPIApp app, String queries, num id, PaymentParams params)?
         launchUpiApp,
-    TResult? Function()? cancel,
+    TResult? Function(String reason)? cancel,
     TResult? Function(String pin, num id, UPIApp app, PaymentParams params)?
         verifyTestPin,
   }) {
@@ -736,7 +770,7 @@ class _$PaymentVerifyTestPinEventImpl implements PaymentVerifyTestPinEvent {
     TResult Function(PaymentParams params)? started,
     TResult Function(UPIApp app, String queries, num id, PaymentParams params)?
         launchUpiApp,
-    TResult Function()? cancel,
+    TResult Function(String reason)? cancel,
     TResult Function(String pin, num id, UPIApp app, PaymentParams params)?
         verifyTestPin,
     required TResult orElse(),

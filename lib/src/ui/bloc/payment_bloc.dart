@@ -1,3 +1,5 @@
+import 'dart:ffi';
+
 import 'package:bloc/bloc.dart';
 import 'package:fiatpe_payments_sdk/fiatpe_payments_sdk.dart';
 import 'package:fiatpe_payments_sdk/src/fiatpe_service/keys.dart';
@@ -93,7 +95,7 @@ class PaymentBloc extends Bloc<PaymentEvent, PaymentState> {
   ) async {
     if (_response == null) return;
     final id = _response!.id;
-    final result = await _repo.cancelTransaction(id: id, reason: "User cancelled");
+    final result = await _repo.cancelTransaction(id: id, reason: event.reason);
     switch (result) {
       case Failed():
         logger.d("Failed Cancellation API");

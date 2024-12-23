@@ -13,7 +13,9 @@ class PaymentEvent with _$PaymentEvent {
     required PaymentParams params,
   }) = LaunchUpiAppPaymentEvent;
 
-  const factory PaymentEvent.cancel() = PaymentCancelEvent;
+  const factory PaymentEvent.cancel({
+    @Default("User canceled.") String reason,
+}) = PaymentCancelEvent;
 
   const factory PaymentEvent.verifyTestPin({
     required String pin,

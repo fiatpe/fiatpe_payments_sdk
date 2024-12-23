@@ -5,6 +5,8 @@ import 'package:fiatpe_payments_sdk/fiatpe_payments_sdk.dart';
 import 'package:fiatpe_payments_sdk/src/ui/cache_memory_image_provider.dart';
 import 'package:fiatpe_payments_sdk/src/ui/custom/clickable_view.dart';
 import 'package:fiatpe_payments_sdk/src/ui/custom/custom_alert_dialog.dart';
+import 'package:fiatpe_payments_sdk/src/ui/home/components/timer/bloc/home_timer_bloc.dart';
+import 'package:fiatpe_payments_sdk/src/ui/home/components/timer/home_timer_widget.dart';
 import 'package:fiatpe_payments_sdk/src/ui/process/processing_payment_screen.dart';
 import 'package:fiatpe_payments_sdk/src/utils/exts/context_ext.dart';
 import 'package:fiatpe_payments_sdk/src/utils/exts/number_ext.dart';
@@ -24,8 +26,15 @@ class PaymentHome extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocProvider(
-      create: (context) => PaymentHomeBloc()..add(const PaymentHomeEvent.started()),
+    return MultiBlocProvider(
+      providers: [
+        BlocProvider(
+          create: (context) => PaymentHomeBloc()..add(const PaymentHomeEvent.started()),
+        ),
+        BlocProvider(
+          create: (context) => HomeTimerBloc()..add(const HomeTimerEvent.started()),
+        ),
+      ],
       child: Builder(builder: (context) {
         return Scaffold(
           body: BlocBuilder<PaymentBloc, PaymentState>(
@@ -87,122 +96,126 @@ class _PaymentHomeUi extends StatelessWidget {
           );
         }
       },
-      child: Stack(
-        children: [
-          Column(
-            children: [
-              Expanded(
-                flex: 1,
-                child: Container(
-                  color: Theme.of(context).colorScheme.tertiary,
-                ),
-              ),
-              Expanded(
-                flex: 2,
-                child: Container(
-                  color: Theme.of(context).colorScheme.onSurface.withAlpha(40),
-                ),
-              ),
-            ],
-          ),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              mainAxisAlignment: MainAxisAlignment.start,
+      child: BlocListener<HomeTimerBloc, HomeTimerState>(
+        listener: (context, state) {
+          if (state is HomeTimerEnded) {
+            context.read<PaymentBloc>().add(const PaymentEvent.cancel(reason: "Session Timeout"));
+          }
+        },
+        child: Stack(
+          children: [
+            Column(
               children: [
-                Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 8.0, horizontal: 8),
-                  child: Row(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    children: [
-                      IconButton(
-                        onPressed: () {
-                          showCancelAlertDialog(
-                            context: context,
-                            onCancel: () {
-                              context.read<PaymentBloc>().add(const PaymentEvent.cancel());
-                            },
-                          );
-                        },
-                        icon: Row(
-                          children: [
-                            Container(
-                              width: 24,
-                              height: 24,
-                              decoration: BoxDecoration(
-                                color: Theme.of(context).colorScheme.surface,
-                                borderRadius: BorderRadius.circular(24),
-                              ),
-                              padding: EdgeInsets.all(2),
-                              child: const Icon(
-                                Icons.close,
-                                size: 20,
-                              ),
-                            ),
-                            const SizedBox(width: 8),
-                            Text(
-                              "Cancel",
-                              style: TextStyle(
-                                fontSize: 12,
-                                fontWeight: FontWeight.w500,
-                                color: Theme.of(context).colorScheme.surface,
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                      const Spacer(),
-                      Text(
-                        "Powered by",
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                          fontSize: 12,
-                          fontWeight: FontWeight.w500,
-                          color: Theme.of(context).colorScheme.surface,
-                        ),
-                      ),
-                      const SizedBox(width: 8),
-                      Container(
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(20),
-                          color: Theme.of(context).colorScheme.surface,
-                        ),
-                        padding: const EdgeInsets.symmetric(vertical: 6, horizontal: 12),
-                        child: Image.asset(
-                          "assets/images/fp_logo_transparent.png",
-                          package: "fiatpe_payments_sdk",
-                          height: 18,
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                    ],
+                Expanded(
+                  flex: 1,
+                  child: Container(
+                    color: Theme.of(context).colorScheme.tertiary,
                   ),
                 ),
                 Expanded(
-                  child: Stack(
-                    children: [
-                      Column(
-                        children: [
-                          Padding(
-                            padding: const EdgeInsets.symmetric(horizontal: 13),
-                            child: Container(
-                              decoration: BoxDecoration(
-                                color: Theme.of(context).colorScheme.primary,
-                                borderRadius: const BorderRadius.vertical(top: Radius.circular(20)),
+                  flex: 2,
+                  child: Container(
+                    color: Theme.of(context).colorScheme.onSurface.withAlpha(40),
+                  ),
+                ),
+              ],
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 8.0, horizontal: 8),
+                    child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        IconButton(
+                          onPressed: () {
+                            showCancelAlertDialog(
+                              context: context,
+                              onCancel: () {
+                                context.read<PaymentBloc>().add(const PaymentEvent.cancel());
+                              },
+                            );
+                          },
+                          icon: Row(
+                            children: [
+                              Container(
+                                width: 24,
+                                height: 24,
+                                decoration: BoxDecoration(
+                                  color: Theme.of(context).colorScheme.surface,
+                                  borderRadius: BorderRadius.circular(24),
+                                ),
+                                padding: EdgeInsets.all(2),
+                                child: const Icon(
+                                  Icons.close,
+                                  size: 20,
+                                ),
                               ),
-                              child: SizedBox(
-                                width: double.infinity,
-                                child: Padding(
-                                  padding: const EdgeInsets.symmetric(
-                                    horizontal: 16,
-                                  ),
+                              const SizedBox(width: 8),
+                              Text(
+                                "Cancel",
+                                style: TextStyle(
+                                  fontSize: 12,
+                                  fontWeight: FontWeight.w500,
+                                  color: Theme.of(context).colorScheme.surface,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                        const Spacer(),
+                        Text(
+                          "Powered by",
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                            fontSize: 12,
+                            fontWeight: FontWeight.w500,
+                            color: Theme.of(context).colorScheme.surface,
+                          ),
+                        ),
+                        const SizedBox(width: 8),
+                        Container(
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(20),
+                            color: Theme.of(context).colorScheme.surface,
+                          ),
+                          padding: const EdgeInsets.symmetric(vertical: 6, horizontal: 12),
+                          child: Image.asset(
+                            "assets/images/fp_logo_transparent.png",
+                            package: "fiatpe_payments_sdk",
+                            height: 18,
+                            fit: BoxFit.cover,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  Expanded(
+                    child: Stack(
+                      children: [
+                        Column(
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.symmetric(horizontal: 13),
+                              child: Container(
+                                decoration: BoxDecoration(
+                                  color: Theme.of(context).colorScheme.primary,
+                                  borderRadius:
+                                      const BorderRadius.vertical(top: Radius.circular(20)),
+                                ),
+                                child: SizedBox(
+                                  width: double.infinity,
                                   child: Column(
                                     children: [
+                                      HomeTimerWidget(),
                                       Padding(
                                         padding: const EdgeInsets.symmetric(
-                                          horizontal: 4,
+                                          horizontal: 20,
                                           vertical: 8,
                                         ),
                                         child: Row(
@@ -225,9 +238,12 @@ class _PaymentHomeUi extends StatelessWidget {
                                             Theme.of(context).colorScheme.onSurface.withAlpha(50),
                                       ),
                                       const SizedBox(height: 8),
-                                      BrandWidget(
-                                        brand: paymentState.brand,
-                                        txnId: paymentState.params.transactionId,
+                                      Padding(
+                                        padding: const EdgeInsets.symmetric(horizontal: 16),
+                                        child: BrandWidget(
+                                          brand: paymentState.brand,
+                                          txnId: paymentState.params.transactionId,
+                                        ),
                                       ),
                                       const SizedBox(height: 12),
                                     ],
@@ -235,116 +251,123 @@ class _PaymentHomeUi extends StatelessWidget {
                                 ),
                               ),
                             ),
-                          ),
-                          Expanded(
-                            child: SingleChildScrollView(
-                              child: Column(
-                                mainAxisAlignment: MainAxisAlignment.start,
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                mainAxisSize: MainAxisSize.min,
-                                children: [
-                                  Padding(
-                                    padding: const EdgeInsets.symmetric(horizontal: 13),
-                                    child: Container(
-                                      decoration: const BoxDecoration(
-                                        color: Colors.white,
-                                      ),
-                                      child: Column(
-                                        children: [
-                                          AnimatedContainer(
-                                            decoration: BoxDecoration(
-                                              border: Border(
-                                                bottom: BorderSide(
-                                                  width: 1,
-                                                  color: Theme.of(context)
-                                                      .colorScheme
-                                                      .onSurface
-                                                      .withAlpha(25),
-                                                ),
-                                              ),
+                            Expanded(
+                              child: Padding(
+                                padding: const EdgeInsets.symmetric(horizontal: 13.0),
+                                child: Container(
+                                  color: Theme.of(context).colorScheme.surface,
+                                  child: SingleChildScrollView(
+                                    child: Column(
+                                      mainAxisAlignment: MainAxisAlignment.start,
+                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                      mainAxisSize: MainAxisSize.min,
+                                      children: [
+                                        Padding(
+                                          padding: const EdgeInsets.symmetric(horizontal: 0),
+                                          child: Container(
+                                            decoration: const BoxDecoration(
+                                              color: Colors.white,
                                             ),
-                                            duration: const Duration(milliseconds: 200),
-                                            child: Padding(
-                                              padding: const EdgeInsets.symmetric(
-                                                vertical: 16.0,
-                                                horizontal: 16,
-                                              ),
-                                              child: Row(
-                                                children: [
-                                                  Image.asset(
-                                                    "assets/images/bhim.png",
-                                                    package: "fiatpe_payments_sdk",
-                                                    height: 18,
-                                                    width: 18,
-                                                    fit: BoxFit.cover,
-                                                  ),
-                                                  const SizedBox(width: 8),
-                                                  Text(
-                                                    "UPI",
-                                                    style: TextStyle(
-                                                      fontSize: 13,
-                                                      color: Theme.of(context)
-                                                          .colorScheme
-                                                          .onSurface
-                                                          .withAlpha(200),
-                                                      fontWeight: FontWeight.bold,
+                                            child: Column(
+                                              children: [
+                                                AnimatedContainer(
+                                                  decoration: BoxDecoration(
+                                                    border: Border(
+                                                      bottom: BorderSide(
+                                                        width: 1,
+                                                        color: Theme.of(context)
+                                                            .colorScheme
+                                                            .onSurface
+                                                            .withAlpha(25),
+                                                      ),
                                                     ),
                                                   ),
-                                                ],
-                                              ),
+                                                  duration: const Duration(milliseconds: 200),
+                                                  child: Padding(
+                                                    padding: const EdgeInsets.symmetric(
+                                                      vertical: 16.0,
+                                                      horizontal: 16,
+                                                    ),
+                                                    child: Row(
+                                                      children: [
+                                                        Image.asset(
+                                                          "assets/images/bhim.png",
+                                                          package: "fiatpe_payments_sdk",
+                                                          height: 18,
+                                                          width: 18,
+                                                          fit: BoxFit.cover,
+                                                        ),
+                                                        const SizedBox(width: 8),
+                                                        Text(
+                                                          "UPI",
+                                                          style: TextStyle(
+                                                            fontSize: 13,
+                                                            color: Theme.of(context)
+                                                                .colorScheme
+                                                                .onSurface
+                                                                .withAlpha(200),
+                                                            fontWeight: FontWeight.bold,
+                                                          ),
+                                                        ),
+                                                      ],
+                                                    ),
+                                                  ),
+                                                ),
+                                                for (UPIApp app in state.upiApps)
+                                                  _UpiAppItemView(app: app, state: state),
+                                                _CustomVpaRadioButton(state: state),
+                                                state.selectedUpiApp == null
+                                                    ? _CustomVpaView(
+                                                        verified: state.isVpaVerified,
+                                                        upiName:
+                                                            state.vpaVerifiedName ?? "Verified",
+                                                        vpaController: vpaController,
+                                                        vpaError: state.vpaVerificationError,
+                                                        verifying: state.isVpaVerifying,
+                                                      )
+                                                    : Container(),
+                                                const SizedBox(height: 12),
+                                              ],
                                             ),
                                           ),
-                                          for (UPIApp app in state.upiApps)
-                                            _UpiAppItemView(app: app, state: state),
-                                          _CustomVpaRadioButton(state: state),
-                                          state.selectedUpiApp == null
-                                              ? _CustomVpaView(
-                                                  verified: state.isVpaVerified,
-                                                  upiName: state.vpaVerifiedName ?? "Verified",
-                                                  vpaController: vpaController,
-                                                  vpaError: state.vpaVerificationError,
-                                                  verifying: state.isVpaVerifying,
-                                                )
-                                              : Container(),
-                                          const SizedBox(height: 12),
-                                        ],
-                                      ),
+                                        ),
+                                      ],
                                     ),
                                   ),
-                                ],
+                                ),
                               ),
                             ),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.symmetric(horizontal: 13.0),
-                            child: Container(
-                              width: double.infinity,
-                              decoration: const BoxDecoration(
-                                color: Colors.white,
-                                borderRadius: BorderRadius.vertical(bottom: Radius.circular(20)),
+                            Padding(
+                              padding: const EdgeInsets.symmetric(horizontal: 13.0),
+                              child: Container(
+                                width: double.infinity,
+                                decoration: const BoxDecoration(
+                                  color: Colors.white,
+                                  borderRadius: BorderRadius.vertical(bottom: Radius.circular(20)),
+                                ),
+                                padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
+                                child: _PayNowButton(
+                                    state: state,
+                                    paymentState: paymentState,
+                                    vpaController: vpaController),
                               ),
-                              padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
-                              child: _PayNowButton(
-                                  state: state,
-                                  paymentState: paymentState,
-                                  vpaController: vpaController),
                             ),
-                          )
-                        ],
-                      ),
-                      state.loading
-                          ? const Align(
-                              alignment: Alignment.center,
-                              child: CircularProgressIndicator(),
-                            )
-                          : Container(),
-                    ],
+                          ],
+                        ),
+                        state.loading
+                            ? const Align(
+                                alignment: Alignment.center,
+                                child: CircularProgressIndicator(),
+                              )
+                            : Container(),
+                      ],
+                    ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
