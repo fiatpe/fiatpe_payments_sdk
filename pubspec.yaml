@@ -17,11 +17,6 @@ dependencies:
   bloc: ^8.1.0
   flutter_bloc: ^8.1.1
   logger: ^1.1.0
-  get_it: ^7.2.0
-  # Allows value based equality for our classes e.g Eat() == Eat() is true
-  equatable: ^2.0.5
-  # Generates code for us by providing annotations we can use
-  injectable: ^2.0.1
   # Allows converting json to dart class and back
   json_annotation: ^4.9.0
   # Networking Libraries
@@ -31,11 +26,6 @@ dependencies:
   crypto: ^3.0.2
   lottie: ^3.1.2
   freezed_annotation: ^2.4.4
-  stream_transform: ^2.1.0
-  auto_size_text: ^3.0.0
-  fluttertoast: ^8.1.1
-  uuid: ^4.5.1
-  qr_flutter: ^4.1.0
   intl: ^0.19.0
 #  flutter_fgbg: ^0.6.0
 
@@ -44,8 +34,6 @@ dev_dependencies:
     sdk: flutter
   flutter_lints: ^3.0.0
 
-  # injectable generator to your dev_dependencies
-  injectable_generator: ^2.0.1
   # networking generators
   retrofit_generator: ">=5.0.0 <6.0.0"
   built_value_generator: ^8.4.2
