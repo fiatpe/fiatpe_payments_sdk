@@ -1,6 +1,6 @@
 name: fiatpe_payments_sdk
 description: "The All-in-One FiatPe Payment Gateway Flutter library is a robust solution designed to simplify digital payment acceptance in your Flutter applications."
-version: 1.0.1
+version: 1.0.2
 homepage: https://github.com/fiatpe/fiatpe_payments_sdk.git
 
 environment:
