@@ -5,7 +5,6 @@ import 'package:fiatpe_payments_sdk/src/ui/custom/test_pin_verification_view.dar
 import 'package:fiatpe_payments_sdk/src/ui/event/bloc/fiat_pe_bloc.dart';
 import 'package:fiatpe_payments_sdk/src/ui/process/components/custom_vpa_timer_widget.dart';
 import 'package:fiatpe_payments_sdk/src/utils/callbacks/callbacks.dart';
-import 'package:fiatpe_payments_sdk/src/utils/exts/time_ext.dart';
 import 'package:fiatpe_payments_sdk/src/utils/log/logging.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -123,6 +122,7 @@ class _ProcessingPaymentScreenUI extends StatelessWidget {
                           title: "Processing Your Payment",
                           description:
                               "Your payment request has been initiated. Please hold on while we process it.",
+                          showOkayButton: false,
                         );
                       case ProcessingStageTwoState():
                         return const _PaymentNextStageUI(

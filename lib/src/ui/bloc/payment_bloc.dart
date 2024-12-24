@@ -1,11 +1,8 @@
-import 'dart:ffi';
 
 import 'package:bloc/bloc.dart';
 import 'package:fiatpe_payments_sdk/fiatpe_payments_sdk.dart';
 import 'package:fiatpe_payments_sdk/src/fiatpe_service/keys.dart';
-import 'package:fiatpe_payments_sdk/src/fiatpe_service/models/payment_params.dart';
 import 'package:fiatpe_payments_sdk/src/ui/event/bloc/fiat_pe_bloc.dart';
-import 'package:fiatpe_payments_sdk/src/upi/helper/upi_app.dart';
 import 'package:fiatpe_payments_sdk/src/upi/upi_transaction_manager.dart';
 import 'package:fiatpe_payments_sdk/src/utils/helper/result.dart';
 import 'package:fiatpe_payments_sdk/src/utils/log/logging.dart';

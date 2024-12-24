@@ -19,7 +19,6 @@ class HomeTimerBloc extends Bloc<HomeTimerEvent, HomeTimerState> {
 
   DateTime? _backgroundedAt;
   int _secondsBackgroundedAt = 0;
-  bool _paused = false;
   bool _isFinished = false;
 
   HomeTimerBloc() : super(const HomeTimerState.updated(duration: Duration(seconds: _totalSeconds))) {
@@ -57,12 +56,10 @@ class HomeTimerBloc extends Bloc<HomeTimerEvent, HomeTimerState> {
     _backgroundedAt = DateTime.now();
     _secondsBackgroundedAt = _remainingSeconds;
     _timer?.cancel();
-    _paused = true;
   }
 
   void resumeTimer() {
     logger.i("App State Changed to ====> FORE_GROUND");
-    _paused = false;
     if (_backgroundedAt != null) {
       _restartTimeTicker(_backgroundedAt!);
     }
