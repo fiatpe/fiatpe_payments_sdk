@@ -158,7 +158,7 @@ class CustomVpaTimerWidget extends StatelessWidget {
               ),
               padding: const EdgeInsets.symmetric(vertical: 6, horizontal: 12),
               child: Image.asset(
-                "assets/images/fiatpe_logo_full.png",
+                "assets/images/fp_logo_transparent.png",
                 package: "fiatpe_payments_sdk",
                 height: 18,
                 fit: BoxFit.cover,
