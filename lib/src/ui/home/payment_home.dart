@@ -79,7 +79,6 @@ class _PaymentHomeUi extends StatelessWidget {
   final TextEditingController vpaController;
 
   const _PaymentHomeUi({
-    super.key,
     required this.state,
     required this.paymentState,
     required this.vpaController,
@@ -150,7 +149,7 @@ class _PaymentHomeUi extends StatelessWidget {
                                   color: Theme.of(context).colorScheme.surface,
                                   borderRadius: BorderRadius.circular(24),
                                 ),
-                                padding: EdgeInsets.all(2),
+                                padding: const EdgeInsets.all(2),
                                 child: const Icon(
                                   Icons.close,
                                   size: 20,
@@ -212,7 +211,7 @@ class _PaymentHomeUi extends StatelessWidget {
                                   width: double.infinity,
                                   child: Column(
                                     children: [
-                                      HomeTimerWidget(),
+                                      const HomeTimerWidget(),
                                       Padding(
                                         padding: const EdgeInsets.symmetric(
                                           horizontal: 20,
@@ -375,7 +374,6 @@ class _PaymentHomeUi extends StatelessWidget {
 
 class _PayNowButton extends StatelessWidget {
   const _PayNowButton({
-    super.key,
     required this.state,
     required this.paymentState,
     required this.vpaController,
@@ -441,7 +439,6 @@ class _PayNowButton extends StatelessWidget {
 
 class _CustomVpaRadioButton extends StatelessWidget {
   const _CustomVpaRadioButton({
-    super.key,
     required this.state,
   });
 
@@ -491,7 +488,6 @@ class _CustomVpaRadioButton extends StatelessWidget {
 
 class _UpiAppItemView extends StatelessWidget {
   const _UpiAppItemView({
-    super.key,
     required this.app,
     required this.state,
   });
@@ -565,7 +561,6 @@ class _CustomVpaView extends StatelessWidget {
   final TextEditingController vpaController;
 
   const _CustomVpaView({
-    super.key,
     required this.verified,
     required this.upiName,
     required this.vpaController,
@@ -665,7 +660,6 @@ class _CustomVpaView extends StatelessWidget {
 
 class _RadioButton extends StatelessWidget {
   const _RadioButton({
-    super.key,
     required this.selected,
   });
 

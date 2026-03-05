@@ -44,7 +44,6 @@ class _ProcessingPaymentScreenUI extends StatelessWidget {
   final PaymentMode mode;
 
   const _ProcessingPaymentScreenUI({
-    super.key,
     required this.paymentState,
     required this.mode,
   });
@@ -166,7 +165,6 @@ class _SuccessFailedView extends StatelessWidget {
   final String animatedAsset;
 
   const _SuccessFailedView({
-    super.key,
     required this.message,
     required this.animatedAsset,
   });
@@ -211,7 +209,6 @@ class _PaymentStageUi extends StatelessWidget {
   final bool showOkayButton;
 
   const _PaymentStageUi({
-    super.key,
     required this.title,
     required this.description,
     this.showOkayButton = false,
@@ -285,7 +282,6 @@ class _PaymentNextStageUI extends StatelessWidget {
   final bool showOkayButton;
 
   const _PaymentNextStageUI({
-    super.key,
     required this.title,
     required this.description,
     this.showOkayButton = false,

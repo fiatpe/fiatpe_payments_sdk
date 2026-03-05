@@ -6,7 +6,7 @@ final logger = Logger(
       ? PrefixPrinter(
           PrettyPrinter(
             colors: true,
-            printTime: true,
+            dateTimeFormat: DateTimeFormat.onlyTimeAndSinceStart,
           ),
         )
       : null,
@@ -17,7 +17,7 @@ final logger = Logger(
 class _FiatPeDevFilter extends LogFilter {
 
   @override
-  Level get level => Level.verbose;
+  Level get level => Level.trace;
 
   @override
   bool shouldLog(LogEvent event) {

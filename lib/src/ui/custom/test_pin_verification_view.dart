@@ -322,7 +322,6 @@ class _BackSpaceButton extends StatelessWidget {
   final VoidCallback onTap;
 
   const _BackSpaceButton({
-    super.key,
     required this.onTap,
   });
 
@@ -350,7 +349,6 @@ class _SubmitButton extends StatelessWidget {
   final VoidCallback onTap;
 
   const _SubmitButton({
-    super.key,
     required this.onTap,
   });
 
