@@ -6,7 +6,7 @@ part of 'upi_app.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$UPIAppImpl _$$UPIAppImplFromJson(Map<String, dynamic> json) => _$UPIAppImpl(
+_UPIApp _$UPIAppFromJson(Map<String, dynamic> json) => _UPIApp(
       scheme: json['scheme'] as String,
       androidPackageName: json['androidPackageName'] as String,
       iosBundleId: json['iosBundleId'] as String,
@@ -16,8 +16,7 @@ _$UPIAppImpl _$$UPIAppImplFromJson(Map<String, dynamic> json) => _$UPIAppImpl(
       icon: json['icon'] as String?,
     );
 
-Map<String, dynamic> _$$UPIAppImplToJson(_$UPIAppImpl instance) =>
-    <String, dynamic>{
+Map<String, dynamic> _$UPIAppToJson(_UPIApp instance) => <String, dynamic>{
       'scheme': instance.scheme,
       'androidPackageName': instance.androidPackageName,
       'iosBundleId': instance.iosBundleId,

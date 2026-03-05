@@ -6,8 +6,8 @@ part of 'payment_params.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$PaymentParamsImpl _$$PaymentParamsImplFromJson(Map<String, dynamic> json) =>
-    _$PaymentParamsImpl(
+_PaymentParams _$PaymentParamsFromJson(Map<String, dynamic> json) =>
+    _PaymentParams(
       transactionId: json['transactionId'] as String,
       amount: (json['amount'] as num).toDouble(),
       customerName: json['customerName'] as String,
@@ -21,7 +21,7 @@ _$PaymentParamsImpl _$$PaymentParamsImplFromJson(Map<String, dynamic> json) =>
       udf5: json['udf5'] as String? ?? "",
     );
 
-Map<String, dynamic> _$$PaymentParamsImplToJson(_$PaymentParamsImpl instance) =>
+Map<String, dynamic> _$PaymentParamsToJson(_PaymentParams instance) =>
     <String, dynamic>{
       'transactionId': instance.transactionId,
       'amount': instance.amount,

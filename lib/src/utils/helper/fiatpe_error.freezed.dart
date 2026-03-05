@@ -1,5 +1,5 @@
-// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// coverage:ignore-file
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
@@ -9,71 +9,90 @@ part of 'fiatpe_error.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// dart format off
 T _$identity<T>(T value) => value;
-
-final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$FiatPeError {
-  String get message => throw _privateConstructorUsedError;
-  Exception? get e => throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function(String message, dynamic data, Exception? e) api,
-    required TResult Function(String message, Exception? e) connection,
-    required TResult Function(String message, Exception? e) timeout,
-    required TResult Function(String message, Exception? e) server,
-    required TResult Function(String message, Exception? e) auth,
-    required TResult Function(String message, Exception? e) badCertificate,
-    required TResult Function(String message, Exception? e) unknown,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(String message, dynamic data, Exception? e)? api,
-    TResult? Function(String message, Exception? e)? connection,
-    TResult? Function(String message, Exception? e)? timeout,
-    TResult? Function(String message, Exception? e)? server,
-    TResult? Function(String message, Exception? e)? auth,
-    TResult? Function(String message, Exception? e)? badCertificate,
-    TResult? Function(String message, Exception? e)? unknown,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function(String message, dynamic data, Exception? e)? api,
-    TResult Function(String message, Exception? e)? connection,
-    TResult Function(String message, Exception? e)? timeout,
-    TResult Function(String message, Exception? e)? server,
-    TResult Function(String message, Exception? e)? auth,
-    TResult Function(String message, Exception? e)? badCertificate,
-    TResult Function(String message, Exception? e)? unknown,
-    required TResult orElse(),
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(ApiError value) api,
-    required TResult Function(FiatPeConnectionError value) connection,
-    required TResult Function(FiatPeTimeoutError value) timeout,
-    required TResult Function(FiatPeServerError value) server,
-    required TResult Function(FiatPeAuthError value) auth,
-    required TResult Function(FiatPeBadCertificate value) badCertificate,
-    required TResult Function(FiatPeUnknownError value) unknown,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(ApiError value)? api,
-    TResult? Function(FiatPeConnectionError value)? connection,
-    TResult? Function(FiatPeTimeoutError value)? timeout,
-    TResult? Function(FiatPeServerError value)? server,
-    TResult? Function(FiatPeAuthError value)? auth,
-    TResult? Function(FiatPeBadCertificate value)? badCertificate,
-    TResult? Function(FiatPeUnknownError value)? unknown,
-  }) =>
-      throw _privateConstructorUsedError;
+  String get message;
+  Exception? get e;
+
+  /// Create a copy of FiatPeError
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $FiatPeErrorCopyWith<FiatPeError> get copyWith =>
+      _$FiatPeErrorCopyWithImpl<FiatPeError>(this as FiatPeError, _$identity);
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is FiatPeError &&
+            (identical(other.message, message) || other.message == message) &&
+            (identical(other.e, e) || other.e == e));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, message, e);
+
+  @override
+  String toString() {
+    return 'FiatPeError(message: $message, e: $e)';
+  }
+}
+
+/// @nodoc
+abstract mixin class $FiatPeErrorCopyWith<$Res> {
+  factory $FiatPeErrorCopyWith(
+          FiatPeError value, $Res Function(FiatPeError) _then) =
+      _$FiatPeErrorCopyWithImpl;
+  @useResult
+  $Res call({String message, Exception? e});
+}
+
+/// @nodoc
+class _$FiatPeErrorCopyWithImpl<$Res> implements $FiatPeErrorCopyWith<$Res> {
+  _$FiatPeErrorCopyWithImpl(this._self, this._then);
+
+  final FiatPeError _self;
+  final $Res Function(FiatPeError) _then;
+
+  /// Create a copy of FiatPeError
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? message = null,
+    Object? e = freezed,
+  }) {
+    return _then(_self.copyWith(
+      message: null == message
+          ? _self.message
+          : message // ignore: cast_nullable_to_non_nullable
+              as String,
+      e: freezed == e
+          ? _self.e
+          : e // ignore: cast_nullable_to_non_nullable
+              as Exception?,
+    ));
+  }
+}
+
+/// Adds pattern-matching-related methods to [FiatPeError].
+extension FiatPeErrorPatterns on FiatPeError {
+  /// A variant of `map` that fallback to returning `orElse`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(ApiError value)? api,
@@ -84,118 +103,268 @@ mixin _$FiatPeError {
     TResult Function(FiatPeBadCertificate value)? badCertificate,
     TResult Function(FiatPeUnknownError value)? unknown,
     required TResult orElse(),
-  }) =>
-      throw _privateConstructorUsedError;
-
-  @JsonKey(ignore: true)
-  $FiatPeErrorCopyWith<FiatPeError> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class $FiatPeErrorCopyWith<$Res> {
-  factory $FiatPeErrorCopyWith(
-          FiatPeError value, $Res Function(FiatPeError) then) =
-      _$FiatPeErrorCopyWithImpl<$Res, FiatPeError>;
-  @useResult
-  $Res call({String message, Exception? e});
-}
-
-/// @nodoc
-class _$FiatPeErrorCopyWithImpl<$Res, $Val extends FiatPeError>
-    implements $FiatPeErrorCopyWith<$Res> {
-  _$FiatPeErrorCopyWithImpl(this._value, this._then);
-
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? message = null,
-    Object? e = freezed,
   }) {
-    return _then(_value.copyWith(
-      message: null == message
-          ? _value.message
-          : message // ignore: cast_nullable_to_non_nullable
-              as String,
-      e: freezed == e
-          ? _value.e
-          : e // ignore: cast_nullable_to_non_nullable
-              as Exception?,
-    ) as $Val);
+    final _that = this;
+    switch (_that) {
+      case ApiError() when api != null:
+        return api(_that);
+      case FiatPeConnectionError() when connection != null:
+        return connection(_that);
+      case FiatPeTimeoutError() when timeout != null:
+        return timeout(_that);
+      case FiatPeServerError() when server != null:
+        return server(_that);
+      case FiatPeAuthError() when auth != null:
+        return auth(_that);
+      case FiatPeBadCertificate() when badCertificate != null:
+        return badCertificate(_that);
+      case FiatPeUnknownError() when unknown != null:
+        return unknown(_that);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// Callbacks receives the raw object, upcasted.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case final Subclass2 value:
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(ApiError value) api,
+    required TResult Function(FiatPeConnectionError value) connection,
+    required TResult Function(FiatPeTimeoutError value) timeout,
+    required TResult Function(FiatPeServerError value) server,
+    required TResult Function(FiatPeAuthError value) auth,
+    required TResult Function(FiatPeBadCertificate value) badCertificate,
+    required TResult Function(FiatPeUnknownError value) unknown,
+  }) {
+    final _that = this;
+    switch (_that) {
+      case ApiError():
+        return api(_that);
+      case FiatPeConnectionError():
+        return connection(_that);
+      case FiatPeTimeoutError():
+        return timeout(_that);
+      case FiatPeServerError():
+        return server(_that);
+      case FiatPeAuthError():
+        return auth(_that);
+      case FiatPeBadCertificate():
+        return badCertificate(_that);
+      case FiatPeUnknownError():
+        return unknown(_that);
+    }
+  }
+
+  /// A variant of `map` that fallback to returning `null`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(ApiError value)? api,
+    TResult? Function(FiatPeConnectionError value)? connection,
+    TResult? Function(FiatPeTimeoutError value)? timeout,
+    TResult? Function(FiatPeServerError value)? server,
+    TResult? Function(FiatPeAuthError value)? auth,
+    TResult? Function(FiatPeBadCertificate value)? badCertificate,
+    TResult? Function(FiatPeUnknownError value)? unknown,
+  }) {
+    final _that = this;
+    switch (_that) {
+      case ApiError() when api != null:
+        return api(_that);
+      case FiatPeConnectionError() when connection != null:
+        return connection(_that);
+      case FiatPeTimeoutError() when timeout != null:
+        return timeout(_that);
+      case FiatPeServerError() when server != null:
+        return server(_that);
+      case FiatPeAuthError() when auth != null:
+        return auth(_that);
+      case FiatPeBadCertificate() when badCertificate != null:
+        return badCertificate(_that);
+      case FiatPeUnknownError() when unknown != null:
+        return unknown(_that);
+      case _:
+        return null;
+    }
+  }
+
+  /// A variant of `when` that fallback to an `orElse` callback.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String message, dynamic data, Exception? e)? api,
+    TResult Function(String message, Exception? e)? connection,
+    TResult Function(String message, Exception? e)? timeout,
+    TResult Function(String message, Exception? e)? server,
+    TResult Function(String message, Exception? e)? auth,
+    TResult Function(String message, Exception? e)? badCertificate,
+    TResult Function(String message, Exception? e)? unknown,
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case ApiError() when api != null:
+        return api(_that.message, _that.data, _that.e);
+      case FiatPeConnectionError() when connection != null:
+        return connection(_that.message, _that.e);
+      case FiatPeTimeoutError() when timeout != null:
+        return timeout(_that.message, _that.e);
+      case FiatPeServerError() when server != null:
+        return server(_that.message, _that.e);
+      case FiatPeAuthError() when auth != null:
+        return auth(_that.message, _that.e);
+      case FiatPeBadCertificate() when badCertificate != null:
+        return badCertificate(_that.message, _that.e);
+      case FiatPeUnknownError() when unknown != null:
+        return unknown(_that.message, _that.e);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// As opposed to `map`, this offers destructuring.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case Subclass2(:final field2):
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(String message, dynamic data, Exception? e) api,
+    required TResult Function(String message, Exception? e) connection,
+    required TResult Function(String message, Exception? e) timeout,
+    required TResult Function(String message, Exception? e) server,
+    required TResult Function(String message, Exception? e) auth,
+    required TResult Function(String message, Exception? e) badCertificate,
+    required TResult Function(String message, Exception? e) unknown,
+  }) {
+    final _that = this;
+    switch (_that) {
+      case ApiError():
+        return api(_that.message, _that.data, _that.e);
+      case FiatPeConnectionError():
+        return connection(_that.message, _that.e);
+      case FiatPeTimeoutError():
+        return timeout(_that.message, _that.e);
+      case FiatPeServerError():
+        return server(_that.message, _that.e);
+      case FiatPeAuthError():
+        return auth(_that.message, _that.e);
+      case FiatPeBadCertificate():
+        return badCertificate(_that.message, _that.e);
+      case FiatPeUnknownError():
+        return unknown(_that.message, _that.e);
+    }
+  }
+
+  /// A variant of `when` that fallback to returning `null`
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(String message, dynamic data, Exception? e)? api,
+    TResult? Function(String message, Exception? e)? connection,
+    TResult? Function(String message, Exception? e)? timeout,
+    TResult? Function(String message, Exception? e)? server,
+    TResult? Function(String message, Exception? e)? auth,
+    TResult? Function(String message, Exception? e)? badCertificate,
+    TResult? Function(String message, Exception? e)? unknown,
+  }) {
+    final _that = this;
+    switch (_that) {
+      case ApiError() when api != null:
+        return api(_that.message, _that.data, _that.e);
+      case FiatPeConnectionError() when connection != null:
+        return connection(_that.message, _that.e);
+      case FiatPeTimeoutError() when timeout != null:
+        return timeout(_that.message, _that.e);
+      case FiatPeServerError() when server != null:
+        return server(_that.message, _that.e);
+      case FiatPeAuthError() when auth != null:
+        return auth(_that.message, _that.e);
+      case FiatPeBadCertificate() when badCertificate != null:
+        return badCertificate(_that.message, _that.e);
+      case FiatPeUnknownError() when unknown != null:
+        return unknown(_that.message, _that.e);
+      case _:
+        return null;
+    }
   }
 }
 
 /// @nodoc
-abstract class _$$ApiErrorImplCopyWith<$Res>
-    implements $FiatPeErrorCopyWith<$Res> {
-  factory _$$ApiErrorImplCopyWith(
-          _$ApiErrorImpl value, $Res Function(_$ApiErrorImpl) then) =
-      __$$ApiErrorImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call({String message, dynamic data, Exception? e});
-}
 
-/// @nodoc
-class __$$ApiErrorImplCopyWithImpl<$Res>
-    extends _$FiatPeErrorCopyWithImpl<$Res, _$ApiErrorImpl>
-    implements _$$ApiErrorImplCopyWith<$Res> {
-  __$$ApiErrorImplCopyWithImpl(
-      _$ApiErrorImpl _value, $Res Function(_$ApiErrorImpl) _then)
-      : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? message = null,
-    Object? data = freezed,
-    Object? e = freezed,
-  }) {
-    return _then(_$ApiErrorImpl(
-      message: null == message
-          ? _value.message
-          : message // ignore: cast_nullable_to_non_nullable
-              as String,
-      data: freezed == data
-          ? _value.data
-          : data // ignore: cast_nullable_to_non_nullable
-              as dynamic,
-      e: freezed == e
-          ? _value.e
-          : e // ignore: cast_nullable_to_non_nullable
-              as Exception?,
-    ));
-  }
-}
-
-/// @nodoc
-
-class _$ApiErrorImpl implements ApiError {
-  const _$ApiErrorImpl({required this.message, this.data, this.e = null});
+class ApiError implements FiatPeError {
+  const ApiError({required this.message, this.data, this.e = null});
 
   @override
   final String message;
-  @override
   final dynamic data;
   @override
   @JsonKey()
   final Exception? e;
 
+  /// Create a copy of FiatPeError
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  String toString() {
-    return 'FiatPeError.api(message: $message, data: $data, e: $e)';
-  }
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $ApiErrorCopyWith<ApiError> get copyWith =>
+      _$ApiErrorCopyWithImpl<ApiError>(this, _$identity);
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$ApiErrorImpl &&
+            other is ApiError &&
             (identical(other.message, message) || other.message == message) &&
             const DeepCollectionEquality().equals(other.data, data) &&
             (identical(other.e, e) || other.e == e));
@@ -205,155 +374,49 @@ class _$ApiErrorImpl implements ApiError {
   int get hashCode => Object.hash(
       runtimeType, message, const DeepCollectionEquality().hash(data), e);
 
-  @JsonKey(ignore: true)
   @override
-  @pragma('vm:prefer-inline')
-  _$$ApiErrorImplCopyWith<_$ApiErrorImpl> get copyWith =>
-      __$$ApiErrorImplCopyWithImpl<_$ApiErrorImpl>(this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function(String message, dynamic data, Exception? e) api,
-    required TResult Function(String message, Exception? e) connection,
-    required TResult Function(String message, Exception? e) timeout,
-    required TResult Function(String message, Exception? e) server,
-    required TResult Function(String message, Exception? e) auth,
-    required TResult Function(String message, Exception? e) badCertificate,
-    required TResult Function(String message, Exception? e) unknown,
-  }) {
-    return api(message, data, e);
+  String toString() {
+    return 'FiatPeError.api(message: $message, data: $data, e: $e)';
   }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(String message, dynamic data, Exception? e)? api,
-    TResult? Function(String message, Exception? e)? connection,
-    TResult? Function(String message, Exception? e)? timeout,
-    TResult? Function(String message, Exception? e)? server,
-    TResult? Function(String message, Exception? e)? auth,
-    TResult? Function(String message, Exception? e)? badCertificate,
-    TResult? Function(String message, Exception? e)? unknown,
-  }) {
-    return api?.call(message, data, e);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function(String message, dynamic data, Exception? e)? api,
-    TResult Function(String message, Exception? e)? connection,
-    TResult Function(String message, Exception? e)? timeout,
-    TResult Function(String message, Exception? e)? server,
-    TResult Function(String message, Exception? e)? auth,
-    TResult Function(String message, Exception? e)? badCertificate,
-    TResult Function(String message, Exception? e)? unknown,
-    required TResult orElse(),
-  }) {
-    if (api != null) {
-      return api(message, data, e);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(ApiError value) api,
-    required TResult Function(FiatPeConnectionError value) connection,
-    required TResult Function(FiatPeTimeoutError value) timeout,
-    required TResult Function(FiatPeServerError value) server,
-    required TResult Function(FiatPeAuthError value) auth,
-    required TResult Function(FiatPeBadCertificate value) badCertificate,
-    required TResult Function(FiatPeUnknownError value) unknown,
-  }) {
-    return api(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(ApiError value)? api,
-    TResult? Function(FiatPeConnectionError value)? connection,
-    TResult? Function(FiatPeTimeoutError value)? timeout,
-    TResult? Function(FiatPeServerError value)? server,
-    TResult? Function(FiatPeAuthError value)? auth,
-    TResult? Function(FiatPeBadCertificate value)? badCertificate,
-    TResult? Function(FiatPeUnknownError value)? unknown,
-  }) {
-    return api?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(ApiError value)? api,
-    TResult Function(FiatPeConnectionError value)? connection,
-    TResult Function(FiatPeTimeoutError value)? timeout,
-    TResult Function(FiatPeServerError value)? server,
-    TResult Function(FiatPeAuthError value)? auth,
-    TResult Function(FiatPeBadCertificate value)? badCertificate,
-    TResult Function(FiatPeUnknownError value)? unknown,
-    required TResult orElse(),
-  }) {
-    if (api != null) {
-      return api(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class ApiError implements FiatPeError {
-  const factory ApiError(
-      {required final String message,
-      final dynamic data,
-      final Exception? e}) = _$ApiErrorImpl;
-
-  @override
-  String get message;
-  dynamic get data;
-  @override
-  Exception? get e;
-  @override
-  @JsonKey(ignore: true)
-  _$$ApiErrorImplCopyWith<_$ApiErrorImpl> get copyWith =>
-      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$FiatPeConnectionErrorImplCopyWith<$Res>
+abstract mixin class $ApiErrorCopyWith<$Res>
     implements $FiatPeErrorCopyWith<$Res> {
-  factory _$$FiatPeConnectionErrorImplCopyWith(
-          _$FiatPeConnectionErrorImpl value,
-          $Res Function(_$FiatPeConnectionErrorImpl) then) =
-      __$$FiatPeConnectionErrorImplCopyWithImpl<$Res>;
+  factory $ApiErrorCopyWith(ApiError value, $Res Function(ApiError) _then) =
+      _$ApiErrorCopyWithImpl;
   @override
   @useResult
-  $Res call({String message, Exception? e});
+  $Res call({String message, dynamic data, Exception? e});
 }
 
 /// @nodoc
-class __$$FiatPeConnectionErrorImplCopyWithImpl<$Res>
-    extends _$FiatPeErrorCopyWithImpl<$Res, _$FiatPeConnectionErrorImpl>
-    implements _$$FiatPeConnectionErrorImplCopyWith<$Res> {
-  __$$FiatPeConnectionErrorImplCopyWithImpl(_$FiatPeConnectionErrorImpl _value,
-      $Res Function(_$FiatPeConnectionErrorImpl) _then)
-      : super(_value, _then);
+class _$ApiErrorCopyWithImpl<$Res> implements $ApiErrorCopyWith<$Res> {
+  _$ApiErrorCopyWithImpl(this._self, this._then);
 
-  @pragma('vm:prefer-inline')
+  final ApiError _self;
+  final $Res Function(ApiError) _then;
+
+  /// Create a copy of FiatPeError
+  /// with the given fields replaced by the non-null parameter values.
   @override
+  @pragma('vm:prefer-inline')
   $Res call({
     Object? message = null,
+    Object? data = freezed,
     Object? e = freezed,
   }) {
-    return _then(_$FiatPeConnectionErrorImpl(
+    return _then(ApiError(
       message: null == message
-          ? _value.message
+          ? _self.message
           : message // ignore: cast_nullable_to_non_nullable
               as String,
+      data: freezed == data
+          ? _self.data
+          : data // ignore: cast_nullable_to_non_nullable
+              as dynamic,
       e: freezed == e
-          ? _value.e
+          ? _self.e
           : e // ignore: cast_nullable_to_non_nullable
               as Exception?,
     ));
@@ -362,8 +425,8 @@ class __$$FiatPeConnectionErrorImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$FiatPeConnectionErrorImpl implements FiatPeConnectionError {
-  const _$FiatPeConnectionErrorImpl(
+class FiatPeConnectionError implements FiatPeError {
+  const FiatPeConnectionError(
       {this.message = "Connection Error.", this.e = null});
 
   @override
@@ -373,16 +436,20 @@ class _$FiatPeConnectionErrorImpl implements FiatPeConnectionError {
   @JsonKey()
   final Exception? e;
 
+  /// Create a copy of FiatPeError
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  String toString() {
-    return 'FiatPeError.connection(message: $message, e: $e)';
-  }
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $FiatPeConnectionErrorCopyWith<FiatPeConnectionError> get copyWith =>
+      _$FiatPeConnectionErrorCopyWithImpl<FiatPeConnectionError>(
+          this, _$identity);
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$FiatPeConnectionErrorImpl &&
+            other is FiatPeConnectionError &&
             (identical(other.message, message) || other.message == message) &&
             (identical(other.e, e) || other.e == e));
   }
@@ -390,152 +457,46 @@ class _$FiatPeConnectionErrorImpl implements FiatPeConnectionError {
   @override
   int get hashCode => Object.hash(runtimeType, message, e);
 
-  @JsonKey(ignore: true)
   @override
-  @pragma('vm:prefer-inline')
-  _$$FiatPeConnectionErrorImplCopyWith<_$FiatPeConnectionErrorImpl>
-      get copyWith => __$$FiatPeConnectionErrorImplCopyWithImpl<
-          _$FiatPeConnectionErrorImpl>(this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function(String message, dynamic data, Exception? e) api,
-    required TResult Function(String message, Exception? e) connection,
-    required TResult Function(String message, Exception? e) timeout,
-    required TResult Function(String message, Exception? e) server,
-    required TResult Function(String message, Exception? e) auth,
-    required TResult Function(String message, Exception? e) badCertificate,
-    required TResult Function(String message, Exception? e) unknown,
-  }) {
-    return connection(message, e);
+  String toString() {
+    return 'FiatPeError.connection(message: $message, e: $e)';
   }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(String message, dynamic data, Exception? e)? api,
-    TResult? Function(String message, Exception? e)? connection,
-    TResult? Function(String message, Exception? e)? timeout,
-    TResult? Function(String message, Exception? e)? server,
-    TResult? Function(String message, Exception? e)? auth,
-    TResult? Function(String message, Exception? e)? badCertificate,
-    TResult? Function(String message, Exception? e)? unknown,
-  }) {
-    return connection?.call(message, e);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function(String message, dynamic data, Exception? e)? api,
-    TResult Function(String message, Exception? e)? connection,
-    TResult Function(String message, Exception? e)? timeout,
-    TResult Function(String message, Exception? e)? server,
-    TResult Function(String message, Exception? e)? auth,
-    TResult Function(String message, Exception? e)? badCertificate,
-    TResult Function(String message, Exception? e)? unknown,
-    required TResult orElse(),
-  }) {
-    if (connection != null) {
-      return connection(message, e);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(ApiError value) api,
-    required TResult Function(FiatPeConnectionError value) connection,
-    required TResult Function(FiatPeTimeoutError value) timeout,
-    required TResult Function(FiatPeServerError value) server,
-    required TResult Function(FiatPeAuthError value) auth,
-    required TResult Function(FiatPeBadCertificate value) badCertificate,
-    required TResult Function(FiatPeUnknownError value) unknown,
-  }) {
-    return connection(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(ApiError value)? api,
-    TResult? Function(FiatPeConnectionError value)? connection,
-    TResult? Function(FiatPeTimeoutError value)? timeout,
-    TResult? Function(FiatPeServerError value)? server,
-    TResult? Function(FiatPeAuthError value)? auth,
-    TResult? Function(FiatPeBadCertificate value)? badCertificate,
-    TResult? Function(FiatPeUnknownError value)? unknown,
-  }) {
-    return connection?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(ApiError value)? api,
-    TResult Function(FiatPeConnectionError value)? connection,
-    TResult Function(FiatPeTimeoutError value)? timeout,
-    TResult Function(FiatPeServerError value)? server,
-    TResult Function(FiatPeAuthError value)? auth,
-    TResult Function(FiatPeBadCertificate value)? badCertificate,
-    TResult Function(FiatPeUnknownError value)? unknown,
-    required TResult orElse(),
-  }) {
-    if (connection != null) {
-      return connection(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class FiatPeConnectionError implements FiatPeError {
-  const factory FiatPeConnectionError(
-      {final String message, final Exception? e}) = _$FiatPeConnectionErrorImpl;
-
-  @override
-  String get message;
-  @override
-  Exception? get e;
-  @override
-  @JsonKey(ignore: true)
-  _$$FiatPeConnectionErrorImplCopyWith<_$FiatPeConnectionErrorImpl>
-      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$FiatPeTimeoutErrorImplCopyWith<$Res>
+abstract mixin class $FiatPeConnectionErrorCopyWith<$Res>
     implements $FiatPeErrorCopyWith<$Res> {
-  factory _$$FiatPeTimeoutErrorImplCopyWith(_$FiatPeTimeoutErrorImpl value,
-          $Res Function(_$FiatPeTimeoutErrorImpl) then) =
-      __$$FiatPeTimeoutErrorImplCopyWithImpl<$Res>;
+  factory $FiatPeConnectionErrorCopyWith(FiatPeConnectionError value,
+          $Res Function(FiatPeConnectionError) _then) =
+      _$FiatPeConnectionErrorCopyWithImpl;
   @override
   @useResult
   $Res call({String message, Exception? e});
 }
 
 /// @nodoc
-class __$$FiatPeTimeoutErrorImplCopyWithImpl<$Res>
-    extends _$FiatPeErrorCopyWithImpl<$Res, _$FiatPeTimeoutErrorImpl>
-    implements _$$FiatPeTimeoutErrorImplCopyWith<$Res> {
-  __$$FiatPeTimeoutErrorImplCopyWithImpl(_$FiatPeTimeoutErrorImpl _value,
-      $Res Function(_$FiatPeTimeoutErrorImpl) _then)
-      : super(_value, _then);
+class _$FiatPeConnectionErrorCopyWithImpl<$Res>
+    implements $FiatPeConnectionErrorCopyWith<$Res> {
+  _$FiatPeConnectionErrorCopyWithImpl(this._self, this._then);
 
-  @pragma('vm:prefer-inline')
+  final FiatPeConnectionError _self;
+  final $Res Function(FiatPeConnectionError) _then;
+
+  /// Create a copy of FiatPeError
+  /// with the given fields replaced by the non-null parameter values.
   @override
+  @pragma('vm:prefer-inline')
   $Res call({
     Object? message = null,
     Object? e = freezed,
   }) {
-    return _then(_$FiatPeTimeoutErrorImpl(
+    return _then(FiatPeConnectionError(
       message: null == message
-          ? _value.message
+          ? _self.message
           : message // ignore: cast_nullable_to_non_nullable
               as String,
       e: freezed == e
-          ? _value.e
+          ? _self.e
           : e // ignore: cast_nullable_to_non_nullable
               as Exception?,
     ));
@@ -544,8 +505,8 @@ class __$$FiatPeTimeoutErrorImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$FiatPeTimeoutErrorImpl implements FiatPeTimeoutError {
-  const _$FiatPeTimeoutErrorImpl(
+class FiatPeTimeoutError implements FiatPeError {
+  const FiatPeTimeoutError(
       {this.message = "Connection timeout.", this.e = null});
 
   @override
@@ -555,16 +516,19 @@ class _$FiatPeTimeoutErrorImpl implements FiatPeTimeoutError {
   @JsonKey()
   final Exception? e;
 
+  /// Create a copy of FiatPeError
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  String toString() {
-    return 'FiatPeError.timeout(message: $message, e: $e)';
-  }
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $FiatPeTimeoutErrorCopyWith<FiatPeTimeoutError> get copyWith =>
+      _$FiatPeTimeoutErrorCopyWithImpl<FiatPeTimeoutError>(this, _$identity);
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$FiatPeTimeoutErrorImpl &&
+            other is FiatPeTimeoutError &&
             (identical(other.message, message) || other.message == message) &&
             (identical(other.e, e) || other.e == e));
   }
@@ -572,152 +536,46 @@ class _$FiatPeTimeoutErrorImpl implements FiatPeTimeoutError {
   @override
   int get hashCode => Object.hash(runtimeType, message, e);
 
-  @JsonKey(ignore: true)
   @override
-  @pragma('vm:prefer-inline')
-  _$$FiatPeTimeoutErrorImplCopyWith<_$FiatPeTimeoutErrorImpl> get copyWith =>
-      __$$FiatPeTimeoutErrorImplCopyWithImpl<_$FiatPeTimeoutErrorImpl>(
-          this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function(String message, dynamic data, Exception? e) api,
-    required TResult Function(String message, Exception? e) connection,
-    required TResult Function(String message, Exception? e) timeout,
-    required TResult Function(String message, Exception? e) server,
-    required TResult Function(String message, Exception? e) auth,
-    required TResult Function(String message, Exception? e) badCertificate,
-    required TResult Function(String message, Exception? e) unknown,
-  }) {
-    return timeout(message, e);
+  String toString() {
+    return 'FiatPeError.timeout(message: $message, e: $e)';
   }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(String message, dynamic data, Exception? e)? api,
-    TResult? Function(String message, Exception? e)? connection,
-    TResult? Function(String message, Exception? e)? timeout,
-    TResult? Function(String message, Exception? e)? server,
-    TResult? Function(String message, Exception? e)? auth,
-    TResult? Function(String message, Exception? e)? badCertificate,
-    TResult? Function(String message, Exception? e)? unknown,
-  }) {
-    return timeout?.call(message, e);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function(String message, dynamic data, Exception? e)? api,
-    TResult Function(String message, Exception? e)? connection,
-    TResult Function(String message, Exception? e)? timeout,
-    TResult Function(String message, Exception? e)? server,
-    TResult Function(String message, Exception? e)? auth,
-    TResult Function(String message, Exception? e)? badCertificate,
-    TResult Function(String message, Exception? e)? unknown,
-    required TResult orElse(),
-  }) {
-    if (timeout != null) {
-      return timeout(message, e);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(ApiError value) api,
-    required TResult Function(FiatPeConnectionError value) connection,
-    required TResult Function(FiatPeTimeoutError value) timeout,
-    required TResult Function(FiatPeServerError value) server,
-    required TResult Function(FiatPeAuthError value) auth,
-    required TResult Function(FiatPeBadCertificate value) badCertificate,
-    required TResult Function(FiatPeUnknownError value) unknown,
-  }) {
-    return timeout(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(ApiError value)? api,
-    TResult? Function(FiatPeConnectionError value)? connection,
-    TResult? Function(FiatPeTimeoutError value)? timeout,
-    TResult? Function(FiatPeServerError value)? server,
-    TResult? Function(FiatPeAuthError value)? auth,
-    TResult? Function(FiatPeBadCertificate value)? badCertificate,
-    TResult? Function(FiatPeUnknownError value)? unknown,
-  }) {
-    return timeout?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(ApiError value)? api,
-    TResult Function(FiatPeConnectionError value)? connection,
-    TResult Function(FiatPeTimeoutError value)? timeout,
-    TResult Function(FiatPeServerError value)? server,
-    TResult Function(FiatPeAuthError value)? auth,
-    TResult Function(FiatPeBadCertificate value)? badCertificate,
-    TResult Function(FiatPeUnknownError value)? unknown,
-    required TResult orElse(),
-  }) {
-    if (timeout != null) {
-      return timeout(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class FiatPeTimeoutError implements FiatPeError {
-  const factory FiatPeTimeoutError({final String message, final Exception? e}) =
-      _$FiatPeTimeoutErrorImpl;
-
-  @override
-  String get message;
-  @override
-  Exception? get e;
-  @override
-  @JsonKey(ignore: true)
-  _$$FiatPeTimeoutErrorImplCopyWith<_$FiatPeTimeoutErrorImpl> get copyWith =>
-      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$FiatPeServerErrorImplCopyWith<$Res>
+abstract mixin class $FiatPeTimeoutErrorCopyWith<$Res>
     implements $FiatPeErrorCopyWith<$Res> {
-  factory _$$FiatPeServerErrorImplCopyWith(_$FiatPeServerErrorImpl value,
-          $Res Function(_$FiatPeServerErrorImpl) then) =
-      __$$FiatPeServerErrorImplCopyWithImpl<$Res>;
+  factory $FiatPeTimeoutErrorCopyWith(
+          FiatPeTimeoutError value, $Res Function(FiatPeTimeoutError) _then) =
+      _$FiatPeTimeoutErrorCopyWithImpl;
   @override
   @useResult
   $Res call({String message, Exception? e});
 }
 
 /// @nodoc
-class __$$FiatPeServerErrorImplCopyWithImpl<$Res>
-    extends _$FiatPeErrorCopyWithImpl<$Res, _$FiatPeServerErrorImpl>
-    implements _$$FiatPeServerErrorImplCopyWith<$Res> {
-  __$$FiatPeServerErrorImplCopyWithImpl(_$FiatPeServerErrorImpl _value,
-      $Res Function(_$FiatPeServerErrorImpl) _then)
-      : super(_value, _then);
+class _$FiatPeTimeoutErrorCopyWithImpl<$Res>
+    implements $FiatPeTimeoutErrorCopyWith<$Res> {
+  _$FiatPeTimeoutErrorCopyWithImpl(this._self, this._then);
 
-  @pragma('vm:prefer-inline')
+  final FiatPeTimeoutError _self;
+  final $Res Function(FiatPeTimeoutError) _then;
+
+  /// Create a copy of FiatPeError
+  /// with the given fields replaced by the non-null parameter values.
   @override
+  @pragma('vm:prefer-inline')
   $Res call({
     Object? message = null,
     Object? e = freezed,
   }) {
-    return _then(_$FiatPeServerErrorImpl(
+    return _then(FiatPeTimeoutError(
       message: null == message
-          ? _value.message
+          ? _self.message
           : message // ignore: cast_nullable_to_non_nullable
               as String,
       e: freezed == e
-          ? _value.e
+          ? _self.e
           : e // ignore: cast_nullable_to_non_nullable
               as Exception?,
     ));
@@ -726,9 +584,8 @@ class __$$FiatPeServerErrorImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$FiatPeServerErrorImpl implements FiatPeServerError {
-  const _$FiatPeServerErrorImpl(
-      {this.message = "Server error.", this.e = null});
+class FiatPeServerError implements FiatPeError {
+  const FiatPeServerError({this.message = "Server error.", this.e = null});
 
   @override
   @JsonKey()
@@ -737,16 +594,19 @@ class _$FiatPeServerErrorImpl implements FiatPeServerError {
   @JsonKey()
   final Exception? e;
 
+  /// Create a copy of FiatPeError
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  String toString() {
-    return 'FiatPeError.server(message: $message, e: $e)';
-  }
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $FiatPeServerErrorCopyWith<FiatPeServerError> get copyWith =>
+      _$FiatPeServerErrorCopyWithImpl<FiatPeServerError>(this, _$identity);
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$FiatPeServerErrorImpl &&
+            other is FiatPeServerError &&
             (identical(other.message, message) || other.message == message) &&
             (identical(other.e, e) || other.e == e));
   }
@@ -754,152 +614,46 @@ class _$FiatPeServerErrorImpl implements FiatPeServerError {
   @override
   int get hashCode => Object.hash(runtimeType, message, e);
 
-  @JsonKey(ignore: true)
   @override
-  @pragma('vm:prefer-inline')
-  _$$FiatPeServerErrorImplCopyWith<_$FiatPeServerErrorImpl> get copyWith =>
-      __$$FiatPeServerErrorImplCopyWithImpl<_$FiatPeServerErrorImpl>(
-          this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function(String message, dynamic data, Exception? e) api,
-    required TResult Function(String message, Exception? e) connection,
-    required TResult Function(String message, Exception? e) timeout,
-    required TResult Function(String message, Exception? e) server,
-    required TResult Function(String message, Exception? e) auth,
-    required TResult Function(String message, Exception? e) badCertificate,
-    required TResult Function(String message, Exception? e) unknown,
-  }) {
-    return server(message, e);
+  String toString() {
+    return 'FiatPeError.server(message: $message, e: $e)';
   }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(String message, dynamic data, Exception? e)? api,
-    TResult? Function(String message, Exception? e)? connection,
-    TResult? Function(String message, Exception? e)? timeout,
-    TResult? Function(String message, Exception? e)? server,
-    TResult? Function(String message, Exception? e)? auth,
-    TResult? Function(String message, Exception? e)? badCertificate,
-    TResult? Function(String message, Exception? e)? unknown,
-  }) {
-    return server?.call(message, e);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function(String message, dynamic data, Exception? e)? api,
-    TResult Function(String message, Exception? e)? connection,
-    TResult Function(String message, Exception? e)? timeout,
-    TResult Function(String message, Exception? e)? server,
-    TResult Function(String message, Exception? e)? auth,
-    TResult Function(String message, Exception? e)? badCertificate,
-    TResult Function(String message, Exception? e)? unknown,
-    required TResult orElse(),
-  }) {
-    if (server != null) {
-      return server(message, e);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(ApiError value) api,
-    required TResult Function(FiatPeConnectionError value) connection,
-    required TResult Function(FiatPeTimeoutError value) timeout,
-    required TResult Function(FiatPeServerError value) server,
-    required TResult Function(FiatPeAuthError value) auth,
-    required TResult Function(FiatPeBadCertificate value) badCertificate,
-    required TResult Function(FiatPeUnknownError value) unknown,
-  }) {
-    return server(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(ApiError value)? api,
-    TResult? Function(FiatPeConnectionError value)? connection,
-    TResult? Function(FiatPeTimeoutError value)? timeout,
-    TResult? Function(FiatPeServerError value)? server,
-    TResult? Function(FiatPeAuthError value)? auth,
-    TResult? Function(FiatPeBadCertificate value)? badCertificate,
-    TResult? Function(FiatPeUnknownError value)? unknown,
-  }) {
-    return server?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(ApiError value)? api,
-    TResult Function(FiatPeConnectionError value)? connection,
-    TResult Function(FiatPeTimeoutError value)? timeout,
-    TResult Function(FiatPeServerError value)? server,
-    TResult Function(FiatPeAuthError value)? auth,
-    TResult Function(FiatPeBadCertificate value)? badCertificate,
-    TResult Function(FiatPeUnknownError value)? unknown,
-    required TResult orElse(),
-  }) {
-    if (server != null) {
-      return server(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class FiatPeServerError implements FiatPeError {
-  const factory FiatPeServerError({final String message, final Exception? e}) =
-      _$FiatPeServerErrorImpl;
-
-  @override
-  String get message;
-  @override
-  Exception? get e;
-  @override
-  @JsonKey(ignore: true)
-  _$$FiatPeServerErrorImplCopyWith<_$FiatPeServerErrorImpl> get copyWith =>
-      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$FiatPeAuthErrorImplCopyWith<$Res>
+abstract mixin class $FiatPeServerErrorCopyWith<$Res>
     implements $FiatPeErrorCopyWith<$Res> {
-  factory _$$FiatPeAuthErrorImplCopyWith(_$FiatPeAuthErrorImpl value,
-          $Res Function(_$FiatPeAuthErrorImpl) then) =
-      __$$FiatPeAuthErrorImplCopyWithImpl<$Res>;
+  factory $FiatPeServerErrorCopyWith(
+          FiatPeServerError value, $Res Function(FiatPeServerError) _then) =
+      _$FiatPeServerErrorCopyWithImpl;
   @override
   @useResult
   $Res call({String message, Exception? e});
 }
 
 /// @nodoc
-class __$$FiatPeAuthErrorImplCopyWithImpl<$Res>
-    extends _$FiatPeErrorCopyWithImpl<$Res, _$FiatPeAuthErrorImpl>
-    implements _$$FiatPeAuthErrorImplCopyWith<$Res> {
-  __$$FiatPeAuthErrorImplCopyWithImpl(
-      _$FiatPeAuthErrorImpl _value, $Res Function(_$FiatPeAuthErrorImpl) _then)
-      : super(_value, _then);
+class _$FiatPeServerErrorCopyWithImpl<$Res>
+    implements $FiatPeServerErrorCopyWith<$Res> {
+  _$FiatPeServerErrorCopyWithImpl(this._self, this._then);
 
-  @pragma('vm:prefer-inline')
+  final FiatPeServerError _self;
+  final $Res Function(FiatPeServerError) _then;
+
+  /// Create a copy of FiatPeError
+  /// with the given fields replaced by the non-null parameter values.
   @override
+  @pragma('vm:prefer-inline')
   $Res call({
     Object? message = null,
     Object? e = freezed,
   }) {
-    return _then(_$FiatPeAuthErrorImpl(
+    return _then(FiatPeServerError(
       message: null == message
-          ? _value.message
+          ? _self.message
           : message // ignore: cast_nullable_to_non_nullable
               as String,
       e: freezed == e
-          ? _value.e
+          ? _self.e
           : e // ignore: cast_nullable_to_non_nullable
               as Exception?,
     ));
@@ -908,8 +662,8 @@ class __$$FiatPeAuthErrorImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$FiatPeAuthErrorImpl implements FiatPeAuthError {
-  const _$FiatPeAuthErrorImpl(
+class FiatPeAuthError implements FiatPeError {
+  const FiatPeAuthError(
       {this.message = "Authentication failed.", this.e = null});
 
   @override
@@ -919,16 +673,19 @@ class _$FiatPeAuthErrorImpl implements FiatPeAuthError {
   @JsonKey()
   final Exception? e;
 
+  /// Create a copy of FiatPeError
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  String toString() {
-    return 'FiatPeError.auth(message: $message, e: $e)';
-  }
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $FiatPeAuthErrorCopyWith<FiatPeAuthError> get copyWith =>
+      _$FiatPeAuthErrorCopyWithImpl<FiatPeAuthError>(this, _$identity);
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$FiatPeAuthErrorImpl &&
+            other is FiatPeAuthError &&
             (identical(other.message, message) || other.message == message) &&
             (identical(other.e, e) || other.e == e));
   }
@@ -936,152 +693,46 @@ class _$FiatPeAuthErrorImpl implements FiatPeAuthError {
   @override
   int get hashCode => Object.hash(runtimeType, message, e);
 
-  @JsonKey(ignore: true)
   @override
-  @pragma('vm:prefer-inline')
-  _$$FiatPeAuthErrorImplCopyWith<_$FiatPeAuthErrorImpl> get copyWith =>
-      __$$FiatPeAuthErrorImplCopyWithImpl<_$FiatPeAuthErrorImpl>(
-          this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function(String message, dynamic data, Exception? e) api,
-    required TResult Function(String message, Exception? e) connection,
-    required TResult Function(String message, Exception? e) timeout,
-    required TResult Function(String message, Exception? e) server,
-    required TResult Function(String message, Exception? e) auth,
-    required TResult Function(String message, Exception? e) badCertificate,
-    required TResult Function(String message, Exception? e) unknown,
-  }) {
-    return auth(message, e);
+  String toString() {
+    return 'FiatPeError.auth(message: $message, e: $e)';
   }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(String message, dynamic data, Exception? e)? api,
-    TResult? Function(String message, Exception? e)? connection,
-    TResult? Function(String message, Exception? e)? timeout,
-    TResult? Function(String message, Exception? e)? server,
-    TResult? Function(String message, Exception? e)? auth,
-    TResult? Function(String message, Exception? e)? badCertificate,
-    TResult? Function(String message, Exception? e)? unknown,
-  }) {
-    return auth?.call(message, e);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function(String message, dynamic data, Exception? e)? api,
-    TResult Function(String message, Exception? e)? connection,
-    TResult Function(String message, Exception? e)? timeout,
-    TResult Function(String message, Exception? e)? server,
-    TResult Function(String message, Exception? e)? auth,
-    TResult Function(String message, Exception? e)? badCertificate,
-    TResult Function(String message, Exception? e)? unknown,
-    required TResult orElse(),
-  }) {
-    if (auth != null) {
-      return auth(message, e);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(ApiError value) api,
-    required TResult Function(FiatPeConnectionError value) connection,
-    required TResult Function(FiatPeTimeoutError value) timeout,
-    required TResult Function(FiatPeServerError value) server,
-    required TResult Function(FiatPeAuthError value) auth,
-    required TResult Function(FiatPeBadCertificate value) badCertificate,
-    required TResult Function(FiatPeUnknownError value) unknown,
-  }) {
-    return auth(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(ApiError value)? api,
-    TResult? Function(FiatPeConnectionError value)? connection,
-    TResult? Function(FiatPeTimeoutError value)? timeout,
-    TResult? Function(FiatPeServerError value)? server,
-    TResult? Function(FiatPeAuthError value)? auth,
-    TResult? Function(FiatPeBadCertificate value)? badCertificate,
-    TResult? Function(FiatPeUnknownError value)? unknown,
-  }) {
-    return auth?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(ApiError value)? api,
-    TResult Function(FiatPeConnectionError value)? connection,
-    TResult Function(FiatPeTimeoutError value)? timeout,
-    TResult Function(FiatPeServerError value)? server,
-    TResult Function(FiatPeAuthError value)? auth,
-    TResult Function(FiatPeBadCertificate value)? badCertificate,
-    TResult Function(FiatPeUnknownError value)? unknown,
-    required TResult orElse(),
-  }) {
-    if (auth != null) {
-      return auth(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class FiatPeAuthError implements FiatPeError {
-  const factory FiatPeAuthError({final String message, final Exception? e}) =
-      _$FiatPeAuthErrorImpl;
-
-  @override
-  String get message;
-  @override
-  Exception? get e;
-  @override
-  @JsonKey(ignore: true)
-  _$$FiatPeAuthErrorImplCopyWith<_$FiatPeAuthErrorImpl> get copyWith =>
-      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$FiatPeBadCertificateImplCopyWith<$Res>
+abstract mixin class $FiatPeAuthErrorCopyWith<$Res>
     implements $FiatPeErrorCopyWith<$Res> {
-  factory _$$FiatPeBadCertificateImplCopyWith(_$FiatPeBadCertificateImpl value,
-          $Res Function(_$FiatPeBadCertificateImpl) then) =
-      __$$FiatPeBadCertificateImplCopyWithImpl<$Res>;
+  factory $FiatPeAuthErrorCopyWith(
+          FiatPeAuthError value, $Res Function(FiatPeAuthError) _then) =
+      _$FiatPeAuthErrorCopyWithImpl;
   @override
   @useResult
   $Res call({String message, Exception? e});
 }
 
 /// @nodoc
-class __$$FiatPeBadCertificateImplCopyWithImpl<$Res>
-    extends _$FiatPeErrorCopyWithImpl<$Res, _$FiatPeBadCertificateImpl>
-    implements _$$FiatPeBadCertificateImplCopyWith<$Res> {
-  __$$FiatPeBadCertificateImplCopyWithImpl(_$FiatPeBadCertificateImpl _value,
-      $Res Function(_$FiatPeBadCertificateImpl) _then)
-      : super(_value, _then);
+class _$FiatPeAuthErrorCopyWithImpl<$Res>
+    implements $FiatPeAuthErrorCopyWith<$Res> {
+  _$FiatPeAuthErrorCopyWithImpl(this._self, this._then);
 
-  @pragma('vm:prefer-inline')
+  final FiatPeAuthError _self;
+  final $Res Function(FiatPeAuthError) _then;
+
+  /// Create a copy of FiatPeError
+  /// with the given fields replaced by the non-null parameter values.
   @override
+  @pragma('vm:prefer-inline')
   $Res call({
     Object? message = null,
     Object? e = freezed,
   }) {
-    return _then(_$FiatPeBadCertificateImpl(
+    return _then(FiatPeAuthError(
       message: null == message
-          ? _value.message
+          ? _self.message
           : message // ignore: cast_nullable_to_non_nullable
               as String,
       e: freezed == e
-          ? _value.e
+          ? _self.e
           : e // ignore: cast_nullable_to_non_nullable
               as Exception?,
     ));
@@ -1090,8 +741,8 @@ class __$$FiatPeBadCertificateImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$FiatPeBadCertificateImpl implements FiatPeBadCertificate {
-  const _$FiatPeBadCertificateImpl(
+class FiatPeBadCertificate implements FiatPeError {
+  const FiatPeBadCertificate(
       {this.message = "Bad certificate.", this.e = null});
 
   @override
@@ -1101,16 +752,20 @@ class _$FiatPeBadCertificateImpl implements FiatPeBadCertificate {
   @JsonKey()
   final Exception? e;
 
+  /// Create a copy of FiatPeError
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  String toString() {
-    return 'FiatPeError.badCertificate(message: $message, e: $e)';
-  }
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $FiatPeBadCertificateCopyWith<FiatPeBadCertificate> get copyWith =>
+      _$FiatPeBadCertificateCopyWithImpl<FiatPeBadCertificate>(
+          this, _$identity);
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$FiatPeBadCertificateImpl &&
+            other is FiatPeBadCertificate &&
             (identical(other.message, message) || other.message == message) &&
             (identical(other.e, e) || other.e == e));
   }
@@ -1118,153 +773,46 @@ class _$FiatPeBadCertificateImpl implements FiatPeBadCertificate {
   @override
   int get hashCode => Object.hash(runtimeType, message, e);
 
-  @JsonKey(ignore: true)
   @override
-  @pragma('vm:prefer-inline')
-  _$$FiatPeBadCertificateImplCopyWith<_$FiatPeBadCertificateImpl>
-      get copyWith =>
-          __$$FiatPeBadCertificateImplCopyWithImpl<_$FiatPeBadCertificateImpl>(
-              this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function(String message, dynamic data, Exception? e) api,
-    required TResult Function(String message, Exception? e) connection,
-    required TResult Function(String message, Exception? e) timeout,
-    required TResult Function(String message, Exception? e) server,
-    required TResult Function(String message, Exception? e) auth,
-    required TResult Function(String message, Exception? e) badCertificate,
-    required TResult Function(String message, Exception? e) unknown,
-  }) {
-    return badCertificate(message, e);
+  String toString() {
+    return 'FiatPeError.badCertificate(message: $message, e: $e)';
   }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(String message, dynamic data, Exception? e)? api,
-    TResult? Function(String message, Exception? e)? connection,
-    TResult? Function(String message, Exception? e)? timeout,
-    TResult? Function(String message, Exception? e)? server,
-    TResult? Function(String message, Exception? e)? auth,
-    TResult? Function(String message, Exception? e)? badCertificate,
-    TResult? Function(String message, Exception? e)? unknown,
-  }) {
-    return badCertificate?.call(message, e);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function(String message, dynamic data, Exception? e)? api,
-    TResult Function(String message, Exception? e)? connection,
-    TResult Function(String message, Exception? e)? timeout,
-    TResult Function(String message, Exception? e)? server,
-    TResult Function(String message, Exception? e)? auth,
-    TResult Function(String message, Exception? e)? badCertificate,
-    TResult Function(String message, Exception? e)? unknown,
-    required TResult orElse(),
-  }) {
-    if (badCertificate != null) {
-      return badCertificate(message, e);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(ApiError value) api,
-    required TResult Function(FiatPeConnectionError value) connection,
-    required TResult Function(FiatPeTimeoutError value) timeout,
-    required TResult Function(FiatPeServerError value) server,
-    required TResult Function(FiatPeAuthError value) auth,
-    required TResult Function(FiatPeBadCertificate value) badCertificate,
-    required TResult Function(FiatPeUnknownError value) unknown,
-  }) {
-    return badCertificate(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(ApiError value)? api,
-    TResult? Function(FiatPeConnectionError value)? connection,
-    TResult? Function(FiatPeTimeoutError value)? timeout,
-    TResult? Function(FiatPeServerError value)? server,
-    TResult? Function(FiatPeAuthError value)? auth,
-    TResult? Function(FiatPeBadCertificate value)? badCertificate,
-    TResult? Function(FiatPeUnknownError value)? unknown,
-  }) {
-    return badCertificate?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(ApiError value)? api,
-    TResult Function(FiatPeConnectionError value)? connection,
-    TResult Function(FiatPeTimeoutError value)? timeout,
-    TResult Function(FiatPeServerError value)? server,
-    TResult Function(FiatPeAuthError value)? auth,
-    TResult Function(FiatPeBadCertificate value)? badCertificate,
-    TResult Function(FiatPeUnknownError value)? unknown,
-    required TResult orElse(),
-  }) {
-    if (badCertificate != null) {
-      return badCertificate(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class FiatPeBadCertificate implements FiatPeError {
-  const factory FiatPeBadCertificate(
-      {final String message, final Exception? e}) = _$FiatPeBadCertificateImpl;
-
-  @override
-  String get message;
-  @override
-  Exception? get e;
-  @override
-  @JsonKey(ignore: true)
-  _$$FiatPeBadCertificateImplCopyWith<_$FiatPeBadCertificateImpl>
-      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$FiatPeUnknownErrorImplCopyWith<$Res>
+abstract mixin class $FiatPeBadCertificateCopyWith<$Res>
     implements $FiatPeErrorCopyWith<$Res> {
-  factory _$$FiatPeUnknownErrorImplCopyWith(_$FiatPeUnknownErrorImpl value,
-          $Res Function(_$FiatPeUnknownErrorImpl) then) =
-      __$$FiatPeUnknownErrorImplCopyWithImpl<$Res>;
+  factory $FiatPeBadCertificateCopyWith(FiatPeBadCertificate value,
+          $Res Function(FiatPeBadCertificate) _then) =
+      _$FiatPeBadCertificateCopyWithImpl;
   @override
   @useResult
   $Res call({String message, Exception? e});
 }
 
 /// @nodoc
-class __$$FiatPeUnknownErrorImplCopyWithImpl<$Res>
-    extends _$FiatPeErrorCopyWithImpl<$Res, _$FiatPeUnknownErrorImpl>
-    implements _$$FiatPeUnknownErrorImplCopyWith<$Res> {
-  __$$FiatPeUnknownErrorImplCopyWithImpl(_$FiatPeUnknownErrorImpl _value,
-      $Res Function(_$FiatPeUnknownErrorImpl) _then)
-      : super(_value, _then);
+class _$FiatPeBadCertificateCopyWithImpl<$Res>
+    implements $FiatPeBadCertificateCopyWith<$Res> {
+  _$FiatPeBadCertificateCopyWithImpl(this._self, this._then);
 
-  @pragma('vm:prefer-inline')
+  final FiatPeBadCertificate _self;
+  final $Res Function(FiatPeBadCertificate) _then;
+
+  /// Create a copy of FiatPeError
+  /// with the given fields replaced by the non-null parameter values.
   @override
+  @pragma('vm:prefer-inline')
   $Res call({
     Object? message = null,
     Object? e = freezed,
   }) {
-    return _then(_$FiatPeUnknownErrorImpl(
+    return _then(FiatPeBadCertificate(
       message: null == message
-          ? _value.message
+          ? _self.message
           : message // ignore: cast_nullable_to_non_nullable
               as String,
       e: freezed == e
-          ? _value.e
+          ? _self.e
           : e // ignore: cast_nullable_to_non_nullable
               as Exception?,
     ));
@@ -1273,8 +821,8 @@ class __$$FiatPeUnknownErrorImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$FiatPeUnknownErrorImpl implements FiatPeUnknownError {
-  const _$FiatPeUnknownErrorImpl(
+class FiatPeUnknownError implements FiatPeError {
+  const FiatPeUnknownError(
       {this.message = "Something went wrong.", this.e = null});
 
   @override
@@ -1284,16 +832,19 @@ class _$FiatPeUnknownErrorImpl implements FiatPeUnknownError {
   @JsonKey()
   final Exception? e;
 
+  /// Create a copy of FiatPeError
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  String toString() {
-    return 'FiatPeError.unknown(message: $message, e: $e)';
-  }
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $FiatPeUnknownErrorCopyWith<FiatPeUnknownError> get copyWith =>
+      _$FiatPeUnknownErrorCopyWithImpl<FiatPeUnknownError>(this, _$identity);
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$FiatPeUnknownErrorImpl &&
+            other is FiatPeUnknownError &&
             (identical(other.message, message) || other.message == message) &&
             (identical(other.e, e) || other.e == e));
   }
@@ -1301,116 +852,50 @@ class _$FiatPeUnknownErrorImpl implements FiatPeUnknownError {
   @override
   int get hashCode => Object.hash(runtimeType, message, e);
 
-  @JsonKey(ignore: true)
+  @override
+  String toString() {
+    return 'FiatPeError.unknown(message: $message, e: $e)';
+  }
+}
+
+/// @nodoc
+abstract mixin class $FiatPeUnknownErrorCopyWith<$Res>
+    implements $FiatPeErrorCopyWith<$Res> {
+  factory $FiatPeUnknownErrorCopyWith(
+          FiatPeUnknownError value, $Res Function(FiatPeUnknownError) _then) =
+      _$FiatPeUnknownErrorCopyWithImpl;
+  @override
+  @useResult
+  $Res call({String message, Exception? e});
+}
+
+/// @nodoc
+class _$FiatPeUnknownErrorCopyWithImpl<$Res>
+    implements $FiatPeUnknownErrorCopyWith<$Res> {
+  _$FiatPeUnknownErrorCopyWithImpl(this._self, this._then);
+
+  final FiatPeUnknownError _self;
+  final $Res Function(FiatPeUnknownError) _then;
+
+  /// Create a copy of FiatPeError
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
-  _$$FiatPeUnknownErrorImplCopyWith<_$FiatPeUnknownErrorImpl> get copyWith =>
-      __$$FiatPeUnknownErrorImplCopyWithImpl<_$FiatPeUnknownErrorImpl>(
-          this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function(String message, dynamic data, Exception? e) api,
-    required TResult Function(String message, Exception? e) connection,
-    required TResult Function(String message, Exception? e) timeout,
-    required TResult Function(String message, Exception? e) server,
-    required TResult Function(String message, Exception? e) auth,
-    required TResult Function(String message, Exception? e) badCertificate,
-    required TResult Function(String message, Exception? e) unknown,
+  $Res call({
+    Object? message = null,
+    Object? e = freezed,
   }) {
-    return unknown(message, e);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(String message, dynamic data, Exception? e)? api,
-    TResult? Function(String message, Exception? e)? connection,
-    TResult? Function(String message, Exception? e)? timeout,
-    TResult? Function(String message, Exception? e)? server,
-    TResult? Function(String message, Exception? e)? auth,
-    TResult? Function(String message, Exception? e)? badCertificate,
-    TResult? Function(String message, Exception? e)? unknown,
-  }) {
-    return unknown?.call(message, e);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function(String message, dynamic data, Exception? e)? api,
-    TResult Function(String message, Exception? e)? connection,
-    TResult Function(String message, Exception? e)? timeout,
-    TResult Function(String message, Exception? e)? server,
-    TResult Function(String message, Exception? e)? auth,
-    TResult Function(String message, Exception? e)? badCertificate,
-    TResult Function(String message, Exception? e)? unknown,
-    required TResult orElse(),
-  }) {
-    if (unknown != null) {
-      return unknown(message, e);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(ApiError value) api,
-    required TResult Function(FiatPeConnectionError value) connection,
-    required TResult Function(FiatPeTimeoutError value) timeout,
-    required TResult Function(FiatPeServerError value) server,
-    required TResult Function(FiatPeAuthError value) auth,
-    required TResult Function(FiatPeBadCertificate value) badCertificate,
-    required TResult Function(FiatPeUnknownError value) unknown,
-  }) {
-    return unknown(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(ApiError value)? api,
-    TResult? Function(FiatPeConnectionError value)? connection,
-    TResult? Function(FiatPeTimeoutError value)? timeout,
-    TResult? Function(FiatPeServerError value)? server,
-    TResult? Function(FiatPeAuthError value)? auth,
-    TResult? Function(FiatPeBadCertificate value)? badCertificate,
-    TResult? Function(FiatPeUnknownError value)? unknown,
-  }) {
-    return unknown?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(ApiError value)? api,
-    TResult Function(FiatPeConnectionError value)? connection,
-    TResult Function(FiatPeTimeoutError value)? timeout,
-    TResult Function(FiatPeServerError value)? server,
-    TResult Function(FiatPeAuthError value)? auth,
-    TResult Function(FiatPeBadCertificate value)? badCertificate,
-    TResult Function(FiatPeUnknownError value)? unknown,
-    required TResult orElse(),
-  }) {
-    if (unknown != null) {
-      return unknown(this);
-    }
-    return orElse();
+    return _then(FiatPeUnknownError(
+      message: null == message
+          ? _self.message
+          : message // ignore: cast_nullable_to_non_nullable
+              as String,
+      e: freezed == e
+          ? _self.e
+          : e // ignore: cast_nullable_to_non_nullable
+              as Exception?,
+    ));
   }
 }
 
-abstract class FiatPeUnknownError implements FiatPeError {
-  const factory FiatPeUnknownError({final String message, final Exception? e}) =
-      _$FiatPeUnknownErrorImpl;
-
-  @override
-  String get message;
-  @override
-  Exception? get e;
-  @override
-  @JsonKey(ignore: true)
-  _$$FiatPeUnknownErrorImplCopyWith<_$FiatPeUnknownErrorImpl> get copyWith =>
-      throw _privateConstructorUsedError;
-}
+// dart format on

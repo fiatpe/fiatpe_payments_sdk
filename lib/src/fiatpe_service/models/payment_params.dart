@@ -5,7 +5,7 @@ part 'payment_params.freezed.dart';
 part 'payment_params.g.dart';
 
 @freezed
-class PaymentParams with _$PaymentParams {
+abstract class PaymentParams with _$PaymentParams {
   const PaymentParams._();
 
   const factory PaymentParams({

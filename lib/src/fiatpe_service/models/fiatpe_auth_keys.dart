@@ -3,7 +3,7 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 part 'fiatpe_auth_keys.freezed.dart';
 
 @freezed
-class FiatPeAuthKeys with _$FiatPeAuthKeys {
+abstract class FiatPeAuthKeys with _$FiatPeAuthKeys {
 
   const FiatPeAuthKeys._();
 

@@ -1,5 +1,5 @@
-// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// coverage:ignore-file
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
@@ -9,13 +9,187 @@ part of 'payment_bloc.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// dart format off
 T _$identity<T>(T value) => value;
-
-final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$PaymentEvent {
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is PaymentEvent);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  String toString() {
+    return 'PaymentEvent()';
+  }
+}
+
+/// @nodoc
+class $PaymentEventCopyWith<$Res> {
+  $PaymentEventCopyWith(PaymentEvent _, $Res Function(PaymentEvent) __);
+}
+
+/// Adds pattern-matching-related methods to [PaymentEvent].
+extension PaymentEventPatterns on PaymentEvent {
+  /// A variant of `map` that fallback to returning `orElse`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(PaymentStartedEvent value)? started,
+    TResult Function(LaunchUpiAppPaymentEvent value)? launchUpiApp,
+    TResult Function(PaymentCancelEvent value)? cancel,
+    TResult Function(PaymentVerifyTestPinEvent value)? verifyTestPin,
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case PaymentStartedEvent() when started != null:
+        return started(_that);
+      case LaunchUpiAppPaymentEvent() when launchUpiApp != null:
+        return launchUpiApp(_that);
+      case PaymentCancelEvent() when cancel != null:
+        return cancel(_that);
+      case PaymentVerifyTestPinEvent() when verifyTestPin != null:
+        return verifyTestPin(_that);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// Callbacks receives the raw object, upcasted.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case final Subclass2 value:
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(PaymentStartedEvent value) started,
+    required TResult Function(LaunchUpiAppPaymentEvent value) launchUpiApp,
+    required TResult Function(PaymentCancelEvent value) cancel,
+    required TResult Function(PaymentVerifyTestPinEvent value) verifyTestPin,
+  }) {
+    final _that = this;
+    switch (_that) {
+      case PaymentStartedEvent():
+        return started(_that);
+      case LaunchUpiAppPaymentEvent():
+        return launchUpiApp(_that);
+      case PaymentCancelEvent():
+        return cancel(_that);
+      case PaymentVerifyTestPinEvent():
+        return verifyTestPin(_that);
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
+
+  /// A variant of `map` that fallback to returning `null`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(PaymentStartedEvent value)? started,
+    TResult? Function(LaunchUpiAppPaymentEvent value)? launchUpiApp,
+    TResult? Function(PaymentCancelEvent value)? cancel,
+    TResult? Function(PaymentVerifyTestPinEvent value)? verifyTestPin,
+  }) {
+    final _that = this;
+    switch (_that) {
+      case PaymentStartedEvent() when started != null:
+        return started(_that);
+      case LaunchUpiAppPaymentEvent() when launchUpiApp != null:
+        return launchUpiApp(_that);
+      case PaymentCancelEvent() when cancel != null:
+        return cancel(_that);
+      case PaymentVerifyTestPinEvent() when verifyTestPin != null:
+        return verifyTestPin(_that);
+      case _:
+        return null;
+    }
+  }
+
+  /// A variant of `when` that fallback to an `orElse` callback.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(PaymentParams params)? started,
+    TResult Function(UPIApp app, String queries, num id, PaymentParams params)?
+        launchUpiApp,
+    TResult Function(String reason)? cancel,
+    TResult Function(String pin, num id, UPIApp app, PaymentParams params)?
+        verifyTestPin,
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case PaymentStartedEvent() when started != null:
+        return started(_that.params);
+      case LaunchUpiAppPaymentEvent() when launchUpiApp != null:
+        return launchUpiApp(_that.app, _that.queries, _that.id, _that.params);
+      case PaymentCancelEvent() when cancel != null:
+        return cancel(_that.reason);
+      case PaymentVerifyTestPinEvent() when verifyTestPin != null:
+        return verifyTestPin(_that.pin, _that.id, _that.app, _that.params);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// As opposed to `map`, this offers destructuring.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case Subclass2(:final field2):
+  ///     return ...;
+  /// }
+  /// ```
+
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(PaymentParams params) started,
@@ -26,8 +200,34 @@ mixin _$PaymentEvent {
     required TResult Function(
             String pin, num id, UPIApp app, PaymentParams params)
         verifyTestPin,
-  }) =>
-      throw _privateConstructorUsedError;
+  }) {
+    final _that = this;
+    switch (_that) {
+      case PaymentStartedEvent():
+        return started(_that.params);
+      case LaunchUpiAppPaymentEvent():
+        return launchUpiApp(_that.app, _that.queries, _that.id, _that.params);
+      case PaymentCancelEvent():
+        return cancel(_that.reason);
+      case PaymentVerifyTestPinEvent():
+        return verifyTestPin(_that.pin, _that.id, _that.app, _that.params);
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
+
+  /// A variant of `when` that fallback to returning `null`
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(PaymentParams params)? started,
@@ -36,69 +236,60 @@ mixin _$PaymentEvent {
     TResult? Function(String reason)? cancel,
     TResult? Function(String pin, num id, UPIApp app, PaymentParams params)?
         verifyTestPin,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function(PaymentParams params)? started,
-    TResult Function(UPIApp app, String queries, num id, PaymentParams params)?
-        launchUpiApp,
-    TResult Function(String reason)? cancel,
-    TResult Function(String pin, num id, UPIApp app, PaymentParams params)?
-        verifyTestPin,
-    required TResult orElse(),
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(PaymentStartedEvent value) started,
-    required TResult Function(LaunchUpiAppPaymentEvent value) launchUpiApp,
-    required TResult Function(PaymentCancelEvent value) cancel,
-    required TResult Function(PaymentVerifyTestPinEvent value) verifyTestPin,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(PaymentStartedEvent value)? started,
-    TResult? Function(LaunchUpiAppPaymentEvent value)? launchUpiApp,
-    TResult? Function(PaymentCancelEvent value)? cancel,
-    TResult? Function(PaymentVerifyTestPinEvent value)? verifyTestPin,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(PaymentStartedEvent value)? started,
-    TResult Function(LaunchUpiAppPaymentEvent value)? launchUpiApp,
-    TResult Function(PaymentCancelEvent value)? cancel,
-    TResult Function(PaymentVerifyTestPinEvent value)? verifyTestPin,
-    required TResult orElse(),
-  }) =>
-      throw _privateConstructorUsedError;
+  }) {
+    final _that = this;
+    switch (_that) {
+      case PaymentStartedEvent() when started != null:
+        return started(_that.params);
+      case LaunchUpiAppPaymentEvent() when launchUpiApp != null:
+        return launchUpiApp(_that.app, _that.queries, _that.id, _that.params);
+      case PaymentCancelEvent() when cancel != null:
+        return cancel(_that.reason);
+      case PaymentVerifyTestPinEvent() when verifyTestPin != null:
+        return verifyTestPin(_that.pin, _that.id, _that.app, _that.params);
+      case _:
+        return null;
+    }
+  }
 }
 
 /// @nodoc
-abstract class $PaymentEventCopyWith<$Res> {
-  factory $PaymentEventCopyWith(
-          PaymentEvent value, $Res Function(PaymentEvent) then) =
-      _$PaymentEventCopyWithImpl<$Res, PaymentEvent>;
+
+class PaymentStartedEvent implements PaymentEvent {
+  const PaymentStartedEvent({required this.params});
+
+  final PaymentParams params;
+
+  /// Create a copy of PaymentEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $PaymentStartedEventCopyWith<PaymentStartedEvent> get copyWith =>
+      _$PaymentStartedEventCopyWithImpl<PaymentStartedEvent>(this, _$identity);
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is PaymentStartedEvent &&
+            (identical(other.params, params) || other.params == params));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, params);
+
+  @override
+  String toString() {
+    return 'PaymentEvent.started(params: $params)';
+  }
 }
 
 /// @nodoc
-class _$PaymentEventCopyWithImpl<$Res, $Val extends PaymentEvent>
+abstract mixin class $PaymentStartedEventCopyWith<$Res>
     implements $PaymentEventCopyWith<$Res> {
-  _$PaymentEventCopyWithImpl(this._value, this._then);
-
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
-}
-
-/// @nodoc
-abstract class _$$PaymentStartedEventImplCopyWith<$Res> {
-  factory _$$PaymentStartedEventImplCopyWith(_$PaymentStartedEventImpl value,
-          $Res Function(_$PaymentStartedEventImpl) then) =
-      __$$PaymentStartedEventImplCopyWithImpl<$Res>;
+  factory $PaymentStartedEventCopyWith(
+          PaymentStartedEvent value, $Res Function(PaymentStartedEvent) _then) =
+      _$PaymentStartedEventCopyWithImpl;
   @useResult
   $Res call({PaymentParams params});
 
@@ -106,254 +297,65 @@ abstract class _$$PaymentStartedEventImplCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$PaymentStartedEventImplCopyWithImpl<$Res>
-    extends _$PaymentEventCopyWithImpl<$Res, _$PaymentStartedEventImpl>
-    implements _$$PaymentStartedEventImplCopyWith<$Res> {
-  __$$PaymentStartedEventImplCopyWithImpl(_$PaymentStartedEventImpl _value,
-      $Res Function(_$PaymentStartedEventImpl) _then)
-      : super(_value, _then);
+class _$PaymentStartedEventCopyWithImpl<$Res>
+    implements $PaymentStartedEventCopyWith<$Res> {
+  _$PaymentStartedEventCopyWithImpl(this._self, this._then);
 
+  final PaymentStartedEvent _self;
+  final $Res Function(PaymentStartedEvent) _then;
+
+  /// Create a copy of PaymentEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
-  @override
   $Res call({
     Object? params = null,
   }) {
-    return _then(_$PaymentStartedEventImpl(
+    return _then(PaymentStartedEvent(
       params: null == params
-          ? _value.params
+          ? _self.params
           : params // ignore: cast_nullable_to_non_nullable
               as PaymentParams,
     ));
   }
 
+  /// Create a copy of PaymentEvent
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $PaymentParamsCopyWith<$Res> get params {
-    return $PaymentParamsCopyWith<$Res>(_value.params, (value) {
-      return _then(_value.copyWith(params: value));
+    return $PaymentParamsCopyWith<$Res>(_self.params, (value) {
+      return _then(_self.copyWith(params: value));
     });
   }
 }
 
 /// @nodoc
 
-class _$PaymentStartedEventImpl implements PaymentStartedEvent {
-  const _$PaymentStartedEventImpl({required this.params});
-
-  @override
-  final PaymentParams params;
-
-  @override
-  String toString() {
-    return 'PaymentEvent.started(params: $params)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$PaymentStartedEventImpl &&
-            (identical(other.params, params) || other.params == params));
-  }
-
-  @override
-  int get hashCode => Object.hash(runtimeType, params);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$PaymentStartedEventImplCopyWith<_$PaymentStartedEventImpl> get copyWith =>
-      __$$PaymentStartedEventImplCopyWithImpl<_$PaymentStartedEventImpl>(
-          this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function(PaymentParams params) started,
-    required TResult Function(
-            UPIApp app, String queries, num id, PaymentParams params)
-        launchUpiApp,
-    required TResult Function(String reason) cancel,
-    required TResult Function(
-            String pin, num id, UPIApp app, PaymentParams params)
-        verifyTestPin,
-  }) {
-    return started(params);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(PaymentParams params)? started,
-    TResult? Function(UPIApp app, String queries, num id, PaymentParams params)?
-        launchUpiApp,
-    TResult? Function(String reason)? cancel,
-    TResult? Function(String pin, num id, UPIApp app, PaymentParams params)?
-        verifyTestPin,
-  }) {
-    return started?.call(params);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function(PaymentParams params)? started,
-    TResult Function(UPIApp app, String queries, num id, PaymentParams params)?
-        launchUpiApp,
-    TResult Function(String reason)? cancel,
-    TResult Function(String pin, num id, UPIApp app, PaymentParams params)?
-        verifyTestPin,
-    required TResult orElse(),
-  }) {
-    if (started != null) {
-      return started(params);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(PaymentStartedEvent value) started,
-    required TResult Function(LaunchUpiAppPaymentEvent value) launchUpiApp,
-    required TResult Function(PaymentCancelEvent value) cancel,
-    required TResult Function(PaymentVerifyTestPinEvent value) verifyTestPin,
-  }) {
-    return started(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(PaymentStartedEvent value)? started,
-    TResult? Function(LaunchUpiAppPaymentEvent value)? launchUpiApp,
-    TResult? Function(PaymentCancelEvent value)? cancel,
-    TResult? Function(PaymentVerifyTestPinEvent value)? verifyTestPin,
-  }) {
-    return started?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(PaymentStartedEvent value)? started,
-    TResult Function(LaunchUpiAppPaymentEvent value)? launchUpiApp,
-    TResult Function(PaymentCancelEvent value)? cancel,
-    TResult Function(PaymentVerifyTestPinEvent value)? verifyTestPin,
-    required TResult orElse(),
-  }) {
-    if (started != null) {
-      return started(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class PaymentStartedEvent implements PaymentEvent {
-  const factory PaymentStartedEvent({required final PaymentParams params}) =
-      _$PaymentStartedEventImpl;
-
-  PaymentParams get params;
-  @JsonKey(ignore: true)
-  _$$PaymentStartedEventImplCopyWith<_$PaymentStartedEventImpl> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class _$$LaunchUpiAppPaymentEventImplCopyWith<$Res> {
-  factory _$$LaunchUpiAppPaymentEventImplCopyWith(
-          _$LaunchUpiAppPaymentEventImpl value,
-          $Res Function(_$LaunchUpiAppPaymentEventImpl) then) =
-      __$$LaunchUpiAppPaymentEventImplCopyWithImpl<$Res>;
-  @useResult
-  $Res call({UPIApp app, String queries, num id, PaymentParams params});
-
-  $UPIAppCopyWith<$Res> get app;
-  $PaymentParamsCopyWith<$Res> get params;
-}
-
-/// @nodoc
-class __$$LaunchUpiAppPaymentEventImplCopyWithImpl<$Res>
-    extends _$PaymentEventCopyWithImpl<$Res, _$LaunchUpiAppPaymentEventImpl>
-    implements _$$LaunchUpiAppPaymentEventImplCopyWith<$Res> {
-  __$$LaunchUpiAppPaymentEventImplCopyWithImpl(
-      _$LaunchUpiAppPaymentEventImpl _value,
-      $Res Function(_$LaunchUpiAppPaymentEventImpl) _then)
-      : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? app = null,
-    Object? queries = null,
-    Object? id = null,
-    Object? params = null,
-  }) {
-    return _then(_$LaunchUpiAppPaymentEventImpl(
-      app: null == app
-          ? _value.app
-          : app // ignore: cast_nullable_to_non_nullable
-              as UPIApp,
-      queries: null == queries
-          ? _value.queries
-          : queries // ignore: cast_nullable_to_non_nullable
-              as String,
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as num,
-      params: null == params
-          ? _value.params
-          : params // ignore: cast_nullable_to_non_nullable
-              as PaymentParams,
-    ));
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $UPIAppCopyWith<$Res> get app {
-    return $UPIAppCopyWith<$Res>(_value.app, (value) {
-      return _then(_value.copyWith(app: value));
-    });
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $PaymentParamsCopyWith<$Res> get params {
-    return $PaymentParamsCopyWith<$Res>(_value.params, (value) {
-      return _then(_value.copyWith(params: value));
-    });
-  }
-}
-
-/// @nodoc
-
-class _$LaunchUpiAppPaymentEventImpl implements LaunchUpiAppPaymentEvent {
-  const _$LaunchUpiAppPaymentEventImpl(
+class LaunchUpiAppPaymentEvent implements PaymentEvent {
+  const LaunchUpiAppPaymentEvent(
       {required this.app,
       required this.queries,
       required this.id,
       required this.params});
 
-  @override
   final UPIApp app;
-  @override
   final String queries;
-  @override
   final num id;
-  @override
   final PaymentParams params;
 
-  @override
-  String toString() {
-    return 'PaymentEvent.launchUpiApp(app: $app, queries: $queries, id: $id, params: $params)';
-  }
+  /// Create a copy of PaymentEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $LaunchUpiAppPaymentEventCopyWith<LaunchUpiAppPaymentEvent> get copyWith =>
+      _$LaunchUpiAppPaymentEventCopyWithImpl<LaunchUpiAppPaymentEvent>(
+          this, _$identity);
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$LaunchUpiAppPaymentEventImpl &&
+            other is LaunchUpiAppPaymentEvent &&
             (identical(other.app, app) || other.app == app) &&
             (identical(other.queries, queries) || other.queries == queries) &&
             (identical(other.id, id) || other.id == id) &&
@@ -363,137 +365,142 @@ class _$LaunchUpiAppPaymentEventImpl implements LaunchUpiAppPaymentEvent {
   @override
   int get hashCode => Object.hash(runtimeType, app, queries, id, params);
 
-  @JsonKey(ignore: true)
   @override
-  @pragma('vm:prefer-inline')
-  _$$LaunchUpiAppPaymentEventImplCopyWith<_$LaunchUpiAppPaymentEventImpl>
-      get copyWith => __$$LaunchUpiAppPaymentEventImplCopyWithImpl<
-          _$LaunchUpiAppPaymentEventImpl>(this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function(PaymentParams params) started,
-    required TResult Function(
-            UPIApp app, String queries, num id, PaymentParams params)
-        launchUpiApp,
-    required TResult Function(String reason) cancel,
-    required TResult Function(
-            String pin, num id, UPIApp app, PaymentParams params)
-        verifyTestPin,
-  }) {
-    return launchUpiApp(app, queries, id, params);
+  String toString() {
+    return 'PaymentEvent.launchUpiApp(app: $app, queries: $queries, id: $id, params: $params)';
   }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(PaymentParams params)? started,
-    TResult? Function(UPIApp app, String queries, num id, PaymentParams params)?
-        launchUpiApp,
-    TResult? Function(String reason)? cancel,
-    TResult? Function(String pin, num id, UPIApp app, PaymentParams params)?
-        verifyTestPin,
-  }) {
-    return launchUpiApp?.call(app, queries, id, params);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function(PaymentParams params)? started,
-    TResult Function(UPIApp app, String queries, num id, PaymentParams params)?
-        launchUpiApp,
-    TResult Function(String reason)? cancel,
-    TResult Function(String pin, num id, UPIApp app, PaymentParams params)?
-        verifyTestPin,
-    required TResult orElse(),
-  }) {
-    if (launchUpiApp != null) {
-      return launchUpiApp(app, queries, id, params);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(PaymentStartedEvent value) started,
-    required TResult Function(LaunchUpiAppPaymentEvent value) launchUpiApp,
-    required TResult Function(PaymentCancelEvent value) cancel,
-    required TResult Function(PaymentVerifyTestPinEvent value) verifyTestPin,
-  }) {
-    return launchUpiApp(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(PaymentStartedEvent value)? started,
-    TResult? Function(LaunchUpiAppPaymentEvent value)? launchUpiApp,
-    TResult? Function(PaymentCancelEvent value)? cancel,
-    TResult? Function(PaymentVerifyTestPinEvent value)? verifyTestPin,
-  }) {
-    return launchUpiApp?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(PaymentStartedEvent value)? started,
-    TResult Function(LaunchUpiAppPaymentEvent value)? launchUpiApp,
-    TResult Function(PaymentCancelEvent value)? cancel,
-    TResult Function(PaymentVerifyTestPinEvent value)? verifyTestPin,
-    required TResult orElse(),
-  }) {
-    if (launchUpiApp != null) {
-      return launchUpiApp(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class LaunchUpiAppPaymentEvent implements PaymentEvent {
-  const factory LaunchUpiAppPaymentEvent(
-      {required final UPIApp app,
-      required final String queries,
-      required final num id,
-      required final PaymentParams params}) = _$LaunchUpiAppPaymentEventImpl;
-
-  UPIApp get app;
-  String get queries;
-  num get id;
-  PaymentParams get params;
-  @JsonKey(ignore: true)
-  _$$LaunchUpiAppPaymentEventImplCopyWith<_$LaunchUpiAppPaymentEventImpl>
-      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$PaymentCancelEventImplCopyWith<$Res> {
-  factory _$$PaymentCancelEventImplCopyWith(_$PaymentCancelEventImpl value,
-          $Res Function(_$PaymentCancelEventImpl) then) =
-      __$$PaymentCancelEventImplCopyWithImpl<$Res>;
+abstract mixin class $LaunchUpiAppPaymentEventCopyWith<$Res>
+    implements $PaymentEventCopyWith<$Res> {
+  factory $LaunchUpiAppPaymentEventCopyWith(LaunchUpiAppPaymentEvent value,
+          $Res Function(LaunchUpiAppPaymentEvent) _then) =
+      _$LaunchUpiAppPaymentEventCopyWithImpl;
+  @useResult
+  $Res call({UPIApp app, String queries, num id, PaymentParams params});
+
+  $UPIAppCopyWith<$Res> get app;
+  $PaymentParamsCopyWith<$Res> get params;
+}
+
+/// @nodoc
+class _$LaunchUpiAppPaymentEventCopyWithImpl<$Res>
+    implements $LaunchUpiAppPaymentEventCopyWith<$Res> {
+  _$LaunchUpiAppPaymentEventCopyWithImpl(this._self, this._then);
+
+  final LaunchUpiAppPaymentEvent _self;
+  final $Res Function(LaunchUpiAppPaymentEvent) _then;
+
+  /// Create a copy of PaymentEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  $Res call({
+    Object? app = null,
+    Object? queries = null,
+    Object? id = null,
+    Object? params = null,
+  }) {
+    return _then(LaunchUpiAppPaymentEvent(
+      app: null == app
+          ? _self.app
+          : app // ignore: cast_nullable_to_non_nullable
+              as UPIApp,
+      queries: null == queries
+          ? _self.queries
+          : queries // ignore: cast_nullable_to_non_nullable
+              as String,
+      id: null == id
+          ? _self.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as num,
+      params: null == params
+          ? _self.params
+          : params // ignore: cast_nullable_to_non_nullable
+              as PaymentParams,
+    ));
+  }
+
+  /// Create a copy of PaymentEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $UPIAppCopyWith<$Res> get app {
+    return $UPIAppCopyWith<$Res>(_self.app, (value) {
+      return _then(_self.copyWith(app: value));
+    });
+  }
+
+  /// Create a copy of PaymentEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $PaymentParamsCopyWith<$Res> get params {
+    return $PaymentParamsCopyWith<$Res>(_self.params, (value) {
+      return _then(_self.copyWith(params: value));
+    });
+  }
+}
+
+/// @nodoc
+
+class PaymentCancelEvent implements PaymentEvent {
+  const PaymentCancelEvent({this.reason = "User canceled."});
+
+  @JsonKey()
+  final String reason;
+
+  /// Create a copy of PaymentEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $PaymentCancelEventCopyWith<PaymentCancelEvent> get copyWith =>
+      _$PaymentCancelEventCopyWithImpl<PaymentCancelEvent>(this, _$identity);
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is PaymentCancelEvent &&
+            (identical(other.reason, reason) || other.reason == reason));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, reason);
+
+  @override
+  String toString() {
+    return 'PaymentEvent.cancel(reason: $reason)';
+  }
+}
+
+/// @nodoc
+abstract mixin class $PaymentCancelEventCopyWith<$Res>
+    implements $PaymentEventCopyWith<$Res> {
+  factory $PaymentCancelEventCopyWith(
+          PaymentCancelEvent value, $Res Function(PaymentCancelEvent) _then) =
+      _$PaymentCancelEventCopyWithImpl;
   @useResult
   $Res call({String reason});
 }
 
 /// @nodoc
-class __$$PaymentCancelEventImplCopyWithImpl<$Res>
-    extends _$PaymentEventCopyWithImpl<$Res, _$PaymentCancelEventImpl>
-    implements _$$PaymentCancelEventImplCopyWith<$Res> {
-  __$$PaymentCancelEventImplCopyWithImpl(_$PaymentCancelEventImpl _value,
-      $Res Function(_$PaymentCancelEventImpl) _then)
-      : super(_value, _then);
+class _$PaymentCancelEventCopyWithImpl<$Res>
+    implements $PaymentCancelEventCopyWith<$Res> {
+  _$PaymentCancelEventCopyWithImpl(this._self, this._then);
 
+  final PaymentCancelEvent _self;
+  final $Res Function(PaymentCancelEvent) _then;
+
+  /// Create a copy of PaymentEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
-  @override
   $Res call({
     Object? reason = null,
   }) {
-    return _then(_$PaymentCancelEventImpl(
+    return _then(PaymentCancelEvent(
       reason: null == reason
-          ? _value.reason
+          ? _self.reason
           : reason // ignore: cast_nullable_to_non_nullable
               as String,
     ));
@@ -502,224 +509,31 @@ class __$$PaymentCancelEventImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$PaymentCancelEventImpl implements PaymentCancelEvent {
-  const _$PaymentCancelEventImpl({this.reason = "User canceled."});
-
-  @override
-  @JsonKey()
-  final String reason;
-
-  @override
-  String toString() {
-    return 'PaymentEvent.cancel(reason: $reason)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$PaymentCancelEventImpl &&
-            (identical(other.reason, reason) || other.reason == reason));
-  }
-
-  @override
-  int get hashCode => Object.hash(runtimeType, reason);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$PaymentCancelEventImplCopyWith<_$PaymentCancelEventImpl> get copyWith =>
-      __$$PaymentCancelEventImplCopyWithImpl<_$PaymentCancelEventImpl>(
-          this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function(PaymentParams params) started,
-    required TResult Function(
-            UPIApp app, String queries, num id, PaymentParams params)
-        launchUpiApp,
-    required TResult Function(String reason) cancel,
-    required TResult Function(
-            String pin, num id, UPIApp app, PaymentParams params)
-        verifyTestPin,
-  }) {
-    return cancel(reason);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(PaymentParams params)? started,
-    TResult? Function(UPIApp app, String queries, num id, PaymentParams params)?
-        launchUpiApp,
-    TResult? Function(String reason)? cancel,
-    TResult? Function(String pin, num id, UPIApp app, PaymentParams params)?
-        verifyTestPin,
-  }) {
-    return cancel?.call(reason);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function(PaymentParams params)? started,
-    TResult Function(UPIApp app, String queries, num id, PaymentParams params)?
-        launchUpiApp,
-    TResult Function(String reason)? cancel,
-    TResult Function(String pin, num id, UPIApp app, PaymentParams params)?
-        verifyTestPin,
-    required TResult orElse(),
-  }) {
-    if (cancel != null) {
-      return cancel(reason);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(PaymentStartedEvent value) started,
-    required TResult Function(LaunchUpiAppPaymentEvent value) launchUpiApp,
-    required TResult Function(PaymentCancelEvent value) cancel,
-    required TResult Function(PaymentVerifyTestPinEvent value) verifyTestPin,
-  }) {
-    return cancel(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(PaymentStartedEvent value)? started,
-    TResult? Function(LaunchUpiAppPaymentEvent value)? launchUpiApp,
-    TResult? Function(PaymentCancelEvent value)? cancel,
-    TResult? Function(PaymentVerifyTestPinEvent value)? verifyTestPin,
-  }) {
-    return cancel?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(PaymentStartedEvent value)? started,
-    TResult Function(LaunchUpiAppPaymentEvent value)? launchUpiApp,
-    TResult Function(PaymentCancelEvent value)? cancel,
-    TResult Function(PaymentVerifyTestPinEvent value)? verifyTestPin,
-    required TResult orElse(),
-  }) {
-    if (cancel != null) {
-      return cancel(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class PaymentCancelEvent implements PaymentEvent {
-  const factory PaymentCancelEvent({final String reason}) =
-      _$PaymentCancelEventImpl;
-
-  String get reason;
-  @JsonKey(ignore: true)
-  _$$PaymentCancelEventImplCopyWith<_$PaymentCancelEventImpl> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class _$$PaymentVerifyTestPinEventImplCopyWith<$Res> {
-  factory _$$PaymentVerifyTestPinEventImplCopyWith(
-          _$PaymentVerifyTestPinEventImpl value,
-          $Res Function(_$PaymentVerifyTestPinEventImpl) then) =
-      __$$PaymentVerifyTestPinEventImplCopyWithImpl<$Res>;
-  @useResult
-  $Res call({String pin, num id, UPIApp app, PaymentParams params});
-
-  $UPIAppCopyWith<$Res> get app;
-  $PaymentParamsCopyWith<$Res> get params;
-}
-
-/// @nodoc
-class __$$PaymentVerifyTestPinEventImplCopyWithImpl<$Res>
-    extends _$PaymentEventCopyWithImpl<$Res, _$PaymentVerifyTestPinEventImpl>
-    implements _$$PaymentVerifyTestPinEventImplCopyWith<$Res> {
-  __$$PaymentVerifyTestPinEventImplCopyWithImpl(
-      _$PaymentVerifyTestPinEventImpl _value,
-      $Res Function(_$PaymentVerifyTestPinEventImpl) _then)
-      : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? pin = null,
-    Object? id = null,
-    Object? app = null,
-    Object? params = null,
-  }) {
-    return _then(_$PaymentVerifyTestPinEventImpl(
-      pin: null == pin
-          ? _value.pin
-          : pin // ignore: cast_nullable_to_non_nullable
-              as String,
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as num,
-      app: null == app
-          ? _value.app
-          : app // ignore: cast_nullable_to_non_nullable
-              as UPIApp,
-      params: null == params
-          ? _value.params
-          : params // ignore: cast_nullable_to_non_nullable
-              as PaymentParams,
-    ));
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $UPIAppCopyWith<$Res> get app {
-    return $UPIAppCopyWith<$Res>(_value.app, (value) {
-      return _then(_value.copyWith(app: value));
-    });
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $PaymentParamsCopyWith<$Res> get params {
-    return $PaymentParamsCopyWith<$Res>(_value.params, (value) {
-      return _then(_value.copyWith(params: value));
-    });
-  }
-}
-
-/// @nodoc
-
-class _$PaymentVerifyTestPinEventImpl implements PaymentVerifyTestPinEvent {
-  const _$PaymentVerifyTestPinEventImpl(
+class PaymentVerifyTestPinEvent implements PaymentEvent {
+  const PaymentVerifyTestPinEvent(
       {required this.pin,
       required this.id,
       required this.app,
       required this.params});
 
-  @override
   final String pin;
-  @override
   final num id;
-  @override
   final UPIApp app;
-  @override
   final PaymentParams params;
 
-  @override
-  String toString() {
-    return 'PaymentEvent.verifyTestPin(pin: $pin, id: $id, app: $app, params: $params)';
-  }
+  /// Create a copy of PaymentEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $PaymentVerifyTestPinEventCopyWith<PaymentVerifyTestPinEvent> get copyWith =>
+      _$PaymentVerifyTestPinEventCopyWithImpl<PaymentVerifyTestPinEvent>(
+          this, _$identity);
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$PaymentVerifyTestPinEventImpl &&
+            other is PaymentVerifyTestPinEvent &&
             (identical(other.pin, pin) || other.pin == pin) &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.app, app) || other.app == app) &&
@@ -729,256 +543,224 @@ class _$PaymentVerifyTestPinEventImpl implements PaymentVerifyTestPinEvent {
   @override
   int get hashCode => Object.hash(runtimeType, pin, id, app, params);
 
-  @JsonKey(ignore: true)
   @override
-  @pragma('vm:prefer-inline')
-  _$$PaymentVerifyTestPinEventImplCopyWith<_$PaymentVerifyTestPinEventImpl>
-      get copyWith => __$$PaymentVerifyTestPinEventImplCopyWithImpl<
-          _$PaymentVerifyTestPinEventImpl>(this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function(PaymentParams params) started,
-    required TResult Function(
-            UPIApp app, String queries, num id, PaymentParams params)
-        launchUpiApp,
-    required TResult Function(String reason) cancel,
-    required TResult Function(
-            String pin, num id, UPIApp app, PaymentParams params)
-        verifyTestPin,
-  }) {
-    return verifyTestPin(pin, id, app, params);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(PaymentParams params)? started,
-    TResult? Function(UPIApp app, String queries, num id, PaymentParams params)?
-        launchUpiApp,
-    TResult? Function(String reason)? cancel,
-    TResult? Function(String pin, num id, UPIApp app, PaymentParams params)?
-        verifyTestPin,
-  }) {
-    return verifyTestPin?.call(pin, id, app, params);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function(PaymentParams params)? started,
-    TResult Function(UPIApp app, String queries, num id, PaymentParams params)?
-        launchUpiApp,
-    TResult Function(String reason)? cancel,
-    TResult Function(String pin, num id, UPIApp app, PaymentParams params)?
-        verifyTestPin,
-    required TResult orElse(),
-  }) {
-    if (verifyTestPin != null) {
-      return verifyTestPin(pin, id, app, params);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(PaymentStartedEvent value) started,
-    required TResult Function(LaunchUpiAppPaymentEvent value) launchUpiApp,
-    required TResult Function(PaymentCancelEvent value) cancel,
-    required TResult Function(PaymentVerifyTestPinEvent value) verifyTestPin,
-  }) {
-    return verifyTestPin(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(PaymentStartedEvent value)? started,
-    TResult? Function(LaunchUpiAppPaymentEvent value)? launchUpiApp,
-    TResult? Function(PaymentCancelEvent value)? cancel,
-    TResult? Function(PaymentVerifyTestPinEvent value)? verifyTestPin,
-  }) {
-    return verifyTestPin?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(PaymentStartedEvent value)? started,
-    TResult Function(LaunchUpiAppPaymentEvent value)? launchUpiApp,
-    TResult Function(PaymentCancelEvent value)? cancel,
-    TResult Function(PaymentVerifyTestPinEvent value)? verifyTestPin,
-    required TResult orElse(),
-  }) {
-    if (verifyTestPin != null) {
-      return verifyTestPin(this);
-    }
-    return orElse();
+  String toString() {
+    return 'PaymentEvent.verifyTestPin(pin: $pin, id: $id, app: $app, params: $params)';
   }
 }
 
-abstract class PaymentVerifyTestPinEvent implements PaymentEvent {
-  const factory PaymentVerifyTestPinEvent(
-      {required final String pin,
-      required final num id,
-      required final UPIApp app,
-      required final PaymentParams params}) = _$PaymentVerifyTestPinEventImpl;
+/// @nodoc
+abstract mixin class $PaymentVerifyTestPinEventCopyWith<$Res>
+    implements $PaymentEventCopyWith<$Res> {
+  factory $PaymentVerifyTestPinEventCopyWith(PaymentVerifyTestPinEvent value,
+          $Res Function(PaymentVerifyTestPinEvent) _then) =
+      _$PaymentVerifyTestPinEventCopyWithImpl;
+  @useResult
+  $Res call({String pin, num id, UPIApp app, PaymentParams params});
 
-  String get pin;
-  num get id;
-  UPIApp get app;
-  PaymentParams get params;
-  @JsonKey(ignore: true)
-  _$$PaymentVerifyTestPinEventImplCopyWith<_$PaymentVerifyTestPinEventImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  $UPIAppCopyWith<$Res> get app;
+  $PaymentParamsCopyWith<$Res> get params;
+}
+
+/// @nodoc
+class _$PaymentVerifyTestPinEventCopyWithImpl<$Res>
+    implements $PaymentVerifyTestPinEventCopyWith<$Res> {
+  _$PaymentVerifyTestPinEventCopyWithImpl(this._self, this._then);
+
+  final PaymentVerifyTestPinEvent _self;
+  final $Res Function(PaymentVerifyTestPinEvent) _then;
+
+  /// Create a copy of PaymentEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  $Res call({
+    Object? pin = null,
+    Object? id = null,
+    Object? app = null,
+    Object? params = null,
+  }) {
+    return _then(PaymentVerifyTestPinEvent(
+      pin: null == pin
+          ? _self.pin
+          : pin // ignore: cast_nullable_to_non_nullable
+              as String,
+      id: null == id
+          ? _self.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as num,
+      app: null == app
+          ? _self.app
+          : app // ignore: cast_nullable_to_non_nullable
+              as UPIApp,
+      params: null == params
+          ? _self.params
+          : params // ignore: cast_nullable_to_non_nullable
+              as PaymentParams,
+    ));
+  }
+
+  /// Create a copy of PaymentEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $UPIAppCopyWith<$Res> get app {
+    return $UPIAppCopyWith<$Res>(_self.app, (value) {
+      return _then(_self.copyWith(app: value));
+    });
+  }
+
+  /// Create a copy of PaymentEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $PaymentParamsCopyWith<$Res> get params {
+    return $PaymentParamsCopyWith<$Res>(_self.params, (value) {
+      return _then(_self.copyWith(params: value));
+    });
+  }
 }
 
 /// @nodoc
 mixin _$PaymentState {
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initiating,
-    required TResult Function(
-            PaymentParams params, num id, String queries, Brand? brand)
-        initiated,
-    required TResult Function(PaymentParams params) initiationFailed,
-    required TResult Function(TransactionDetails details) canceled,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initiating,
-    TResult? Function(
-            PaymentParams params, num id, String queries, Brand? brand)?
-        initiated,
-    TResult? Function(PaymentParams params)? initiationFailed,
-    TResult? Function(TransactionDetails details)? canceled,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initiating,
-    TResult Function(
-            PaymentParams params, num id, String queries, Brand? brand)?
-        initiated,
-    TResult Function(PaymentParams params)? initiationFailed,
-    TResult Function(TransactionDetails details)? canceled,
-    required TResult orElse(),
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(PaymentInitiatingState value) initiating,
-    required TResult Function(PaymentInitiatedState value) initiated,
-    required TResult Function(PaymentInitiationFailedState value)
-        initiationFailed,
-    required TResult Function(PaymentCanceledState value) canceled,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(PaymentInitiatingState value)? initiating,
-    TResult? Function(PaymentInitiatedState value)? initiated,
-    TResult? Function(PaymentInitiationFailedState value)? initiationFailed,
-    TResult? Function(PaymentCanceledState value)? canceled,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(PaymentInitiatingState value)? initiating,
-    TResult Function(PaymentInitiatedState value)? initiated,
-    TResult Function(PaymentInitiationFailedState value)? initiationFailed,
-    TResult Function(PaymentCanceledState value)? canceled,
-    required TResult orElse(),
-  }) =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class $PaymentStateCopyWith<$Res> {
-  factory $PaymentStateCopyWith(
-          PaymentState value, $Res Function(PaymentState) then) =
-      _$PaymentStateCopyWithImpl<$Res, PaymentState>;
-}
-
-/// @nodoc
-class _$PaymentStateCopyWithImpl<$Res, $Val extends PaymentState>
-    implements $PaymentStateCopyWith<$Res> {
-  _$PaymentStateCopyWithImpl(this._value, this._then);
-
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
-}
-
-/// @nodoc
-abstract class _$$PaymentInitiatingStateImplCopyWith<$Res> {
-  factory _$$PaymentInitiatingStateImplCopyWith(
-          _$PaymentInitiatingStateImpl value,
-          $Res Function(_$PaymentInitiatingStateImpl) then) =
-      __$$PaymentInitiatingStateImplCopyWithImpl<$Res>;
-}
-
-/// @nodoc
-class __$$PaymentInitiatingStateImplCopyWithImpl<$Res>
-    extends _$PaymentStateCopyWithImpl<$Res, _$PaymentInitiatingStateImpl>
-    implements _$$PaymentInitiatingStateImplCopyWith<$Res> {
-  __$$PaymentInitiatingStateImplCopyWithImpl(
-      _$PaymentInitiatingStateImpl _value,
-      $Res Function(_$PaymentInitiatingStateImpl) _then)
-      : super(_value, _then);
-}
-
-/// @nodoc
-
-class _$PaymentInitiatingStateImpl implements PaymentInitiatingState {
-  const _$PaymentInitiatingStateImpl();
-
-  @override
-  String toString() {
-    return 'PaymentState.initiating()';
-  }
-
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$PaymentInitiatingStateImpl);
+        (other.runtimeType == runtimeType && other is PaymentState);
   }
 
   @override
   int get hashCode => runtimeType.hashCode;
 
   @override
+  String toString() {
+    return 'PaymentState()';
+  }
+}
+
+/// @nodoc
+class $PaymentStateCopyWith<$Res> {
+  $PaymentStateCopyWith(PaymentState _, $Res Function(PaymentState) __);
+}
+
+/// Adds pattern-matching-related methods to [PaymentState].
+extension PaymentStatePatterns on PaymentState {
+  /// A variant of `map` that fallback to returning `orElse`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
   @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initiating,
-    required TResult Function(
-            PaymentParams params, num id, String queries, Brand? brand)
-        initiated,
-    required TResult Function(PaymentParams params) initiationFailed,
-    required TResult Function(TransactionDetails details) canceled,
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(PaymentInitiatingState value)? initiating,
+    TResult Function(PaymentInitiatedState value)? initiated,
+    TResult Function(PaymentInitiationFailedState value)? initiationFailed,
+    TResult Function(PaymentCanceledState value)? canceled,
+    required TResult orElse(),
   }) {
-    return initiating();
+    final _that = this;
+    switch (_that) {
+      case PaymentInitiatingState() when initiating != null:
+        return initiating(_that);
+      case PaymentInitiatedState() when initiated != null:
+        return initiated(_that);
+      case PaymentInitiationFailedState() when initiationFailed != null:
+        return initiationFailed(_that);
+      case PaymentCanceledState() when canceled != null:
+        return canceled(_that);
+      case _:
+        return orElse();
+    }
   }
 
-  @override
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// Callbacks receives the raw object, upcasted.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case final Subclass2 value:
+  ///     return ...;
+  /// }
+  /// ```
+
   @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initiating,
-    TResult? Function(
-            PaymentParams params, num id, String queries, Brand? brand)?
-        initiated,
-    TResult? Function(PaymentParams params)? initiationFailed,
-    TResult? Function(TransactionDetails details)? canceled,
+  TResult map<TResult extends Object?>({
+    required TResult Function(PaymentInitiatingState value) initiating,
+    required TResult Function(PaymentInitiatedState value) initiated,
+    required TResult Function(PaymentInitiationFailedState value)
+        initiationFailed,
+    required TResult Function(PaymentCanceledState value) canceled,
   }) {
-    return initiating?.call();
+    final _that = this;
+    switch (_that) {
+      case PaymentInitiatingState():
+        return initiating(_that);
+      case PaymentInitiatedState():
+        return initiated(_that);
+      case PaymentInitiationFailedState():
+        return initiationFailed(_that);
+      case PaymentCanceledState():
+        return canceled(_that);
+      case _:
+        throw StateError('Unexpected subclass');
+    }
   }
 
-  @override
+  /// A variant of `map` that fallback to returning `null`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(PaymentInitiatingState value)? initiating,
+    TResult? Function(PaymentInitiatedState value)? initiated,
+    TResult? Function(PaymentInitiationFailedState value)? initiationFailed,
+    TResult? Function(PaymentCanceledState value)? canceled,
+  }) {
+    final _that = this;
+    switch (_that) {
+      case PaymentInitiatingState() when initiating != null:
+        return initiating(_that);
+      case PaymentInitiatedState() when initiated != null:
+        return initiated(_that);
+      case PaymentInitiationFailedState() when initiationFailed != null:
+        return initiationFailed(_that);
+      case PaymentCanceledState() when canceled != null:
+        return canceled(_that);
+      case _:
+        return null;
+    }
+  }
+
+  /// A variant of `when` that fallback to an `orElse` callback.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initiating,
@@ -989,140 +771,142 @@ class _$PaymentInitiatingStateImpl implements PaymentInitiatingState {
     TResult Function(TransactionDetails details)? canceled,
     required TResult orElse(),
   }) {
-    if (initiating != null) {
-      return initiating();
+    final _that = this;
+    switch (_that) {
+      case PaymentInitiatingState() when initiating != null:
+        return initiating();
+      case PaymentInitiatedState() when initiated != null:
+        return initiated(_that.params, _that.id, _that.queries, _that.brand);
+      case PaymentInitiationFailedState() when initiationFailed != null:
+        return initiationFailed(_that.params);
+      case PaymentCanceledState() when canceled != null:
+        return canceled(_that.details);
+      case _:
+        return orElse();
     }
-    return orElse();
   }
 
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(PaymentInitiatingState value) initiating,
-    required TResult Function(PaymentInitiatedState value) initiated,
-    required TResult Function(PaymentInitiationFailedState value)
-        initiationFailed,
-    required TResult Function(PaymentCanceledState value) canceled,
-  }) {
-    return initiating(this);
-  }
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// As opposed to `map`, this offers destructuring.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case Subclass2(:final field2):
+  ///     return ...;
+  /// }
+  /// ```
 
-  @override
   @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(PaymentInitiatingState value)? initiating,
-    TResult? Function(PaymentInitiatedState value)? initiated,
-    TResult? Function(PaymentInitiationFailedState value)? initiationFailed,
-    TResult? Function(PaymentCanceledState value)? canceled,
+  TResult when<TResult extends Object?>({
+    required TResult Function() initiating,
+    required TResult Function(
+            PaymentParams params, num id, String queries, Brand? brand)
+        initiated,
+    required TResult Function(PaymentParams params) initiationFailed,
+    required TResult Function(TransactionDetails details) canceled,
   }) {
-    return initiating?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(PaymentInitiatingState value)? initiating,
-    TResult Function(PaymentInitiatedState value)? initiated,
-    TResult Function(PaymentInitiationFailedState value)? initiationFailed,
-    TResult Function(PaymentCanceledState value)? canceled,
-    required TResult orElse(),
-  }) {
-    if (initiating != null) {
-      return initiating(this);
+    final _that = this;
+    switch (_that) {
+      case PaymentInitiatingState():
+        return initiating();
+      case PaymentInitiatedState():
+        return initiated(_that.params, _that.id, _that.queries, _that.brand);
+      case PaymentInitiationFailedState():
+        return initiationFailed(_that.params);
+      case PaymentCanceledState():
+        return canceled(_that.details);
+      case _:
+        throw StateError('Unexpected subclass');
     }
-    return orElse();
   }
-}
 
-abstract class PaymentInitiatingState implements PaymentState {
-  const factory PaymentInitiatingState() = _$PaymentInitiatingStateImpl;
-}
+  /// A variant of `when` that fallback to returning `null`
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
 
-/// @nodoc
-abstract class _$$PaymentInitiatedStateImplCopyWith<$Res> {
-  factory _$$PaymentInitiatedStateImplCopyWith(
-          _$PaymentInitiatedStateImpl value,
-          $Res Function(_$PaymentInitiatedStateImpl) then) =
-      __$$PaymentInitiatedStateImplCopyWithImpl<$Res>;
-  @useResult
-  $Res call({PaymentParams params, num id, String queries, Brand? brand});
-
-  $PaymentParamsCopyWith<$Res> get params;
-}
-
-/// @nodoc
-class __$$PaymentInitiatedStateImplCopyWithImpl<$Res>
-    extends _$PaymentStateCopyWithImpl<$Res, _$PaymentInitiatedStateImpl>
-    implements _$$PaymentInitiatedStateImplCopyWith<$Res> {
-  __$$PaymentInitiatedStateImplCopyWithImpl(_$PaymentInitiatedStateImpl _value,
-      $Res Function(_$PaymentInitiatedStateImpl) _then)
-      : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? params = null,
-    Object? id = null,
-    Object? queries = null,
-    Object? brand = freezed,
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initiating,
+    TResult? Function(
+            PaymentParams params, num id, String queries, Brand? brand)?
+        initiated,
+    TResult? Function(PaymentParams params)? initiationFailed,
+    TResult? Function(TransactionDetails details)? canceled,
   }) {
-    return _then(_$PaymentInitiatedStateImpl(
-      params: null == params
-          ? _value.params
-          : params // ignore: cast_nullable_to_non_nullable
-              as PaymentParams,
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as num,
-      queries: null == queries
-          ? _value.queries
-          : queries // ignore: cast_nullable_to_non_nullable
-              as String,
-      brand: freezed == brand
-          ? _value.brand
-          : brand // ignore: cast_nullable_to_non_nullable
-              as Brand?,
-    ));
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $PaymentParamsCopyWith<$Res> get params {
-    return $PaymentParamsCopyWith<$Res>(_value.params, (value) {
-      return _then(_value.copyWith(params: value));
-    });
+    final _that = this;
+    switch (_that) {
+      case PaymentInitiatingState() when initiating != null:
+        return initiating();
+      case PaymentInitiatedState() when initiated != null:
+        return initiated(_that.params, _that.id, _that.queries, _that.brand);
+      case PaymentInitiationFailedState() when initiationFailed != null:
+        return initiationFailed(_that.params);
+      case PaymentCanceledState() when canceled != null:
+        return canceled(_that.details);
+      case _:
+        return null;
+    }
   }
 }
 
 /// @nodoc
 
-class _$PaymentInitiatedStateImpl implements PaymentInitiatedState {
-  const _$PaymentInitiatedStateImpl(
+class PaymentInitiatingState implements PaymentState {
+  const PaymentInitiatingState();
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is PaymentInitiatingState);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  String toString() {
+    return 'PaymentState.initiating()';
+  }
+}
+
+/// @nodoc
+
+class PaymentInitiatedState implements PaymentState {
+  const PaymentInitiatedState(
       {required this.params,
       required this.id,
       required this.queries,
       required this.brand});
 
-  @override
   final PaymentParams params;
-  @override
   final num id;
-  @override
   final String queries;
-  @override
   final Brand? brand;
 
-  @override
-  String toString() {
-    return 'PaymentState.initiated(params: $params, id: $id, queries: $queries, brand: $brand)';
-  }
+  /// Create a copy of PaymentState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $PaymentInitiatedStateCopyWith<PaymentInitiatedState> get copyWith =>
+      _$PaymentInitiatedStateCopyWithImpl<PaymentInitiatedState>(
+          this, _$identity);
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$PaymentInitiatedStateImpl &&
+            other is PaymentInitiatedState &&
             (identical(other.params, params) || other.params == params) &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.queries, queries) || other.queries == queries) &&
@@ -1132,117 +916,111 @@ class _$PaymentInitiatedStateImpl implements PaymentInitiatedState {
   @override
   int get hashCode => Object.hash(runtimeType, params, id, queries, brand);
 
-  @JsonKey(ignore: true)
   @override
-  @pragma('vm:prefer-inline')
-  _$$PaymentInitiatedStateImplCopyWith<_$PaymentInitiatedStateImpl>
-      get copyWith => __$$PaymentInitiatedStateImplCopyWithImpl<
-          _$PaymentInitiatedStateImpl>(this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initiating,
-    required TResult Function(
-            PaymentParams params, num id, String queries, Brand? brand)
-        initiated,
-    required TResult Function(PaymentParams params) initiationFailed,
-    required TResult Function(TransactionDetails details) canceled,
-  }) {
-    return initiated(params, id, queries, brand);
+  String toString() {
+    return 'PaymentState.initiated(params: $params, id: $id, queries: $queries, brand: $brand)';
   }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initiating,
-    TResult? Function(
-            PaymentParams params, num id, String queries, Brand? brand)?
-        initiated,
-    TResult? Function(PaymentParams params)? initiationFailed,
-    TResult? Function(TransactionDetails details)? canceled,
-  }) {
-    return initiated?.call(params, id, queries, brand);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initiating,
-    TResult Function(
-            PaymentParams params, num id, String queries, Brand? brand)?
-        initiated,
-    TResult Function(PaymentParams params)? initiationFailed,
-    TResult Function(TransactionDetails details)? canceled,
-    required TResult orElse(),
-  }) {
-    if (initiated != null) {
-      return initiated(params, id, queries, brand);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(PaymentInitiatingState value) initiating,
-    required TResult Function(PaymentInitiatedState value) initiated,
-    required TResult Function(PaymentInitiationFailedState value)
-        initiationFailed,
-    required TResult Function(PaymentCanceledState value) canceled,
-  }) {
-    return initiated(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(PaymentInitiatingState value)? initiating,
-    TResult? Function(PaymentInitiatedState value)? initiated,
-    TResult? Function(PaymentInitiationFailedState value)? initiationFailed,
-    TResult? Function(PaymentCanceledState value)? canceled,
-  }) {
-    return initiated?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(PaymentInitiatingState value)? initiating,
-    TResult Function(PaymentInitiatedState value)? initiated,
-    TResult Function(PaymentInitiationFailedState value)? initiationFailed,
-    TResult Function(PaymentCanceledState value)? canceled,
-    required TResult orElse(),
-  }) {
-    if (initiated != null) {
-      return initiated(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class PaymentInitiatedState implements PaymentState {
-  const factory PaymentInitiatedState(
-      {required final PaymentParams params,
-      required final num id,
-      required final String queries,
-      required final Brand? brand}) = _$PaymentInitiatedStateImpl;
-
-  PaymentParams get params;
-  num get id;
-  String get queries;
-  Brand? get brand;
-  @JsonKey(ignore: true)
-  _$$PaymentInitiatedStateImplCopyWith<_$PaymentInitiatedStateImpl>
-      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$PaymentInitiationFailedStateImplCopyWith<$Res> {
-  factory _$$PaymentInitiationFailedStateImplCopyWith(
-          _$PaymentInitiationFailedStateImpl value,
-          $Res Function(_$PaymentInitiationFailedStateImpl) then) =
-      __$$PaymentInitiationFailedStateImplCopyWithImpl<$Res>;
+abstract mixin class $PaymentInitiatedStateCopyWith<$Res>
+    implements $PaymentStateCopyWith<$Res> {
+  factory $PaymentInitiatedStateCopyWith(PaymentInitiatedState value,
+          $Res Function(PaymentInitiatedState) _then) =
+      _$PaymentInitiatedStateCopyWithImpl;
+  @useResult
+  $Res call({PaymentParams params, num id, String queries, Brand? brand});
+
+  $PaymentParamsCopyWith<$Res> get params;
+}
+
+/// @nodoc
+class _$PaymentInitiatedStateCopyWithImpl<$Res>
+    implements $PaymentInitiatedStateCopyWith<$Res> {
+  _$PaymentInitiatedStateCopyWithImpl(this._self, this._then);
+
+  final PaymentInitiatedState _self;
+  final $Res Function(PaymentInitiatedState) _then;
+
+  /// Create a copy of PaymentState
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  $Res call({
+    Object? params = null,
+    Object? id = null,
+    Object? queries = null,
+    Object? brand = freezed,
+  }) {
+    return _then(PaymentInitiatedState(
+      params: null == params
+          ? _self.params
+          : params // ignore: cast_nullable_to_non_nullable
+              as PaymentParams,
+      id: null == id
+          ? _self.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as num,
+      queries: null == queries
+          ? _self.queries
+          : queries // ignore: cast_nullable_to_non_nullable
+              as String,
+      brand: freezed == brand
+          ? _self.brand
+          : brand // ignore: cast_nullable_to_non_nullable
+              as Brand?,
+    ));
+  }
+
+  /// Create a copy of PaymentState
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $PaymentParamsCopyWith<$Res> get params {
+    return $PaymentParamsCopyWith<$Res>(_self.params, (value) {
+      return _then(_self.copyWith(params: value));
+    });
+  }
+}
+
+/// @nodoc
+
+class PaymentInitiationFailedState implements PaymentState {
+  const PaymentInitiationFailedState({required this.params});
+
+  final PaymentParams params;
+
+  /// Create a copy of PaymentState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $PaymentInitiationFailedStateCopyWith<PaymentInitiationFailedState>
+      get copyWith => _$PaymentInitiationFailedStateCopyWithImpl<
+          PaymentInitiationFailedState>(this, _$identity);
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is PaymentInitiationFailedState &&
+            (identical(other.params, params) || other.params == params));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, params);
+
+  @override
+  String toString() {
+    return 'PaymentState.initiationFailed(params: $params)';
+  }
+}
+
+/// @nodoc
+abstract mixin class $PaymentInitiationFailedStateCopyWith<$Res>
+    implements $PaymentStateCopyWith<$Res> {
+  factory $PaymentInitiationFailedStateCopyWith(
+          PaymentInitiationFailedState value,
+          $Res Function(PaymentInitiationFailedState) _then) =
+      _$PaymentInitiationFailedStateCopyWithImpl;
   @useResult
   $Res call({PaymentParams params});
 
@@ -1250,314 +1028,101 @@ abstract class _$$PaymentInitiationFailedStateImplCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$PaymentInitiationFailedStateImplCopyWithImpl<$Res>
-    extends _$PaymentStateCopyWithImpl<$Res, _$PaymentInitiationFailedStateImpl>
-    implements _$$PaymentInitiationFailedStateImplCopyWith<$Res> {
-  __$$PaymentInitiationFailedStateImplCopyWithImpl(
-      _$PaymentInitiationFailedStateImpl _value,
-      $Res Function(_$PaymentInitiationFailedStateImpl) _then)
-      : super(_value, _then);
+class _$PaymentInitiationFailedStateCopyWithImpl<$Res>
+    implements $PaymentInitiationFailedStateCopyWith<$Res> {
+  _$PaymentInitiationFailedStateCopyWithImpl(this._self, this._then);
 
+  final PaymentInitiationFailedState _self;
+  final $Res Function(PaymentInitiationFailedState) _then;
+
+  /// Create a copy of PaymentState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
-  @override
   $Res call({
     Object? params = null,
   }) {
-    return _then(_$PaymentInitiationFailedStateImpl(
+    return _then(PaymentInitiationFailedState(
       params: null == params
-          ? _value.params
+          ? _self.params
           : params // ignore: cast_nullable_to_non_nullable
               as PaymentParams,
     ));
   }
 
+  /// Create a copy of PaymentState
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $PaymentParamsCopyWith<$Res> get params {
-    return $PaymentParamsCopyWith<$Res>(_value.params, (value) {
-      return _then(_value.copyWith(params: value));
+    return $PaymentParamsCopyWith<$Res>(_self.params, (value) {
+      return _then(_self.copyWith(params: value));
     });
   }
 }
 
 /// @nodoc
 
-class _$PaymentInitiationFailedStateImpl
-    implements PaymentInitiationFailedState {
-  const _$PaymentInitiationFailedStateImpl({required this.params});
+class PaymentCanceledState implements PaymentState {
+  const PaymentCanceledState({required this.details});
 
-  @override
-  final PaymentParams params;
-
-  @override
-  String toString() {
-    return 'PaymentState.initiationFailed(params: $params)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$PaymentInitiationFailedStateImpl &&
-            (identical(other.params, params) || other.params == params));
-  }
-
-  @override
-  int get hashCode => Object.hash(runtimeType, params);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$PaymentInitiationFailedStateImplCopyWith<
-          _$PaymentInitiationFailedStateImpl>
-      get copyWith => __$$PaymentInitiationFailedStateImplCopyWithImpl<
-          _$PaymentInitiationFailedStateImpl>(this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initiating,
-    required TResult Function(
-            PaymentParams params, num id, String queries, Brand? brand)
-        initiated,
-    required TResult Function(PaymentParams params) initiationFailed,
-    required TResult Function(TransactionDetails details) canceled,
-  }) {
-    return initiationFailed(params);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initiating,
-    TResult? Function(
-            PaymentParams params, num id, String queries, Brand? brand)?
-        initiated,
-    TResult? Function(PaymentParams params)? initiationFailed,
-    TResult? Function(TransactionDetails details)? canceled,
-  }) {
-    return initiationFailed?.call(params);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initiating,
-    TResult Function(
-            PaymentParams params, num id, String queries, Brand? brand)?
-        initiated,
-    TResult Function(PaymentParams params)? initiationFailed,
-    TResult Function(TransactionDetails details)? canceled,
-    required TResult orElse(),
-  }) {
-    if (initiationFailed != null) {
-      return initiationFailed(params);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(PaymentInitiatingState value) initiating,
-    required TResult Function(PaymentInitiatedState value) initiated,
-    required TResult Function(PaymentInitiationFailedState value)
-        initiationFailed,
-    required TResult Function(PaymentCanceledState value) canceled,
-  }) {
-    return initiationFailed(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(PaymentInitiatingState value)? initiating,
-    TResult? Function(PaymentInitiatedState value)? initiated,
-    TResult? Function(PaymentInitiationFailedState value)? initiationFailed,
-    TResult? Function(PaymentCanceledState value)? canceled,
-  }) {
-    return initiationFailed?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(PaymentInitiatingState value)? initiating,
-    TResult Function(PaymentInitiatedState value)? initiated,
-    TResult Function(PaymentInitiationFailedState value)? initiationFailed,
-    TResult Function(PaymentCanceledState value)? canceled,
-    required TResult orElse(),
-  }) {
-    if (initiationFailed != null) {
-      return initiationFailed(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class PaymentInitiationFailedState implements PaymentState {
-  const factory PaymentInitiationFailedState(
-          {required final PaymentParams params}) =
-      _$PaymentInitiationFailedStateImpl;
-
-  PaymentParams get params;
-  @JsonKey(ignore: true)
-  _$$PaymentInitiationFailedStateImplCopyWith<
-          _$PaymentInitiationFailedStateImpl>
-      get copyWith => throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class _$$PaymentCanceledStateImplCopyWith<$Res> {
-  factory _$$PaymentCanceledStateImplCopyWith(_$PaymentCanceledStateImpl value,
-          $Res Function(_$PaymentCanceledStateImpl) then) =
-      __$$PaymentCanceledStateImplCopyWithImpl<$Res>;
-  @useResult
-  $Res call({TransactionDetails details});
-}
-
-/// @nodoc
-class __$$PaymentCanceledStateImplCopyWithImpl<$Res>
-    extends _$PaymentStateCopyWithImpl<$Res, _$PaymentCanceledStateImpl>
-    implements _$$PaymentCanceledStateImplCopyWith<$Res> {
-  __$$PaymentCanceledStateImplCopyWithImpl(_$PaymentCanceledStateImpl _value,
-      $Res Function(_$PaymentCanceledStateImpl) _then)
-      : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? details = null,
-  }) {
-    return _then(_$PaymentCanceledStateImpl(
-      details: null == details
-          ? _value.details
-          : details // ignore: cast_nullable_to_non_nullable
-              as TransactionDetails,
-    ));
-  }
-}
-
-/// @nodoc
-
-class _$PaymentCanceledStateImpl implements PaymentCanceledState {
-  const _$PaymentCanceledStateImpl({required this.details});
-
-  @override
   final TransactionDetails details;
 
-  @override
-  String toString() {
-    return 'PaymentState.canceled(details: $details)';
-  }
+  /// Create a copy of PaymentState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $PaymentCanceledStateCopyWith<PaymentCanceledState> get copyWith =>
+      _$PaymentCanceledStateCopyWithImpl<PaymentCanceledState>(
+          this, _$identity);
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$PaymentCanceledStateImpl &&
+            other is PaymentCanceledState &&
             (identical(other.details, details) || other.details == details));
   }
 
   @override
   int get hashCode => Object.hash(runtimeType, details);
 
-  @JsonKey(ignore: true)
   @override
+  String toString() {
+    return 'PaymentState.canceled(details: $details)';
+  }
+}
+
+/// @nodoc
+abstract mixin class $PaymentCanceledStateCopyWith<$Res>
+    implements $PaymentStateCopyWith<$Res> {
+  factory $PaymentCanceledStateCopyWith(PaymentCanceledState value,
+          $Res Function(PaymentCanceledState) _then) =
+      _$PaymentCanceledStateCopyWithImpl;
+  @useResult
+  $Res call({TransactionDetails details});
+}
+
+/// @nodoc
+class _$PaymentCanceledStateCopyWithImpl<$Res>
+    implements $PaymentCanceledStateCopyWith<$Res> {
+  _$PaymentCanceledStateCopyWithImpl(this._self, this._then);
+
+  final PaymentCanceledState _self;
+  final $Res Function(PaymentCanceledState) _then;
+
+  /// Create a copy of PaymentState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
-  _$$PaymentCanceledStateImplCopyWith<_$PaymentCanceledStateImpl>
-      get copyWith =>
-          __$$PaymentCanceledStateImplCopyWithImpl<_$PaymentCanceledStateImpl>(
-              this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initiating,
-    required TResult Function(
-            PaymentParams params, num id, String queries, Brand? brand)
-        initiated,
-    required TResult Function(PaymentParams params) initiationFailed,
-    required TResult Function(TransactionDetails details) canceled,
+  $Res call({
+    Object? details = null,
   }) {
-    return canceled(details);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initiating,
-    TResult? Function(
-            PaymentParams params, num id, String queries, Brand? brand)?
-        initiated,
-    TResult? Function(PaymentParams params)? initiationFailed,
-    TResult? Function(TransactionDetails details)? canceled,
-  }) {
-    return canceled?.call(details);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initiating,
-    TResult Function(
-            PaymentParams params, num id, String queries, Brand? brand)?
-        initiated,
-    TResult Function(PaymentParams params)? initiationFailed,
-    TResult Function(TransactionDetails details)? canceled,
-    required TResult orElse(),
-  }) {
-    if (canceled != null) {
-      return canceled(details);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(PaymentInitiatingState value) initiating,
-    required TResult Function(PaymentInitiatedState value) initiated,
-    required TResult Function(PaymentInitiationFailedState value)
-        initiationFailed,
-    required TResult Function(PaymentCanceledState value) canceled,
-  }) {
-    return canceled(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(PaymentInitiatingState value)? initiating,
-    TResult? Function(PaymentInitiatedState value)? initiated,
-    TResult? Function(PaymentInitiationFailedState value)? initiationFailed,
-    TResult? Function(PaymentCanceledState value)? canceled,
-  }) {
-    return canceled?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(PaymentInitiatingState value)? initiating,
-    TResult Function(PaymentInitiatedState value)? initiated,
-    TResult Function(PaymentInitiationFailedState value)? initiationFailed,
-    TResult Function(PaymentCanceledState value)? canceled,
-    required TResult orElse(),
-  }) {
-    if (canceled != null) {
-      return canceled(this);
-    }
-    return orElse();
+    return _then(PaymentCanceledState(
+      details: null == details
+          ? _self.details
+          : details // ignore: cast_nullable_to_non_nullable
+              as TransactionDetails,
+    ));
   }
 }
 
-abstract class PaymentCanceledState implements PaymentState {
-  const factory PaymentCanceledState(
-      {required final TransactionDetails details}) = _$PaymentCanceledStateImpl;
-
-  TransactionDetails get details;
-  @JsonKey(ignore: true)
-  _$$PaymentCanceledStateImplCopyWith<_$PaymentCanceledStateImpl>
-      get copyWith => throw _privateConstructorUsedError;
-}
+// dart format on

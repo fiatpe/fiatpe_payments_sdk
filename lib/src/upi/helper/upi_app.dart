@@ -5,7 +5,7 @@ part 'upi_app.freezed.dart';
 part 'upi_app.g.dart';
 
 @freezed
-class UPIApp with _$UPIApp {
+abstract class UPIApp with _$UPIApp {
   const factory UPIApp({
     required String scheme,
     required String androidPackageName,

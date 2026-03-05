@@ -1,5 +1,5 @@
-// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// coverage:ignore-file
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
@@ -9,98 +9,65 @@ part of 'upi_app.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// dart format off
 T _$identity<T>(T value) => value;
-
-final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
-
-UPIApp _$UPIAppFromJson(Map<String, dynamic> json) {
-  return _UPIApp.fromJson(json);
-}
 
 /// @nodoc
 mixin _$UPIApp {
-  String get scheme => throw _privateConstructorUsedError;
-  String get androidPackageName => throw _privateConstructorUsedError;
-  String get iosBundleId => throw _privateConstructorUsedError;
-  String get appName => throw _privateConstructorUsedError;
-  Set<String> get upiHandles => throw _privateConstructorUsedError;
-  String? get icon => throw _privateConstructorUsedError;
+  String get scheme;
+  String get androidPackageName;
+  String get iosBundleId;
+  String get appName;
+  Set<String> get upiHandles;
+  String? get icon;
 
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
-  $UPIAppCopyWith<UPIApp> get copyWith => throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class $UPIAppCopyWith<$Res> {
-  factory $UPIAppCopyWith(UPIApp value, $Res Function(UPIApp) then) =
-      _$UPIAppCopyWithImpl<$Res, UPIApp>;
-  @useResult
-  $Res call(
-      {String scheme,
-      String androidPackageName,
-      String iosBundleId,
-      String appName,
-      Set<String> upiHandles,
-      String? icon});
-}
-
-/// @nodoc
-class _$UPIAppCopyWithImpl<$Res, $Val extends UPIApp>
-    implements $UPIAppCopyWith<$Res> {
-  _$UPIAppCopyWithImpl(this._value, this._then);
-
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
-
+  /// Create a copy of UPIApp
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @pragma('vm:prefer-inline')
+  $UPIAppCopyWith<UPIApp> get copyWith =>
+      _$UPIAppCopyWithImpl<UPIApp>(this as UPIApp, _$identity);
+
+  /// Serializes this UPIApp to a JSON map.
+  Map<String, dynamic> toJson();
+
   @override
-  $Res call({
-    Object? scheme = null,
-    Object? androidPackageName = null,
-    Object? iosBundleId = null,
-    Object? appName = null,
-    Object? upiHandles = null,
-    Object? icon = freezed,
-  }) {
-    return _then(_value.copyWith(
-      scheme: null == scheme
-          ? _value.scheme
-          : scheme // ignore: cast_nullable_to_non_nullable
-              as String,
-      androidPackageName: null == androidPackageName
-          ? _value.androidPackageName
-          : androidPackageName // ignore: cast_nullable_to_non_nullable
-              as String,
-      iosBundleId: null == iosBundleId
-          ? _value.iosBundleId
-          : iosBundleId // ignore: cast_nullable_to_non_nullable
-              as String,
-      appName: null == appName
-          ? _value.appName
-          : appName // ignore: cast_nullable_to_non_nullable
-              as String,
-      upiHandles: null == upiHandles
-          ? _value.upiHandles
-          : upiHandles // ignore: cast_nullable_to_non_nullable
-              as Set<String>,
-      icon: freezed == icon
-          ? _value.icon
-          : icon // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ) as $Val);
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is UPIApp &&
+            (identical(other.scheme, scheme) || other.scheme == scheme) &&
+            (identical(other.androidPackageName, androidPackageName) ||
+                other.androidPackageName == androidPackageName) &&
+            (identical(other.iosBundleId, iosBundleId) ||
+                other.iosBundleId == iosBundleId) &&
+            (identical(other.appName, appName) || other.appName == appName) &&
+            const DeepCollectionEquality()
+                .equals(other.upiHandles, upiHandles) &&
+            (identical(other.icon, icon) || other.icon == icon));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      scheme,
+      androidPackageName,
+      iosBundleId,
+      appName,
+      const DeepCollectionEquality().hash(upiHandles),
+      icon);
+
+  @override
+  String toString() {
+    return 'UPIApp(scheme: $scheme, androidPackageName: $androidPackageName, iosBundleId: $iosBundleId, appName: $appName, upiHandles: $upiHandles, icon: $icon)';
   }
 }
 
 /// @nodoc
-abstract class _$$UPIAppImplCopyWith<$Res> implements $UPIAppCopyWith<$Res> {
-  factory _$$UPIAppImplCopyWith(
-          _$UPIAppImpl value, $Res Function(_$UPIAppImpl) then) =
-      __$$UPIAppImplCopyWithImpl<$Res>;
-  @override
+abstract mixin class $UPIAppCopyWith<$Res> {
+  factory $UPIAppCopyWith(UPIApp value, $Res Function(UPIApp) _then) =
+      _$UPIAppCopyWithImpl;
   @useResult
   $Res call(
       {String scheme,
@@ -112,13 +79,14 @@ abstract class _$$UPIAppImplCopyWith<$Res> implements $UPIAppCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$UPIAppImplCopyWithImpl<$Res>
-    extends _$UPIAppCopyWithImpl<$Res, _$UPIAppImpl>
-    implements _$$UPIAppImplCopyWith<$Res> {
-  __$$UPIAppImplCopyWithImpl(
-      _$UPIAppImpl _value, $Res Function(_$UPIAppImpl) _then)
-      : super(_value, _then);
+class _$UPIAppCopyWithImpl<$Res> implements $UPIAppCopyWith<$Res> {
+  _$UPIAppCopyWithImpl(this._self, this._then);
 
+  final UPIApp _self;
+  final $Res Function(UPIApp) _then;
+
+  /// Create a copy of UPIApp
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -129,39 +97,220 @@ class __$$UPIAppImplCopyWithImpl<$Res>
     Object? upiHandles = null,
     Object? icon = freezed,
   }) {
-    return _then(_$UPIAppImpl(
+    return _then(_self.copyWith(
       scheme: null == scheme
-          ? _value.scheme
+          ? _self.scheme
           : scheme // ignore: cast_nullable_to_non_nullable
               as String,
       androidPackageName: null == androidPackageName
-          ? _value.androidPackageName
+          ? _self.androidPackageName
           : androidPackageName // ignore: cast_nullable_to_non_nullable
               as String,
       iosBundleId: null == iosBundleId
-          ? _value.iosBundleId
+          ? _self.iosBundleId
           : iosBundleId // ignore: cast_nullable_to_non_nullable
               as String,
       appName: null == appName
-          ? _value.appName
+          ? _self.appName
           : appName // ignore: cast_nullable_to_non_nullable
               as String,
       upiHandles: null == upiHandles
-          ? _value._upiHandles
+          ? _self.upiHandles
           : upiHandles // ignore: cast_nullable_to_non_nullable
               as Set<String>,
       icon: freezed == icon
-          ? _value.icon
+          ? _self.icon
           : icon // ignore: cast_nullable_to_non_nullable
               as String?,
     ));
   }
 }
 
+/// Adds pattern-matching-related methods to [UPIApp].
+extension UPIAppPatterns on UPIApp {
+  /// A variant of `map` that fallback to returning `orElse`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>(
+    TResult Function(_UPIApp value)? $default, {
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _UPIApp() when $default != null:
+        return $default(_that);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// Callbacks receives the raw object, upcasted.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case final Subclass2 value:
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>(
+    TResult Function(_UPIApp value) $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _UPIApp():
+        return $default(_that);
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
+
+  /// A variant of `map` that fallback to returning `null`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>(
+    TResult? Function(_UPIApp value)? $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _UPIApp() when $default != null:
+        return $default(_that);
+      case _:
+        return null;
+    }
+  }
+
+  /// A variant of `when` that fallback to an `orElse` callback.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>(
+    TResult Function(
+            String scheme,
+            String androidPackageName,
+            String iosBundleId,
+            String appName,
+            Set<String> upiHandles,
+            String? icon)?
+        $default, {
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _UPIApp() when $default != null:
+        return $default(_that.scheme, _that.androidPackageName,
+            _that.iosBundleId, _that.appName, _that.upiHandles, _that.icon);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// As opposed to `map`, this offers destructuring.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case Subclass2(:final field2):
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>(
+    TResult Function(
+            String scheme,
+            String androidPackageName,
+            String iosBundleId,
+            String appName,
+            Set<String> upiHandles,
+            String? icon)
+        $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _UPIApp():
+        return $default(_that.scheme, _that.androidPackageName,
+            _that.iosBundleId, _that.appName, _that.upiHandles, _that.icon);
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
+
+  /// A variant of `when` that fallback to returning `null`
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>(
+    TResult? Function(
+            String scheme,
+            String androidPackageName,
+            String iosBundleId,
+            String appName,
+            Set<String> upiHandles,
+            String? icon)?
+        $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _UPIApp() when $default != null:
+        return $default(_that.scheme, _that.androidPackageName,
+            _that.iosBundleId, _that.appName, _that.upiHandles, _that.icon);
+      case _:
+        return null;
+    }
+  }
+}
+
 /// @nodoc
 @JsonSerializable()
-class _$UPIAppImpl implements _UPIApp {
-  const _$UPIAppImpl(
+class _UPIApp implements UPIApp {
+  const _UPIApp(
       {required this.scheme,
       required this.androidPackageName,
       required this.iosBundleId,
@@ -169,9 +318,7 @@ class _$UPIAppImpl implements _UPIApp {
       required final Set<String> upiHandles,
       this.icon})
       : _upiHandles = upiHandles;
-
-  factory _$UPIAppImpl.fromJson(Map<String, dynamic> json) =>
-      _$$UPIAppImplFromJson(json);
+  factory _UPIApp.fromJson(Map<String, dynamic> json) => _$UPIAppFromJson(json);
 
   @override
   final String scheme;
@@ -192,16 +339,26 @@ class _$UPIAppImpl implements _UPIApp {
   @override
   final String? icon;
 
+  /// Create a copy of UPIApp
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  String toString() {
-    return 'UPIApp(scheme: $scheme, androidPackageName: $androidPackageName, iosBundleId: $iosBundleId, appName: $appName, upiHandles: $upiHandles, icon: $icon)';
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  _$UPIAppCopyWith<_UPIApp> get copyWith =>
+      __$UPIAppCopyWithImpl<_UPIApp>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$UPIAppToJson(
+      this,
+    );
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$UPIAppImpl &&
+            other is _UPIApp &&
             (identical(other.scheme, scheme) || other.scheme == scheme) &&
             (identical(other.androidPackageName, androidPackageName) ||
                 other.androidPackageName == androidPackageName) &&
@@ -213,7 +370,7 @@ class _$UPIAppImpl implements _UPIApp {
             (identical(other.icon, icon) || other.icon == icon));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -224,45 +381,73 @@ class _$UPIAppImpl implements _UPIApp {
       const DeepCollectionEquality().hash(_upiHandles),
       icon);
 
-  @JsonKey(ignore: true)
   @override
-  @pragma('vm:prefer-inline')
-  _$$UPIAppImplCopyWith<_$UPIAppImpl> get copyWith =>
-      __$$UPIAppImplCopyWithImpl<_$UPIAppImpl>(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$UPIAppImplToJson(
-      this,
-    );
+  String toString() {
+    return 'UPIApp(scheme: $scheme, androidPackageName: $androidPackageName, iosBundleId: $iosBundleId, appName: $appName, upiHandles: $upiHandles, icon: $icon)';
   }
 }
 
-abstract class _UPIApp implements UPIApp {
-  const factory _UPIApp(
-      {required final String scheme,
-      required final String androidPackageName,
-      required final String iosBundleId,
-      required final String appName,
-      required final Set<String> upiHandles,
-      final String? icon}) = _$UPIAppImpl;
-
-  factory _UPIApp.fromJson(Map<String, dynamic> json) = _$UPIAppImpl.fromJson;
-
+/// @nodoc
+abstract mixin class _$UPIAppCopyWith<$Res> implements $UPIAppCopyWith<$Res> {
+  factory _$UPIAppCopyWith(_UPIApp value, $Res Function(_UPIApp) _then) =
+      __$UPIAppCopyWithImpl;
   @override
-  String get scheme;
-  @override
-  String get androidPackageName;
-  @override
-  String get iosBundleId;
-  @override
-  String get appName;
-  @override
-  Set<String> get upiHandles;
-  @override
-  String? get icon;
-  @override
-  @JsonKey(ignore: true)
-  _$$UPIAppImplCopyWith<_$UPIAppImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  @useResult
+  $Res call(
+      {String scheme,
+      String androidPackageName,
+      String iosBundleId,
+      String appName,
+      Set<String> upiHandles,
+      String? icon});
 }
+
+/// @nodoc
+class __$UPIAppCopyWithImpl<$Res> implements _$UPIAppCopyWith<$Res> {
+  __$UPIAppCopyWithImpl(this._self, this._then);
+
+  final _UPIApp _self;
+  final $Res Function(_UPIApp) _then;
+
+  /// Create a copy of UPIApp
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $Res call({
+    Object? scheme = null,
+    Object? androidPackageName = null,
+    Object? iosBundleId = null,
+    Object? appName = null,
+    Object? upiHandles = null,
+    Object? icon = freezed,
+  }) {
+    return _then(_UPIApp(
+      scheme: null == scheme
+          ? _self.scheme
+          : scheme // ignore: cast_nullable_to_non_nullable
+              as String,
+      androidPackageName: null == androidPackageName
+          ? _self.androidPackageName
+          : androidPackageName // ignore: cast_nullable_to_non_nullable
+              as String,
+      iosBundleId: null == iosBundleId
+          ? _self.iosBundleId
+          : iosBundleId // ignore: cast_nullable_to_non_nullable
+              as String,
+      appName: null == appName
+          ? _self.appName
+          : appName // ignore: cast_nullable_to_non_nullable
+              as String,
+      upiHandles: null == upiHandles
+          ? _self._upiHandles
+          : upiHandles // ignore: cast_nullable_to_non_nullable
+              as Set<String>,
+      icon: freezed == icon
+          ? _self.icon
+          : icon // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ));
+  }
+}
+
+// dart format on

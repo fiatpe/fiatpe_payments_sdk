@@ -4,7 +4,7 @@ part 'verify_vpa_response.freezed.dart';
 part 'verify_vpa_response.g.dart';
 
 @freezed
-class VerifyVpaResponse with _$VerifyVpaResponse {
+abstract class VerifyVpaResponse with _$VerifyVpaResponse {
   const factory VerifyVpaResponse({
     required String message,
     @Default(null) String? name

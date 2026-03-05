@@ -1,5 +1,5 @@
-// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// coverage:ignore-file
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
@@ -9,36 +9,156 @@ part of 'payment_result.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// dart format off
 T _$identity<T>(T value) => value;
-
-final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$PaymentResult {
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is PaymentResult);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  String toString() {
+    return 'PaymentResult()';
+  }
+}
+
+/// @nodoc
+class $PaymentResultCopyWith<$Res> {
+  $PaymentResultCopyWith(PaymentResult _, $Res Function(PaymentResult) __);
+}
+
+/// Adds pattern-matching-related methods to [PaymentResult].
+extension PaymentResultPatterns on PaymentResult {
+  /// A variant of `map` that fallback to returning `orElse`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
   @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function(TransactionDetails details) success,
-    required TResult Function(
-            String errorCode, String errorMessage, TransactionDetails? details)
-        failure,
-    required TResult Function(TransactionDetails details) pending,
-    required TResult Function(TransactionDetails details, String? reason)
-        cancelled,
-    required TResult Function(String rawResponse) unknown,
-  }) =>
-      throw _privateConstructorUsedError;
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(PaymentSuccess value)? success,
+    TResult Function(PaymentFailure value)? failure,
+    TResult Function(PaymentPending value)? pending,
+    TResult Function(PaymentCancelled value)? cancelled,
+    TResult Function(PaymentUnknown value)? unknown,
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case PaymentSuccess() when success != null:
+        return success(_that);
+      case PaymentFailure() when failure != null:
+        return failure(_that);
+      case PaymentPending() when pending != null:
+        return pending(_that);
+      case PaymentCancelled() when cancelled != null:
+        return cancelled(_that);
+      case PaymentUnknown() when unknown != null:
+        return unknown(_that);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// Callbacks receives the raw object, upcasted.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case final Subclass2 value:
+  ///     return ...;
+  /// }
+  /// ```
+
   @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(TransactionDetails details)? success,
-    TResult? Function(
-            String errorCode, String errorMessage, TransactionDetails? details)?
-        failure,
-    TResult? Function(TransactionDetails details)? pending,
-    TResult? Function(TransactionDetails details, String? reason)? cancelled,
-    TResult? Function(String rawResponse)? unknown,
-  }) =>
-      throw _privateConstructorUsedError;
+  TResult map<TResult extends Object?>({
+    required TResult Function(PaymentSuccess value) success,
+    required TResult Function(PaymentFailure value) failure,
+    required TResult Function(PaymentPending value) pending,
+    required TResult Function(PaymentCancelled value) cancelled,
+    required TResult Function(PaymentUnknown value) unknown,
+  }) {
+    final _that = this;
+    switch (_that) {
+      case PaymentSuccess():
+        return success(_that);
+      case PaymentFailure():
+        return failure(_that);
+      case PaymentPending():
+        return pending(_that);
+      case PaymentCancelled():
+        return cancelled(_that);
+      case PaymentUnknown():
+        return unknown(_that);
+    }
+  }
+
+  /// A variant of `map` that fallback to returning `null`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(PaymentSuccess value)? success,
+    TResult? Function(PaymentFailure value)? failure,
+    TResult? Function(PaymentPending value)? pending,
+    TResult? Function(PaymentCancelled value)? cancelled,
+    TResult? Function(PaymentUnknown value)? unknown,
+  }) {
+    final _that = this;
+    switch (_that) {
+      case PaymentSuccess() when success != null:
+        return success(_that);
+      case PaymentFailure() when failure != null:
+        return failure(_that);
+      case PaymentPending() when pending != null:
+        return pending(_that);
+      case PaymentCancelled() when cancelled != null:
+        return cancelled(_that);
+      case PaymentUnknown() when unknown != null:
+        return unknown(_that);
+      case _:
+        return null;
+    }
+  }
+
+  /// A variant of `when` that fallback to an `orElse` callback.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(TransactionDetails details)? success,
@@ -49,81 +169,161 @@ mixin _$PaymentResult {
     TResult Function(TransactionDetails details, String? reason)? cancelled,
     TResult Function(String rawResponse)? unknown,
     required TResult orElse(),
-  }) =>
-      throw _privateConstructorUsedError;
+  }) {
+    final _that = this;
+    switch (_that) {
+      case PaymentSuccess() when success != null:
+        return success(_that.details);
+      case PaymentFailure() when failure != null:
+        return failure(_that.errorCode, _that.errorMessage, _that.details);
+      case PaymentPending() when pending != null:
+        return pending(_that.details);
+      case PaymentCancelled() when cancelled != null:
+        return cancelled(_that.details, _that.reason);
+      case PaymentUnknown() when unknown != null:
+        return unknown(_that.rawResponse);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// As opposed to `map`, this offers destructuring.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case Subclass2(:final field2):
+  ///     return ...;
+  /// }
+  /// ```
+
   @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(PaymentSuccess value) success,
-    required TResult Function(PaymentFailure value) failure,
-    required TResult Function(PaymentPending value) pending,
-    required TResult Function(PaymentCancelled value) cancelled,
-    required TResult Function(PaymentUnknown value) unknown,
-  }) =>
-      throw _privateConstructorUsedError;
+  TResult when<TResult extends Object?>({
+    required TResult Function(TransactionDetails details) success,
+    required TResult Function(
+            String errorCode, String errorMessage, TransactionDetails? details)
+        failure,
+    required TResult Function(TransactionDetails details) pending,
+    required TResult Function(TransactionDetails details, String? reason)
+        cancelled,
+    required TResult Function(String rawResponse) unknown,
+  }) {
+    final _that = this;
+    switch (_that) {
+      case PaymentSuccess():
+        return success(_that.details);
+      case PaymentFailure():
+        return failure(_that.errorCode, _that.errorMessage, _that.details);
+      case PaymentPending():
+        return pending(_that.details);
+      case PaymentCancelled():
+        return cancelled(_that.details, _that.reason);
+      case PaymentUnknown():
+        return unknown(_that.rawResponse);
+    }
+  }
+
+  /// A variant of `when` that fallback to returning `null`
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
   @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(PaymentSuccess value)? success,
-    TResult? Function(PaymentFailure value)? failure,
-    TResult? Function(PaymentPending value)? pending,
-    TResult? Function(PaymentCancelled value)? cancelled,
-    TResult? Function(PaymentUnknown value)? unknown,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(PaymentSuccess value)? success,
-    TResult Function(PaymentFailure value)? failure,
-    TResult Function(PaymentPending value)? pending,
-    TResult Function(PaymentCancelled value)? cancelled,
-    TResult Function(PaymentUnknown value)? unknown,
-    required TResult orElse(),
-  }) =>
-      throw _privateConstructorUsedError;
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(TransactionDetails details)? success,
+    TResult? Function(
+            String errorCode, String errorMessage, TransactionDetails? details)?
+        failure,
+    TResult? Function(TransactionDetails details)? pending,
+    TResult? Function(TransactionDetails details, String? reason)? cancelled,
+    TResult? Function(String rawResponse)? unknown,
+  }) {
+    final _that = this;
+    switch (_that) {
+      case PaymentSuccess() when success != null:
+        return success(_that.details);
+      case PaymentFailure() when failure != null:
+        return failure(_that.errorCode, _that.errorMessage, _that.details);
+      case PaymentPending() when pending != null:
+        return pending(_that.details);
+      case PaymentCancelled() when cancelled != null:
+        return cancelled(_that.details, _that.reason);
+      case PaymentUnknown() when unknown != null:
+        return unknown(_that.rawResponse);
+      case _:
+        return null;
+    }
+  }
 }
 
 /// @nodoc
-abstract class $PaymentResultCopyWith<$Res> {
-  factory $PaymentResultCopyWith(
-          PaymentResult value, $Res Function(PaymentResult) then) =
-      _$PaymentResultCopyWithImpl<$Res, PaymentResult>;
+
+class PaymentSuccess implements PaymentResult {
+  const PaymentSuccess({required this.details});
+
+  final TransactionDetails details;
+
+  /// Create a copy of PaymentResult
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $PaymentSuccessCopyWith<PaymentSuccess> get copyWith =>
+      _$PaymentSuccessCopyWithImpl<PaymentSuccess>(this, _$identity);
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is PaymentSuccess &&
+            (identical(other.details, details) || other.details == details));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, details);
+
+  @override
+  String toString() {
+    return 'PaymentResult.success(details: $details)';
+  }
 }
 
 /// @nodoc
-class _$PaymentResultCopyWithImpl<$Res, $Val extends PaymentResult>
+abstract mixin class $PaymentSuccessCopyWith<$Res>
     implements $PaymentResultCopyWith<$Res> {
-  _$PaymentResultCopyWithImpl(this._value, this._then);
-
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
-}
-
-/// @nodoc
-abstract class _$$PaymentSuccessImplCopyWith<$Res> {
-  factory _$$PaymentSuccessImplCopyWith(_$PaymentSuccessImpl value,
-          $Res Function(_$PaymentSuccessImpl) then) =
-      __$$PaymentSuccessImplCopyWithImpl<$Res>;
+  factory $PaymentSuccessCopyWith(
+          PaymentSuccess value, $Res Function(PaymentSuccess) _then) =
+      _$PaymentSuccessCopyWithImpl;
   @useResult
   $Res call({TransactionDetails details});
 }
 
 /// @nodoc
-class __$$PaymentSuccessImplCopyWithImpl<$Res>
-    extends _$PaymentResultCopyWithImpl<$Res, _$PaymentSuccessImpl>
-    implements _$$PaymentSuccessImplCopyWith<$Res> {
-  __$$PaymentSuccessImplCopyWithImpl(
-      _$PaymentSuccessImpl _value, $Res Function(_$PaymentSuccessImpl) _then)
-      : super(_value, _then);
+class _$PaymentSuccessCopyWithImpl<$Res>
+    implements $PaymentSuccessCopyWith<$Res> {
+  _$PaymentSuccessCopyWithImpl(this._self, this._then);
 
+  final PaymentSuccess _self;
+  final $Res Function(PaymentSuccess) _then;
+
+  /// Create a copy of PaymentResult
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
-  @override
   $Res call({
     Object? details = null,
   }) {
-    return _then(_$PaymentSuccessImpl(
+    return _then(PaymentSuccess(
       details: null == details
-          ? _value.details
+          ? _self.details
           : details // ignore: cast_nullable_to_non_nullable
               as TransactionDetails,
     ));
@@ -132,200 +332,28 @@ class __$$PaymentSuccessImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$PaymentSuccessImpl implements PaymentSuccess {
-  const _$PaymentSuccessImpl({required this.details});
-
-  @override
-  final TransactionDetails details;
-
-  @override
-  String toString() {
-    return 'PaymentResult.success(details: $details)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$PaymentSuccessImpl &&
-            (identical(other.details, details) || other.details == details));
-  }
-
-  @override
-  int get hashCode => Object.hash(runtimeType, details);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$PaymentSuccessImplCopyWith<_$PaymentSuccessImpl> get copyWith =>
-      __$$PaymentSuccessImplCopyWithImpl<_$PaymentSuccessImpl>(
-          this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function(TransactionDetails details) success,
-    required TResult Function(
-            String errorCode, String errorMessage, TransactionDetails? details)
-        failure,
-    required TResult Function(TransactionDetails details) pending,
-    required TResult Function(TransactionDetails details, String? reason)
-        cancelled,
-    required TResult Function(String rawResponse) unknown,
-  }) {
-    return success(details);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(TransactionDetails details)? success,
-    TResult? Function(
-            String errorCode, String errorMessage, TransactionDetails? details)?
-        failure,
-    TResult? Function(TransactionDetails details)? pending,
-    TResult? Function(TransactionDetails details, String? reason)? cancelled,
-    TResult? Function(String rawResponse)? unknown,
-  }) {
-    return success?.call(details);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function(TransactionDetails details)? success,
-    TResult Function(
-            String errorCode, String errorMessage, TransactionDetails? details)?
-        failure,
-    TResult Function(TransactionDetails details)? pending,
-    TResult Function(TransactionDetails details, String? reason)? cancelled,
-    TResult Function(String rawResponse)? unknown,
-    required TResult orElse(),
-  }) {
-    if (success != null) {
-      return success(details);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(PaymentSuccess value) success,
-    required TResult Function(PaymentFailure value) failure,
-    required TResult Function(PaymentPending value) pending,
-    required TResult Function(PaymentCancelled value) cancelled,
-    required TResult Function(PaymentUnknown value) unknown,
-  }) {
-    return success(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(PaymentSuccess value)? success,
-    TResult? Function(PaymentFailure value)? failure,
-    TResult? Function(PaymentPending value)? pending,
-    TResult? Function(PaymentCancelled value)? cancelled,
-    TResult? Function(PaymentUnknown value)? unknown,
-  }) {
-    return success?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(PaymentSuccess value)? success,
-    TResult Function(PaymentFailure value)? failure,
-    TResult Function(PaymentPending value)? pending,
-    TResult Function(PaymentCancelled value)? cancelled,
-    TResult Function(PaymentUnknown value)? unknown,
-    required TResult orElse(),
-  }) {
-    if (success != null) {
-      return success(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class PaymentSuccess implements PaymentResult {
-  const factory PaymentSuccess({required final TransactionDetails details}) =
-      _$PaymentSuccessImpl;
-
-  TransactionDetails get details;
-  @JsonKey(ignore: true)
-  _$$PaymentSuccessImplCopyWith<_$PaymentSuccessImpl> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class _$$PaymentFailureImplCopyWith<$Res> {
-  factory _$$PaymentFailureImplCopyWith(_$PaymentFailureImpl value,
-          $Res Function(_$PaymentFailureImpl) then) =
-      __$$PaymentFailureImplCopyWithImpl<$Res>;
-  @useResult
-  $Res call(
-      {String errorCode, String errorMessage, TransactionDetails? details});
-}
-
-/// @nodoc
-class __$$PaymentFailureImplCopyWithImpl<$Res>
-    extends _$PaymentResultCopyWithImpl<$Res, _$PaymentFailureImpl>
-    implements _$$PaymentFailureImplCopyWith<$Res> {
-  __$$PaymentFailureImplCopyWithImpl(
-      _$PaymentFailureImpl _value, $Res Function(_$PaymentFailureImpl) _then)
-      : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? errorCode = null,
-    Object? errorMessage = null,
-    Object? details = freezed,
-  }) {
-    return _then(_$PaymentFailureImpl(
-      errorCode: null == errorCode
-          ? _value.errorCode
-          : errorCode // ignore: cast_nullable_to_non_nullable
-              as String,
-      errorMessage: null == errorMessage
-          ? _value.errorMessage
-          : errorMessage // ignore: cast_nullable_to_non_nullable
-              as String,
-      details: freezed == details
-          ? _value.details
-          : details // ignore: cast_nullable_to_non_nullable
-              as TransactionDetails?,
-    ));
-  }
-}
-
-/// @nodoc
-
-class _$PaymentFailureImpl implements PaymentFailure {
-  const _$PaymentFailureImpl(
+class PaymentFailure implements PaymentResult {
+  const PaymentFailure(
       {required this.errorCode,
       required this.errorMessage,
       required this.details});
 
-  @override
   final String errorCode;
-  @override
   final String errorMessage;
-  @override
   final TransactionDetails? details;
 
-  @override
-  String toString() {
-    return 'PaymentResult.failure(errorCode: $errorCode, errorMessage: $errorMessage, details: $details)';
-  }
+  /// Create a copy of PaymentResult
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $PaymentFailureCopyWith<PaymentFailure> get copyWith =>
+      _$PaymentFailureCopyWithImpl<PaymentFailure>(this, _$identity);
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$PaymentFailureImpl &&
+            other is PaymentFailure &&
             (identical(other.errorCode, errorCode) ||
                 other.errorCode == errorCode) &&
             (identical(other.errorMessage, errorMessage) ||
@@ -337,140 +365,114 @@ class _$PaymentFailureImpl implements PaymentFailure {
   int get hashCode =>
       Object.hash(runtimeType, errorCode, errorMessage, details);
 
-  @JsonKey(ignore: true)
   @override
-  @pragma('vm:prefer-inline')
-  _$$PaymentFailureImplCopyWith<_$PaymentFailureImpl> get copyWith =>
-      __$$PaymentFailureImplCopyWithImpl<_$PaymentFailureImpl>(
-          this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function(TransactionDetails details) success,
-    required TResult Function(
-            String errorCode, String errorMessage, TransactionDetails? details)
-        failure,
-    required TResult Function(TransactionDetails details) pending,
-    required TResult Function(TransactionDetails details, String? reason)
-        cancelled,
-    required TResult Function(String rawResponse) unknown,
-  }) {
-    return failure(errorCode, errorMessage, details);
+  String toString() {
+    return 'PaymentResult.failure(errorCode: $errorCode, errorMessage: $errorMessage, details: $details)';
   }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(TransactionDetails details)? success,
-    TResult? Function(
-            String errorCode, String errorMessage, TransactionDetails? details)?
-        failure,
-    TResult? Function(TransactionDetails details)? pending,
-    TResult? Function(TransactionDetails details, String? reason)? cancelled,
-    TResult? Function(String rawResponse)? unknown,
-  }) {
-    return failure?.call(errorCode, errorMessage, details);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function(TransactionDetails details)? success,
-    TResult Function(
-            String errorCode, String errorMessage, TransactionDetails? details)?
-        failure,
-    TResult Function(TransactionDetails details)? pending,
-    TResult Function(TransactionDetails details, String? reason)? cancelled,
-    TResult Function(String rawResponse)? unknown,
-    required TResult orElse(),
-  }) {
-    if (failure != null) {
-      return failure(errorCode, errorMessage, details);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(PaymentSuccess value) success,
-    required TResult Function(PaymentFailure value) failure,
-    required TResult Function(PaymentPending value) pending,
-    required TResult Function(PaymentCancelled value) cancelled,
-    required TResult Function(PaymentUnknown value) unknown,
-  }) {
-    return failure(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(PaymentSuccess value)? success,
-    TResult? Function(PaymentFailure value)? failure,
-    TResult? Function(PaymentPending value)? pending,
-    TResult? Function(PaymentCancelled value)? cancelled,
-    TResult? Function(PaymentUnknown value)? unknown,
-  }) {
-    return failure?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(PaymentSuccess value)? success,
-    TResult Function(PaymentFailure value)? failure,
-    TResult Function(PaymentPending value)? pending,
-    TResult Function(PaymentCancelled value)? cancelled,
-    TResult Function(PaymentUnknown value)? unknown,
-    required TResult orElse(),
-  }) {
-    if (failure != null) {
-      return failure(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class PaymentFailure implements PaymentResult {
-  const factory PaymentFailure(
-      {required final String errorCode,
-      required final String errorMessage,
-      required final TransactionDetails? details}) = _$PaymentFailureImpl;
-
-  String get errorCode;
-  String get errorMessage;
-  TransactionDetails? get details;
-  @JsonKey(ignore: true)
-  _$$PaymentFailureImplCopyWith<_$PaymentFailureImpl> get copyWith =>
-      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$PaymentPendingImplCopyWith<$Res> {
-  factory _$$PaymentPendingImplCopyWith(_$PaymentPendingImpl value,
-          $Res Function(_$PaymentPendingImpl) then) =
-      __$$PaymentPendingImplCopyWithImpl<$Res>;
+abstract mixin class $PaymentFailureCopyWith<$Res>
+    implements $PaymentResultCopyWith<$Res> {
+  factory $PaymentFailureCopyWith(
+          PaymentFailure value, $Res Function(PaymentFailure) _then) =
+      _$PaymentFailureCopyWithImpl;
+  @useResult
+  $Res call(
+      {String errorCode, String errorMessage, TransactionDetails? details});
+}
+
+/// @nodoc
+class _$PaymentFailureCopyWithImpl<$Res>
+    implements $PaymentFailureCopyWith<$Res> {
+  _$PaymentFailureCopyWithImpl(this._self, this._then);
+
+  final PaymentFailure _self;
+  final $Res Function(PaymentFailure) _then;
+
+  /// Create a copy of PaymentResult
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  $Res call({
+    Object? errorCode = null,
+    Object? errorMessage = null,
+    Object? details = freezed,
+  }) {
+    return _then(PaymentFailure(
+      errorCode: null == errorCode
+          ? _self.errorCode
+          : errorCode // ignore: cast_nullable_to_non_nullable
+              as String,
+      errorMessage: null == errorMessage
+          ? _self.errorMessage
+          : errorMessage // ignore: cast_nullable_to_non_nullable
+              as String,
+      details: freezed == details
+          ? _self.details
+          : details // ignore: cast_nullable_to_non_nullable
+              as TransactionDetails?,
+    ));
+  }
+}
+
+/// @nodoc
+
+class PaymentPending implements PaymentResult {
+  const PaymentPending({required this.details});
+
+  final TransactionDetails details;
+
+  /// Create a copy of PaymentResult
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $PaymentPendingCopyWith<PaymentPending> get copyWith =>
+      _$PaymentPendingCopyWithImpl<PaymentPending>(this, _$identity);
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is PaymentPending &&
+            (identical(other.details, details) || other.details == details));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, details);
+
+  @override
+  String toString() {
+    return 'PaymentResult.pending(details: $details)';
+  }
+}
+
+/// @nodoc
+abstract mixin class $PaymentPendingCopyWith<$Res>
+    implements $PaymentResultCopyWith<$Res> {
+  factory $PaymentPendingCopyWith(
+          PaymentPending value, $Res Function(PaymentPending) _then) =
+      _$PaymentPendingCopyWithImpl;
   @useResult
   $Res call({TransactionDetails details});
 }
 
 /// @nodoc
-class __$$PaymentPendingImplCopyWithImpl<$Res>
-    extends _$PaymentResultCopyWithImpl<$Res, _$PaymentPendingImpl>
-    implements _$$PaymentPendingImplCopyWith<$Res> {
-  __$$PaymentPendingImplCopyWithImpl(
-      _$PaymentPendingImpl _value, $Res Function(_$PaymentPendingImpl) _then)
-      : super(_value, _then);
+class _$PaymentPendingCopyWithImpl<$Res>
+    implements $PaymentPendingCopyWith<$Res> {
+  _$PaymentPendingCopyWithImpl(this._self, this._then);
 
+  final PaymentPending _self;
+  final $Res Function(PaymentPending) _then;
+
+  /// Create a copy of PaymentResult
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
-  @override
   $Res call({
     Object? details = null,
   }) {
-    return _then(_$PaymentPendingImpl(
+    return _then(PaymentPending(
       details: null == details
-          ? _value.details
+          ? _self.details
           : details // ignore: cast_nullable_to_non_nullable
               as TransactionDetails,
     ));
@@ -479,163 +481,69 @@ class __$$PaymentPendingImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$PaymentPendingImpl implements PaymentPending {
-  const _$PaymentPendingImpl({required this.details});
+class PaymentCancelled implements PaymentResult {
+  const PaymentCancelled({required this.details, this.reason});
 
-  @override
   final TransactionDetails details;
+  final String? reason;
 
-  @override
-  String toString() {
-    return 'PaymentResult.pending(details: $details)';
-  }
+  /// Create a copy of PaymentResult
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $PaymentCancelledCopyWith<PaymentCancelled> get copyWith =>
+      _$PaymentCancelledCopyWithImpl<PaymentCancelled>(this, _$identity);
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$PaymentPendingImpl &&
-            (identical(other.details, details) || other.details == details));
+            other is PaymentCancelled &&
+            (identical(other.details, details) || other.details == details) &&
+            (identical(other.reason, reason) || other.reason == reason));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, details);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$PaymentPendingImplCopyWith<_$PaymentPendingImpl> get copyWith =>
-      __$$PaymentPendingImplCopyWithImpl<_$PaymentPendingImpl>(
-          this, _$identity);
+  int get hashCode => Object.hash(runtimeType, details, reason);
 
   @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function(TransactionDetails details) success,
-    required TResult Function(
-            String errorCode, String errorMessage, TransactionDetails? details)
-        failure,
-    required TResult Function(TransactionDetails details) pending,
-    required TResult Function(TransactionDetails details, String? reason)
-        cancelled,
-    required TResult Function(String rawResponse) unknown,
-  }) {
-    return pending(details);
+  String toString() {
+    return 'PaymentResult.cancelled(details: $details, reason: $reason)';
   }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(TransactionDetails details)? success,
-    TResult? Function(
-            String errorCode, String errorMessage, TransactionDetails? details)?
-        failure,
-    TResult? Function(TransactionDetails details)? pending,
-    TResult? Function(TransactionDetails details, String? reason)? cancelled,
-    TResult? Function(String rawResponse)? unknown,
-  }) {
-    return pending?.call(details);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function(TransactionDetails details)? success,
-    TResult Function(
-            String errorCode, String errorMessage, TransactionDetails? details)?
-        failure,
-    TResult Function(TransactionDetails details)? pending,
-    TResult Function(TransactionDetails details, String? reason)? cancelled,
-    TResult Function(String rawResponse)? unknown,
-    required TResult orElse(),
-  }) {
-    if (pending != null) {
-      return pending(details);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(PaymentSuccess value) success,
-    required TResult Function(PaymentFailure value) failure,
-    required TResult Function(PaymentPending value) pending,
-    required TResult Function(PaymentCancelled value) cancelled,
-    required TResult Function(PaymentUnknown value) unknown,
-  }) {
-    return pending(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(PaymentSuccess value)? success,
-    TResult? Function(PaymentFailure value)? failure,
-    TResult? Function(PaymentPending value)? pending,
-    TResult? Function(PaymentCancelled value)? cancelled,
-    TResult? Function(PaymentUnknown value)? unknown,
-  }) {
-    return pending?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(PaymentSuccess value)? success,
-    TResult Function(PaymentFailure value)? failure,
-    TResult Function(PaymentPending value)? pending,
-    TResult Function(PaymentCancelled value)? cancelled,
-    TResult Function(PaymentUnknown value)? unknown,
-    required TResult orElse(),
-  }) {
-    if (pending != null) {
-      return pending(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class PaymentPending implements PaymentResult {
-  const factory PaymentPending({required final TransactionDetails details}) =
-      _$PaymentPendingImpl;
-
-  TransactionDetails get details;
-  @JsonKey(ignore: true)
-  _$$PaymentPendingImplCopyWith<_$PaymentPendingImpl> get copyWith =>
-      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$PaymentCancelledImplCopyWith<$Res> {
-  factory _$$PaymentCancelledImplCopyWith(_$PaymentCancelledImpl value,
-          $Res Function(_$PaymentCancelledImpl) then) =
-      __$$PaymentCancelledImplCopyWithImpl<$Res>;
+abstract mixin class $PaymentCancelledCopyWith<$Res>
+    implements $PaymentResultCopyWith<$Res> {
+  factory $PaymentCancelledCopyWith(
+          PaymentCancelled value, $Res Function(PaymentCancelled) _then) =
+      _$PaymentCancelledCopyWithImpl;
   @useResult
   $Res call({TransactionDetails details, String? reason});
 }
 
 /// @nodoc
-class __$$PaymentCancelledImplCopyWithImpl<$Res>
-    extends _$PaymentResultCopyWithImpl<$Res, _$PaymentCancelledImpl>
-    implements _$$PaymentCancelledImplCopyWith<$Res> {
-  __$$PaymentCancelledImplCopyWithImpl(_$PaymentCancelledImpl _value,
-      $Res Function(_$PaymentCancelledImpl) _then)
-      : super(_value, _then);
+class _$PaymentCancelledCopyWithImpl<$Res>
+    implements $PaymentCancelledCopyWith<$Res> {
+  _$PaymentCancelledCopyWithImpl(this._self, this._then);
 
+  final PaymentCancelled _self;
+  final $Res Function(PaymentCancelled) _then;
+
+  /// Create a copy of PaymentResult
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
-  @override
   $Res call({
     Object? details = null,
     Object? reason = freezed,
   }) {
-    return _then(_$PaymentCancelledImpl(
+    return _then(PaymentCancelled(
       details: null == details
-          ? _value.details
+          ? _self.details
           : details // ignore: cast_nullable_to_non_nullable
               as TransactionDetails,
       reason: freezed == reason
-          ? _value.reason
+          ? _self.reason
           : reason // ignore: cast_nullable_to_non_nullable
               as String?,
     ));
@@ -644,187 +552,23 @@ class __$$PaymentCancelledImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$PaymentCancelledImpl implements PaymentCancelled {
-  const _$PaymentCancelledImpl({required this.details, this.reason});
+class PaymentUnknown implements PaymentResult {
+  const PaymentUnknown({required this.rawResponse});
 
-  @override
-  final TransactionDetails details;
-  @override
-  final String? reason;
-
-  @override
-  String toString() {
-    return 'PaymentResult.cancelled(details: $details, reason: $reason)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$PaymentCancelledImpl &&
-            (identical(other.details, details) || other.details == details) &&
-            (identical(other.reason, reason) || other.reason == reason));
-  }
-
-  @override
-  int get hashCode => Object.hash(runtimeType, details, reason);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$PaymentCancelledImplCopyWith<_$PaymentCancelledImpl> get copyWith =>
-      __$$PaymentCancelledImplCopyWithImpl<_$PaymentCancelledImpl>(
-          this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function(TransactionDetails details) success,
-    required TResult Function(
-            String errorCode, String errorMessage, TransactionDetails? details)
-        failure,
-    required TResult Function(TransactionDetails details) pending,
-    required TResult Function(TransactionDetails details, String? reason)
-        cancelled,
-    required TResult Function(String rawResponse) unknown,
-  }) {
-    return cancelled(details, reason);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(TransactionDetails details)? success,
-    TResult? Function(
-            String errorCode, String errorMessage, TransactionDetails? details)?
-        failure,
-    TResult? Function(TransactionDetails details)? pending,
-    TResult? Function(TransactionDetails details, String? reason)? cancelled,
-    TResult? Function(String rawResponse)? unknown,
-  }) {
-    return cancelled?.call(details, reason);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function(TransactionDetails details)? success,
-    TResult Function(
-            String errorCode, String errorMessage, TransactionDetails? details)?
-        failure,
-    TResult Function(TransactionDetails details)? pending,
-    TResult Function(TransactionDetails details, String? reason)? cancelled,
-    TResult Function(String rawResponse)? unknown,
-    required TResult orElse(),
-  }) {
-    if (cancelled != null) {
-      return cancelled(details, reason);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(PaymentSuccess value) success,
-    required TResult Function(PaymentFailure value) failure,
-    required TResult Function(PaymentPending value) pending,
-    required TResult Function(PaymentCancelled value) cancelled,
-    required TResult Function(PaymentUnknown value) unknown,
-  }) {
-    return cancelled(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(PaymentSuccess value)? success,
-    TResult? Function(PaymentFailure value)? failure,
-    TResult? Function(PaymentPending value)? pending,
-    TResult? Function(PaymentCancelled value)? cancelled,
-    TResult? Function(PaymentUnknown value)? unknown,
-  }) {
-    return cancelled?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(PaymentSuccess value)? success,
-    TResult Function(PaymentFailure value)? failure,
-    TResult Function(PaymentPending value)? pending,
-    TResult Function(PaymentCancelled value)? cancelled,
-    TResult Function(PaymentUnknown value)? unknown,
-    required TResult orElse(),
-  }) {
-    if (cancelled != null) {
-      return cancelled(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class PaymentCancelled implements PaymentResult {
-  const factory PaymentCancelled(
-      {required final TransactionDetails details,
-      final String? reason}) = _$PaymentCancelledImpl;
-
-  TransactionDetails get details;
-  String? get reason;
-  @JsonKey(ignore: true)
-  _$$PaymentCancelledImplCopyWith<_$PaymentCancelledImpl> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class _$$PaymentUnknownImplCopyWith<$Res> {
-  factory _$$PaymentUnknownImplCopyWith(_$PaymentUnknownImpl value,
-          $Res Function(_$PaymentUnknownImpl) then) =
-      __$$PaymentUnknownImplCopyWithImpl<$Res>;
-  @useResult
-  $Res call({String rawResponse});
-}
-
-/// @nodoc
-class __$$PaymentUnknownImplCopyWithImpl<$Res>
-    extends _$PaymentResultCopyWithImpl<$Res, _$PaymentUnknownImpl>
-    implements _$$PaymentUnknownImplCopyWith<$Res> {
-  __$$PaymentUnknownImplCopyWithImpl(
-      _$PaymentUnknownImpl _value, $Res Function(_$PaymentUnknownImpl) _then)
-      : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? rawResponse = null,
-  }) {
-    return _then(_$PaymentUnknownImpl(
-      rawResponse: null == rawResponse
-          ? _value.rawResponse
-          : rawResponse // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
-  }
-}
-
-/// @nodoc
-
-class _$PaymentUnknownImpl implements PaymentUnknown {
-  const _$PaymentUnknownImpl({required this.rawResponse});
-
-  @override
   final String rawResponse;
 
-  @override
-  String toString() {
-    return 'PaymentResult.unknown(rawResponse: $rawResponse)';
-  }
+  /// Create a copy of PaymentResult
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $PaymentUnknownCopyWith<PaymentUnknown> get copyWith =>
+      _$PaymentUnknownCopyWithImpl<PaymentUnknown>(this, _$identity);
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$PaymentUnknownImpl &&
+            other is PaymentUnknown &&
             (identical(other.rawResponse, rawResponse) ||
                 other.rawResponse == rawResponse));
   }
@@ -832,107 +576,43 @@ class _$PaymentUnknownImpl implements PaymentUnknown {
   @override
   int get hashCode => Object.hash(runtimeType, rawResponse);
 
-  @JsonKey(ignore: true)
   @override
+  String toString() {
+    return 'PaymentResult.unknown(rawResponse: $rawResponse)';
+  }
+}
+
+/// @nodoc
+abstract mixin class $PaymentUnknownCopyWith<$Res>
+    implements $PaymentResultCopyWith<$Res> {
+  factory $PaymentUnknownCopyWith(
+          PaymentUnknown value, $Res Function(PaymentUnknown) _then) =
+      _$PaymentUnknownCopyWithImpl;
+  @useResult
+  $Res call({String rawResponse});
+}
+
+/// @nodoc
+class _$PaymentUnknownCopyWithImpl<$Res>
+    implements $PaymentUnknownCopyWith<$Res> {
+  _$PaymentUnknownCopyWithImpl(this._self, this._then);
+
+  final PaymentUnknown _self;
+  final $Res Function(PaymentUnknown) _then;
+
+  /// Create a copy of PaymentResult
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
-  _$$PaymentUnknownImplCopyWith<_$PaymentUnknownImpl> get copyWith =>
-      __$$PaymentUnknownImplCopyWithImpl<_$PaymentUnknownImpl>(
-          this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function(TransactionDetails details) success,
-    required TResult Function(
-            String errorCode, String errorMessage, TransactionDetails? details)
-        failure,
-    required TResult Function(TransactionDetails details) pending,
-    required TResult Function(TransactionDetails details, String? reason)
-        cancelled,
-    required TResult Function(String rawResponse) unknown,
+  $Res call({
+    Object? rawResponse = null,
   }) {
-    return unknown(rawResponse);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(TransactionDetails details)? success,
-    TResult? Function(
-            String errorCode, String errorMessage, TransactionDetails? details)?
-        failure,
-    TResult? Function(TransactionDetails details)? pending,
-    TResult? Function(TransactionDetails details, String? reason)? cancelled,
-    TResult? Function(String rawResponse)? unknown,
-  }) {
-    return unknown?.call(rawResponse);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function(TransactionDetails details)? success,
-    TResult Function(
-            String errorCode, String errorMessage, TransactionDetails? details)?
-        failure,
-    TResult Function(TransactionDetails details)? pending,
-    TResult Function(TransactionDetails details, String? reason)? cancelled,
-    TResult Function(String rawResponse)? unknown,
-    required TResult orElse(),
-  }) {
-    if (unknown != null) {
-      return unknown(rawResponse);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(PaymentSuccess value) success,
-    required TResult Function(PaymentFailure value) failure,
-    required TResult Function(PaymentPending value) pending,
-    required TResult Function(PaymentCancelled value) cancelled,
-    required TResult Function(PaymentUnknown value) unknown,
-  }) {
-    return unknown(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(PaymentSuccess value)? success,
-    TResult? Function(PaymentFailure value)? failure,
-    TResult? Function(PaymentPending value)? pending,
-    TResult? Function(PaymentCancelled value)? cancelled,
-    TResult? Function(PaymentUnknown value)? unknown,
-  }) {
-    return unknown?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(PaymentSuccess value)? success,
-    TResult Function(PaymentFailure value)? failure,
-    TResult Function(PaymentPending value)? pending,
-    TResult Function(PaymentCancelled value)? cancelled,
-    TResult Function(PaymentUnknown value)? unknown,
-    required TResult orElse(),
-  }) {
-    if (unknown != null) {
-      return unknown(this);
-    }
-    return orElse();
+    return _then(PaymentUnknown(
+      rawResponse: null == rawResponse
+          ? _self.rawResponse
+          : rawResponse // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
   }
 }
 
-abstract class PaymentUnknown implements PaymentResult {
-  const factory PaymentUnknown({required final String rawResponse}) =
-      _$PaymentUnknownImpl;
-
-  String get rawResponse;
-  @JsonKey(ignore: true)
-  _$$PaymentUnknownImplCopyWith<_$PaymentUnknownImpl> get copyWith =>
-      throw _privateConstructorUsedError;
-}
+// dart format on

@@ -1,5 +1,5 @@
-// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// coverage:ignore-file
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
@@ -9,96 +9,260 @@ part of 'payment_mode.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// dart format off
 T _$identity<T>(T value) => value;
-
-final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$PaymentMode {
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function(String vpa) upi,
-    required TResult Function(UPIApp app) app,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(String vpa)? upi,
-    TResult? Function(UPIApp app)? app,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function(String vpa)? upi,
-    TResult Function(UPIApp app)? app,
-    required TResult orElse(),
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(UPIPaymentModeVPA value) upi,
-    required TResult Function(UPIPaymentModeApp value) app,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(UPIPaymentModeVPA value)? upi,
-    TResult? Function(UPIPaymentModeApp value)? app,
-  }) =>
-      throw _privateConstructorUsedError;
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is PaymentMode);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  String toString() {
+    return 'PaymentMode()';
+  }
+}
+
+/// @nodoc
+class $PaymentModeCopyWith<$Res> {
+  $PaymentModeCopyWith(PaymentMode _, $Res Function(PaymentMode) __);
+}
+
+/// Adds pattern-matching-related methods to [PaymentMode].
+extension PaymentModePatterns on PaymentMode {
+  /// A variant of `map` that fallback to returning `orElse`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(UPIPaymentModeVPA value)? upi,
     TResult Function(UPIPaymentModeApp value)? app,
     required TResult orElse(),
-  }) =>
-      throw _privateConstructorUsedError;
+  }) {
+    final _that = this;
+    switch (_that) {
+      case UPIPaymentModeVPA() when upi != null:
+        return upi(_that);
+      case UPIPaymentModeApp() when app != null:
+        return app(_that);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// Callbacks receives the raw object, upcasted.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case final Subclass2 value:
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(UPIPaymentModeVPA value) upi,
+    required TResult Function(UPIPaymentModeApp value) app,
+  }) {
+    final _that = this;
+    switch (_that) {
+      case UPIPaymentModeVPA():
+        return upi(_that);
+      case UPIPaymentModeApp():
+        return app(_that);
+    }
+  }
+
+  /// A variant of `map` that fallback to returning `null`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(UPIPaymentModeVPA value)? upi,
+    TResult? Function(UPIPaymentModeApp value)? app,
+  }) {
+    final _that = this;
+    switch (_that) {
+      case UPIPaymentModeVPA() when upi != null:
+        return upi(_that);
+      case UPIPaymentModeApp() when app != null:
+        return app(_that);
+      case _:
+        return null;
+    }
+  }
+
+  /// A variant of `when` that fallback to an `orElse` callback.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String vpa)? upi,
+    TResult Function(UPIApp app)? app,
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case UPIPaymentModeVPA() when upi != null:
+        return upi(_that.vpa);
+      case UPIPaymentModeApp() when app != null:
+        return app(_that.app);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// As opposed to `map`, this offers destructuring.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case Subclass2(:final field2):
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(String vpa) upi,
+    required TResult Function(UPIApp app) app,
+  }) {
+    final _that = this;
+    switch (_that) {
+      case UPIPaymentModeVPA():
+        return upi(_that.vpa);
+      case UPIPaymentModeApp():
+        return app(_that.app);
+    }
+  }
+
+  /// A variant of `when` that fallback to returning `null`
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(String vpa)? upi,
+    TResult? Function(UPIApp app)? app,
+  }) {
+    final _that = this;
+    switch (_that) {
+      case UPIPaymentModeVPA() when upi != null:
+        return upi(_that.vpa);
+      case UPIPaymentModeApp() when app != null:
+        return app(_that.app);
+      case _:
+        return null;
+    }
+  }
 }
 
 /// @nodoc
-abstract class $PaymentModeCopyWith<$Res> {
-  factory $PaymentModeCopyWith(
-          PaymentMode value, $Res Function(PaymentMode) then) =
-      _$PaymentModeCopyWithImpl<$Res, PaymentMode>;
+
+class UPIPaymentModeVPA implements PaymentMode {
+  const UPIPaymentModeVPA({required this.vpa});
+
+  final String vpa;
+
+  /// Create a copy of PaymentMode
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $UPIPaymentModeVPACopyWith<UPIPaymentModeVPA> get copyWith =>
+      _$UPIPaymentModeVPACopyWithImpl<UPIPaymentModeVPA>(this, _$identity);
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is UPIPaymentModeVPA &&
+            (identical(other.vpa, vpa) || other.vpa == vpa));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, vpa);
+
+  @override
+  String toString() {
+    return 'PaymentMode.upi(vpa: $vpa)';
+  }
 }
 
 /// @nodoc
-class _$PaymentModeCopyWithImpl<$Res, $Val extends PaymentMode>
+abstract mixin class $UPIPaymentModeVPACopyWith<$Res>
     implements $PaymentModeCopyWith<$Res> {
-  _$PaymentModeCopyWithImpl(this._value, this._then);
-
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
-}
-
-/// @nodoc
-abstract class _$$UPIPaymentModeVPAImplCopyWith<$Res> {
-  factory _$$UPIPaymentModeVPAImplCopyWith(_$UPIPaymentModeVPAImpl value,
-          $Res Function(_$UPIPaymentModeVPAImpl) then) =
-      __$$UPIPaymentModeVPAImplCopyWithImpl<$Res>;
+  factory $UPIPaymentModeVPACopyWith(
+          UPIPaymentModeVPA value, $Res Function(UPIPaymentModeVPA) _then) =
+      _$UPIPaymentModeVPACopyWithImpl;
   @useResult
   $Res call({String vpa});
 }
 
 /// @nodoc
-class __$$UPIPaymentModeVPAImplCopyWithImpl<$Res>
-    extends _$PaymentModeCopyWithImpl<$Res, _$UPIPaymentModeVPAImpl>
-    implements _$$UPIPaymentModeVPAImplCopyWith<$Res> {
-  __$$UPIPaymentModeVPAImplCopyWithImpl(_$UPIPaymentModeVPAImpl _value,
-      $Res Function(_$UPIPaymentModeVPAImpl) _then)
-      : super(_value, _then);
+class _$UPIPaymentModeVPACopyWithImpl<$Res>
+    implements $UPIPaymentModeVPACopyWith<$Res> {
+  _$UPIPaymentModeVPACopyWithImpl(this._self, this._then);
 
+  final UPIPaymentModeVPA _self;
+  final $Res Function(UPIPaymentModeVPA) _then;
+
+  /// Create a copy of PaymentMode
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
-  @override
   $Res call({
     Object? vpa = null,
   }) {
-    return _then(_$UPIPaymentModeVPAImpl(
+    return _then(UPIPaymentModeVPA(
       vpa: null == vpa
-          ? _value.vpa
+          ? _self.vpa
           : vpa // ignore: cast_nullable_to_non_nullable
               as String,
     ));
@@ -107,113 +271,41 @@ class __$$UPIPaymentModeVPAImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$UPIPaymentModeVPAImpl implements UPIPaymentModeVPA {
-  const _$UPIPaymentModeVPAImpl({required this.vpa});
+class UPIPaymentModeApp implements PaymentMode {
+  const UPIPaymentModeApp({required this.app});
 
-  @override
-  final String vpa;
+  final UPIApp app;
 
-  @override
-  String toString() {
-    return 'PaymentMode.upi(vpa: $vpa)';
-  }
+  /// Create a copy of PaymentMode
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $UPIPaymentModeAppCopyWith<UPIPaymentModeApp> get copyWith =>
+      _$UPIPaymentModeAppCopyWithImpl<UPIPaymentModeApp>(this, _$identity);
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$UPIPaymentModeVPAImpl &&
-            (identical(other.vpa, vpa) || other.vpa == vpa));
+            other is UPIPaymentModeApp &&
+            (identical(other.app, app) || other.app == app));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, vpa);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$UPIPaymentModeVPAImplCopyWith<_$UPIPaymentModeVPAImpl> get copyWith =>
-      __$$UPIPaymentModeVPAImplCopyWithImpl<_$UPIPaymentModeVPAImpl>(
-          this, _$identity);
+  int get hashCode => Object.hash(runtimeType, app);
 
   @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function(String vpa) upi,
-    required TResult Function(UPIApp app) app,
-  }) {
-    return upi(vpa);
+  String toString() {
+    return 'PaymentMode.app(app: $app)';
   }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(String vpa)? upi,
-    TResult? Function(UPIApp app)? app,
-  }) {
-    return upi?.call(vpa);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function(String vpa)? upi,
-    TResult Function(UPIApp app)? app,
-    required TResult orElse(),
-  }) {
-    if (upi != null) {
-      return upi(vpa);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(UPIPaymentModeVPA value) upi,
-    required TResult Function(UPIPaymentModeApp value) app,
-  }) {
-    return upi(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(UPIPaymentModeVPA value)? upi,
-    TResult? Function(UPIPaymentModeApp value)? app,
-  }) {
-    return upi?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(UPIPaymentModeVPA value)? upi,
-    TResult Function(UPIPaymentModeApp value)? app,
-    required TResult orElse(),
-  }) {
-    if (upi != null) {
-      return upi(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class UPIPaymentModeVPA implements PaymentMode {
-  const factory UPIPaymentModeVPA({required final String vpa}) =
-      _$UPIPaymentModeVPAImpl;
-
-  String get vpa;
-  @JsonKey(ignore: true)
-  _$$UPIPaymentModeVPAImplCopyWith<_$UPIPaymentModeVPAImpl> get copyWith =>
-      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$UPIPaymentModeAppImplCopyWith<$Res> {
-  factory _$$UPIPaymentModeAppImplCopyWith(_$UPIPaymentModeAppImpl value,
-          $Res Function(_$UPIPaymentModeAppImpl) then) =
-      __$$UPIPaymentModeAppImplCopyWithImpl<$Res>;
+abstract mixin class $UPIPaymentModeAppCopyWith<$Res>
+    implements $PaymentModeCopyWith<$Res> {
+  factory $UPIPaymentModeAppCopyWith(
+          UPIPaymentModeApp value, $Res Function(UPIPaymentModeApp) _then) =
+      _$UPIPaymentModeAppCopyWithImpl;
   @useResult
   $Res call({UPIApp app});
 
@@ -221,135 +313,36 @@ abstract class _$$UPIPaymentModeAppImplCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$UPIPaymentModeAppImplCopyWithImpl<$Res>
-    extends _$PaymentModeCopyWithImpl<$Res, _$UPIPaymentModeAppImpl>
-    implements _$$UPIPaymentModeAppImplCopyWith<$Res> {
-  __$$UPIPaymentModeAppImplCopyWithImpl(_$UPIPaymentModeAppImpl _value,
-      $Res Function(_$UPIPaymentModeAppImpl) _then)
-      : super(_value, _then);
+class _$UPIPaymentModeAppCopyWithImpl<$Res>
+    implements $UPIPaymentModeAppCopyWith<$Res> {
+  _$UPIPaymentModeAppCopyWithImpl(this._self, this._then);
 
+  final UPIPaymentModeApp _self;
+  final $Res Function(UPIPaymentModeApp) _then;
+
+  /// Create a copy of PaymentMode
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
-  @override
   $Res call({
     Object? app = null,
   }) {
-    return _then(_$UPIPaymentModeAppImpl(
+    return _then(UPIPaymentModeApp(
       app: null == app
-          ? _value.app
+          ? _self.app
           : app // ignore: cast_nullable_to_non_nullable
               as UPIApp,
     ));
   }
 
+  /// Create a copy of PaymentMode
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $UPIAppCopyWith<$Res> get app {
-    return $UPIAppCopyWith<$Res>(_value.app, (value) {
-      return _then(_value.copyWith(app: value));
+    return $UPIAppCopyWith<$Res>(_self.app, (value) {
+      return _then(_self.copyWith(app: value));
     });
   }
 }
 
-/// @nodoc
-
-class _$UPIPaymentModeAppImpl implements UPIPaymentModeApp {
-  const _$UPIPaymentModeAppImpl({required this.app});
-
-  @override
-  final UPIApp app;
-
-  @override
-  String toString() {
-    return 'PaymentMode.app(app: $app)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$UPIPaymentModeAppImpl &&
-            (identical(other.app, app) || other.app == app));
-  }
-
-  @override
-  int get hashCode => Object.hash(runtimeType, app);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$UPIPaymentModeAppImplCopyWith<_$UPIPaymentModeAppImpl> get copyWith =>
-      __$$UPIPaymentModeAppImplCopyWithImpl<_$UPIPaymentModeAppImpl>(
-          this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function(String vpa) upi,
-    required TResult Function(UPIApp app) app,
-  }) {
-    return app(this.app);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(String vpa)? upi,
-    TResult? Function(UPIApp app)? app,
-  }) {
-    return app?.call(this.app);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function(String vpa)? upi,
-    TResult Function(UPIApp app)? app,
-    required TResult orElse(),
-  }) {
-    if (app != null) {
-      return app(this.app);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(UPIPaymentModeVPA value) upi,
-    required TResult Function(UPIPaymentModeApp value) app,
-  }) {
-    return app(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(UPIPaymentModeVPA value)? upi,
-    TResult? Function(UPIPaymentModeApp value)? app,
-  }) {
-    return app?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(UPIPaymentModeVPA value)? upi,
-    TResult Function(UPIPaymentModeApp value)? app,
-    required TResult orElse(),
-  }) {
-    if (app != null) {
-      return app(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class UPIPaymentModeApp implements PaymentMode {
-  const factory UPIPaymentModeApp({required final UPIApp app}) =
-      _$UPIPaymentModeAppImpl;
-
-  UPIApp get app;
-  @JsonKey(ignore: true)
-  _$$UPIPaymentModeAppImplCopyWith<_$UPIPaymentModeAppImpl> get copyWith =>
-      throw _privateConstructorUsedError;
-}
+// dart format on

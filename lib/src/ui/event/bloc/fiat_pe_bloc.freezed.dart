@@ -1,5 +1,5 @@
-// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// coverage:ignore-file
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
@@ -9,910 +9,151 @@ part of 'fiat_pe_bloc.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// dart format off
 T _$identity<T>(T value) => value;
-
-final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$FiatPeEvent {
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function(TransactionDetails details) completed,
-    required TResult Function(TransactionDetails details) failed,
-    required TResult Function(String vpa, num id) upiRequestRaised,
-    required TResult Function(num id, UPIApp app, PaymentParams params)
-        showTestUpiDialog,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(TransactionDetails details)? completed,
-    TResult? Function(TransactionDetails details)? failed,
-    TResult? Function(String vpa, num id)? upiRequestRaised,
-    TResult? Function(num id, UPIApp app, PaymentParams params)?
-        showTestUpiDialog,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function(TransactionDetails details)? completed,
-    TResult Function(TransactionDetails details)? failed,
-    TResult Function(String vpa, num id)? upiRequestRaised,
-    TResult Function(num id, UPIApp app, PaymentParams params)?
-        showTestUpiDialog,
-    required TResult orElse(),
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(FiatPePaymentCompletedEvent value) completed,
-    required TResult Function(FiatPePaymentFailedEvent value) failed,
-    required TResult Function(FiatPeUpiRequestRaisedEvent value)
-        upiRequestRaised,
-    required TResult Function(FiatPeUpiShowTestUpiDialogEvent value)
-        showTestUpiDialog,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(FiatPePaymentCompletedEvent value)? completed,
-    TResult? Function(FiatPePaymentFailedEvent value)? failed,
-    TResult? Function(FiatPeUpiRequestRaisedEvent value)? upiRequestRaised,
-    TResult? Function(FiatPeUpiShowTestUpiDialogEvent value)? showTestUpiDialog,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(FiatPePaymentCompletedEvent value)? completed,
-    TResult Function(FiatPePaymentFailedEvent value)? failed,
-    TResult Function(FiatPeUpiRequestRaisedEvent value)? upiRequestRaised,
-    TResult Function(FiatPeUpiShowTestUpiDialogEvent value)? showTestUpiDialog,
-    required TResult orElse(),
-  }) =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class $FiatPeEventCopyWith<$Res> {
-  factory $FiatPeEventCopyWith(
-          FiatPeEvent value, $Res Function(FiatPeEvent) then) =
-      _$FiatPeEventCopyWithImpl<$Res, FiatPeEvent>;
-}
-
-/// @nodoc
-class _$FiatPeEventCopyWithImpl<$Res, $Val extends FiatPeEvent>
-    implements $FiatPeEventCopyWith<$Res> {
-  _$FiatPeEventCopyWithImpl(this._value, this._then);
-
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
-}
-
-/// @nodoc
-abstract class _$$FiatPePaymentCompletedEventImplCopyWith<$Res> {
-  factory _$$FiatPePaymentCompletedEventImplCopyWith(
-          _$FiatPePaymentCompletedEventImpl value,
-          $Res Function(_$FiatPePaymentCompletedEventImpl) then) =
-      __$$FiatPePaymentCompletedEventImplCopyWithImpl<$Res>;
-  @useResult
-  $Res call({TransactionDetails details});
-}
-
-/// @nodoc
-class __$$FiatPePaymentCompletedEventImplCopyWithImpl<$Res>
-    extends _$FiatPeEventCopyWithImpl<$Res, _$FiatPePaymentCompletedEventImpl>
-    implements _$$FiatPePaymentCompletedEventImplCopyWith<$Res> {
-  __$$FiatPePaymentCompletedEventImplCopyWithImpl(
-      _$FiatPePaymentCompletedEventImpl _value,
-      $Res Function(_$FiatPePaymentCompletedEventImpl) _then)
-      : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? details = null,
-  }) {
-    return _then(_$FiatPePaymentCompletedEventImpl(
-      details: null == details
-          ? _value.details
-          : details // ignore: cast_nullable_to_non_nullable
-              as TransactionDetails,
-    ));
-  }
-}
-
-/// @nodoc
-
-class _$FiatPePaymentCompletedEventImpl implements FiatPePaymentCompletedEvent {
-  const _$FiatPePaymentCompletedEventImpl({required this.details});
-
-  @override
-  final TransactionDetails details;
-
-  @override
-  String toString() {
-    return 'FiatPeEvent.completed(details: $details)';
-  }
-
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$FiatPePaymentCompletedEventImpl &&
-            (identical(other.details, details) || other.details == details));
-  }
-
-  @override
-  int get hashCode => Object.hash(runtimeType, details);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$FiatPePaymentCompletedEventImplCopyWith<_$FiatPePaymentCompletedEventImpl>
-      get copyWith => __$$FiatPePaymentCompletedEventImplCopyWithImpl<
-          _$FiatPePaymentCompletedEventImpl>(this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function(TransactionDetails details) completed,
-    required TResult Function(TransactionDetails details) failed,
-    required TResult Function(String vpa, num id) upiRequestRaised,
-    required TResult Function(num id, UPIApp app, PaymentParams params)
-        showTestUpiDialog,
-  }) {
-    return completed(details);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(TransactionDetails details)? completed,
-    TResult? Function(TransactionDetails details)? failed,
-    TResult? Function(String vpa, num id)? upiRequestRaised,
-    TResult? Function(num id, UPIApp app, PaymentParams params)?
-        showTestUpiDialog,
-  }) {
-    return completed?.call(details);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function(TransactionDetails details)? completed,
-    TResult Function(TransactionDetails details)? failed,
-    TResult Function(String vpa, num id)? upiRequestRaised,
-    TResult Function(num id, UPIApp app, PaymentParams params)?
-        showTestUpiDialog,
-    required TResult orElse(),
-  }) {
-    if (completed != null) {
-      return completed(details);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(FiatPePaymentCompletedEvent value) completed,
-    required TResult Function(FiatPePaymentFailedEvent value) failed,
-    required TResult Function(FiatPeUpiRequestRaisedEvent value)
-        upiRequestRaised,
-    required TResult Function(FiatPeUpiShowTestUpiDialogEvent value)
-        showTestUpiDialog,
-  }) {
-    return completed(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(FiatPePaymentCompletedEvent value)? completed,
-    TResult? Function(FiatPePaymentFailedEvent value)? failed,
-    TResult? Function(FiatPeUpiRequestRaisedEvent value)? upiRequestRaised,
-    TResult? Function(FiatPeUpiShowTestUpiDialogEvent value)? showTestUpiDialog,
-  }) {
-    return completed?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(FiatPePaymentCompletedEvent value)? completed,
-    TResult Function(FiatPePaymentFailedEvent value)? failed,
-    TResult Function(FiatPeUpiRequestRaisedEvent value)? upiRequestRaised,
-    TResult Function(FiatPeUpiShowTestUpiDialogEvent value)? showTestUpiDialog,
-    required TResult orElse(),
-  }) {
-    if (completed != null) {
-      return completed(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class FiatPePaymentCompletedEvent implements FiatPeEvent {
-  const factory FiatPePaymentCompletedEvent(
-          {required final TransactionDetails details}) =
-      _$FiatPePaymentCompletedEventImpl;
-
-  TransactionDetails get details;
-  @JsonKey(ignore: true)
-  _$$FiatPePaymentCompletedEventImplCopyWith<_$FiatPePaymentCompletedEventImpl>
-      get copyWith => throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class _$$FiatPePaymentFailedEventImplCopyWith<$Res> {
-  factory _$$FiatPePaymentFailedEventImplCopyWith(
-          _$FiatPePaymentFailedEventImpl value,
-          $Res Function(_$FiatPePaymentFailedEventImpl) then) =
-      __$$FiatPePaymentFailedEventImplCopyWithImpl<$Res>;
-  @useResult
-  $Res call({TransactionDetails details});
-}
-
-/// @nodoc
-class __$$FiatPePaymentFailedEventImplCopyWithImpl<$Res>
-    extends _$FiatPeEventCopyWithImpl<$Res, _$FiatPePaymentFailedEventImpl>
-    implements _$$FiatPePaymentFailedEventImplCopyWith<$Res> {
-  __$$FiatPePaymentFailedEventImplCopyWithImpl(
-      _$FiatPePaymentFailedEventImpl _value,
-      $Res Function(_$FiatPePaymentFailedEventImpl) _then)
-      : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? details = null,
-  }) {
-    return _then(_$FiatPePaymentFailedEventImpl(
-      details: null == details
-          ? _value.details
-          : details // ignore: cast_nullable_to_non_nullable
-              as TransactionDetails,
-    ));
-  }
-}
-
-/// @nodoc
-
-class _$FiatPePaymentFailedEventImpl implements FiatPePaymentFailedEvent {
-  const _$FiatPePaymentFailedEventImpl({required this.details});
-
-  @override
-  final TransactionDetails details;
-
-  @override
-  String toString() {
-    return 'FiatPeEvent.failed(details: $details)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$FiatPePaymentFailedEventImpl &&
-            (identical(other.details, details) || other.details == details));
-  }
-
-  @override
-  int get hashCode => Object.hash(runtimeType, details);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$FiatPePaymentFailedEventImplCopyWith<_$FiatPePaymentFailedEventImpl>
-      get copyWith => __$$FiatPePaymentFailedEventImplCopyWithImpl<
-          _$FiatPePaymentFailedEventImpl>(this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function(TransactionDetails details) completed,
-    required TResult Function(TransactionDetails details) failed,
-    required TResult Function(String vpa, num id) upiRequestRaised,
-    required TResult Function(num id, UPIApp app, PaymentParams params)
-        showTestUpiDialog,
-  }) {
-    return failed(details);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(TransactionDetails details)? completed,
-    TResult? Function(TransactionDetails details)? failed,
-    TResult? Function(String vpa, num id)? upiRequestRaised,
-    TResult? Function(num id, UPIApp app, PaymentParams params)?
-        showTestUpiDialog,
-  }) {
-    return failed?.call(details);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function(TransactionDetails details)? completed,
-    TResult Function(TransactionDetails details)? failed,
-    TResult Function(String vpa, num id)? upiRequestRaised,
-    TResult Function(num id, UPIApp app, PaymentParams params)?
-        showTestUpiDialog,
-    required TResult orElse(),
-  }) {
-    if (failed != null) {
-      return failed(details);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(FiatPePaymentCompletedEvent value) completed,
-    required TResult Function(FiatPePaymentFailedEvent value) failed,
-    required TResult Function(FiatPeUpiRequestRaisedEvent value)
-        upiRequestRaised,
-    required TResult Function(FiatPeUpiShowTestUpiDialogEvent value)
-        showTestUpiDialog,
-  }) {
-    return failed(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(FiatPePaymentCompletedEvent value)? completed,
-    TResult? Function(FiatPePaymentFailedEvent value)? failed,
-    TResult? Function(FiatPeUpiRequestRaisedEvent value)? upiRequestRaised,
-    TResult? Function(FiatPeUpiShowTestUpiDialogEvent value)? showTestUpiDialog,
-  }) {
-    return failed?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(FiatPePaymentCompletedEvent value)? completed,
-    TResult Function(FiatPePaymentFailedEvent value)? failed,
-    TResult Function(FiatPeUpiRequestRaisedEvent value)? upiRequestRaised,
-    TResult Function(FiatPeUpiShowTestUpiDialogEvent value)? showTestUpiDialog,
-    required TResult orElse(),
-  }) {
-    if (failed != null) {
-      return failed(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class FiatPePaymentFailedEvent implements FiatPeEvent {
-  const factory FiatPePaymentFailedEvent(
-          {required final TransactionDetails details}) =
-      _$FiatPePaymentFailedEventImpl;
-
-  TransactionDetails get details;
-  @JsonKey(ignore: true)
-  _$$FiatPePaymentFailedEventImplCopyWith<_$FiatPePaymentFailedEventImpl>
-      get copyWith => throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class _$$FiatPeUpiRequestRaisedEventImplCopyWith<$Res> {
-  factory _$$FiatPeUpiRequestRaisedEventImplCopyWith(
-          _$FiatPeUpiRequestRaisedEventImpl value,
-          $Res Function(_$FiatPeUpiRequestRaisedEventImpl) then) =
-      __$$FiatPeUpiRequestRaisedEventImplCopyWithImpl<$Res>;
-  @useResult
-  $Res call({String vpa, num id});
-}
-
-/// @nodoc
-class __$$FiatPeUpiRequestRaisedEventImplCopyWithImpl<$Res>
-    extends _$FiatPeEventCopyWithImpl<$Res, _$FiatPeUpiRequestRaisedEventImpl>
-    implements _$$FiatPeUpiRequestRaisedEventImplCopyWith<$Res> {
-  __$$FiatPeUpiRequestRaisedEventImplCopyWithImpl(
-      _$FiatPeUpiRequestRaisedEventImpl _value,
-      $Res Function(_$FiatPeUpiRequestRaisedEventImpl) _then)
-      : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? vpa = null,
-    Object? id = null,
-  }) {
-    return _then(_$FiatPeUpiRequestRaisedEventImpl(
-      vpa: null == vpa
-          ? _value.vpa
-          : vpa // ignore: cast_nullable_to_non_nullable
-              as String,
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as num,
-    ));
-  }
-}
-
-/// @nodoc
-
-class _$FiatPeUpiRequestRaisedEventImpl implements FiatPeUpiRequestRaisedEvent {
-  const _$FiatPeUpiRequestRaisedEventImpl(
-      {required this.vpa, required this.id});
-
-  @override
-  final String vpa;
-  @override
-  final num id;
-
-  @override
-  String toString() {
-    return 'FiatPeEvent.upiRequestRaised(vpa: $vpa, id: $id)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$FiatPeUpiRequestRaisedEventImpl &&
-            (identical(other.vpa, vpa) || other.vpa == vpa) &&
-            (identical(other.id, id) || other.id == id));
-  }
-
-  @override
-  int get hashCode => Object.hash(runtimeType, vpa, id);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$FiatPeUpiRequestRaisedEventImplCopyWith<_$FiatPeUpiRequestRaisedEventImpl>
-      get copyWith => __$$FiatPeUpiRequestRaisedEventImplCopyWithImpl<
-          _$FiatPeUpiRequestRaisedEventImpl>(this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function(TransactionDetails details) completed,
-    required TResult Function(TransactionDetails details) failed,
-    required TResult Function(String vpa, num id) upiRequestRaised,
-    required TResult Function(num id, UPIApp app, PaymentParams params)
-        showTestUpiDialog,
-  }) {
-    return upiRequestRaised(vpa, id);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(TransactionDetails details)? completed,
-    TResult? Function(TransactionDetails details)? failed,
-    TResult? Function(String vpa, num id)? upiRequestRaised,
-    TResult? Function(num id, UPIApp app, PaymentParams params)?
-        showTestUpiDialog,
-  }) {
-    return upiRequestRaised?.call(vpa, id);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function(TransactionDetails details)? completed,
-    TResult Function(TransactionDetails details)? failed,
-    TResult Function(String vpa, num id)? upiRequestRaised,
-    TResult Function(num id, UPIApp app, PaymentParams params)?
-        showTestUpiDialog,
-    required TResult orElse(),
-  }) {
-    if (upiRequestRaised != null) {
-      return upiRequestRaised(vpa, id);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(FiatPePaymentCompletedEvent value) completed,
-    required TResult Function(FiatPePaymentFailedEvent value) failed,
-    required TResult Function(FiatPeUpiRequestRaisedEvent value)
-        upiRequestRaised,
-    required TResult Function(FiatPeUpiShowTestUpiDialogEvent value)
-        showTestUpiDialog,
-  }) {
-    return upiRequestRaised(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(FiatPePaymentCompletedEvent value)? completed,
-    TResult? Function(FiatPePaymentFailedEvent value)? failed,
-    TResult? Function(FiatPeUpiRequestRaisedEvent value)? upiRequestRaised,
-    TResult? Function(FiatPeUpiShowTestUpiDialogEvent value)? showTestUpiDialog,
-  }) {
-    return upiRequestRaised?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(FiatPePaymentCompletedEvent value)? completed,
-    TResult Function(FiatPePaymentFailedEvent value)? failed,
-    TResult Function(FiatPeUpiRequestRaisedEvent value)? upiRequestRaised,
-    TResult Function(FiatPeUpiShowTestUpiDialogEvent value)? showTestUpiDialog,
-    required TResult orElse(),
-  }) {
-    if (upiRequestRaised != null) {
-      return upiRequestRaised(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class FiatPeUpiRequestRaisedEvent implements FiatPeEvent {
-  const factory FiatPeUpiRequestRaisedEvent(
-      {required final String vpa,
-      required final num id}) = _$FiatPeUpiRequestRaisedEventImpl;
-
-  String get vpa;
-  num get id;
-  @JsonKey(ignore: true)
-  _$$FiatPeUpiRequestRaisedEventImplCopyWith<_$FiatPeUpiRequestRaisedEventImpl>
-      get copyWith => throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class _$$FiatPeUpiShowTestUpiDialogEventImplCopyWith<$Res> {
-  factory _$$FiatPeUpiShowTestUpiDialogEventImplCopyWith(
-          _$FiatPeUpiShowTestUpiDialogEventImpl value,
-          $Res Function(_$FiatPeUpiShowTestUpiDialogEventImpl) then) =
-      __$$FiatPeUpiShowTestUpiDialogEventImplCopyWithImpl<$Res>;
-  @useResult
-  $Res call({num id, UPIApp app, PaymentParams params});
-
-  $UPIAppCopyWith<$Res> get app;
-  $PaymentParamsCopyWith<$Res> get params;
-}
-
-/// @nodoc
-class __$$FiatPeUpiShowTestUpiDialogEventImplCopyWithImpl<$Res>
-    extends _$FiatPeEventCopyWithImpl<$Res,
-        _$FiatPeUpiShowTestUpiDialogEventImpl>
-    implements _$$FiatPeUpiShowTestUpiDialogEventImplCopyWith<$Res> {
-  __$$FiatPeUpiShowTestUpiDialogEventImplCopyWithImpl(
-      _$FiatPeUpiShowTestUpiDialogEventImpl _value,
-      $Res Function(_$FiatPeUpiShowTestUpiDialogEventImpl) _then)
-      : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? id = null,
-    Object? app = null,
-    Object? params = null,
-  }) {
-    return _then(_$FiatPeUpiShowTestUpiDialogEventImpl(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as num,
-      app: null == app
-          ? _value.app
-          : app // ignore: cast_nullable_to_non_nullable
-              as UPIApp,
-      params: null == params
-          ? _value.params
-          : params // ignore: cast_nullable_to_non_nullable
-              as PaymentParams,
-    ));
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $UPIAppCopyWith<$Res> get app {
-    return $UPIAppCopyWith<$Res>(_value.app, (value) {
-      return _then(_value.copyWith(app: value));
-    });
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $PaymentParamsCopyWith<$Res> get params {
-    return $PaymentParamsCopyWith<$Res>(_value.params, (value) {
-      return _then(_value.copyWith(params: value));
-    });
-  }
-}
-
-/// @nodoc
-
-class _$FiatPeUpiShowTestUpiDialogEventImpl
-    implements FiatPeUpiShowTestUpiDialogEvent {
-  const _$FiatPeUpiShowTestUpiDialogEventImpl(
-      {required this.id, required this.app, required this.params});
-
-  @override
-  final num id;
-  @override
-  final UPIApp app;
-  @override
-  final PaymentParams params;
-
-  @override
-  String toString() {
-    return 'FiatPeEvent.showTestUpiDialog(id: $id, app: $app, params: $params)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$FiatPeUpiShowTestUpiDialogEventImpl &&
-            (identical(other.id, id) || other.id == id) &&
-            (identical(other.app, app) || other.app == app) &&
-            (identical(other.params, params) || other.params == params));
-  }
-
-  @override
-  int get hashCode => Object.hash(runtimeType, id, app, params);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$FiatPeUpiShowTestUpiDialogEventImplCopyWith<
-          _$FiatPeUpiShowTestUpiDialogEventImpl>
-      get copyWith => __$$FiatPeUpiShowTestUpiDialogEventImplCopyWithImpl<
-          _$FiatPeUpiShowTestUpiDialogEventImpl>(this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function(TransactionDetails details) completed,
-    required TResult Function(TransactionDetails details) failed,
-    required TResult Function(String vpa, num id) upiRequestRaised,
-    required TResult Function(num id, UPIApp app, PaymentParams params)
-        showTestUpiDialog,
-  }) {
-    return showTestUpiDialog(id, app, params);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(TransactionDetails details)? completed,
-    TResult? Function(TransactionDetails details)? failed,
-    TResult? Function(String vpa, num id)? upiRequestRaised,
-    TResult? Function(num id, UPIApp app, PaymentParams params)?
-        showTestUpiDialog,
-  }) {
-    return showTestUpiDialog?.call(id, app, params);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function(TransactionDetails details)? completed,
-    TResult Function(TransactionDetails details)? failed,
-    TResult Function(String vpa, num id)? upiRequestRaised,
-    TResult Function(num id, UPIApp app, PaymentParams params)?
-        showTestUpiDialog,
-    required TResult orElse(),
-  }) {
-    if (showTestUpiDialog != null) {
-      return showTestUpiDialog(id, app, params);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(FiatPePaymentCompletedEvent value) completed,
-    required TResult Function(FiatPePaymentFailedEvent value) failed,
-    required TResult Function(FiatPeUpiRequestRaisedEvent value)
-        upiRequestRaised,
-    required TResult Function(FiatPeUpiShowTestUpiDialogEvent value)
-        showTestUpiDialog,
-  }) {
-    return showTestUpiDialog(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(FiatPePaymentCompletedEvent value)? completed,
-    TResult? Function(FiatPePaymentFailedEvent value)? failed,
-    TResult? Function(FiatPeUpiRequestRaisedEvent value)? upiRequestRaised,
-    TResult? Function(FiatPeUpiShowTestUpiDialogEvent value)? showTestUpiDialog,
-  }) {
-    return showTestUpiDialog?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(FiatPePaymentCompletedEvent value)? completed,
-    TResult Function(FiatPePaymentFailedEvent value)? failed,
-    TResult Function(FiatPeUpiRequestRaisedEvent value)? upiRequestRaised,
-    TResult Function(FiatPeUpiShowTestUpiDialogEvent value)? showTestUpiDialog,
-    required TResult orElse(),
-  }) {
-    if (showTestUpiDialog != null) {
-      return showTestUpiDialog(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class FiatPeUpiShowTestUpiDialogEvent implements FiatPeEvent {
-  const factory FiatPeUpiShowTestUpiDialogEvent(
-          {required final num id,
-          required final UPIApp app,
-          required final PaymentParams params}) =
-      _$FiatPeUpiShowTestUpiDialogEventImpl;
-
-  num get id;
-  UPIApp get app;
-  PaymentParams get params;
-  @JsonKey(ignore: true)
-  _$$FiatPeUpiShowTestUpiDialogEventImplCopyWith<
-          _$FiatPeUpiShowTestUpiDialogEventImpl>
-      get copyWith => throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-mixin _$FiatPeState {
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function(TransactionDetails details) completed,
-    required TResult Function(TransactionDetails details) failed,
-    required TResult Function(String vpa, num id) upiRequestRaised,
-    required TResult Function(num id, UPIApp app, PaymentParams params)
-        showTestUpiDialog,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-    TResult? Function(TransactionDetails details)? completed,
-    TResult? Function(TransactionDetails details)? failed,
-    TResult? Function(String vpa, num id)? upiRequestRaised,
-    TResult? Function(num id, UPIApp app, PaymentParams params)?
-        showTestUpiDialog,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function(TransactionDetails details)? completed,
-    TResult Function(TransactionDetails details)? failed,
-    TResult Function(String vpa, num id)? upiRequestRaised,
-    TResult Function(num id, UPIApp app, PaymentParams params)?
-        showTestUpiDialog,
-    required TResult orElse(),
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(FiatPeInitialState value) initial,
-    required TResult Function(FiatPePaymentCompletedState value) completed,
-    required TResult Function(FiatPePaymentFailedState value) failed,
-    required TResult Function(FiatPeUpiRequestRaisedState value)
-        upiRequestRaised,
-    required TResult Function(FiatPeUpiShowTestUpiDialogState value)
-        showTestUpiDialog,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(FiatPeInitialState value)? initial,
-    TResult? Function(FiatPePaymentCompletedState value)? completed,
-    TResult? Function(FiatPePaymentFailedState value)? failed,
-    TResult? Function(FiatPeUpiRequestRaisedState value)? upiRequestRaised,
-    TResult? Function(FiatPeUpiShowTestUpiDialogState value)? showTestUpiDialog,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(FiatPeInitialState value)? initial,
-    TResult Function(FiatPePaymentCompletedState value)? completed,
-    TResult Function(FiatPePaymentFailedState value)? failed,
-    TResult Function(FiatPeUpiRequestRaisedState value)? upiRequestRaised,
-    TResult Function(FiatPeUpiShowTestUpiDialogState value)? showTestUpiDialog,
-    required TResult orElse(),
-  }) =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class $FiatPeStateCopyWith<$Res> {
-  factory $FiatPeStateCopyWith(
-          FiatPeState value, $Res Function(FiatPeState) then) =
-      _$FiatPeStateCopyWithImpl<$Res, FiatPeState>;
-}
-
-/// @nodoc
-class _$FiatPeStateCopyWithImpl<$Res, $Val extends FiatPeState>
-    implements $FiatPeStateCopyWith<$Res> {
-  _$FiatPeStateCopyWithImpl(this._value, this._then);
-
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
-}
-
-/// @nodoc
-abstract class _$$FiatPeInitialStateImplCopyWith<$Res> {
-  factory _$$FiatPeInitialStateImplCopyWith(_$FiatPeInitialStateImpl value,
-          $Res Function(_$FiatPeInitialStateImpl) then) =
-      __$$FiatPeInitialStateImplCopyWithImpl<$Res>;
-}
-
-/// @nodoc
-class __$$FiatPeInitialStateImplCopyWithImpl<$Res>
-    extends _$FiatPeStateCopyWithImpl<$Res, _$FiatPeInitialStateImpl>
-    implements _$$FiatPeInitialStateImplCopyWith<$Res> {
-  __$$FiatPeInitialStateImplCopyWithImpl(_$FiatPeInitialStateImpl _value,
-      $Res Function(_$FiatPeInitialStateImpl) _then)
-      : super(_value, _then);
-}
-
-/// @nodoc
-
-class _$FiatPeInitialStateImpl implements FiatPeInitialState {
-  const _$FiatPeInitialStateImpl();
-
-  @override
-  String toString() {
-    return 'FiatPeState.initial()';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$FiatPeInitialStateImpl);
+        (other.runtimeType == runtimeType && other is FiatPeEvent);
   }
 
   @override
   int get hashCode => runtimeType.hashCode;
 
   @override
+  String toString() {
+    return 'FiatPeEvent()';
+  }
+}
+
+/// @nodoc
+class $FiatPeEventCopyWith<$Res> {
+  $FiatPeEventCopyWith(FiatPeEvent _, $Res Function(FiatPeEvent) __);
+}
+
+/// Adds pattern-matching-related methods to [FiatPeEvent].
+extension FiatPeEventPatterns on FiatPeEvent {
+  /// A variant of `map` that fallback to returning `orElse`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
   @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function(TransactionDetails details) completed,
-    required TResult Function(TransactionDetails details) failed,
-    required TResult Function(String vpa, num id) upiRequestRaised,
-    required TResult Function(num id, UPIApp app, PaymentParams params)
-        showTestUpiDialog,
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(FiatPePaymentCompletedEvent value)? completed,
+    TResult Function(FiatPePaymentFailedEvent value)? failed,
+    TResult Function(FiatPeUpiRequestRaisedEvent value)? upiRequestRaised,
+    TResult Function(FiatPeUpiShowTestUpiDialogEvent value)? showTestUpiDialog,
+    required TResult orElse(),
   }) {
-    return initial();
+    final _that = this;
+    switch (_that) {
+      case FiatPePaymentCompletedEvent() when completed != null:
+        return completed(_that);
+      case FiatPePaymentFailedEvent() when failed != null:
+        return failed(_that);
+      case FiatPeUpiRequestRaisedEvent() when upiRequestRaised != null:
+        return upiRequestRaised(_that);
+      case FiatPeUpiShowTestUpiDialogEvent() when showTestUpiDialog != null:
+        return showTestUpiDialog(_that);
+      case _:
+        return orElse();
+    }
   }
 
-  @override
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// Callbacks receives the raw object, upcasted.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case final Subclass2 value:
+  ///     return ...;
+  /// }
+  /// ```
+
   @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-    TResult? Function(TransactionDetails details)? completed,
-    TResult? Function(TransactionDetails details)? failed,
-    TResult? Function(String vpa, num id)? upiRequestRaised,
-    TResult? Function(num id, UPIApp app, PaymentParams params)?
+  TResult map<TResult extends Object?>({
+    required TResult Function(FiatPePaymentCompletedEvent value) completed,
+    required TResult Function(FiatPePaymentFailedEvent value) failed,
+    required TResult Function(FiatPeUpiRequestRaisedEvent value)
+        upiRequestRaised,
+    required TResult Function(FiatPeUpiShowTestUpiDialogEvent value)
         showTestUpiDialog,
   }) {
-    return initial?.call();
+    final _that = this;
+    switch (_that) {
+      case FiatPePaymentCompletedEvent():
+        return completed(_that);
+      case FiatPePaymentFailedEvent():
+        return failed(_that);
+      case FiatPeUpiRequestRaisedEvent():
+        return upiRequestRaised(_that);
+      case FiatPeUpiShowTestUpiDialogEvent():
+        return showTestUpiDialog(_that);
+    }
   }
 
-  @override
+  /// A variant of `map` that fallback to returning `null`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(FiatPePaymentCompletedEvent value)? completed,
+    TResult? Function(FiatPePaymentFailedEvent value)? failed,
+    TResult? Function(FiatPeUpiRequestRaisedEvent value)? upiRequestRaised,
+    TResult? Function(FiatPeUpiShowTestUpiDialogEvent value)? showTestUpiDialog,
+  }) {
+    final _that = this;
+    switch (_that) {
+      case FiatPePaymentCompletedEvent() when completed != null:
+        return completed(_that);
+      case FiatPePaymentFailedEvent() when failed != null:
+        return failed(_that);
+      case FiatPeUpiRequestRaisedEvent() when upiRequestRaised != null:
+        return upiRequestRaised(_that);
+      case FiatPeUpiShowTestUpiDialogEvent() when showTestUpiDialog != null:
+        return showTestUpiDialog(_that);
+      case _:
+        return null;
+    }
+  }
+
+  /// A variant of `when` that fallback to an `orElse` callback.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
     TResult Function(TransactionDetails details)? completed,
     TResult Function(TransactionDetails details)? failed,
     TResult Function(String vpa, num id)? upiRequestRaised,
@@ -920,86 +161,151 @@ class _$FiatPeInitialStateImpl implements FiatPeInitialState {
         showTestUpiDialog,
     required TResult orElse(),
   }) {
-    if (initial != null) {
-      return initial();
+    final _that = this;
+    switch (_that) {
+      case FiatPePaymentCompletedEvent() when completed != null:
+        return completed(_that.details);
+      case FiatPePaymentFailedEvent() when failed != null:
+        return failed(_that.details);
+      case FiatPeUpiRequestRaisedEvent() when upiRequestRaised != null:
+        return upiRequestRaised(_that.vpa, _that.id);
+      case FiatPeUpiShowTestUpiDialogEvent() when showTestUpiDialog != null:
+        return showTestUpiDialog(_that.id, _that.app, _that.params);
+      case _:
+        return orElse();
     }
-    return orElse();
   }
 
-  @override
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// As opposed to `map`, this offers destructuring.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case Subclass2(:final field2):
+  ///     return ...;
+  /// }
+  /// ```
+
   @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(FiatPeInitialState value) initial,
-    required TResult Function(FiatPePaymentCompletedState value) completed,
-    required TResult Function(FiatPePaymentFailedState value) failed,
-    required TResult Function(FiatPeUpiRequestRaisedState value)
-        upiRequestRaised,
-    required TResult Function(FiatPeUpiShowTestUpiDialogState value)
+  TResult when<TResult extends Object?>({
+    required TResult Function(TransactionDetails details) completed,
+    required TResult Function(TransactionDetails details) failed,
+    required TResult Function(String vpa, num id) upiRequestRaised,
+    required TResult Function(num id, UPIApp app, PaymentParams params)
         showTestUpiDialog,
   }) {
-    return initial(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(FiatPeInitialState value)? initial,
-    TResult? Function(FiatPePaymentCompletedState value)? completed,
-    TResult? Function(FiatPePaymentFailedState value)? failed,
-    TResult? Function(FiatPeUpiRequestRaisedState value)? upiRequestRaised,
-    TResult? Function(FiatPeUpiShowTestUpiDialogState value)? showTestUpiDialog,
-  }) {
-    return initial?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(FiatPeInitialState value)? initial,
-    TResult Function(FiatPePaymentCompletedState value)? completed,
-    TResult Function(FiatPePaymentFailedState value)? failed,
-    TResult Function(FiatPeUpiRequestRaisedState value)? upiRequestRaised,
-    TResult Function(FiatPeUpiShowTestUpiDialogState value)? showTestUpiDialog,
-    required TResult orElse(),
-  }) {
-    if (initial != null) {
-      return initial(this);
+    final _that = this;
+    switch (_that) {
+      case FiatPePaymentCompletedEvent():
+        return completed(_that.details);
+      case FiatPePaymentFailedEvent():
+        return failed(_that.details);
+      case FiatPeUpiRequestRaisedEvent():
+        return upiRequestRaised(_that.vpa, _that.id);
+      case FiatPeUpiShowTestUpiDialogEvent():
+        return showTestUpiDialog(_that.id, _that.app, _that.params);
     }
-    return orElse();
   }
-}
 
-abstract class FiatPeInitialState implements FiatPeState {
-  const factory FiatPeInitialState() = _$FiatPeInitialStateImpl;
+  /// A variant of `when` that fallback to returning `null`
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(TransactionDetails details)? completed,
+    TResult? Function(TransactionDetails details)? failed,
+    TResult? Function(String vpa, num id)? upiRequestRaised,
+    TResult? Function(num id, UPIApp app, PaymentParams params)?
+        showTestUpiDialog,
+  }) {
+    final _that = this;
+    switch (_that) {
+      case FiatPePaymentCompletedEvent() when completed != null:
+        return completed(_that.details);
+      case FiatPePaymentFailedEvent() when failed != null:
+        return failed(_that.details);
+      case FiatPeUpiRequestRaisedEvent() when upiRequestRaised != null:
+        return upiRequestRaised(_that.vpa, _that.id);
+      case FiatPeUpiShowTestUpiDialogEvent() when showTestUpiDialog != null:
+        return showTestUpiDialog(_that.id, _that.app, _that.params);
+      case _:
+        return null;
+    }
+  }
 }
 
 /// @nodoc
-abstract class _$$FiatPePaymentCompletedStateImplCopyWith<$Res> {
-  factory _$$FiatPePaymentCompletedStateImplCopyWith(
-          _$FiatPePaymentCompletedStateImpl value,
-          $Res Function(_$FiatPePaymentCompletedStateImpl) then) =
-      __$$FiatPePaymentCompletedStateImplCopyWithImpl<$Res>;
+
+class FiatPePaymentCompletedEvent implements FiatPeEvent {
+  const FiatPePaymentCompletedEvent({required this.details});
+
+  final TransactionDetails details;
+
+  /// Create a copy of FiatPeEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $FiatPePaymentCompletedEventCopyWith<FiatPePaymentCompletedEvent>
+      get copyWith => _$FiatPePaymentCompletedEventCopyWithImpl<
+          FiatPePaymentCompletedEvent>(this, _$identity);
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is FiatPePaymentCompletedEvent &&
+            (identical(other.details, details) || other.details == details));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, details);
+
+  @override
+  String toString() {
+    return 'FiatPeEvent.completed(details: $details)';
+  }
+}
+
+/// @nodoc
+abstract mixin class $FiatPePaymentCompletedEventCopyWith<$Res>
+    implements $FiatPeEventCopyWith<$Res> {
+  factory $FiatPePaymentCompletedEventCopyWith(
+          FiatPePaymentCompletedEvent value,
+          $Res Function(FiatPePaymentCompletedEvent) _then) =
+      _$FiatPePaymentCompletedEventCopyWithImpl;
   @useResult
   $Res call({TransactionDetails details});
 }
 
 /// @nodoc
-class __$$FiatPePaymentCompletedStateImplCopyWithImpl<$Res>
-    extends _$FiatPeStateCopyWithImpl<$Res, _$FiatPePaymentCompletedStateImpl>
-    implements _$$FiatPePaymentCompletedStateImplCopyWith<$Res> {
-  __$$FiatPePaymentCompletedStateImplCopyWithImpl(
-      _$FiatPePaymentCompletedStateImpl _value,
-      $Res Function(_$FiatPePaymentCompletedStateImpl) _then)
-      : super(_value, _then);
+class _$FiatPePaymentCompletedEventCopyWithImpl<$Res>
+    implements $FiatPePaymentCompletedEventCopyWith<$Res> {
+  _$FiatPePaymentCompletedEventCopyWithImpl(this._self, this._then);
 
+  final FiatPePaymentCompletedEvent _self;
+  final $Res Function(FiatPePaymentCompletedEvent) _then;
+
+  /// Create a copy of FiatPeEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
-  @override
   $Res call({
     Object? details = null,
   }) {
-    return _then(_$FiatPePaymentCompletedStateImpl(
+    return _then(FiatPePaymentCompletedEvent(
       details: null == details
-          ? _value.details
+          ? _self.details
           : details // ignore: cast_nullable_to_non_nullable
               as TransactionDetails,
     ));
@@ -1008,159 +314,63 @@ class __$$FiatPePaymentCompletedStateImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$FiatPePaymentCompletedStateImpl implements FiatPePaymentCompletedState {
-  const _$FiatPePaymentCompletedStateImpl({required this.details});
+class FiatPePaymentFailedEvent implements FiatPeEvent {
+  const FiatPePaymentFailedEvent({required this.details});
 
-  @override
   final TransactionDetails details;
 
-  @override
-  String toString() {
-    return 'FiatPeState.completed(details: $details)';
-  }
+  /// Create a copy of FiatPeEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $FiatPePaymentFailedEventCopyWith<FiatPePaymentFailedEvent> get copyWith =>
+      _$FiatPePaymentFailedEventCopyWithImpl<FiatPePaymentFailedEvent>(
+          this, _$identity);
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$FiatPePaymentCompletedStateImpl &&
+            other is FiatPePaymentFailedEvent &&
             (identical(other.details, details) || other.details == details));
   }
 
   @override
   int get hashCode => Object.hash(runtimeType, details);
 
-  @JsonKey(ignore: true)
   @override
-  @pragma('vm:prefer-inline')
-  _$$FiatPePaymentCompletedStateImplCopyWith<_$FiatPePaymentCompletedStateImpl>
-      get copyWith => __$$FiatPePaymentCompletedStateImplCopyWithImpl<
-          _$FiatPePaymentCompletedStateImpl>(this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function(TransactionDetails details) completed,
-    required TResult Function(TransactionDetails details) failed,
-    required TResult Function(String vpa, num id) upiRequestRaised,
-    required TResult Function(num id, UPIApp app, PaymentParams params)
-        showTestUpiDialog,
-  }) {
-    return completed(details);
+  String toString() {
+    return 'FiatPeEvent.failed(details: $details)';
   }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-    TResult? Function(TransactionDetails details)? completed,
-    TResult? Function(TransactionDetails details)? failed,
-    TResult? Function(String vpa, num id)? upiRequestRaised,
-    TResult? Function(num id, UPIApp app, PaymentParams params)?
-        showTestUpiDialog,
-  }) {
-    return completed?.call(details);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function(TransactionDetails details)? completed,
-    TResult Function(TransactionDetails details)? failed,
-    TResult Function(String vpa, num id)? upiRequestRaised,
-    TResult Function(num id, UPIApp app, PaymentParams params)?
-        showTestUpiDialog,
-    required TResult orElse(),
-  }) {
-    if (completed != null) {
-      return completed(details);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(FiatPeInitialState value) initial,
-    required TResult Function(FiatPePaymentCompletedState value) completed,
-    required TResult Function(FiatPePaymentFailedState value) failed,
-    required TResult Function(FiatPeUpiRequestRaisedState value)
-        upiRequestRaised,
-    required TResult Function(FiatPeUpiShowTestUpiDialogState value)
-        showTestUpiDialog,
-  }) {
-    return completed(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(FiatPeInitialState value)? initial,
-    TResult? Function(FiatPePaymentCompletedState value)? completed,
-    TResult? Function(FiatPePaymentFailedState value)? failed,
-    TResult? Function(FiatPeUpiRequestRaisedState value)? upiRequestRaised,
-    TResult? Function(FiatPeUpiShowTestUpiDialogState value)? showTestUpiDialog,
-  }) {
-    return completed?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(FiatPeInitialState value)? initial,
-    TResult Function(FiatPePaymentCompletedState value)? completed,
-    TResult Function(FiatPePaymentFailedState value)? failed,
-    TResult Function(FiatPeUpiRequestRaisedState value)? upiRequestRaised,
-    TResult Function(FiatPeUpiShowTestUpiDialogState value)? showTestUpiDialog,
-    required TResult orElse(),
-  }) {
-    if (completed != null) {
-      return completed(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class FiatPePaymentCompletedState implements FiatPeState {
-  const factory FiatPePaymentCompletedState(
-          {required final TransactionDetails details}) =
-      _$FiatPePaymentCompletedStateImpl;
-
-  TransactionDetails get details;
-  @JsonKey(ignore: true)
-  _$$FiatPePaymentCompletedStateImplCopyWith<_$FiatPePaymentCompletedStateImpl>
-      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$FiatPePaymentFailedStateImplCopyWith<$Res> {
-  factory _$$FiatPePaymentFailedStateImplCopyWith(
-          _$FiatPePaymentFailedStateImpl value,
-          $Res Function(_$FiatPePaymentFailedStateImpl) then) =
-      __$$FiatPePaymentFailedStateImplCopyWithImpl<$Res>;
+abstract mixin class $FiatPePaymentFailedEventCopyWith<$Res>
+    implements $FiatPeEventCopyWith<$Res> {
+  factory $FiatPePaymentFailedEventCopyWith(FiatPePaymentFailedEvent value,
+          $Res Function(FiatPePaymentFailedEvent) _then) =
+      _$FiatPePaymentFailedEventCopyWithImpl;
   @useResult
   $Res call({TransactionDetails details});
 }
 
 /// @nodoc
-class __$$FiatPePaymentFailedStateImplCopyWithImpl<$Res>
-    extends _$FiatPeStateCopyWithImpl<$Res, _$FiatPePaymentFailedStateImpl>
-    implements _$$FiatPePaymentFailedStateImplCopyWith<$Res> {
-  __$$FiatPePaymentFailedStateImplCopyWithImpl(
-      _$FiatPePaymentFailedStateImpl _value,
-      $Res Function(_$FiatPePaymentFailedStateImpl) _then)
-      : super(_value, _then);
+class _$FiatPePaymentFailedEventCopyWithImpl<$Res>
+    implements $FiatPePaymentFailedEventCopyWith<$Res> {
+  _$FiatPePaymentFailedEventCopyWithImpl(this._self, this._then);
 
+  final FiatPePaymentFailedEvent _self;
+  final $Res Function(FiatPePaymentFailedEvent) _then;
+
+  /// Create a copy of FiatPeEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
-  @override
   $Res call({
     Object? details = null,
   }) {
-    return _then(_$FiatPePaymentFailedStateImpl(
+    return _then(FiatPePaymentFailedEvent(
       details: null == details
-          ? _value.details
+          ? _self.details
           : details // ignore: cast_nullable_to_non_nullable
               as TransactionDetails,
     ));
@@ -1169,191 +379,25 @@ class __$$FiatPePaymentFailedStateImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$FiatPePaymentFailedStateImpl implements FiatPePaymentFailedState {
-  const _$FiatPePaymentFailedStateImpl({required this.details});
+class FiatPeUpiRequestRaisedEvent implements FiatPeEvent {
+  const FiatPeUpiRequestRaisedEvent({required this.vpa, required this.id});
 
-  @override
-  final TransactionDetails details;
-
-  @override
-  String toString() {
-    return 'FiatPeState.failed(details: $details)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$FiatPePaymentFailedStateImpl &&
-            (identical(other.details, details) || other.details == details));
-  }
-
-  @override
-  int get hashCode => Object.hash(runtimeType, details);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$FiatPePaymentFailedStateImplCopyWith<_$FiatPePaymentFailedStateImpl>
-      get copyWith => __$$FiatPePaymentFailedStateImplCopyWithImpl<
-          _$FiatPePaymentFailedStateImpl>(this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function(TransactionDetails details) completed,
-    required TResult Function(TransactionDetails details) failed,
-    required TResult Function(String vpa, num id) upiRequestRaised,
-    required TResult Function(num id, UPIApp app, PaymentParams params)
-        showTestUpiDialog,
-  }) {
-    return failed(details);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-    TResult? Function(TransactionDetails details)? completed,
-    TResult? Function(TransactionDetails details)? failed,
-    TResult? Function(String vpa, num id)? upiRequestRaised,
-    TResult? Function(num id, UPIApp app, PaymentParams params)?
-        showTestUpiDialog,
-  }) {
-    return failed?.call(details);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function(TransactionDetails details)? completed,
-    TResult Function(TransactionDetails details)? failed,
-    TResult Function(String vpa, num id)? upiRequestRaised,
-    TResult Function(num id, UPIApp app, PaymentParams params)?
-        showTestUpiDialog,
-    required TResult orElse(),
-  }) {
-    if (failed != null) {
-      return failed(details);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(FiatPeInitialState value) initial,
-    required TResult Function(FiatPePaymentCompletedState value) completed,
-    required TResult Function(FiatPePaymentFailedState value) failed,
-    required TResult Function(FiatPeUpiRequestRaisedState value)
-        upiRequestRaised,
-    required TResult Function(FiatPeUpiShowTestUpiDialogState value)
-        showTestUpiDialog,
-  }) {
-    return failed(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(FiatPeInitialState value)? initial,
-    TResult? Function(FiatPePaymentCompletedState value)? completed,
-    TResult? Function(FiatPePaymentFailedState value)? failed,
-    TResult? Function(FiatPeUpiRequestRaisedState value)? upiRequestRaised,
-    TResult? Function(FiatPeUpiShowTestUpiDialogState value)? showTestUpiDialog,
-  }) {
-    return failed?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(FiatPeInitialState value)? initial,
-    TResult Function(FiatPePaymentCompletedState value)? completed,
-    TResult Function(FiatPePaymentFailedState value)? failed,
-    TResult Function(FiatPeUpiRequestRaisedState value)? upiRequestRaised,
-    TResult Function(FiatPeUpiShowTestUpiDialogState value)? showTestUpiDialog,
-    required TResult orElse(),
-  }) {
-    if (failed != null) {
-      return failed(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class FiatPePaymentFailedState implements FiatPeState {
-  const factory FiatPePaymentFailedState(
-          {required final TransactionDetails details}) =
-      _$FiatPePaymentFailedStateImpl;
-
-  TransactionDetails get details;
-  @JsonKey(ignore: true)
-  _$$FiatPePaymentFailedStateImplCopyWith<_$FiatPePaymentFailedStateImpl>
-      get copyWith => throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class _$$FiatPeUpiRequestRaisedStateImplCopyWith<$Res> {
-  factory _$$FiatPeUpiRequestRaisedStateImplCopyWith(
-          _$FiatPeUpiRequestRaisedStateImpl value,
-          $Res Function(_$FiatPeUpiRequestRaisedStateImpl) then) =
-      __$$FiatPeUpiRequestRaisedStateImplCopyWithImpl<$Res>;
-  @useResult
-  $Res call({String vpa, num id});
-}
-
-/// @nodoc
-class __$$FiatPeUpiRequestRaisedStateImplCopyWithImpl<$Res>
-    extends _$FiatPeStateCopyWithImpl<$Res, _$FiatPeUpiRequestRaisedStateImpl>
-    implements _$$FiatPeUpiRequestRaisedStateImplCopyWith<$Res> {
-  __$$FiatPeUpiRequestRaisedStateImplCopyWithImpl(
-      _$FiatPeUpiRequestRaisedStateImpl _value,
-      $Res Function(_$FiatPeUpiRequestRaisedStateImpl) _then)
-      : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? vpa = null,
-    Object? id = null,
-  }) {
-    return _then(_$FiatPeUpiRequestRaisedStateImpl(
-      vpa: null == vpa
-          ? _value.vpa
-          : vpa // ignore: cast_nullable_to_non_nullable
-              as String,
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as num,
-    ));
-  }
-}
-
-/// @nodoc
-
-class _$FiatPeUpiRequestRaisedStateImpl implements FiatPeUpiRequestRaisedState {
-  const _$FiatPeUpiRequestRaisedStateImpl(
-      {required this.vpa, required this.id});
-
-  @override
   final String vpa;
-  @override
   final num id;
 
-  @override
-  String toString() {
-    return 'FiatPeState.upiRequestRaised(vpa: $vpa, id: $id)';
-  }
+  /// Create a copy of FiatPeEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $FiatPeUpiRequestRaisedEventCopyWith<FiatPeUpiRequestRaisedEvent>
+      get copyWith => _$FiatPeUpiRequestRaisedEventCopyWithImpl<
+          FiatPeUpiRequestRaisedEvent>(this, _$identity);
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$FiatPeUpiRequestRaisedStateImpl &&
+            other is FiatPeUpiRequestRaisedEvent &&
             (identical(other.vpa, vpa) || other.vpa == vpa) &&
             (identical(other.id, id) || other.id == id));
   }
@@ -1361,198 +405,74 @@ class _$FiatPeUpiRequestRaisedStateImpl implements FiatPeUpiRequestRaisedState {
   @override
   int get hashCode => Object.hash(runtimeType, vpa, id);
 
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$FiatPeUpiRequestRaisedStateImplCopyWith<_$FiatPeUpiRequestRaisedStateImpl>
-      get copyWith => __$$FiatPeUpiRequestRaisedStateImplCopyWithImpl<
-          _$FiatPeUpiRequestRaisedStateImpl>(this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function(TransactionDetails details) completed,
-    required TResult Function(TransactionDetails details) failed,
-    required TResult Function(String vpa, num id) upiRequestRaised,
-    required TResult Function(num id, UPIApp app, PaymentParams params)
-        showTestUpiDialog,
-  }) {
-    return upiRequestRaised(vpa, id);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-    TResult? Function(TransactionDetails details)? completed,
-    TResult? Function(TransactionDetails details)? failed,
-    TResult? Function(String vpa, num id)? upiRequestRaised,
-    TResult? Function(num id, UPIApp app, PaymentParams params)?
-        showTestUpiDialog,
-  }) {
-    return upiRequestRaised?.call(vpa, id);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function(TransactionDetails details)? completed,
-    TResult Function(TransactionDetails details)? failed,
-    TResult Function(String vpa, num id)? upiRequestRaised,
-    TResult Function(num id, UPIApp app, PaymentParams params)?
-        showTestUpiDialog,
-    required TResult orElse(),
-  }) {
-    if (upiRequestRaised != null) {
-      return upiRequestRaised(vpa, id);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(FiatPeInitialState value) initial,
-    required TResult Function(FiatPePaymentCompletedState value) completed,
-    required TResult Function(FiatPePaymentFailedState value) failed,
-    required TResult Function(FiatPeUpiRequestRaisedState value)
-        upiRequestRaised,
-    required TResult Function(FiatPeUpiShowTestUpiDialogState value)
-        showTestUpiDialog,
-  }) {
-    return upiRequestRaised(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(FiatPeInitialState value)? initial,
-    TResult? Function(FiatPePaymentCompletedState value)? completed,
-    TResult? Function(FiatPePaymentFailedState value)? failed,
-    TResult? Function(FiatPeUpiRequestRaisedState value)? upiRequestRaised,
-    TResult? Function(FiatPeUpiShowTestUpiDialogState value)? showTestUpiDialog,
-  }) {
-    return upiRequestRaised?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(FiatPeInitialState value)? initial,
-    TResult Function(FiatPePaymentCompletedState value)? completed,
-    TResult Function(FiatPePaymentFailedState value)? failed,
-    TResult Function(FiatPeUpiRequestRaisedState value)? upiRequestRaised,
-    TResult Function(FiatPeUpiShowTestUpiDialogState value)? showTestUpiDialog,
-    required TResult orElse(),
-  }) {
-    if (upiRequestRaised != null) {
-      return upiRequestRaised(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class FiatPeUpiRequestRaisedState implements FiatPeState {
-  const factory FiatPeUpiRequestRaisedState(
-      {required final String vpa,
-      required final num id}) = _$FiatPeUpiRequestRaisedStateImpl;
-
-  String get vpa;
-  num get id;
-  @JsonKey(ignore: true)
-  _$$FiatPeUpiRequestRaisedStateImplCopyWith<_$FiatPeUpiRequestRaisedStateImpl>
-      get copyWith => throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class _$$FiatPeUpiShowTestUpiDialogStateImplCopyWith<$Res> {
-  factory _$$FiatPeUpiShowTestUpiDialogStateImplCopyWith(
-          _$FiatPeUpiShowTestUpiDialogStateImpl value,
-          $Res Function(_$FiatPeUpiShowTestUpiDialogStateImpl) then) =
-      __$$FiatPeUpiShowTestUpiDialogStateImplCopyWithImpl<$Res>;
-  @useResult
-  $Res call({num id, UPIApp app, PaymentParams params});
-
-  $UPIAppCopyWith<$Res> get app;
-  $PaymentParamsCopyWith<$Res> get params;
-}
-
-/// @nodoc
-class __$$FiatPeUpiShowTestUpiDialogStateImplCopyWithImpl<$Res>
-    extends _$FiatPeStateCopyWithImpl<$Res,
-        _$FiatPeUpiShowTestUpiDialogStateImpl>
-    implements _$$FiatPeUpiShowTestUpiDialogStateImplCopyWith<$Res> {
-  __$$FiatPeUpiShowTestUpiDialogStateImplCopyWithImpl(
-      _$FiatPeUpiShowTestUpiDialogStateImpl _value,
-      $Res Function(_$FiatPeUpiShowTestUpiDialogStateImpl) _then)
-      : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? id = null,
-    Object? app = null,
-    Object? params = null,
-  }) {
-    return _then(_$FiatPeUpiShowTestUpiDialogStateImpl(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as num,
-      app: null == app
-          ? _value.app
-          : app // ignore: cast_nullable_to_non_nullable
-              as UPIApp,
-      params: null == params
-          ? _value.params
-          : params // ignore: cast_nullable_to_non_nullable
-              as PaymentParams,
-    ));
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $UPIAppCopyWith<$Res> get app {
-    return $UPIAppCopyWith<$Res>(_value.app, (value) {
-      return _then(_value.copyWith(app: value));
-    });
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $PaymentParamsCopyWith<$Res> get params {
-    return $PaymentParamsCopyWith<$Res>(_value.params, (value) {
-      return _then(_value.copyWith(params: value));
-    });
-  }
-}
-
-/// @nodoc
-
-class _$FiatPeUpiShowTestUpiDialogStateImpl
-    implements FiatPeUpiShowTestUpiDialogState {
-  const _$FiatPeUpiShowTestUpiDialogStateImpl(
-      {required this.id, required this.app, required this.params});
-
-  @override
-  final num id;
-  @override
-  final UPIApp app;
-  @override
-  final PaymentParams params;
-
   @override
   String toString() {
-    return 'FiatPeState.showTestUpiDialog(id: $id, app: $app, params: $params)';
+    return 'FiatPeEvent.upiRequestRaised(vpa: $vpa, id: $id)';
   }
+}
+
+/// @nodoc
+abstract mixin class $FiatPeUpiRequestRaisedEventCopyWith<$Res>
+    implements $FiatPeEventCopyWith<$Res> {
+  factory $FiatPeUpiRequestRaisedEventCopyWith(
+          FiatPeUpiRequestRaisedEvent value,
+          $Res Function(FiatPeUpiRequestRaisedEvent) _then) =
+      _$FiatPeUpiRequestRaisedEventCopyWithImpl;
+  @useResult
+  $Res call({String vpa, num id});
+}
+
+/// @nodoc
+class _$FiatPeUpiRequestRaisedEventCopyWithImpl<$Res>
+    implements $FiatPeUpiRequestRaisedEventCopyWith<$Res> {
+  _$FiatPeUpiRequestRaisedEventCopyWithImpl(this._self, this._then);
+
+  final FiatPeUpiRequestRaisedEvent _self;
+  final $Res Function(FiatPeUpiRequestRaisedEvent) _then;
+
+  /// Create a copy of FiatPeEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  $Res call({
+    Object? vpa = null,
+    Object? id = null,
+  }) {
+    return _then(FiatPeUpiRequestRaisedEvent(
+      vpa: null == vpa
+          ? _self.vpa
+          : vpa // ignore: cast_nullable_to_non_nullable
+              as String,
+      id: null == id
+          ? _self.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as num,
+    ));
+  }
+}
+
+/// @nodoc
+
+class FiatPeUpiShowTestUpiDialogEvent implements FiatPeEvent {
+  const FiatPeUpiShowTestUpiDialogEvent(
+      {required this.id, required this.app, required this.params});
+
+  final num id;
+  final UPIApp app;
+  final PaymentParams params;
+
+  /// Create a copy of FiatPeEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $FiatPeUpiShowTestUpiDialogEventCopyWith<FiatPeUpiShowTestUpiDialogEvent>
+      get copyWith => _$FiatPeUpiShowTestUpiDialogEventCopyWithImpl<
+          FiatPeUpiShowTestUpiDialogEvent>(this, _$identity);
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$FiatPeUpiShowTestUpiDialogStateImpl &&
+            other is FiatPeUpiShowTestUpiDialogEvent &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.app, app) || other.app == app) &&
             (identical(other.params, params) || other.params == params));
@@ -1561,58 +481,154 @@ class _$FiatPeUpiShowTestUpiDialogStateImpl
   @override
   int get hashCode => Object.hash(runtimeType, id, app, params);
 
-  @JsonKey(ignore: true)
+  @override
+  String toString() {
+    return 'FiatPeEvent.showTestUpiDialog(id: $id, app: $app, params: $params)';
+  }
+}
+
+/// @nodoc
+abstract mixin class $FiatPeUpiShowTestUpiDialogEventCopyWith<$Res>
+    implements $FiatPeEventCopyWith<$Res> {
+  factory $FiatPeUpiShowTestUpiDialogEventCopyWith(
+          FiatPeUpiShowTestUpiDialogEvent value,
+          $Res Function(FiatPeUpiShowTestUpiDialogEvent) _then) =
+      _$FiatPeUpiShowTestUpiDialogEventCopyWithImpl;
+  @useResult
+  $Res call({num id, UPIApp app, PaymentParams params});
+
+  $UPIAppCopyWith<$Res> get app;
+  $PaymentParamsCopyWith<$Res> get params;
+}
+
+/// @nodoc
+class _$FiatPeUpiShowTestUpiDialogEventCopyWithImpl<$Res>
+    implements $FiatPeUpiShowTestUpiDialogEventCopyWith<$Res> {
+  _$FiatPeUpiShowTestUpiDialogEventCopyWithImpl(this._self, this._then);
+
+  final FiatPeUpiShowTestUpiDialogEvent _self;
+  final $Res Function(FiatPeUpiShowTestUpiDialogEvent) _then;
+
+  /// Create a copy of FiatPeEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  $Res call({
+    Object? id = null,
+    Object? app = null,
+    Object? params = null,
+  }) {
+    return _then(FiatPeUpiShowTestUpiDialogEvent(
+      id: null == id
+          ? _self.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as num,
+      app: null == app
+          ? _self.app
+          : app // ignore: cast_nullable_to_non_nullable
+              as UPIApp,
+      params: null == params
+          ? _self.params
+          : params // ignore: cast_nullable_to_non_nullable
+              as PaymentParams,
+    ));
+  }
+
+  /// Create a copy of FiatPeEvent
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
-  _$$FiatPeUpiShowTestUpiDialogStateImplCopyWith<
-          _$FiatPeUpiShowTestUpiDialogStateImpl>
-      get copyWith => __$$FiatPeUpiShowTestUpiDialogStateImplCopyWithImpl<
-          _$FiatPeUpiShowTestUpiDialogStateImpl>(this, _$identity);
+  $UPIAppCopyWith<$Res> get app {
+    return $UPIAppCopyWith<$Res>(_self.app, (value) {
+      return _then(_self.copyWith(app: value));
+    });
+  }
 
+  /// Create a copy of FiatPeEvent
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function(TransactionDetails details) completed,
-    required TResult Function(TransactionDetails details) failed,
-    required TResult Function(String vpa, num id) upiRequestRaised,
-    required TResult Function(num id, UPIApp app, PaymentParams params)
-        showTestUpiDialog,
-  }) {
-    return showTestUpiDialog(id, app, params);
+  @pragma('vm:prefer-inline')
+  $PaymentParamsCopyWith<$Res> get params {
+    return $PaymentParamsCopyWith<$Res>(_self.params, (value) {
+      return _then(_self.copyWith(params: value));
+    });
+  }
+}
+
+/// @nodoc
+mixin _$FiatPeState {
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is FiatPeState);
   }
 
   @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-    TResult? Function(TransactionDetails details)? completed,
-    TResult? Function(TransactionDetails details)? failed,
-    TResult? Function(String vpa, num id)? upiRequestRaised,
-    TResult? Function(num id, UPIApp app, PaymentParams params)?
-        showTestUpiDialog,
-  }) {
-    return showTestUpiDialog?.call(id, app, params);
-  }
+  int get hashCode => runtimeType.hashCode;
 
   @override
+  String toString() {
+    return 'FiatPeState()';
+  }
+}
+
+/// @nodoc
+class $FiatPeStateCopyWith<$Res> {
+  $FiatPeStateCopyWith(FiatPeState _, $Res Function(FiatPeState) __);
+}
+
+/// Adds pattern-matching-related methods to [FiatPeState].
+extension FiatPeStatePatterns on FiatPeState {
+  /// A variant of `map` that fallback to returning `orElse`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function(TransactionDetails details)? completed,
-    TResult Function(TransactionDetails details)? failed,
-    TResult Function(String vpa, num id)? upiRequestRaised,
-    TResult Function(num id, UPIApp app, PaymentParams params)?
-        showTestUpiDialog,
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(FiatPeInitialState value)? initial,
+    TResult Function(FiatPePaymentCompletedState value)? completed,
+    TResult Function(FiatPePaymentFailedState value)? failed,
+    TResult Function(FiatPeUpiRequestRaisedState value)? upiRequestRaised,
+    TResult Function(FiatPeUpiShowTestUpiDialogState value)? showTestUpiDialog,
     required TResult orElse(),
   }) {
-    if (showTestUpiDialog != null) {
-      return showTestUpiDialog(id, app, params);
+    final _that = this;
+    switch (_that) {
+      case FiatPeInitialState() when initial != null:
+        return initial(_that);
+      case FiatPePaymentCompletedState() when completed != null:
+        return completed(_that);
+      case FiatPePaymentFailedState() when failed != null:
+        return failed(_that);
+      case FiatPeUpiRequestRaisedState() when upiRequestRaised != null:
+        return upiRequestRaised(_that);
+      case FiatPeUpiShowTestUpiDialogState() when showTestUpiDialog != null:
+        return showTestUpiDialog(_that);
+      case _:
+        return orElse();
     }
-    return orElse();
   }
 
-  @override
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// Callbacks receives the raw object, upcasted.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case final Subclass2 value:
+  ///     return ...;
+  /// }
+  /// ```
+
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(FiatPeInitialState value) initial,
@@ -1623,10 +639,33 @@ class _$FiatPeUpiShowTestUpiDialogStateImpl
     required TResult Function(FiatPeUpiShowTestUpiDialogState value)
         showTestUpiDialog,
   }) {
-    return showTestUpiDialog(this);
+    final _that = this;
+    switch (_that) {
+      case FiatPeInitialState():
+        return initial(_that);
+      case FiatPePaymentCompletedState():
+        return completed(_that);
+      case FiatPePaymentFailedState():
+        return failed(_that);
+      case FiatPeUpiRequestRaisedState():
+        return upiRequestRaised(_that);
+      case FiatPeUpiShowTestUpiDialogState():
+        return showTestUpiDialog(_that);
+    }
   }
 
-  @override
+  /// A variant of `map` that fallback to returning `null`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(FiatPeInitialState value)? initial,
@@ -1635,38 +674,464 @@ class _$FiatPeUpiShowTestUpiDialogStateImpl
     TResult? Function(FiatPeUpiRequestRaisedState value)? upiRequestRaised,
     TResult? Function(FiatPeUpiShowTestUpiDialogState value)? showTestUpiDialog,
   }) {
-    return showTestUpiDialog?.call(this);
+    final _that = this;
+    switch (_that) {
+      case FiatPeInitialState() when initial != null:
+        return initial(_that);
+      case FiatPePaymentCompletedState() when completed != null:
+        return completed(_that);
+      case FiatPePaymentFailedState() when failed != null:
+        return failed(_that);
+      case FiatPeUpiRequestRaisedState() when upiRequestRaised != null:
+        return upiRequestRaised(_that);
+      case FiatPeUpiShowTestUpiDialogState() when showTestUpiDialog != null:
+        return showTestUpiDialog(_that);
+      case _:
+        return null;
+    }
+  }
+
+  /// A variant of `when` that fallback to an `orElse` callback.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function(TransactionDetails details)? completed,
+    TResult Function(TransactionDetails details)? failed,
+    TResult Function(String vpa, num id)? upiRequestRaised,
+    TResult Function(num id, UPIApp app, PaymentParams params)?
+        showTestUpiDialog,
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case FiatPeInitialState() when initial != null:
+        return initial();
+      case FiatPePaymentCompletedState() when completed != null:
+        return completed(_that.details);
+      case FiatPePaymentFailedState() when failed != null:
+        return failed(_that.details);
+      case FiatPeUpiRequestRaisedState() when upiRequestRaised != null:
+        return upiRequestRaised(_that.vpa, _that.id);
+      case FiatPeUpiShowTestUpiDialogState() when showTestUpiDialog != null:
+        return showTestUpiDialog(_that.id, _that.app, _that.params);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// As opposed to `map`, this offers destructuring.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case Subclass2(:final field2):
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function(TransactionDetails details) completed,
+    required TResult Function(TransactionDetails details) failed,
+    required TResult Function(String vpa, num id) upiRequestRaised,
+    required TResult Function(num id, UPIApp app, PaymentParams params)
+        showTestUpiDialog,
+  }) {
+    final _that = this;
+    switch (_that) {
+      case FiatPeInitialState():
+        return initial();
+      case FiatPePaymentCompletedState():
+        return completed(_that.details);
+      case FiatPePaymentFailedState():
+        return failed(_that.details);
+      case FiatPeUpiRequestRaisedState():
+        return upiRequestRaised(_that.vpa, _that.id);
+      case FiatPeUpiShowTestUpiDialogState():
+        return showTestUpiDialog(_that.id, _that.app, _that.params);
+    }
+  }
+
+  /// A variant of `when` that fallback to returning `null`
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function(TransactionDetails details)? completed,
+    TResult? Function(TransactionDetails details)? failed,
+    TResult? Function(String vpa, num id)? upiRequestRaised,
+    TResult? Function(num id, UPIApp app, PaymentParams params)?
+        showTestUpiDialog,
+  }) {
+    final _that = this;
+    switch (_that) {
+      case FiatPeInitialState() when initial != null:
+        return initial();
+      case FiatPePaymentCompletedState() when completed != null:
+        return completed(_that.details);
+      case FiatPePaymentFailedState() when failed != null:
+        return failed(_that.details);
+      case FiatPeUpiRequestRaisedState() when upiRequestRaised != null:
+        return upiRequestRaised(_that.vpa, _that.id);
+      case FiatPeUpiShowTestUpiDialogState() when showTestUpiDialog != null:
+        return showTestUpiDialog(_that.id, _that.app, _that.params);
+      case _:
+        return null;
+    }
+  }
+}
+
+/// @nodoc
+
+class FiatPeInitialState implements FiatPeState {
+  const FiatPeInitialState();
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is FiatPeInitialState);
   }
 
   @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(FiatPeInitialState value)? initial,
-    TResult Function(FiatPePaymentCompletedState value)? completed,
-    TResult Function(FiatPePaymentFailedState value)? failed,
-    TResult Function(FiatPeUpiRequestRaisedState value)? upiRequestRaised,
-    TResult Function(FiatPeUpiShowTestUpiDialogState value)? showTestUpiDialog,
-    required TResult orElse(),
-  }) {
-    if (showTestUpiDialog != null) {
-      return showTestUpiDialog(this);
-    }
-    return orElse();
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  String toString() {
+    return 'FiatPeState.initial()';
   }
 }
 
-abstract class FiatPeUpiShowTestUpiDialogState implements FiatPeState {
-  const factory FiatPeUpiShowTestUpiDialogState(
-          {required final num id,
-          required final UPIApp app,
-          required final PaymentParams params}) =
-      _$FiatPeUpiShowTestUpiDialogStateImpl;
+/// @nodoc
 
-  num get id;
-  UPIApp get app;
-  PaymentParams get params;
-  @JsonKey(ignore: true)
-  _$$FiatPeUpiShowTestUpiDialogStateImplCopyWith<
-          _$FiatPeUpiShowTestUpiDialogStateImpl>
-      get copyWith => throw _privateConstructorUsedError;
+class FiatPePaymentCompletedState implements FiatPeState {
+  const FiatPePaymentCompletedState({required this.details});
+
+  final TransactionDetails details;
+
+  /// Create a copy of FiatPeState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $FiatPePaymentCompletedStateCopyWith<FiatPePaymentCompletedState>
+      get copyWith => _$FiatPePaymentCompletedStateCopyWithImpl<
+          FiatPePaymentCompletedState>(this, _$identity);
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is FiatPePaymentCompletedState &&
+            (identical(other.details, details) || other.details == details));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, details);
+
+  @override
+  String toString() {
+    return 'FiatPeState.completed(details: $details)';
+  }
 }
+
+/// @nodoc
+abstract mixin class $FiatPePaymentCompletedStateCopyWith<$Res>
+    implements $FiatPeStateCopyWith<$Res> {
+  factory $FiatPePaymentCompletedStateCopyWith(
+          FiatPePaymentCompletedState value,
+          $Res Function(FiatPePaymentCompletedState) _then) =
+      _$FiatPePaymentCompletedStateCopyWithImpl;
+  @useResult
+  $Res call({TransactionDetails details});
+}
+
+/// @nodoc
+class _$FiatPePaymentCompletedStateCopyWithImpl<$Res>
+    implements $FiatPePaymentCompletedStateCopyWith<$Res> {
+  _$FiatPePaymentCompletedStateCopyWithImpl(this._self, this._then);
+
+  final FiatPePaymentCompletedState _self;
+  final $Res Function(FiatPePaymentCompletedState) _then;
+
+  /// Create a copy of FiatPeState
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  $Res call({
+    Object? details = null,
+  }) {
+    return _then(FiatPePaymentCompletedState(
+      details: null == details
+          ? _self.details
+          : details // ignore: cast_nullable_to_non_nullable
+              as TransactionDetails,
+    ));
+  }
+}
+
+/// @nodoc
+
+class FiatPePaymentFailedState implements FiatPeState {
+  const FiatPePaymentFailedState({required this.details});
+
+  final TransactionDetails details;
+
+  /// Create a copy of FiatPeState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $FiatPePaymentFailedStateCopyWith<FiatPePaymentFailedState> get copyWith =>
+      _$FiatPePaymentFailedStateCopyWithImpl<FiatPePaymentFailedState>(
+          this, _$identity);
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is FiatPePaymentFailedState &&
+            (identical(other.details, details) || other.details == details));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, details);
+
+  @override
+  String toString() {
+    return 'FiatPeState.failed(details: $details)';
+  }
+}
+
+/// @nodoc
+abstract mixin class $FiatPePaymentFailedStateCopyWith<$Res>
+    implements $FiatPeStateCopyWith<$Res> {
+  factory $FiatPePaymentFailedStateCopyWith(FiatPePaymentFailedState value,
+          $Res Function(FiatPePaymentFailedState) _then) =
+      _$FiatPePaymentFailedStateCopyWithImpl;
+  @useResult
+  $Res call({TransactionDetails details});
+}
+
+/// @nodoc
+class _$FiatPePaymentFailedStateCopyWithImpl<$Res>
+    implements $FiatPePaymentFailedStateCopyWith<$Res> {
+  _$FiatPePaymentFailedStateCopyWithImpl(this._self, this._then);
+
+  final FiatPePaymentFailedState _self;
+  final $Res Function(FiatPePaymentFailedState) _then;
+
+  /// Create a copy of FiatPeState
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  $Res call({
+    Object? details = null,
+  }) {
+    return _then(FiatPePaymentFailedState(
+      details: null == details
+          ? _self.details
+          : details // ignore: cast_nullable_to_non_nullable
+              as TransactionDetails,
+    ));
+  }
+}
+
+/// @nodoc
+
+class FiatPeUpiRequestRaisedState implements FiatPeState {
+  const FiatPeUpiRequestRaisedState({required this.vpa, required this.id});
+
+  final String vpa;
+  final num id;
+
+  /// Create a copy of FiatPeState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $FiatPeUpiRequestRaisedStateCopyWith<FiatPeUpiRequestRaisedState>
+      get copyWith => _$FiatPeUpiRequestRaisedStateCopyWithImpl<
+          FiatPeUpiRequestRaisedState>(this, _$identity);
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is FiatPeUpiRequestRaisedState &&
+            (identical(other.vpa, vpa) || other.vpa == vpa) &&
+            (identical(other.id, id) || other.id == id));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, vpa, id);
+
+  @override
+  String toString() {
+    return 'FiatPeState.upiRequestRaised(vpa: $vpa, id: $id)';
+  }
+}
+
+/// @nodoc
+abstract mixin class $FiatPeUpiRequestRaisedStateCopyWith<$Res>
+    implements $FiatPeStateCopyWith<$Res> {
+  factory $FiatPeUpiRequestRaisedStateCopyWith(
+          FiatPeUpiRequestRaisedState value,
+          $Res Function(FiatPeUpiRequestRaisedState) _then) =
+      _$FiatPeUpiRequestRaisedStateCopyWithImpl;
+  @useResult
+  $Res call({String vpa, num id});
+}
+
+/// @nodoc
+class _$FiatPeUpiRequestRaisedStateCopyWithImpl<$Res>
+    implements $FiatPeUpiRequestRaisedStateCopyWith<$Res> {
+  _$FiatPeUpiRequestRaisedStateCopyWithImpl(this._self, this._then);
+
+  final FiatPeUpiRequestRaisedState _self;
+  final $Res Function(FiatPeUpiRequestRaisedState) _then;
+
+  /// Create a copy of FiatPeState
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  $Res call({
+    Object? vpa = null,
+    Object? id = null,
+  }) {
+    return _then(FiatPeUpiRequestRaisedState(
+      vpa: null == vpa
+          ? _self.vpa
+          : vpa // ignore: cast_nullable_to_non_nullable
+              as String,
+      id: null == id
+          ? _self.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as num,
+    ));
+  }
+}
+
+/// @nodoc
+
+class FiatPeUpiShowTestUpiDialogState implements FiatPeState {
+  const FiatPeUpiShowTestUpiDialogState(
+      {required this.id, required this.app, required this.params});
+
+  final num id;
+  final UPIApp app;
+  final PaymentParams params;
+
+  /// Create a copy of FiatPeState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $FiatPeUpiShowTestUpiDialogStateCopyWith<FiatPeUpiShowTestUpiDialogState>
+      get copyWith => _$FiatPeUpiShowTestUpiDialogStateCopyWithImpl<
+          FiatPeUpiShowTestUpiDialogState>(this, _$identity);
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is FiatPeUpiShowTestUpiDialogState &&
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.app, app) || other.app == app) &&
+            (identical(other.params, params) || other.params == params));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, id, app, params);
+
+  @override
+  String toString() {
+    return 'FiatPeState.showTestUpiDialog(id: $id, app: $app, params: $params)';
+  }
+}
+
+/// @nodoc
+abstract mixin class $FiatPeUpiShowTestUpiDialogStateCopyWith<$Res>
+    implements $FiatPeStateCopyWith<$Res> {
+  factory $FiatPeUpiShowTestUpiDialogStateCopyWith(
+          FiatPeUpiShowTestUpiDialogState value,
+          $Res Function(FiatPeUpiShowTestUpiDialogState) _then) =
+      _$FiatPeUpiShowTestUpiDialogStateCopyWithImpl;
+  @useResult
+  $Res call({num id, UPIApp app, PaymentParams params});
+
+  $UPIAppCopyWith<$Res> get app;
+  $PaymentParamsCopyWith<$Res> get params;
+}
+
+/// @nodoc
+class _$FiatPeUpiShowTestUpiDialogStateCopyWithImpl<$Res>
+    implements $FiatPeUpiShowTestUpiDialogStateCopyWith<$Res> {
+  _$FiatPeUpiShowTestUpiDialogStateCopyWithImpl(this._self, this._then);
+
+  final FiatPeUpiShowTestUpiDialogState _self;
+  final $Res Function(FiatPeUpiShowTestUpiDialogState) _then;
+
+  /// Create a copy of FiatPeState
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  $Res call({
+    Object? id = null,
+    Object? app = null,
+    Object? params = null,
+  }) {
+    return _then(FiatPeUpiShowTestUpiDialogState(
+      id: null == id
+          ? _self.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as num,
+      app: null == app
+          ? _self.app
+          : app // ignore: cast_nullable_to_non_nullable
+              as UPIApp,
+      params: null == params
+          ? _self.params
+          : params // ignore: cast_nullable_to_non_nullable
+              as PaymentParams,
+    ));
+  }
+
+  /// Create a copy of FiatPeState
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $UPIAppCopyWith<$Res> get app {
+    return $UPIAppCopyWith<$Res>(_self.app, (value) {
+      return _then(_self.copyWith(app: value));
+    });
+  }
+
+  /// Create a copy of FiatPeState
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $PaymentParamsCopyWith<$Res> get params {
+    return $PaymentParamsCopyWith<$Res>(_self.params, (value) {
+      return _then(_self.copyWith(params: value));
+    });
+  }
+}
+
+// dart format on

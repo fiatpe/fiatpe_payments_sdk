@@ -1,7 +1,7 @@
 part of 'payment_home_bloc.dart';
 
 @freezed
-class PaymentHomeState with _$PaymentHomeState {
+sealed class PaymentHomeState with _$PaymentHomeState {
   const factory PaymentHomeState.updated({
     @Default([]) List<UPIApp> upiApps,
     @Default(true) bool loading,

@@ -1,7 +1,7 @@
 part of 'home_timer_bloc.dart';
 
 @freezed
-class HomeTimerState with _$HomeTimerState {
+sealed class HomeTimerState with _$HomeTimerState {
   const factory HomeTimerState.updated({
     required Duration duration,
   }) = HomeTimerUpdated;

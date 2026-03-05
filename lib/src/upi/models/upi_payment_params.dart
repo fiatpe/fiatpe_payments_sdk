@@ -6,7 +6,7 @@ part 'upi_payment_params.freezed.dart';
 part 'upi_payment_params.g.dart';
 
 @freezed
-class UpiPaymentParams with _$UpiPaymentParams {
+abstract class UpiPaymentParams with _$UpiPaymentParams {
   const factory UpiPaymentParams({
     required UPIApp app,
     required String queries,

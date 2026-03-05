@@ -42,7 +42,7 @@ extension DioErrorParser on DioException {
           return FiatPeError.unknown(e: this);
       }
     } catch (e) {
-      logger.e(e, e, StackTrace.current);
+      logger.e(e, error: e, stackTrace: StackTrace.current);
       return FiatPeError.unknown(e: this);
     }
   }

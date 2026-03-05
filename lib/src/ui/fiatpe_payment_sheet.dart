@@ -98,7 +98,7 @@ class FiatPePaymentSheet extends StatelessWidget {
             child: SizedBox(
               child: PopScope(
                 canPop: false,
-                onPopInvoked: (a) async {
+                onPopInvokedWithResult: (a, d) async {
                   logger.d("Pop Invoked with Value -> $a");
                   if (!a) {
                     showCancelAlertDialog(

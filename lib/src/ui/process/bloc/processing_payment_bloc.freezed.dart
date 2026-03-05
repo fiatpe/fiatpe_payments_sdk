@@ -1,5 +1,5 @@
-// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// coverage:ignore-file
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
@@ -9,156 +9,249 @@ part of 'processing_payment_bloc.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// dart format off
 T _$identity<T>(T value) => value;
-
-final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$ProcessingPaymentEvent {
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function(num id, String queries, PaymentMode mode) start,
-    required TResult Function(num id) fetchStatus,
-    required TResult Function() timerTick,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(num id, String queries, PaymentMode mode)? start,
-    TResult? Function(num id)? fetchStatus,
-    TResult? Function()? timerTick,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function(num id, String queries, PaymentMode mode)? start,
-    TResult Function(num id)? fetchStatus,
-    TResult Function()? timerTick,
-    required TResult orElse(),
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(PaymentProcessingStartEvent value) start,
-    required TResult Function(PaymentProcessingFetchStatusEvent value)
-        fetchStatus,
-    required TResult Function(PaymentProcessingTimerTickEvent value) timerTick,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(PaymentProcessingStartEvent value)? start,
-    TResult? Function(PaymentProcessingFetchStatusEvent value)? fetchStatus,
-    TResult? Function(PaymentProcessingTimerTickEvent value)? timerTick,
-  }) =>
-      throw _privateConstructorUsedError;
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is ProcessingPaymentEvent);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  String toString() {
+    return 'ProcessingPaymentEvent()';
+  }
+}
+
+/// @nodoc
+class $ProcessingPaymentEventCopyWith<$Res> {
+  $ProcessingPaymentEventCopyWith(
+      ProcessingPaymentEvent _, $Res Function(ProcessingPaymentEvent) __);
+}
+
+/// Adds pattern-matching-related methods to [ProcessingPaymentEvent].
+extension ProcessingPaymentEventPatterns on ProcessingPaymentEvent {
+  /// A variant of `map` that fallback to returning `orElse`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(PaymentProcessingStartEvent value)? start,
     TResult Function(PaymentProcessingFetchStatusEvent value)? fetchStatus,
     TResult Function(PaymentProcessingTimerTickEvent value)? timerTick,
     required TResult orElse(),
-  }) =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class $ProcessingPaymentEventCopyWith<$Res> {
-  factory $ProcessingPaymentEventCopyWith(ProcessingPaymentEvent value,
-          $Res Function(ProcessingPaymentEvent) then) =
-      _$ProcessingPaymentEventCopyWithImpl<$Res, ProcessingPaymentEvent>;
-}
-
-/// @nodoc
-class _$ProcessingPaymentEventCopyWithImpl<$Res,
-        $Val extends ProcessingPaymentEvent>
-    implements $ProcessingPaymentEventCopyWith<$Res> {
-  _$ProcessingPaymentEventCopyWithImpl(this._value, this._then);
-
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
-}
-
-/// @nodoc
-abstract class _$$PaymentProcessingStartEventImplCopyWith<$Res> {
-  factory _$$PaymentProcessingStartEventImplCopyWith(
-          _$PaymentProcessingStartEventImpl value,
-          $Res Function(_$PaymentProcessingStartEventImpl) then) =
-      __$$PaymentProcessingStartEventImplCopyWithImpl<$Res>;
-  @useResult
-  $Res call({num id, String queries, PaymentMode mode});
-
-  $PaymentModeCopyWith<$Res> get mode;
-}
-
-/// @nodoc
-class __$$PaymentProcessingStartEventImplCopyWithImpl<$Res>
-    extends _$ProcessingPaymentEventCopyWithImpl<$Res,
-        _$PaymentProcessingStartEventImpl>
-    implements _$$PaymentProcessingStartEventImplCopyWith<$Res> {
-  __$$PaymentProcessingStartEventImplCopyWithImpl(
-      _$PaymentProcessingStartEventImpl _value,
-      $Res Function(_$PaymentProcessingStartEventImpl) _then)
-      : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? id = null,
-    Object? queries = null,
-    Object? mode = null,
   }) {
-    return _then(_$PaymentProcessingStartEventImpl(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as num,
-      queries: null == queries
-          ? _value.queries
-          : queries // ignore: cast_nullable_to_non_nullable
-              as String,
-      mode: null == mode
-          ? _value.mode
-          : mode // ignore: cast_nullable_to_non_nullable
-              as PaymentMode,
-    ));
+    final _that = this;
+    switch (_that) {
+      case PaymentProcessingStartEvent() when start != null:
+        return start(_that);
+      case PaymentProcessingFetchStatusEvent() when fetchStatus != null:
+        return fetchStatus(_that);
+      case PaymentProcessingTimerTickEvent() when timerTick != null:
+        return timerTick(_that);
+      case _:
+        return orElse();
+    }
   }
 
-  @override
-  @pragma('vm:prefer-inline')
-  $PaymentModeCopyWith<$Res> get mode {
-    return $PaymentModeCopyWith<$Res>(_value.mode, (value) {
-      return _then(_value.copyWith(mode: value));
-    });
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// Callbacks receives the raw object, upcasted.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case final Subclass2 value:
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(PaymentProcessingStartEvent value) start,
+    required TResult Function(PaymentProcessingFetchStatusEvent value)
+        fetchStatus,
+    required TResult Function(PaymentProcessingTimerTickEvent value) timerTick,
+  }) {
+    final _that = this;
+    switch (_that) {
+      case PaymentProcessingStartEvent():
+        return start(_that);
+      case PaymentProcessingFetchStatusEvent():
+        return fetchStatus(_that);
+      case PaymentProcessingTimerTickEvent():
+        return timerTick(_that);
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
+
+  /// A variant of `map` that fallback to returning `null`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(PaymentProcessingStartEvent value)? start,
+    TResult? Function(PaymentProcessingFetchStatusEvent value)? fetchStatus,
+    TResult? Function(PaymentProcessingTimerTickEvent value)? timerTick,
+  }) {
+    final _that = this;
+    switch (_that) {
+      case PaymentProcessingStartEvent() when start != null:
+        return start(_that);
+      case PaymentProcessingFetchStatusEvent() when fetchStatus != null:
+        return fetchStatus(_that);
+      case PaymentProcessingTimerTickEvent() when timerTick != null:
+        return timerTick(_that);
+      case _:
+        return null;
+    }
+  }
+
+  /// A variant of `when` that fallback to an `orElse` callback.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(num id, String queries, PaymentMode mode)? start,
+    TResult Function(num id)? fetchStatus,
+    TResult Function()? timerTick,
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case PaymentProcessingStartEvent() when start != null:
+        return start(_that.id, _that.queries, _that.mode);
+      case PaymentProcessingFetchStatusEvent() when fetchStatus != null:
+        return fetchStatus(_that.id);
+      case PaymentProcessingTimerTickEvent() when timerTick != null:
+        return timerTick();
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// As opposed to `map`, this offers destructuring.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case Subclass2(:final field2):
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(num id, String queries, PaymentMode mode) start,
+    required TResult Function(num id) fetchStatus,
+    required TResult Function() timerTick,
+  }) {
+    final _that = this;
+    switch (_that) {
+      case PaymentProcessingStartEvent():
+        return start(_that.id, _that.queries, _that.mode);
+      case PaymentProcessingFetchStatusEvent():
+        return fetchStatus(_that.id);
+      case PaymentProcessingTimerTickEvent():
+        return timerTick();
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
+
+  /// A variant of `when` that fallback to returning `null`
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(num id, String queries, PaymentMode mode)? start,
+    TResult? Function(num id)? fetchStatus,
+    TResult? Function()? timerTick,
+  }) {
+    final _that = this;
+    switch (_that) {
+      case PaymentProcessingStartEvent() when start != null:
+        return start(_that.id, _that.queries, _that.mode);
+      case PaymentProcessingFetchStatusEvent() when fetchStatus != null:
+        return fetchStatus(_that.id);
+      case PaymentProcessingTimerTickEvent() when timerTick != null:
+        return timerTick();
+      case _:
+        return null;
+    }
   }
 }
 
 /// @nodoc
 
-class _$PaymentProcessingStartEventImpl implements PaymentProcessingStartEvent {
-  const _$PaymentProcessingStartEventImpl(
+class PaymentProcessingStartEvent implements ProcessingPaymentEvent {
+  const PaymentProcessingStartEvent(
       {required this.id, required this.queries, required this.mode});
 
-  @override
   final num id;
-  @override
   final String queries;
-  @override
   final PaymentMode mode;
 
-  @override
-  String toString() {
-    return 'ProcessingPaymentEvent.start(id: $id, queries: $queries, mode: $mode)';
-  }
+  /// Create a copy of ProcessingPaymentEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $PaymentProcessingStartEventCopyWith<PaymentProcessingStartEvent>
+      get copyWith => _$PaymentProcessingStartEventCopyWithImpl<
+          PaymentProcessingStartEvent>(this, _$identity);
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$PaymentProcessingStartEventImpl &&
+            other is PaymentProcessingStartEvent &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.queries, queries) || other.queries == queries) &&
             (identical(other.mode, mode) || other.mode == mode));
@@ -167,125 +260,128 @@ class _$PaymentProcessingStartEventImpl implements PaymentProcessingStartEvent {
   @override
   int get hashCode => Object.hash(runtimeType, id, queries, mode);
 
-  @JsonKey(ignore: true)
   @override
-  @pragma('vm:prefer-inline')
-  _$$PaymentProcessingStartEventImplCopyWith<_$PaymentProcessingStartEventImpl>
-      get copyWith => __$$PaymentProcessingStartEventImplCopyWithImpl<
-          _$PaymentProcessingStartEventImpl>(this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function(num id, String queries, PaymentMode mode) start,
-    required TResult Function(num id) fetchStatus,
-    required TResult Function() timerTick,
-  }) {
-    return start(id, queries, mode);
+  String toString() {
+    return 'ProcessingPaymentEvent.start(id: $id, queries: $queries, mode: $mode)';
   }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(num id, String queries, PaymentMode mode)? start,
-    TResult? Function(num id)? fetchStatus,
-    TResult? Function()? timerTick,
-  }) {
-    return start?.call(id, queries, mode);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function(num id, String queries, PaymentMode mode)? start,
-    TResult Function(num id)? fetchStatus,
-    TResult Function()? timerTick,
-    required TResult orElse(),
-  }) {
-    if (start != null) {
-      return start(id, queries, mode);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(PaymentProcessingStartEvent value) start,
-    required TResult Function(PaymentProcessingFetchStatusEvent value)
-        fetchStatus,
-    required TResult Function(PaymentProcessingTimerTickEvent value) timerTick,
-  }) {
-    return start(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(PaymentProcessingStartEvent value)? start,
-    TResult? Function(PaymentProcessingFetchStatusEvent value)? fetchStatus,
-    TResult? Function(PaymentProcessingTimerTickEvent value)? timerTick,
-  }) {
-    return start?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(PaymentProcessingStartEvent value)? start,
-    TResult Function(PaymentProcessingFetchStatusEvent value)? fetchStatus,
-    TResult Function(PaymentProcessingTimerTickEvent value)? timerTick,
-    required TResult orElse(),
-  }) {
-    if (start != null) {
-      return start(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class PaymentProcessingStartEvent implements ProcessingPaymentEvent {
-  const factory PaymentProcessingStartEvent(
-      {required final num id,
-      required final String queries,
-      required final PaymentMode mode}) = _$PaymentProcessingStartEventImpl;
-
-  num get id;
-  String get queries;
-  PaymentMode get mode;
-  @JsonKey(ignore: true)
-  _$$PaymentProcessingStartEventImplCopyWith<_$PaymentProcessingStartEventImpl>
-      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$PaymentProcessingFetchStatusEventImplCopyWith<$Res> {
-  factory _$$PaymentProcessingFetchStatusEventImplCopyWith(
-          _$PaymentProcessingFetchStatusEventImpl value,
-          $Res Function(_$PaymentProcessingFetchStatusEventImpl) then) =
-      __$$PaymentProcessingFetchStatusEventImplCopyWithImpl<$Res>;
+abstract mixin class $PaymentProcessingStartEventCopyWith<$Res>
+    implements $ProcessingPaymentEventCopyWith<$Res> {
+  factory $PaymentProcessingStartEventCopyWith(
+          PaymentProcessingStartEvent value,
+          $Res Function(PaymentProcessingStartEvent) _then) =
+      _$PaymentProcessingStartEventCopyWithImpl;
+  @useResult
+  $Res call({num id, String queries, PaymentMode mode});
+
+  $PaymentModeCopyWith<$Res> get mode;
+}
+
+/// @nodoc
+class _$PaymentProcessingStartEventCopyWithImpl<$Res>
+    implements $PaymentProcessingStartEventCopyWith<$Res> {
+  _$PaymentProcessingStartEventCopyWithImpl(this._self, this._then);
+
+  final PaymentProcessingStartEvent _self;
+  final $Res Function(PaymentProcessingStartEvent) _then;
+
+  /// Create a copy of ProcessingPaymentEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  $Res call({
+    Object? id = null,
+    Object? queries = null,
+    Object? mode = null,
+  }) {
+    return _then(PaymentProcessingStartEvent(
+      id: null == id
+          ? _self.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as num,
+      queries: null == queries
+          ? _self.queries
+          : queries // ignore: cast_nullable_to_non_nullable
+              as String,
+      mode: null == mode
+          ? _self.mode
+          : mode // ignore: cast_nullable_to_non_nullable
+              as PaymentMode,
+    ));
+  }
+
+  /// Create a copy of ProcessingPaymentEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $PaymentModeCopyWith<$Res> get mode {
+    return $PaymentModeCopyWith<$Res>(_self.mode, (value) {
+      return _then(_self.copyWith(mode: value));
+    });
+  }
+}
+
+/// @nodoc
+
+class PaymentProcessingFetchStatusEvent implements ProcessingPaymentEvent {
+  const PaymentProcessingFetchStatusEvent({required this.id});
+
+  final num id;
+
+  /// Create a copy of ProcessingPaymentEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $PaymentProcessingFetchStatusEventCopyWith<PaymentProcessingFetchStatusEvent>
+      get copyWith => _$PaymentProcessingFetchStatusEventCopyWithImpl<
+          PaymentProcessingFetchStatusEvent>(this, _$identity);
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is PaymentProcessingFetchStatusEvent &&
+            (identical(other.id, id) || other.id == id));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, id);
+
+  @override
+  String toString() {
+    return 'ProcessingPaymentEvent.fetchStatus(id: $id)';
+  }
+}
+
+/// @nodoc
+abstract mixin class $PaymentProcessingFetchStatusEventCopyWith<$Res>
+    implements $ProcessingPaymentEventCopyWith<$Res> {
+  factory $PaymentProcessingFetchStatusEventCopyWith(
+          PaymentProcessingFetchStatusEvent value,
+          $Res Function(PaymentProcessingFetchStatusEvent) _then) =
+      _$PaymentProcessingFetchStatusEventCopyWithImpl;
   @useResult
   $Res call({num id});
 }
 
 /// @nodoc
-class __$$PaymentProcessingFetchStatusEventImplCopyWithImpl<$Res>
-    extends _$ProcessingPaymentEventCopyWithImpl<$Res,
-        _$PaymentProcessingFetchStatusEventImpl>
-    implements _$$PaymentProcessingFetchStatusEventImplCopyWith<$Res> {
-  __$$PaymentProcessingFetchStatusEventImplCopyWithImpl(
-      _$PaymentProcessingFetchStatusEventImpl _value,
-      $Res Function(_$PaymentProcessingFetchStatusEventImpl) _then)
-      : super(_value, _then);
+class _$PaymentProcessingFetchStatusEventCopyWithImpl<$Res>
+    implements $PaymentProcessingFetchStatusEventCopyWith<$Res> {
+  _$PaymentProcessingFetchStatusEventCopyWithImpl(this._self, this._then);
 
+  final PaymentProcessingFetchStatusEvent _self;
+  final $Res Function(PaymentProcessingFetchStatusEvent) _then;
+
+  /// Create a copy of ProcessingPaymentEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
-  @override
   $Res call({
     Object? id = null,
   }) {
-    return _then(_$PaymentProcessingFetchStatusEventImpl(
+    return _then(PaymentProcessingFetchStatusEvent(
       id: null == id
-          ? _value.id
+          ? _self.id
           : id // ignore: cast_nullable_to_non_nullable
               as num,
     ));
@@ -294,261 +390,184 @@ class __$$PaymentProcessingFetchStatusEventImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$PaymentProcessingFetchStatusEventImpl
-    implements PaymentProcessingFetchStatusEvent {
-  const _$PaymentProcessingFetchStatusEventImpl({required this.id});
-
-  @override
-  final num id;
-
-  @override
-  String toString() {
-    return 'ProcessingPaymentEvent.fetchStatus(id: $id)';
-  }
+class PaymentProcessingTimerTickEvent implements ProcessingPaymentEvent {
+  const PaymentProcessingTimerTickEvent();
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$PaymentProcessingFetchStatusEventImpl &&
-            (identical(other.id, id) || other.id == id));
+            other is PaymentProcessingTimerTickEvent);
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, id);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$PaymentProcessingFetchStatusEventImplCopyWith<
-          _$PaymentProcessingFetchStatusEventImpl>
-      get copyWith => __$$PaymentProcessingFetchStatusEventImplCopyWithImpl<
-          _$PaymentProcessingFetchStatusEventImpl>(this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function(num id, String queries, PaymentMode mode) start,
-    required TResult Function(num id) fetchStatus,
-    required TResult Function() timerTick,
-  }) {
-    return fetchStatus(id);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(num id, String queries, PaymentMode mode)? start,
-    TResult? Function(num id)? fetchStatus,
-    TResult? Function()? timerTick,
-  }) {
-    return fetchStatus?.call(id);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function(num id, String queries, PaymentMode mode)? start,
-    TResult Function(num id)? fetchStatus,
-    TResult Function()? timerTick,
-    required TResult orElse(),
-  }) {
-    if (fetchStatus != null) {
-      return fetchStatus(id);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(PaymentProcessingStartEvent value) start,
-    required TResult Function(PaymentProcessingFetchStatusEvent value)
-        fetchStatus,
-    required TResult Function(PaymentProcessingTimerTickEvent value) timerTick,
-  }) {
-    return fetchStatus(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(PaymentProcessingStartEvent value)? start,
-    TResult? Function(PaymentProcessingFetchStatusEvent value)? fetchStatus,
-    TResult? Function(PaymentProcessingTimerTickEvent value)? timerTick,
-  }) {
-    return fetchStatus?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(PaymentProcessingStartEvent value)? start,
-    TResult Function(PaymentProcessingFetchStatusEvent value)? fetchStatus,
-    TResult Function(PaymentProcessingTimerTickEvent value)? timerTick,
-    required TResult orElse(),
-  }) {
-    if (fetchStatus != null) {
-      return fetchStatus(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class PaymentProcessingFetchStatusEvent
-    implements ProcessingPaymentEvent {
-  const factory PaymentProcessingFetchStatusEvent({required final num id}) =
-      _$PaymentProcessingFetchStatusEventImpl;
-
-  num get id;
-  @JsonKey(ignore: true)
-  _$$PaymentProcessingFetchStatusEventImplCopyWith<
-          _$PaymentProcessingFetchStatusEventImpl>
-      get copyWith => throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class _$$PaymentProcessingTimerTickEventImplCopyWith<$Res> {
-  factory _$$PaymentProcessingTimerTickEventImplCopyWith(
-          _$PaymentProcessingTimerTickEventImpl value,
-          $Res Function(_$PaymentProcessingTimerTickEventImpl) then) =
-      __$$PaymentProcessingTimerTickEventImplCopyWithImpl<$Res>;
-}
-
-/// @nodoc
-class __$$PaymentProcessingTimerTickEventImplCopyWithImpl<$Res>
-    extends _$ProcessingPaymentEventCopyWithImpl<$Res,
-        _$PaymentProcessingTimerTickEventImpl>
-    implements _$$PaymentProcessingTimerTickEventImplCopyWith<$Res> {
-  __$$PaymentProcessingTimerTickEventImplCopyWithImpl(
-      _$PaymentProcessingTimerTickEventImpl _value,
-      $Res Function(_$PaymentProcessingTimerTickEventImpl) _then)
-      : super(_value, _then);
-}
-
-/// @nodoc
-
-class _$PaymentProcessingTimerTickEventImpl
-    implements PaymentProcessingTimerTickEvent {
-  const _$PaymentProcessingTimerTickEventImpl();
+  int get hashCode => runtimeType.hashCode;
 
   @override
   String toString() {
     return 'ProcessingPaymentEvent.timerTick()';
   }
+}
 
+/// @nodoc
+mixin _$ProcessingPaymentState {
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$PaymentProcessingTimerTickEventImpl);
+        (other.runtimeType == runtimeType && other is ProcessingPaymentState);
   }
 
   @override
   int get hashCode => runtimeType.hashCode;
 
   @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function(num id, String queries, PaymentMode mode) start,
-    required TResult Function(num id) fetchStatus,
-    required TResult Function() timerTick,
-  }) {
-    return timerTick();
+  String toString() {
+    return 'ProcessingPaymentState()';
   }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(num id, String queries, PaymentMode mode)? start,
-    TResult? Function(num id)? fetchStatus,
-    TResult? Function()? timerTick,
-  }) {
-    return timerTick?.call();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function(num id, String queries, PaymentMode mode)? start,
-    TResult Function(num id)? fetchStatus,
-    TResult Function()? timerTick,
-    required TResult orElse(),
-  }) {
-    if (timerTick != null) {
-      return timerTick();
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(PaymentProcessingStartEvent value) start,
-    required TResult Function(PaymentProcessingFetchStatusEvent value)
-        fetchStatus,
-    required TResult Function(PaymentProcessingTimerTickEvent value) timerTick,
-  }) {
-    return timerTick(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(PaymentProcessingStartEvent value)? start,
-    TResult? Function(PaymentProcessingFetchStatusEvent value)? fetchStatus,
-    TResult? Function(PaymentProcessingTimerTickEvent value)? timerTick,
-  }) {
-    return timerTick?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(PaymentProcessingStartEvent value)? start,
-    TResult Function(PaymentProcessingFetchStatusEvent value)? fetchStatus,
-    TResult Function(PaymentProcessingTimerTickEvent value)? timerTick,
-    required TResult orElse(),
-  }) {
-    if (timerTick != null) {
-      return timerTick(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class PaymentProcessingTimerTickEvent
-    implements ProcessingPaymentEvent {
-  const factory PaymentProcessingTimerTickEvent() =
-      _$PaymentProcessingTimerTickEventImpl;
 }
 
 /// @nodoc
-mixin _$ProcessingPaymentState {
+class $ProcessingPaymentStateCopyWith<$Res> {
+  $ProcessingPaymentStateCopyWith(
+      ProcessingPaymentState _, $Res Function(ProcessingPaymentState) __);
+}
+
+/// Adds pattern-matching-related methods to [ProcessingPaymentState].
+extension ProcessingPaymentStatePatterns on ProcessingPaymentState {
+  /// A variant of `map` that fallback to returning `orElse`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
   @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() processingStageOne,
-    required TResult Function() processingStageTwo,
-    required TResult Function() processingStageThree,
-    required TResult Function(TransactionDetails details) paymentFailed,
-    required TResult Function(TransactionDetails details) paymentSuccess,
-    required TResult Function(TransactionDetails? details, Duration duration,
-            UPIPaymentModeVPA modeVpa)
-        timerTick,
-  }) =>
-      throw _privateConstructorUsedError;
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(ProcessingStageOneState value)? processingStageOne,
+    TResult Function(ProcessingStageTwoState value)? processingStageTwo,
+    TResult Function(ProcessingStageThreeState value)? processingStageThree,
+    TResult Function(ProcessingPaymentFailedState value)? paymentFailed,
+    TResult Function(ProcessingPaymentSuccessState value)? paymentSuccess,
+    TResult Function(ProcessingPaymentTimerState value)? timerTick,
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case ProcessingStageOneState() when processingStageOne != null:
+        return processingStageOne(_that);
+      case ProcessingStageTwoState() when processingStageTwo != null:
+        return processingStageTwo(_that);
+      case ProcessingStageThreeState() when processingStageThree != null:
+        return processingStageThree(_that);
+      case ProcessingPaymentFailedState() when paymentFailed != null:
+        return paymentFailed(_that);
+      case ProcessingPaymentSuccessState() when paymentSuccess != null:
+        return paymentSuccess(_that);
+      case ProcessingPaymentTimerState() when timerTick != null:
+        return timerTick(_that);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// Callbacks receives the raw object, upcasted.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case final Subclass2 value:
+  ///     return ...;
+  /// }
+  /// ```
+
   @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? processingStageOne,
-    TResult? Function()? processingStageTwo,
-    TResult? Function()? processingStageThree,
-    TResult? Function(TransactionDetails details)? paymentFailed,
-    TResult? Function(TransactionDetails details)? paymentSuccess,
-    TResult? Function(TransactionDetails? details, Duration duration,
-            UPIPaymentModeVPA modeVpa)?
-        timerTick,
-  }) =>
-      throw _privateConstructorUsedError;
+  TResult map<TResult extends Object?>({
+    required TResult Function(ProcessingStageOneState value) processingStageOne,
+    required TResult Function(ProcessingStageTwoState value) processingStageTwo,
+    required TResult Function(ProcessingStageThreeState value)
+        processingStageThree,
+    required TResult Function(ProcessingPaymentFailedState value) paymentFailed,
+    required TResult Function(ProcessingPaymentSuccessState value)
+        paymentSuccess,
+    required TResult Function(ProcessingPaymentTimerState value) timerTick,
+  }) {
+    final _that = this;
+    switch (_that) {
+      case ProcessingStageOneState():
+        return processingStageOne(_that);
+      case ProcessingStageTwoState():
+        return processingStageTwo(_that);
+      case ProcessingStageThreeState():
+        return processingStageThree(_that);
+      case ProcessingPaymentFailedState():
+        return paymentFailed(_that);
+      case ProcessingPaymentSuccessState():
+        return paymentSuccess(_that);
+      case ProcessingPaymentTimerState():
+        return timerTick(_that);
+    }
+  }
+
+  /// A variant of `map` that fallback to returning `null`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(ProcessingStageOneState value)? processingStageOne,
+    TResult? Function(ProcessingStageTwoState value)? processingStageTwo,
+    TResult? Function(ProcessingStageThreeState value)? processingStageThree,
+    TResult? Function(ProcessingPaymentFailedState value)? paymentFailed,
+    TResult? Function(ProcessingPaymentSuccessState value)? paymentSuccess,
+    TResult? Function(ProcessingPaymentTimerState value)? timerTick,
+  }) {
+    final _that = this;
+    switch (_that) {
+      case ProcessingStageOneState() when processingStageOne != null:
+        return processingStageOne(_that);
+      case ProcessingStageTwoState() when processingStageTwo != null:
+        return processingStageTwo(_that);
+      case ProcessingStageThreeState() when processingStageThree != null:
+        return processingStageThree(_that);
+      case ProcessingPaymentFailedState() when paymentFailed != null:
+        return paymentFailed(_that);
+      case ProcessingPaymentSuccessState() when paymentSuccess != null:
+        return paymentSuccess(_that);
+      case ProcessingPaymentTimerState() when timerTick != null:
+        return timerTick(_that);
+      case _:
+        return null;
+    }
+  }
+
+  /// A variant of `when` that fallback to an `orElse` callback.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? processingStageOne,
@@ -560,678 +579,231 @@ mixin _$ProcessingPaymentState {
             UPIPaymentModeVPA modeVpa)?
         timerTick,
     required TResult orElse(),
-  }) =>
-      throw _privateConstructorUsedError;
+  }) {
+    final _that = this;
+    switch (_that) {
+      case ProcessingStageOneState() when processingStageOne != null:
+        return processingStageOne();
+      case ProcessingStageTwoState() when processingStageTwo != null:
+        return processingStageTwo();
+      case ProcessingStageThreeState() when processingStageThree != null:
+        return processingStageThree();
+      case ProcessingPaymentFailedState() when paymentFailed != null:
+        return paymentFailed(_that.details);
+      case ProcessingPaymentSuccessState() when paymentSuccess != null:
+        return paymentSuccess(_that.details);
+      case ProcessingPaymentTimerState() when timerTick != null:
+        return timerTick(_that.details, _that.duration, _that.modeVpa);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// As opposed to `map`, this offers destructuring.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case Subclass2(:final field2):
+  ///     return ...;
+  /// }
+  /// ```
+
   @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(ProcessingStageOneState value) processingStageOne,
-    required TResult Function(ProcessingStageTwoState value) processingStageTwo,
-    required TResult Function(ProcessingStageThreeState value)
-        processingStageThree,
-    required TResult Function(ProcessingPaymentFailedState value) paymentFailed,
-    required TResult Function(ProcessingPaymentSuccessState value)
-        paymentSuccess,
-    required TResult Function(ProcessingPaymentTimerState value) timerTick,
-  }) =>
-      throw _privateConstructorUsedError;
+  TResult when<TResult extends Object?>({
+    required TResult Function() processingStageOne,
+    required TResult Function() processingStageTwo,
+    required TResult Function() processingStageThree,
+    required TResult Function(TransactionDetails details) paymentFailed,
+    required TResult Function(TransactionDetails details) paymentSuccess,
+    required TResult Function(TransactionDetails? details, Duration duration,
+            UPIPaymentModeVPA modeVpa)
+        timerTick,
+  }) {
+    final _that = this;
+    switch (_that) {
+      case ProcessingStageOneState():
+        return processingStageOne();
+      case ProcessingStageTwoState():
+        return processingStageTwo();
+      case ProcessingStageThreeState():
+        return processingStageThree();
+      case ProcessingPaymentFailedState():
+        return paymentFailed(_that.details);
+      case ProcessingPaymentSuccessState():
+        return paymentSuccess(_that.details);
+      case ProcessingPaymentTimerState():
+        return timerTick(_that.details, _that.duration, _that.modeVpa);
+    }
+  }
+
+  /// A variant of `when` that fallback to returning `null`
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
   @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(ProcessingStageOneState value)? processingStageOne,
-    TResult? Function(ProcessingStageTwoState value)? processingStageTwo,
-    TResult? Function(ProcessingStageThreeState value)? processingStageThree,
-    TResult? Function(ProcessingPaymentFailedState value)? paymentFailed,
-    TResult? Function(ProcessingPaymentSuccessState value)? paymentSuccess,
-    TResult? Function(ProcessingPaymentTimerState value)? timerTick,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(ProcessingStageOneState value)? processingStageOne,
-    TResult Function(ProcessingStageTwoState value)? processingStageTwo,
-    TResult Function(ProcessingStageThreeState value)? processingStageThree,
-    TResult Function(ProcessingPaymentFailedState value)? paymentFailed,
-    TResult Function(ProcessingPaymentSuccessState value)? paymentSuccess,
-    TResult Function(ProcessingPaymentTimerState value)? timerTick,
-    required TResult orElse(),
-  }) =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class $ProcessingPaymentStateCopyWith<$Res> {
-  factory $ProcessingPaymentStateCopyWith(ProcessingPaymentState value,
-          $Res Function(ProcessingPaymentState) then) =
-      _$ProcessingPaymentStateCopyWithImpl<$Res, ProcessingPaymentState>;
-}
-
-/// @nodoc
-class _$ProcessingPaymentStateCopyWithImpl<$Res,
-        $Val extends ProcessingPaymentState>
-    implements $ProcessingPaymentStateCopyWith<$Res> {
-  _$ProcessingPaymentStateCopyWithImpl(this._value, this._then);
-
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
-}
-
-/// @nodoc
-abstract class _$$ProcessingStageOneStateImplCopyWith<$Res> {
-  factory _$$ProcessingStageOneStateImplCopyWith(
-          _$ProcessingStageOneStateImpl value,
-          $Res Function(_$ProcessingStageOneStateImpl) then) =
-      __$$ProcessingStageOneStateImplCopyWithImpl<$Res>;
-}
-
-/// @nodoc
-class __$$ProcessingStageOneStateImplCopyWithImpl<$Res>
-    extends _$ProcessingPaymentStateCopyWithImpl<$Res,
-        _$ProcessingStageOneStateImpl>
-    implements _$$ProcessingStageOneStateImplCopyWith<$Res> {
-  __$$ProcessingStageOneStateImplCopyWithImpl(
-      _$ProcessingStageOneStateImpl _value,
-      $Res Function(_$ProcessingStageOneStateImpl) _then)
-      : super(_value, _then);
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? processingStageOne,
+    TResult? Function()? processingStageTwo,
+    TResult? Function()? processingStageThree,
+    TResult? Function(TransactionDetails details)? paymentFailed,
+    TResult? Function(TransactionDetails details)? paymentSuccess,
+    TResult? Function(TransactionDetails? details, Duration duration,
+            UPIPaymentModeVPA modeVpa)?
+        timerTick,
+  }) {
+    final _that = this;
+    switch (_that) {
+      case ProcessingStageOneState() when processingStageOne != null:
+        return processingStageOne();
+      case ProcessingStageTwoState() when processingStageTwo != null:
+        return processingStageTwo();
+      case ProcessingStageThreeState() when processingStageThree != null:
+        return processingStageThree();
+      case ProcessingPaymentFailedState() when paymentFailed != null:
+        return paymentFailed(_that.details);
+      case ProcessingPaymentSuccessState() when paymentSuccess != null:
+        return paymentSuccess(_that.details);
+      case ProcessingPaymentTimerState() when timerTick != null:
+        return timerTick(_that.details, _that.duration, _that.modeVpa);
+      case _:
+        return null;
+    }
+  }
 }
 
 /// @nodoc
 
-class _$ProcessingStageOneStateImpl implements ProcessingStageOneState {
-  const _$ProcessingStageOneStateImpl();
+class ProcessingStageOneState implements ProcessingPaymentState {
+  const ProcessingStageOneState();
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is ProcessingStageOneState);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
 
   @override
   String toString() {
     return 'ProcessingPaymentState.processingStageOne()';
   }
+}
+
+/// @nodoc
+
+class ProcessingStageTwoState implements ProcessingPaymentState {
+  const ProcessingStageTwoState();
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$ProcessingStageOneStateImpl);
+        (other.runtimeType == runtimeType && other is ProcessingStageTwoState);
   }
 
   @override
   int get hashCode => runtimeType.hashCode;
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() processingStageOne,
-    required TResult Function() processingStageTwo,
-    required TResult Function() processingStageThree,
-    required TResult Function(TransactionDetails details) paymentFailed,
-    required TResult Function(TransactionDetails details) paymentSuccess,
-    required TResult Function(TransactionDetails? details, Duration duration,
-            UPIPaymentModeVPA modeVpa)
-        timerTick,
-  }) {
-    return processingStageOne();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? processingStageOne,
-    TResult? Function()? processingStageTwo,
-    TResult? Function()? processingStageThree,
-    TResult? Function(TransactionDetails details)? paymentFailed,
-    TResult? Function(TransactionDetails details)? paymentSuccess,
-    TResult? Function(TransactionDetails? details, Duration duration,
-            UPIPaymentModeVPA modeVpa)?
-        timerTick,
-  }) {
-    return processingStageOne?.call();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? processingStageOne,
-    TResult Function()? processingStageTwo,
-    TResult Function()? processingStageThree,
-    TResult Function(TransactionDetails details)? paymentFailed,
-    TResult Function(TransactionDetails details)? paymentSuccess,
-    TResult Function(TransactionDetails? details, Duration duration,
-            UPIPaymentModeVPA modeVpa)?
-        timerTick,
-    required TResult orElse(),
-  }) {
-    if (processingStageOne != null) {
-      return processingStageOne();
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(ProcessingStageOneState value) processingStageOne,
-    required TResult Function(ProcessingStageTwoState value) processingStageTwo,
-    required TResult Function(ProcessingStageThreeState value)
-        processingStageThree,
-    required TResult Function(ProcessingPaymentFailedState value) paymentFailed,
-    required TResult Function(ProcessingPaymentSuccessState value)
-        paymentSuccess,
-    required TResult Function(ProcessingPaymentTimerState value) timerTick,
-  }) {
-    return processingStageOne(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(ProcessingStageOneState value)? processingStageOne,
-    TResult? Function(ProcessingStageTwoState value)? processingStageTwo,
-    TResult? Function(ProcessingStageThreeState value)? processingStageThree,
-    TResult? Function(ProcessingPaymentFailedState value)? paymentFailed,
-    TResult? Function(ProcessingPaymentSuccessState value)? paymentSuccess,
-    TResult? Function(ProcessingPaymentTimerState value)? timerTick,
-  }) {
-    return processingStageOne?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(ProcessingStageOneState value)? processingStageOne,
-    TResult Function(ProcessingStageTwoState value)? processingStageTwo,
-    TResult Function(ProcessingStageThreeState value)? processingStageThree,
-    TResult Function(ProcessingPaymentFailedState value)? paymentFailed,
-    TResult Function(ProcessingPaymentSuccessState value)? paymentSuccess,
-    TResult Function(ProcessingPaymentTimerState value)? timerTick,
-    required TResult orElse(),
-  }) {
-    if (processingStageOne != null) {
-      return processingStageOne(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class ProcessingStageOneState implements ProcessingPaymentState {
-  const factory ProcessingStageOneState() = _$ProcessingStageOneStateImpl;
-}
-
-/// @nodoc
-abstract class _$$ProcessingStageTwoStateImplCopyWith<$Res> {
-  factory _$$ProcessingStageTwoStateImplCopyWith(
-          _$ProcessingStageTwoStateImpl value,
-          $Res Function(_$ProcessingStageTwoStateImpl) then) =
-      __$$ProcessingStageTwoStateImplCopyWithImpl<$Res>;
-}
-
-/// @nodoc
-class __$$ProcessingStageTwoStateImplCopyWithImpl<$Res>
-    extends _$ProcessingPaymentStateCopyWithImpl<$Res,
-        _$ProcessingStageTwoStateImpl>
-    implements _$$ProcessingStageTwoStateImplCopyWith<$Res> {
-  __$$ProcessingStageTwoStateImplCopyWithImpl(
-      _$ProcessingStageTwoStateImpl _value,
-      $Res Function(_$ProcessingStageTwoStateImpl) _then)
-      : super(_value, _then);
-}
-
-/// @nodoc
-
-class _$ProcessingStageTwoStateImpl implements ProcessingStageTwoState {
-  const _$ProcessingStageTwoStateImpl();
 
   @override
   String toString() {
     return 'ProcessingPaymentState.processingStageTwo()';
   }
+}
+
+/// @nodoc
+
+class ProcessingStageThreeState implements ProcessingPaymentState {
+  const ProcessingStageThreeState();
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$ProcessingStageTwoStateImpl);
+            other is ProcessingStageThreeState);
   }
 
   @override
   int get hashCode => runtimeType.hashCode;
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() processingStageOne,
-    required TResult Function() processingStageTwo,
-    required TResult Function() processingStageThree,
-    required TResult Function(TransactionDetails details) paymentFailed,
-    required TResult Function(TransactionDetails details) paymentSuccess,
-    required TResult Function(TransactionDetails? details, Duration duration,
-            UPIPaymentModeVPA modeVpa)
-        timerTick,
-  }) {
-    return processingStageTwo();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? processingStageOne,
-    TResult? Function()? processingStageTwo,
-    TResult? Function()? processingStageThree,
-    TResult? Function(TransactionDetails details)? paymentFailed,
-    TResult? Function(TransactionDetails details)? paymentSuccess,
-    TResult? Function(TransactionDetails? details, Duration duration,
-            UPIPaymentModeVPA modeVpa)?
-        timerTick,
-  }) {
-    return processingStageTwo?.call();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? processingStageOne,
-    TResult Function()? processingStageTwo,
-    TResult Function()? processingStageThree,
-    TResult Function(TransactionDetails details)? paymentFailed,
-    TResult Function(TransactionDetails details)? paymentSuccess,
-    TResult Function(TransactionDetails? details, Duration duration,
-            UPIPaymentModeVPA modeVpa)?
-        timerTick,
-    required TResult orElse(),
-  }) {
-    if (processingStageTwo != null) {
-      return processingStageTwo();
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(ProcessingStageOneState value) processingStageOne,
-    required TResult Function(ProcessingStageTwoState value) processingStageTwo,
-    required TResult Function(ProcessingStageThreeState value)
-        processingStageThree,
-    required TResult Function(ProcessingPaymentFailedState value) paymentFailed,
-    required TResult Function(ProcessingPaymentSuccessState value)
-        paymentSuccess,
-    required TResult Function(ProcessingPaymentTimerState value) timerTick,
-  }) {
-    return processingStageTwo(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(ProcessingStageOneState value)? processingStageOne,
-    TResult? Function(ProcessingStageTwoState value)? processingStageTwo,
-    TResult? Function(ProcessingStageThreeState value)? processingStageThree,
-    TResult? Function(ProcessingPaymentFailedState value)? paymentFailed,
-    TResult? Function(ProcessingPaymentSuccessState value)? paymentSuccess,
-    TResult? Function(ProcessingPaymentTimerState value)? timerTick,
-  }) {
-    return processingStageTwo?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(ProcessingStageOneState value)? processingStageOne,
-    TResult Function(ProcessingStageTwoState value)? processingStageTwo,
-    TResult Function(ProcessingStageThreeState value)? processingStageThree,
-    TResult Function(ProcessingPaymentFailedState value)? paymentFailed,
-    TResult Function(ProcessingPaymentSuccessState value)? paymentSuccess,
-    TResult Function(ProcessingPaymentTimerState value)? timerTick,
-    required TResult orElse(),
-  }) {
-    if (processingStageTwo != null) {
-      return processingStageTwo(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class ProcessingStageTwoState implements ProcessingPaymentState {
-  const factory ProcessingStageTwoState() = _$ProcessingStageTwoStateImpl;
-}
-
-/// @nodoc
-abstract class _$$ProcessingStageThreeStateImplCopyWith<$Res> {
-  factory _$$ProcessingStageThreeStateImplCopyWith(
-          _$ProcessingStageThreeStateImpl value,
-          $Res Function(_$ProcessingStageThreeStateImpl) then) =
-      __$$ProcessingStageThreeStateImplCopyWithImpl<$Res>;
-}
-
-/// @nodoc
-class __$$ProcessingStageThreeStateImplCopyWithImpl<$Res>
-    extends _$ProcessingPaymentStateCopyWithImpl<$Res,
-        _$ProcessingStageThreeStateImpl>
-    implements _$$ProcessingStageThreeStateImplCopyWith<$Res> {
-  __$$ProcessingStageThreeStateImplCopyWithImpl(
-      _$ProcessingStageThreeStateImpl _value,
-      $Res Function(_$ProcessingStageThreeStateImpl) _then)
-      : super(_value, _then);
-}
-
-/// @nodoc
-
-class _$ProcessingStageThreeStateImpl implements ProcessingStageThreeState {
-  const _$ProcessingStageThreeStateImpl();
 
   @override
   String toString() {
     return 'ProcessingPaymentState.processingStageThree()';
   }
+}
+
+/// @nodoc
+
+class ProcessingPaymentFailedState implements ProcessingPaymentState {
+  const ProcessingPaymentFailedState({required this.details});
+
+  final TransactionDetails details;
+
+  /// Create a copy of ProcessingPaymentState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $ProcessingPaymentFailedStateCopyWith<ProcessingPaymentFailedState>
+      get copyWith => _$ProcessingPaymentFailedStateCopyWithImpl<
+          ProcessingPaymentFailedState>(this, _$identity);
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$ProcessingStageThreeStateImpl);
+            other is ProcessingPaymentFailedState &&
+            (identical(other.details, details) || other.details == details));
   }
 
   @override
-  int get hashCode => runtimeType.hashCode;
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() processingStageOne,
-    required TResult Function() processingStageTwo,
-    required TResult Function() processingStageThree,
-    required TResult Function(TransactionDetails details) paymentFailed,
-    required TResult Function(TransactionDetails details) paymentSuccess,
-    required TResult Function(TransactionDetails? details, Duration duration,
-            UPIPaymentModeVPA modeVpa)
-        timerTick,
-  }) {
-    return processingStageThree();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? processingStageOne,
-    TResult? Function()? processingStageTwo,
-    TResult? Function()? processingStageThree,
-    TResult? Function(TransactionDetails details)? paymentFailed,
-    TResult? Function(TransactionDetails details)? paymentSuccess,
-    TResult? Function(TransactionDetails? details, Duration duration,
-            UPIPaymentModeVPA modeVpa)?
-        timerTick,
-  }) {
-    return processingStageThree?.call();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? processingStageOne,
-    TResult Function()? processingStageTwo,
-    TResult Function()? processingStageThree,
-    TResult Function(TransactionDetails details)? paymentFailed,
-    TResult Function(TransactionDetails details)? paymentSuccess,
-    TResult Function(TransactionDetails? details, Duration duration,
-            UPIPaymentModeVPA modeVpa)?
-        timerTick,
-    required TResult orElse(),
-  }) {
-    if (processingStageThree != null) {
-      return processingStageThree();
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(ProcessingStageOneState value) processingStageOne,
-    required TResult Function(ProcessingStageTwoState value) processingStageTwo,
-    required TResult Function(ProcessingStageThreeState value)
-        processingStageThree,
-    required TResult Function(ProcessingPaymentFailedState value) paymentFailed,
-    required TResult Function(ProcessingPaymentSuccessState value)
-        paymentSuccess,
-    required TResult Function(ProcessingPaymentTimerState value) timerTick,
-  }) {
-    return processingStageThree(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(ProcessingStageOneState value)? processingStageOne,
-    TResult? Function(ProcessingStageTwoState value)? processingStageTwo,
-    TResult? Function(ProcessingStageThreeState value)? processingStageThree,
-    TResult? Function(ProcessingPaymentFailedState value)? paymentFailed,
-    TResult? Function(ProcessingPaymentSuccessState value)? paymentSuccess,
-    TResult? Function(ProcessingPaymentTimerState value)? timerTick,
-  }) {
-    return processingStageThree?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(ProcessingStageOneState value)? processingStageOne,
-    TResult Function(ProcessingStageTwoState value)? processingStageTwo,
-    TResult Function(ProcessingStageThreeState value)? processingStageThree,
-    TResult Function(ProcessingPaymentFailedState value)? paymentFailed,
-    TResult Function(ProcessingPaymentSuccessState value)? paymentSuccess,
-    TResult Function(ProcessingPaymentTimerState value)? timerTick,
-    required TResult orElse(),
-  }) {
-    if (processingStageThree != null) {
-      return processingStageThree(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class ProcessingStageThreeState implements ProcessingPaymentState {
-  const factory ProcessingStageThreeState() = _$ProcessingStageThreeStateImpl;
-}
-
-/// @nodoc
-abstract class _$$ProcessingPaymentFailedStateImplCopyWith<$Res> {
-  factory _$$ProcessingPaymentFailedStateImplCopyWith(
-          _$ProcessingPaymentFailedStateImpl value,
-          $Res Function(_$ProcessingPaymentFailedStateImpl) then) =
-      __$$ProcessingPaymentFailedStateImplCopyWithImpl<$Res>;
-  @useResult
-  $Res call({TransactionDetails details});
-}
-
-/// @nodoc
-class __$$ProcessingPaymentFailedStateImplCopyWithImpl<$Res>
-    extends _$ProcessingPaymentStateCopyWithImpl<$Res,
-        _$ProcessingPaymentFailedStateImpl>
-    implements _$$ProcessingPaymentFailedStateImplCopyWith<$Res> {
-  __$$ProcessingPaymentFailedStateImplCopyWithImpl(
-      _$ProcessingPaymentFailedStateImpl _value,
-      $Res Function(_$ProcessingPaymentFailedStateImpl) _then)
-      : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? details = null,
-  }) {
-    return _then(_$ProcessingPaymentFailedStateImpl(
-      details: null == details
-          ? _value.details
-          : details // ignore: cast_nullable_to_non_nullable
-              as TransactionDetails,
-    ));
-  }
-}
-
-/// @nodoc
-
-class _$ProcessingPaymentFailedStateImpl
-    implements ProcessingPaymentFailedState {
-  const _$ProcessingPaymentFailedStateImpl({required this.details});
-
-  @override
-  final TransactionDetails details;
+  int get hashCode => Object.hash(runtimeType, details);
 
   @override
   String toString() {
     return 'ProcessingPaymentState.paymentFailed(details: $details)';
   }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$ProcessingPaymentFailedStateImpl &&
-            (identical(other.details, details) || other.details == details));
-  }
-
-  @override
-  int get hashCode => Object.hash(runtimeType, details);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$ProcessingPaymentFailedStateImplCopyWith<
-          _$ProcessingPaymentFailedStateImpl>
-      get copyWith => __$$ProcessingPaymentFailedStateImplCopyWithImpl<
-          _$ProcessingPaymentFailedStateImpl>(this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() processingStageOne,
-    required TResult Function() processingStageTwo,
-    required TResult Function() processingStageThree,
-    required TResult Function(TransactionDetails details) paymentFailed,
-    required TResult Function(TransactionDetails details) paymentSuccess,
-    required TResult Function(TransactionDetails? details, Duration duration,
-            UPIPaymentModeVPA modeVpa)
-        timerTick,
-  }) {
-    return paymentFailed(details);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? processingStageOne,
-    TResult? Function()? processingStageTwo,
-    TResult? Function()? processingStageThree,
-    TResult? Function(TransactionDetails details)? paymentFailed,
-    TResult? Function(TransactionDetails details)? paymentSuccess,
-    TResult? Function(TransactionDetails? details, Duration duration,
-            UPIPaymentModeVPA modeVpa)?
-        timerTick,
-  }) {
-    return paymentFailed?.call(details);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? processingStageOne,
-    TResult Function()? processingStageTwo,
-    TResult Function()? processingStageThree,
-    TResult Function(TransactionDetails details)? paymentFailed,
-    TResult Function(TransactionDetails details)? paymentSuccess,
-    TResult Function(TransactionDetails? details, Duration duration,
-            UPIPaymentModeVPA modeVpa)?
-        timerTick,
-    required TResult orElse(),
-  }) {
-    if (paymentFailed != null) {
-      return paymentFailed(details);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(ProcessingStageOneState value) processingStageOne,
-    required TResult Function(ProcessingStageTwoState value) processingStageTwo,
-    required TResult Function(ProcessingStageThreeState value)
-        processingStageThree,
-    required TResult Function(ProcessingPaymentFailedState value) paymentFailed,
-    required TResult Function(ProcessingPaymentSuccessState value)
-        paymentSuccess,
-    required TResult Function(ProcessingPaymentTimerState value) timerTick,
-  }) {
-    return paymentFailed(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(ProcessingStageOneState value)? processingStageOne,
-    TResult? Function(ProcessingStageTwoState value)? processingStageTwo,
-    TResult? Function(ProcessingStageThreeState value)? processingStageThree,
-    TResult? Function(ProcessingPaymentFailedState value)? paymentFailed,
-    TResult? Function(ProcessingPaymentSuccessState value)? paymentSuccess,
-    TResult? Function(ProcessingPaymentTimerState value)? timerTick,
-  }) {
-    return paymentFailed?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(ProcessingStageOneState value)? processingStageOne,
-    TResult Function(ProcessingStageTwoState value)? processingStageTwo,
-    TResult Function(ProcessingStageThreeState value)? processingStageThree,
-    TResult Function(ProcessingPaymentFailedState value)? paymentFailed,
-    TResult Function(ProcessingPaymentSuccessState value)? paymentSuccess,
-    TResult Function(ProcessingPaymentTimerState value)? timerTick,
-    required TResult orElse(),
-  }) {
-    if (paymentFailed != null) {
-      return paymentFailed(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class ProcessingPaymentFailedState implements ProcessingPaymentState {
-  const factory ProcessingPaymentFailedState(
-          {required final TransactionDetails details}) =
-      _$ProcessingPaymentFailedStateImpl;
-
-  TransactionDetails get details;
-  @JsonKey(ignore: true)
-  _$$ProcessingPaymentFailedStateImplCopyWith<
-          _$ProcessingPaymentFailedStateImpl>
-      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$ProcessingPaymentSuccessStateImplCopyWith<$Res> {
-  factory _$$ProcessingPaymentSuccessStateImplCopyWith(
-          _$ProcessingPaymentSuccessStateImpl value,
-          $Res Function(_$ProcessingPaymentSuccessStateImpl) then) =
-      __$$ProcessingPaymentSuccessStateImplCopyWithImpl<$Res>;
+abstract mixin class $ProcessingPaymentFailedStateCopyWith<$Res>
+    implements $ProcessingPaymentStateCopyWith<$Res> {
+  factory $ProcessingPaymentFailedStateCopyWith(
+          ProcessingPaymentFailedState value,
+          $Res Function(ProcessingPaymentFailedState) _then) =
+      _$ProcessingPaymentFailedStateCopyWithImpl;
   @useResult
   $Res call({TransactionDetails details});
 }
 
 /// @nodoc
-class __$$ProcessingPaymentSuccessStateImplCopyWithImpl<$Res>
-    extends _$ProcessingPaymentStateCopyWithImpl<$Res,
-        _$ProcessingPaymentSuccessStateImpl>
-    implements _$$ProcessingPaymentSuccessStateImplCopyWith<$Res> {
-  __$$ProcessingPaymentSuccessStateImplCopyWithImpl(
-      _$ProcessingPaymentSuccessStateImpl _value,
-      $Res Function(_$ProcessingPaymentSuccessStateImpl) _then)
-      : super(_value, _then);
+class _$ProcessingPaymentFailedStateCopyWithImpl<$Res>
+    implements $ProcessingPaymentFailedStateCopyWith<$Res> {
+  _$ProcessingPaymentFailedStateCopyWithImpl(this._self, this._then);
 
+  final ProcessingPaymentFailedState _self;
+  final $Res Function(ProcessingPaymentFailedState) _then;
+
+  /// Create a copy of ProcessingPaymentState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
-  @override
   $Res call({
     Object? details = null,
   }) {
-    return _then(_$ProcessingPaymentSuccessStateImpl(
+    return _then(ProcessingPaymentFailedState(
       details: null == details
-          ? _value.details
+          ? _self.details
           : details // ignore: cast_nullable_to_non_nullable
               as TransactionDetails,
     ));
@@ -1240,215 +812,94 @@ class __$$ProcessingPaymentSuccessStateImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$ProcessingPaymentSuccessStateImpl
-    implements ProcessingPaymentSuccessState {
-  const _$ProcessingPaymentSuccessStateImpl({required this.details});
+class ProcessingPaymentSuccessState implements ProcessingPaymentState {
+  const ProcessingPaymentSuccessState({required this.details});
 
-  @override
   final TransactionDetails details;
 
-  @override
-  String toString() {
-    return 'ProcessingPaymentState.paymentSuccess(details: $details)';
-  }
+  /// Create a copy of ProcessingPaymentState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $ProcessingPaymentSuccessStateCopyWith<ProcessingPaymentSuccessState>
+      get copyWith => _$ProcessingPaymentSuccessStateCopyWithImpl<
+          ProcessingPaymentSuccessState>(this, _$identity);
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$ProcessingPaymentSuccessStateImpl &&
+            other is ProcessingPaymentSuccessState &&
             (identical(other.details, details) || other.details == details));
   }
 
   @override
   int get hashCode => Object.hash(runtimeType, details);
 
-  @JsonKey(ignore: true)
   @override
-  @pragma('vm:prefer-inline')
-  _$$ProcessingPaymentSuccessStateImplCopyWith<
-          _$ProcessingPaymentSuccessStateImpl>
-      get copyWith => __$$ProcessingPaymentSuccessStateImplCopyWithImpl<
-          _$ProcessingPaymentSuccessStateImpl>(this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() processingStageOne,
-    required TResult Function() processingStageTwo,
-    required TResult Function() processingStageThree,
-    required TResult Function(TransactionDetails details) paymentFailed,
-    required TResult Function(TransactionDetails details) paymentSuccess,
-    required TResult Function(TransactionDetails? details, Duration duration,
-            UPIPaymentModeVPA modeVpa)
-        timerTick,
-  }) {
-    return paymentSuccess(details);
+  String toString() {
+    return 'ProcessingPaymentState.paymentSuccess(details: $details)';
   }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? processingStageOne,
-    TResult? Function()? processingStageTwo,
-    TResult? Function()? processingStageThree,
-    TResult? Function(TransactionDetails details)? paymentFailed,
-    TResult? Function(TransactionDetails details)? paymentSuccess,
-    TResult? Function(TransactionDetails? details, Duration duration,
-            UPIPaymentModeVPA modeVpa)?
-        timerTick,
-  }) {
-    return paymentSuccess?.call(details);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? processingStageOne,
-    TResult Function()? processingStageTwo,
-    TResult Function()? processingStageThree,
-    TResult Function(TransactionDetails details)? paymentFailed,
-    TResult Function(TransactionDetails details)? paymentSuccess,
-    TResult Function(TransactionDetails? details, Duration duration,
-            UPIPaymentModeVPA modeVpa)?
-        timerTick,
-    required TResult orElse(),
-  }) {
-    if (paymentSuccess != null) {
-      return paymentSuccess(details);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(ProcessingStageOneState value) processingStageOne,
-    required TResult Function(ProcessingStageTwoState value) processingStageTwo,
-    required TResult Function(ProcessingStageThreeState value)
-        processingStageThree,
-    required TResult Function(ProcessingPaymentFailedState value) paymentFailed,
-    required TResult Function(ProcessingPaymentSuccessState value)
-        paymentSuccess,
-    required TResult Function(ProcessingPaymentTimerState value) timerTick,
-  }) {
-    return paymentSuccess(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(ProcessingStageOneState value)? processingStageOne,
-    TResult? Function(ProcessingStageTwoState value)? processingStageTwo,
-    TResult? Function(ProcessingStageThreeState value)? processingStageThree,
-    TResult? Function(ProcessingPaymentFailedState value)? paymentFailed,
-    TResult? Function(ProcessingPaymentSuccessState value)? paymentSuccess,
-    TResult? Function(ProcessingPaymentTimerState value)? timerTick,
-  }) {
-    return paymentSuccess?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(ProcessingStageOneState value)? processingStageOne,
-    TResult Function(ProcessingStageTwoState value)? processingStageTwo,
-    TResult Function(ProcessingStageThreeState value)? processingStageThree,
-    TResult Function(ProcessingPaymentFailedState value)? paymentFailed,
-    TResult Function(ProcessingPaymentSuccessState value)? paymentSuccess,
-    TResult Function(ProcessingPaymentTimerState value)? timerTick,
-    required TResult orElse(),
-  }) {
-    if (paymentSuccess != null) {
-      return paymentSuccess(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class ProcessingPaymentSuccessState implements ProcessingPaymentState {
-  const factory ProcessingPaymentSuccessState(
-          {required final TransactionDetails details}) =
-      _$ProcessingPaymentSuccessStateImpl;
-
-  TransactionDetails get details;
-  @JsonKey(ignore: true)
-  _$$ProcessingPaymentSuccessStateImplCopyWith<
-          _$ProcessingPaymentSuccessStateImpl>
-      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$ProcessingPaymentTimerStateImplCopyWith<$Res> {
-  factory _$$ProcessingPaymentTimerStateImplCopyWith(
-          _$ProcessingPaymentTimerStateImpl value,
-          $Res Function(_$ProcessingPaymentTimerStateImpl) then) =
-      __$$ProcessingPaymentTimerStateImplCopyWithImpl<$Res>;
+abstract mixin class $ProcessingPaymentSuccessStateCopyWith<$Res>
+    implements $ProcessingPaymentStateCopyWith<$Res> {
+  factory $ProcessingPaymentSuccessStateCopyWith(
+          ProcessingPaymentSuccessState value,
+          $Res Function(ProcessingPaymentSuccessState) _then) =
+      _$ProcessingPaymentSuccessStateCopyWithImpl;
   @useResult
-  $Res call(
-      {TransactionDetails? details,
-      Duration duration,
-      UPIPaymentModeVPA modeVpa});
+  $Res call({TransactionDetails details});
 }
 
 /// @nodoc
-class __$$ProcessingPaymentTimerStateImplCopyWithImpl<$Res>
-    extends _$ProcessingPaymentStateCopyWithImpl<$Res,
-        _$ProcessingPaymentTimerStateImpl>
-    implements _$$ProcessingPaymentTimerStateImplCopyWith<$Res> {
-  __$$ProcessingPaymentTimerStateImplCopyWithImpl(
-      _$ProcessingPaymentTimerStateImpl _value,
-      $Res Function(_$ProcessingPaymentTimerStateImpl) _then)
-      : super(_value, _then);
+class _$ProcessingPaymentSuccessStateCopyWithImpl<$Res>
+    implements $ProcessingPaymentSuccessStateCopyWith<$Res> {
+  _$ProcessingPaymentSuccessStateCopyWithImpl(this._self, this._then);
 
+  final ProcessingPaymentSuccessState _self;
+  final $Res Function(ProcessingPaymentSuccessState) _then;
+
+  /// Create a copy of ProcessingPaymentState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
-  @override
   $Res call({
-    Object? details = freezed,
-    Object? duration = null,
-    Object? modeVpa = freezed,
+    Object? details = null,
   }) {
-    return _then(_$ProcessingPaymentTimerStateImpl(
-      details: freezed == details
-          ? _value.details
+    return _then(ProcessingPaymentSuccessState(
+      details: null == details
+          ? _self.details
           : details // ignore: cast_nullable_to_non_nullable
-              as TransactionDetails?,
-      duration: null == duration
-          ? _value.duration
-          : duration // ignore: cast_nullable_to_non_nullable
-              as Duration,
-      modeVpa: freezed == modeVpa
-          ? _value.modeVpa
-          : modeVpa // ignore: cast_nullable_to_non_nullable
-              as UPIPaymentModeVPA,
+              as TransactionDetails,
     ));
   }
 }
 
 /// @nodoc
 
-class _$ProcessingPaymentTimerStateImpl implements ProcessingPaymentTimerState {
-  const _$ProcessingPaymentTimerStateImpl(
+class ProcessingPaymentTimerState implements ProcessingPaymentState {
+  const ProcessingPaymentTimerState(
       {this.details = null, required this.duration, required this.modeVpa});
 
-  @override
   @JsonKey()
   final TransactionDetails? details;
-  @override
   final Duration duration;
-  @override
   final UPIPaymentModeVPA modeVpa;
 
-  @override
-  String toString() {
-    return 'ProcessingPaymentState.timerTick(details: $details, duration: $duration, modeVpa: $modeVpa)';
-  }
+  /// Create a copy of ProcessingPaymentState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $ProcessingPaymentTimerStateCopyWith<ProcessingPaymentTimerState>
+      get copyWith => _$ProcessingPaymentTimerStateCopyWithImpl<
+          ProcessingPaymentTimerState>(this, _$identity);
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$ProcessingPaymentTimerStateImpl &&
+            other is ProcessingPaymentTimerState &&
             (identical(other.details, details) || other.details == details) &&
             (identical(other.duration, duration) ||
                 other.duration == duration) &&
@@ -1459,119 +910,57 @@ class _$ProcessingPaymentTimerStateImpl implements ProcessingPaymentTimerState {
   int get hashCode => Object.hash(runtimeType, details, duration,
       const DeepCollectionEquality().hash(modeVpa));
 
-  @JsonKey(ignore: true)
   @override
+  String toString() {
+    return 'ProcessingPaymentState.timerTick(details: $details, duration: $duration, modeVpa: $modeVpa)';
+  }
+}
+
+/// @nodoc
+abstract mixin class $ProcessingPaymentTimerStateCopyWith<$Res>
+    implements $ProcessingPaymentStateCopyWith<$Res> {
+  factory $ProcessingPaymentTimerStateCopyWith(
+          ProcessingPaymentTimerState value,
+          $Res Function(ProcessingPaymentTimerState) _then) =
+      _$ProcessingPaymentTimerStateCopyWithImpl;
+  @useResult
+  $Res call(
+      {TransactionDetails? details,
+      Duration duration,
+      UPIPaymentModeVPA modeVpa});
+}
+
+/// @nodoc
+class _$ProcessingPaymentTimerStateCopyWithImpl<$Res>
+    implements $ProcessingPaymentTimerStateCopyWith<$Res> {
+  _$ProcessingPaymentTimerStateCopyWithImpl(this._self, this._then);
+
+  final ProcessingPaymentTimerState _self;
+  final $Res Function(ProcessingPaymentTimerState) _then;
+
+  /// Create a copy of ProcessingPaymentState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
-  _$$ProcessingPaymentTimerStateImplCopyWith<_$ProcessingPaymentTimerStateImpl>
-      get copyWith => __$$ProcessingPaymentTimerStateImplCopyWithImpl<
-          _$ProcessingPaymentTimerStateImpl>(this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() processingStageOne,
-    required TResult Function() processingStageTwo,
-    required TResult Function() processingStageThree,
-    required TResult Function(TransactionDetails details) paymentFailed,
-    required TResult Function(TransactionDetails details) paymentSuccess,
-    required TResult Function(TransactionDetails? details, Duration duration,
-            UPIPaymentModeVPA modeVpa)
-        timerTick,
+  $Res call({
+    Object? details = freezed,
+    Object? duration = null,
+    Object? modeVpa = freezed,
   }) {
-    return timerTick(details, duration, modeVpa);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? processingStageOne,
-    TResult? Function()? processingStageTwo,
-    TResult? Function()? processingStageThree,
-    TResult? Function(TransactionDetails details)? paymentFailed,
-    TResult? Function(TransactionDetails details)? paymentSuccess,
-    TResult? Function(TransactionDetails? details, Duration duration,
-            UPIPaymentModeVPA modeVpa)?
-        timerTick,
-  }) {
-    return timerTick?.call(details, duration, modeVpa);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? processingStageOne,
-    TResult Function()? processingStageTwo,
-    TResult Function()? processingStageThree,
-    TResult Function(TransactionDetails details)? paymentFailed,
-    TResult Function(TransactionDetails details)? paymentSuccess,
-    TResult Function(TransactionDetails? details, Duration duration,
-            UPIPaymentModeVPA modeVpa)?
-        timerTick,
-    required TResult orElse(),
-  }) {
-    if (timerTick != null) {
-      return timerTick(details, duration, modeVpa);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(ProcessingStageOneState value) processingStageOne,
-    required TResult Function(ProcessingStageTwoState value) processingStageTwo,
-    required TResult Function(ProcessingStageThreeState value)
-        processingStageThree,
-    required TResult Function(ProcessingPaymentFailedState value) paymentFailed,
-    required TResult Function(ProcessingPaymentSuccessState value)
-        paymentSuccess,
-    required TResult Function(ProcessingPaymentTimerState value) timerTick,
-  }) {
-    return timerTick(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(ProcessingStageOneState value)? processingStageOne,
-    TResult? Function(ProcessingStageTwoState value)? processingStageTwo,
-    TResult? Function(ProcessingStageThreeState value)? processingStageThree,
-    TResult? Function(ProcessingPaymentFailedState value)? paymentFailed,
-    TResult? Function(ProcessingPaymentSuccessState value)? paymentSuccess,
-    TResult? Function(ProcessingPaymentTimerState value)? timerTick,
-  }) {
-    return timerTick?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(ProcessingStageOneState value)? processingStageOne,
-    TResult Function(ProcessingStageTwoState value)? processingStageTwo,
-    TResult Function(ProcessingStageThreeState value)? processingStageThree,
-    TResult Function(ProcessingPaymentFailedState value)? paymentFailed,
-    TResult Function(ProcessingPaymentSuccessState value)? paymentSuccess,
-    TResult Function(ProcessingPaymentTimerState value)? timerTick,
-    required TResult orElse(),
-  }) {
-    if (timerTick != null) {
-      return timerTick(this);
-    }
-    return orElse();
+    return _then(ProcessingPaymentTimerState(
+      details: freezed == details
+          ? _self.details
+          : details // ignore: cast_nullable_to_non_nullable
+              as TransactionDetails?,
+      duration: null == duration
+          ? _self.duration
+          : duration // ignore: cast_nullable_to_non_nullable
+              as Duration,
+      modeVpa: freezed == modeVpa
+          ? _self.modeVpa
+          : modeVpa // ignore: cast_nullable_to_non_nullable
+              as UPIPaymentModeVPA,
+    ));
   }
 }
 
-abstract class ProcessingPaymentTimerState implements ProcessingPaymentState {
-  const factory ProcessingPaymentTimerState(
-          {final TransactionDetails? details,
-          required final Duration duration,
-          required final UPIPaymentModeVPA modeVpa}) =
-      _$ProcessingPaymentTimerStateImpl;
-
-  TransactionDetails? get details;
-  Duration get duration;
-  UPIPaymentModeVPA get modeVpa;
-  @JsonKey(ignore: true)
-  _$$ProcessingPaymentTimerStateImplCopyWith<_$ProcessingPaymentTimerStateImpl>
-      get copyWith => throw _privateConstructorUsedError;
-}
+// dart format on
