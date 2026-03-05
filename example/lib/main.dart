@@ -21,7 +21,7 @@ void main() {
       // Fluttertoast.showToast(msg: msg, toastLength: Toast.LENGTH_LONG);
     },
     onSuccess: (msg) {
-      // TODO: Handle initialization success
+      // TODO: Handle initialization successz
       // Fluttertoast.showToast(msg: msg);
     },
   );
