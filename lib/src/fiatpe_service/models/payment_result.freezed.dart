@@ -166,7 +166,7 @@ extension PaymentResultPatterns on PaymentResult {
             String errorCode, String errorMessage, TransactionDetails? details)?
         failure,
     TResult Function(TransactionDetails details)? pending,
-    TResult Function(TransactionDetails details, String? reason)? cancelled,
+    TResult Function(TransactionDetails? details, String? reason)? cancelled,
     TResult Function(String rawResponse)? unknown,
     required TResult orElse(),
   }) {
@@ -207,7 +207,7 @@ extension PaymentResultPatterns on PaymentResult {
             String errorCode, String errorMessage, TransactionDetails? details)
         failure,
     required TResult Function(TransactionDetails details) pending,
-    required TResult Function(TransactionDetails details, String? reason)
+    required TResult Function(TransactionDetails? details, String? reason)
         cancelled,
     required TResult Function(String rawResponse) unknown,
   }) {
@@ -245,7 +245,7 @@ extension PaymentResultPatterns on PaymentResult {
             String errorCode, String errorMessage, TransactionDetails? details)?
         failure,
     TResult? Function(TransactionDetails details)? pending,
-    TResult? Function(TransactionDetails details, String? reason)? cancelled,
+    TResult? Function(TransactionDetails? details, String? reason)? cancelled,
     TResult? Function(String rawResponse)? unknown,
   }) {
     final _that = this;
@@ -482,9 +482,11 @@ class _$PaymentPendingCopyWithImpl<$Res>
 /// @nodoc
 
 class PaymentCancelled implements PaymentResult {
-  const PaymentCancelled({required this.details, this.reason});
+  const PaymentCancelled({this.details = null, this.reason = null});
 
-  final TransactionDetails details;
+  @JsonKey()
+  final TransactionDetails? details;
+  @JsonKey()
   final String? reason;
 
   /// Create a copy of PaymentResult
@@ -519,7 +521,7 @@ abstract mixin class $PaymentCancelledCopyWith<$Res>
           PaymentCancelled value, $Res Function(PaymentCancelled) _then) =
       _$PaymentCancelledCopyWithImpl;
   @useResult
-  $Res call({TransactionDetails details, String? reason});
+  $Res call({TransactionDetails? details, String? reason});
 }
 
 /// @nodoc
@@ -534,14 +536,14 @@ class _$PaymentCancelledCopyWithImpl<$Res>
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   $Res call({
-    Object? details = null,
+    Object? details = freezed,
     Object? reason = freezed,
   }) {
     return _then(PaymentCancelled(
-      details: null == details
+      details: freezed == details
           ? _self.details
           : details // ignore: cast_nullable_to_non_nullable
-              as TransactionDetails,
+              as TransactionDetails?,
       reason: freezed == reason
           ? _self.reason
           : reason // ignore: cast_nullable_to_non_nullable

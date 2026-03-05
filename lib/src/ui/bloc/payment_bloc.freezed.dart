@@ -662,6 +662,7 @@ extension PaymentStatePatterns on PaymentState {
     TResult Function(PaymentInitiatedState value)? initiated,
     TResult Function(PaymentInitiationFailedState value)? initiationFailed,
     TResult Function(PaymentCanceledState value)? canceled,
+    TResult Function(PaymentDismissedState value)? dismissed,
     required TResult orElse(),
   }) {
     final _that = this;
@@ -674,6 +675,8 @@ extension PaymentStatePatterns on PaymentState {
         return initiationFailed(_that);
       case PaymentCanceledState() when canceled != null:
         return canceled(_that);
+      case PaymentDismissedState() when dismissed != null:
+        return dismissed(_that);
       case _:
         return orElse();
     }
@@ -699,6 +702,7 @@ extension PaymentStatePatterns on PaymentState {
     required TResult Function(PaymentInitiationFailedState value)
         initiationFailed,
     required TResult Function(PaymentCanceledState value) canceled,
+    required TResult Function(PaymentDismissedState value) dismissed,
   }) {
     final _that = this;
     switch (_that) {
@@ -710,6 +714,8 @@ extension PaymentStatePatterns on PaymentState {
         return initiationFailed(_that);
       case PaymentCanceledState():
         return canceled(_that);
+      case PaymentDismissedState():
+        return dismissed(_that);
       case _:
         throw StateError('Unexpected subclass');
     }
@@ -733,6 +739,7 @@ extension PaymentStatePatterns on PaymentState {
     TResult? Function(PaymentInitiatedState value)? initiated,
     TResult? Function(PaymentInitiationFailedState value)? initiationFailed,
     TResult? Function(PaymentCanceledState value)? canceled,
+    TResult? Function(PaymentDismissedState value)? dismissed,
   }) {
     final _that = this;
     switch (_that) {
@@ -744,6 +751,8 @@ extension PaymentStatePatterns on PaymentState {
         return initiationFailed(_that);
       case PaymentCanceledState() when canceled != null:
         return canceled(_that);
+      case PaymentDismissedState() when dismissed != null:
+        return dismissed(_that);
       case _:
         return null;
     }
@@ -769,6 +778,7 @@ extension PaymentStatePatterns on PaymentState {
         initiated,
     TResult Function(PaymentParams params)? initiationFailed,
     TResult Function(TransactionDetails details)? canceled,
+    TResult Function()? dismissed,
     required TResult orElse(),
   }) {
     final _that = this;
@@ -781,6 +791,8 @@ extension PaymentStatePatterns on PaymentState {
         return initiationFailed(_that.params);
       case PaymentCanceledState() when canceled != null:
         return canceled(_that.details);
+      case PaymentDismissedState() when dismissed != null:
+        return dismissed();
       case _:
         return orElse();
     }
@@ -807,6 +819,7 @@ extension PaymentStatePatterns on PaymentState {
         initiated,
     required TResult Function(PaymentParams params) initiationFailed,
     required TResult Function(TransactionDetails details) canceled,
+    required TResult Function() dismissed,
   }) {
     final _that = this;
     switch (_that) {
@@ -818,6 +831,8 @@ extension PaymentStatePatterns on PaymentState {
         return initiationFailed(_that.params);
       case PaymentCanceledState():
         return canceled(_that.details);
+      case PaymentDismissedState():
+        return dismissed();
       case _:
         throw StateError('Unexpected subclass');
     }
@@ -843,6 +858,7 @@ extension PaymentStatePatterns on PaymentState {
         initiated,
     TResult? Function(PaymentParams params)? initiationFailed,
     TResult? Function(TransactionDetails details)? canceled,
+    TResult? Function()? dismissed,
   }) {
     final _that = this;
     switch (_that) {
@@ -854,6 +870,8 @@ extension PaymentStatePatterns on PaymentState {
         return initiationFailed(_that.params);
       case PaymentCanceledState() when canceled != null:
         return canceled(_that.details);
+      case PaymentDismissedState() when dismissed != null:
+        return dismissed();
       case _:
         return null;
     }
@@ -1122,6 +1140,26 @@ class _$PaymentCanceledStateCopyWithImpl<$Res>
           : details // ignore: cast_nullable_to_non_nullable
               as TransactionDetails,
     ));
+  }
+}
+
+/// @nodoc
+
+class PaymentDismissedState implements PaymentState {
+  const PaymentDismissedState();
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is PaymentDismissedState);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  String toString() {
+    return 'PaymentState.dismissed()';
   }
 }
 

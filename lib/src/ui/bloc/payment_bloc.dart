@@ -90,7 +90,10 @@ class PaymentBloc extends Bloc<PaymentEvent, PaymentState> {
     PaymentCancelEvent event,
     Emitter<PaymentState> emit,
   ) async {
-    if (_response == null) return;
+    if (_response == null) {
+      emit(const PaymentState.dismissed());
+      return;
+    }
     final id = _response!.id;
     final result = await _repo.cancelTransaction(id: id, reason: event.reason);
     switch (result) {

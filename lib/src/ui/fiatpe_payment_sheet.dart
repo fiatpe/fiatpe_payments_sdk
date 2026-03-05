@@ -93,6 +93,12 @@ class FiatPePaymentSheet extends StatelessWidget {
               if (state is PaymentCanceledState) {
                 onPaymentResult(PaymentResult.cancelled(details: state.details));
                 Navigator.of(parentContext).pop();
+                return;
+              }
+              if (state is PaymentDismissedState) {
+                onPaymentResult(const PaymentResult.cancelled());
+                Navigator.of(parentContext).pop();
+                return;
               }
             },
             child: SizedBox(

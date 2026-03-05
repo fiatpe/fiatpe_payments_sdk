@@ -148,7 +148,7 @@ class _MyHomePageState extends State<MyHomePage> {
             break;
           case PaymentCancelled():
           // TODO: Handle this case.
-            Fluttertoast.showToast(msg: "CANCELED TID: ${result.details.transactionId}");
+            Fluttertoast.showToast(msg: "CANCELED TID: ${result.details?.transactionId}");
             break;
           case PaymentUnknown():
           // TODO: Handle this case.

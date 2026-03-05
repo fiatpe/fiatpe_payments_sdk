@@ -23,4 +23,5 @@ class PaymentState with _$PaymentState {
     required TransactionDetails details,
   }) = PaymentCanceledState;
 
+  const factory PaymentState.dismissed() = PaymentDismissedState;
 }

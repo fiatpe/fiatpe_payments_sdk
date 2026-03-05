@@ -25,8 +25,8 @@ sealed class PaymentResult with _$PaymentResult {
 
   /// Represents a cancelled payment
   const factory PaymentResult.cancelled({
-    required TransactionDetails details,
-    String? reason,
+    @Default(null) TransactionDetails? details,
+    @Default(null) String? reason,
   }) = PaymentCancelled;
 
   /// Represents an unknown or unexpected result
