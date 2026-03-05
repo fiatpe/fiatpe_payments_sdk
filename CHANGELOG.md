@@ -1,3 +1,10 @@
+## 1.1.0 - 05 Jan, 2025
+
+### Dependency Updates
+- **Core Dependencies**: Upgraded `dio`, `bloc`, `flutter_bloc`, and `logger` to newer versions.
+- **Networking & Serialization**: Updated `retrofit`, `json_serializable`, and `built_value` to resolve potential version conflicts and improve stability.
+- **Build Tools**: Updated `build_runner` and other generators for better development experience.
+
 ## 1.0.2 - 24 Dec, 2024
 
 ### Timeout & UI Changes
