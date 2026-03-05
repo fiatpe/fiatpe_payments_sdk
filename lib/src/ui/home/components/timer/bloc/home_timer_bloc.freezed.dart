@@ -405,8 +405,6 @@ extension HomeTimerStatePatterns on HomeTimerState {
         return updated(_that);
       case HomeTimerEnded():
         return ended(_that);
-      case _:
-        throw StateError('Unexpected subclass');
     }
   }
 
@@ -491,8 +489,6 @@ extension HomeTimerStatePatterns on HomeTimerState {
         return updated(_that.duration);
       case HomeTimerEnded():
         return ended(_that.duration);
-      case _:
-        throw StateError('Unexpected subclass');
     }
   }
 

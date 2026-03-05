@@ -751,8 +751,6 @@ extension PaymentHomeStatePatterns on PaymentHomeState {
     switch (_that) {
       case PaymentHomeUpdatedState():
         return updated(_that);
-      case _:
-        throw StateError('Unexpected subclass');
     }
   }
 
@@ -858,8 +856,6 @@ extension PaymentHomeStatePatterns on PaymentHomeState {
             _that.vpaVerificationError,
             _that.isVpaVerified,
             _that.isVpaVerifying);
-      case _:
-        throw StateError('Unexpected subclass');
     }
   }
 
