@@ -1,3 +1,9 @@
+## 1.1.1 - 20 Jan, 2025
+
+### Fixes
+- **Payment Cancellation**: Fixed an issue where payment cancellation was not being processed correctly.
+
+
 ## 1.1.0 - 05 Jan, 2025
 
 ### Dependency Updates
